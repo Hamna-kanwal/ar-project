@@ -7,15 +7,8 @@ import Link from "next/link";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { 
-    label: "Services", 
-    isDropdown: true, 
-    subItems: [
-      { label: "Boiler", href: "/Services/boiler" },
-      { label: "Gas", href: "/services/gas" },
-      { label: "Water", href: "/services/water" }
-    ]
-  },
+ 
+ 
   { label: "Why AR-Heating", href: "/about" },
   { label: "About Us", href: "/expertise" },
   { label: "Area We Cover", href: "/complaints-procedure" },

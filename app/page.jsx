@@ -11,7 +11,7 @@ export default function Home() {
       <ServiceList />
       <Strategy />
       <AboutSection />
-      <Cta />
+      <CTA />
     </>
   );
 }

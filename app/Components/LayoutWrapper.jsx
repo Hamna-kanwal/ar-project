@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./Navbar"; 
-import Sidebar from "./Sidebar"; // Apni path check kar lein
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 import { Toaster } from "react-hot-toast";
 
 export default function LayoutWrapper({ children }) {

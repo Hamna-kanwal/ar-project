@@ -57,7 +57,7 @@ export const SLIDES = [
   },
 ];
 
-export function HeroSlider() {
+export default function HeroSlider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
 

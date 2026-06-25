@@ -31,7 +31,7 @@ const SERVICES = [
   { name: "Dishwasher Install", desc: "Professional plumbing and connection.", icon: <Disc />, link: "/dishwasher" },
 ];
 
-export function ServicesList() {
+export default function ServicesList() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [
     AutoScroll({ playOnInit: true, stopOnInteraction: false, stopOnMouseEnter: true, speed: 0.5, delay: 2000 })
   ]);

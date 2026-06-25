@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 // Components/Cta.js mein ye change karein
-export function CTA() {
+export default function CTA() {
   return (
     <div style={{ 
       position: 'relative', 
@@ -10,7 +10,7 @@ export function CTA() {
       marginBottom: '60px' // Yahan 100vh ki jagah fixed height dein
     }}>
       <Image
-        src="/cta section.jpg" // Filename mein space na rakhein (cta-section.jpg behtar hai)
+        src="/cta_section.jpg" // Filename mein space na rakhein (cta-section.jpg behtar hai)
         alt="CTA section"
         fill
         style={{ objectFit: 'cover' }}

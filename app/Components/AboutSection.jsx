@@ -5,7 +5,7 @@ import Image from "next/image";
 import React from "react";
 import Script from "next/script";
 
-export function AboutSection() {
+export  default function AboutSection() {
   return (
     <section 
       id="about"

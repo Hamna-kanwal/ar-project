@@ -24,7 +24,7 @@ const navItems = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-export function Sidebar({ isOpen, onClose }) {
+export default function Sidebar({ isOpen, onClose }) {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Menu, Mail, Phone } from "lucide-react";
 import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 
-export function Navbar({ onOpenSidebar }) {
+export default function Navbar({ onOpenSidebar }) {
   return (
     <>
       {/* Top Contact Bar */}

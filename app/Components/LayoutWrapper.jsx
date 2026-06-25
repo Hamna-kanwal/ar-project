@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./navbar"; 
+import Navbar from "./Navbar"; 
 import Sidebar from "./sidebar"; // Apni path check kar lein
 import { Toaster } from "react-hot-toast";
 

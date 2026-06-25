@@ -1,7 +1,7 @@
 import React from 'react';
 import { Settings, ShieldCheck, MapPin } from 'lucide-react';
 
-export function WhyChooseUs() {
+export function Strategy() {
   const features = [
     {
       title: "Our Strategy",

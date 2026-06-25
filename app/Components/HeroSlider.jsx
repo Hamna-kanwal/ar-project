@@ -110,6 +110,7 @@ export function HeroSlider() {
           ))}
         </div>
       </div>
+      <h1>hamna</h1>
 
       {/* 3. Pagination Dots */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center gap-3 z-20">

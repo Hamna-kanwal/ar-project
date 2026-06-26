@@ -30,7 +30,7 @@ export default function Navbar({ onOpenSidebar }) {
       <header className="absolute top-12 left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
         <nav className="py-6 px-12 flex items-center justify-between">
-          <Link href="/" className="relative w-[120px] h-[80px] block">
+          <Link href="/" className="relative mt-7 w-[120px] h-[80px] block">
           <Image 
   src="/Heating.jpeg" 
   alt="Logo" 

@@ -32,7 +32,7 @@ export default function Navbar({ onOpenSidebar }) {
         <nav className="py-6 px-12 flex items-center justify-between">
           <Link href="/" className="relative w-[120px] h-[80px] block">
           <Image 
-  src="/heating.jpeg" 
+  src="/Heating.jpeg" 
   alt="Logo" 
   width={500}       // Yahan width apni zaroorat ke mutabiq adjust karein
   height={300}      // Yahan height set karein

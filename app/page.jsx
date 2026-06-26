@@ -1,3 +1,17 @@
-export default function Page() {
-  return <h1>Hello World</h1>;
+import HeroSlider from "./Components/HeroSlider";
+import ServiceList from "./Components/ServiceList";
+import Strategy from "./Components/Strategy"; // Aapki file mein ye 'WhyChooseUs' hai, so use 'WhyChooseUs'
+import AboutSection from "./Components/AboutSection";
+import CTA from "./Components/CTA";
+
+export default function Home() {
+  return (
+    <>
+      <HeroSlider />
+      <ServiceList />
+      <Strategy /> 
+      <AboutSection />
+      <CTA />
+    </>
+  );
 }

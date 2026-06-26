@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, Mail, Phone } from "lucide-react";
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Navbar({ onOpenSidebar }) {
   return (
@@ -20,7 +20,7 @@ export default function Navbar({ onOpenSidebar }) {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="#" className="hover:text-gray-200"><FaTwitter size={22} /></a>
+         
           <a href="#" className="hover:text-gray-200"><FaFacebook size={22} /></a>
           <a href="#" className="hover:text-gray-200"><FaInstagram size={22} /></a>
         </div>

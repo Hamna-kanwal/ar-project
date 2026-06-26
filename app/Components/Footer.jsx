@@ -1,6 +1,6 @@
 import Link from "next/link";
 import NextImage from "next/image";
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -18,7 +18,6 @@ export default function Footer() {
             className="object-contain" 
           />
           <div className="flex gap-4">
-            <a href="#" className="p-3 bg-orange-500 rounded-full hover:bg-orange-600 transition"><FaTwitter size={20} /></a>
             <a href="#" className="p-3 bg-orange-500 rounded-full hover:bg-orange-600 transition"><FaFacebook size={20} /></a>
             <a href="#" className="p-3 bg-orange-500 rounded-full hover:bg-orange-600 transition"><FaInstagram size={20} /></a>
           </div>

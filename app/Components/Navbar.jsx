@@ -27,12 +27,12 @@ export default function Navbar({ onOpenSidebar }) {
       </div>
 
       {/* Header / Logo and Menu */}
-      <header className="absolute top-12 left-0 w-full z-50 bg-transparent">
+      <header className="absolute top-6  left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
-        <nav className="py-6 px-12 flex items-center justify-between">
-          <Link href="/" className="relative mt-7 w-[120px] h-[80px] block">
+        <nav className="py-6 px-10 flex items-center justify-between">
+          <Link href="/" className="relative mt-5 w-[120px] h-[80px] block">
           <Image 
-  src="/Heating.jpeg" 
+  src="/ar-logo.png" 
   alt="Logo" 
   width={500}       // Yahan width apni zaroorat ke mutabiq adjust karein
   height={300}      // Yahan height set karein
@@ -42,7 +42,7 @@ export default function Navbar({ onOpenSidebar }) {
 
           <button 
             onClick={onOpenSidebar} 
-            className="p-2 bg-[#027cc1] hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all border border-white/20"
+            className="p-2 bg-[#027cc1] mt-5 hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all border border-white/20"
           >
             <Menu className="w-8 h-8 text-white" />
           </button>

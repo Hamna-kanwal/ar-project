@@ -1,7 +1,8 @@
 import HeroSlider from "./Components/HeroSlider";
 import ServiceList from "./Components/ServiceList";
-import Strategy from "./Components/Strategy"; // Aapki file mein ye 'WhyChooseUs' hai, so use 'WhyChooseUs'
 import AboutSection from "./Components/AboutSection";
+import Strategy from "./Components/Strategy"; // Aapki file mein ye 'WhyChooseUs' hai, so use 'WhyChooseUs'
+
 import CTA from "./Components/CTA";
 
 export default function Home() {
@@ -9,8 +10,9 @@ export default function Home() {
     <>
       <HeroSlider />
       <ServiceList />
-      <Strategy /> 
       <AboutSection />
+      <Strategy /> 
+      
       <CTA />
     </>
   );

@@ -4,11 +4,17 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
-
 const navItems = [
   { label: "Home", href: "/" },
- 
- 
+  { 
+    label: "Services", 
+    isDropdown: true, 
+    subItems: [
+      { label: "Boiler Repair", href: "/Services/boiler" },
+      { label: "Gas Safety Check", href: "/services/gas-safety" },
+      { label: "Heating Installation", href: "/services/heating" },
+    ] 
+  },
   { label: "Why AR-Heating", href: "/about" },
   { label: "About Us", href: "/expertise" },
   { label: "Area We Cover", href: "/complaints-procedure" },

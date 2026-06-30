@@ -31,6 +31,8 @@ const SERVICES = [
   { name: "Dishwasher Install", desc: "Reliable plumbing and connection services for your new kitchen dishwasher.", icon: <Disc />, link: "/dishwasher" },
 ];
 
+// ... (imports wahi rahengi)
+
 export default function ServicesList() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [
     AutoScroll({ playOnInit: true, stopOnInteraction: false, stopOnMouseEnter: true, speed: 0.5, delay: 2000 })
@@ -41,20 +43,22 @@ export default function ServicesList() {
 
   return (
     <section className="py-20 relative overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-12 relative">
+      <div className="max-w-[90rem] mx-auto px-16 relative">
         <h1 className="text-5xl font-bold text-[#0056b3] mb-12">Our Expertise</h1>
         
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex" style={{ marginLeft: '-32px' }}>
+          {/* gap-4 add kiya taake boxes ke beech space rahe */}
+          <div className="flex -ml-4">
             {SERVICES.map((item, index) => (
-              <Link href={item.link} key={index} className="flex-[0_0_33.333%] pl-8">
-                <div className="bg-[#0056b3] p-8 rounded-3xl flex flex-col items-center justify-center text-white hover:bg-[#004494] transition-all cursor-pointer shadow-xl h-80 group">
-                  <div className="mb-6 p-5 bg-white/10 rounded-2xl text-white group-hover:scale-110 transition-transform">
-                    {React.cloneElement(item.icon, { size: 40 })}
+              // flex-[0_0_20%] ka matlab 1 row mein 5 cards
+              <Link href={item.link} key={index} className="flex-[0_0_20%] pl-4">
+                {/* h-72 se box chota ho gaya, p-6 padding kam kar di */}
+                <div className="bg-[#0056b3] p-4 rounded-2xl flex flex-col items-center justify-center text-white hover:bg-[#004494] transition-all cursor-pointer shadow-lg h-72 group">
+                  <div className="mb-4 p-4 bg-white/10 rounded-xl text-white group-hover:scale-110 transition-transform">
+                    {React.cloneElement(item.icon, { size: 30 })}
                   </div>
-                  <h3 className="font-bold text-center text-xl mb-3">{item.name}</h3>
-                  {/* line-clamp-2 class description ko 2 lines mein limit kar degi */}
-                  <p className="text-sm text-white/90 text-center leading-relaxed line-clamp-2">
+                  <h3 className="font-bold text-center text-lg mb-2 leading-tight">{item.name}</h3>
+                  <p className="text-xs text-white/90 text-center leading-relaxed line-clamp-3">
                     {item.desc}
                   </p>
                 </div>
@@ -63,8 +67,9 @@ export default function ServicesList() {
           </div>
         </div>
 
-        <button onClick={scrollPrev} className="absolute left-0 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a] transition-colors"><ChevronLeft size={48} /></button>
-        <button onClick={scrollNext} className="absolute right-0 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a] transition-colors"><ChevronRight size={48} /></button>
+        {/* Buttons ko thora adjust kiya */}
+        <button onClick={scrollPrev} className="absolute left-2 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a]"><ChevronLeft size={40} /></button>
+        <button onClick={scrollNext} className="absolute right-2 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a]"><ChevronRight size={40} /></button>
       </div>
     </section>
   );

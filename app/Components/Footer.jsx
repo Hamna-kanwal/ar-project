@@ -1,72 +1,87 @@
-import Link from "next/link";
-import NextImage from "next/image";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import Image from 'next/image';
+import Link from 'next/link';
+import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#005f93] text-white py-24 px-32">
-      {/* justify-between se sections ke darmiyan natural aur barabar space aayegi */}
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-2 items-start">
+    <footer className="bg-[#027cc1] text-white py-12 px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
-        {/* Left: Logo & Socials */}
-        <div className="flex flex-col gap-2 w-full md:w-auto">
-          <NextImage 
-            src="/AR-02.png" 
-            alt="Logo" 
-            width={150} 
-            height={80} 
-            className="object-contain" 
+        {/* Column 1: Logo & Contact */}
+        <div className="space-y-4">
+          <Image 
+            src="/footer.png" 
+            alt="AR Heating Logo" 
+            width={200} 
+            height={200} 
+            className="w-auto h-22" 
           />
-          <div className="flex gap-4">
-            <a href="#" className="p-3 bg-orange-500 rounded-full hover:bg-orange-600 transition"><FaFacebook size={20} /></a>
-            <a href="#" className="p-3 bg-orange-500 rounded-full hover:bg-orange-600 transition"><FaInstagram size={20} /></a>
+          <p className="text-sm leading-relaxed">
+            Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
+          </p>
+          <div className="space-y-3 text-sm">
+            <p className="flex items-center gap-2"><MdEmail className="text-lg" /> info@arheatingservice.co.uk</p>
+            <p className="flex items-center gap-2"><MdSmartphone className="text-lg" /> +447800657141</p>
+            <p className="flex items-start gap-2"><MdLocationOn className="text-xl mt-0.5" /> Unit 24 The Roundway Watford, WD18 6LB</p>
           </div>
         </div>
 
-        {/* Middle: Links */}
-        <div className="w-full md:w-auto">
-          <h3 className="text-xl font-bold mb-6 text-white">QUICK LINKS</h3>
-          <ul className="space-y-4">
-            <li><Link href="/" className="hover:text-orange-300 transition">Home</Link></li>
-            <li><Link href="/services" className="hover:text-orange-300 transition">Services</Link></li>
-            <li><Link href="/about" className="hover:text-orange-300 transition">About Us</Link></li>
-            <li><Link href="/contact" className="hover:text-orange-300 transition">Contact</Link></li>
+        {/* Column 2: Our Services */}
+        <div>
+          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Our Services</h3>
+          <ul className="space-y-2 text-sm cursor-pointer">
+            <li className="hover:text-yellow-500 transition-colors">Boiler Installation</li>
+            <li className="hover:text-yellow-500 transition-colors">Heating Installation</li>
+            <li className="hover:text-yellow-500 transition-colors">Landlord Certificate</li>
+            <li className="hover:text-yellow-500 transition-colors">Dishwasher Installation</li>
+            <li className="hover:text-yellow-500 transition-colors">Power Flushing</li>
           </ul>
         </div>
 
-        {/* Right: Contact & Gas Safe */}
-        <div className="flex flex-col gap-6 w-full md:w-auto">
-          <div className="flex flex-row gap-8 items-start">
-            
-            <div className="flex-1">
-              <h3 className="text-xl font-bold mb-6 text-white">CONTACT US</h3>
-              <p className="text-sm">24 The Roundway Watford<br />WD18 6LB</p>
-              <p className="mt-4 font-semibold text-white">Phone: +447800657141</p>
-              <p className="font-semibold text-white">Email: info@arheatingservice.co.uk</p>
-            </div>
+        {/* Column 3: Quick Links */}
+        <div>
+          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Quick Links</h3>
+          <ul className="space-y-2 text-sm cursor-pointer">
+            <li className="hover:text-yellow-500 transition-colors">Why AR-Heating</li>
+            <li className="hover:text-yellow-500 transition-colors">About Us</li>
+            <li className="hover:text-yellow-500 transition-colors">Area We Cover</li>
+            <li className="hover:text-yellow-500 transition-colors">Blogs</li>
+          </ul>
+        </div>
 
-            <div className="flex flex-col items-center gap-2">
-              <Link href="https://www.gassaferegister.co.uk/find-an-engineer/check-a-business/?id=z6Bj0%2b9BiC3wfVafaxt2%2bA%3d%3d&st=registration" target="_blank" rel="noopener noreferrer">
-                <NextImage 
-                  src="/gas-register.png" 
-                  alt="Gas Safe" 
-                  width={120} 
-                  height={120} 
-                  className="cursor-pointer"
-                />
-              </Link>
-              <Link href="/sitemap" className="text-orange-400 font-bold hover:underline whitespace-nowrap">
-                Site Map
-              </Link>
-            </div>
+        {/* Column 4: Support & Badge */}
+        <div className="flex flex-col gap-6">
+          <div>
+            <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Support</h3>
+            <ul className="space-y-2 text-sm cursor-pointer">
+              <li className="hover:text-yellow-500 transition-colors">FAQ</li>
+              <li className="hover:text-yellow-500 transition-colors">Privacy Policy</li>
+              <li className="hover:text-yellow-500 transition-colors">Terms & Conditions</li>
+              <li className="hover:text-yellow-500 transition-colors">Contact Us</li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col items-start gap-2">
+            <Link href="https://www.gassaferegister.co.uk/find-an-engineer/check-a-business/?id=z6Bj0%2b9BiC3wfVafaxt2%2bA%3d%3d&st=registration" target="_blank" rel="noopener noreferrer">
+              <Image 
+                src="/gas-register.png" 
+                alt="Gas Safe" 
+                width={120} 
+                height={120} 
+                className="cursor-pointer bg-white p-1 rounded"
+              />
+            </Link>
+            <Link href="/sitemap" className="text-yellow-400 font-bold hover:underline">
+              Site Map
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 text-center text-sm">
-        <p>© Copyright AR Heating. All Rights Reserved</p>
-        <p className="mt-2">Designed and Developed by <span className="text-orange-300 font-bold">TEQNOOR</span></p>
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between text-xs text-gray-300 gap-4">
+        <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
+        <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>
     </footer>
   );

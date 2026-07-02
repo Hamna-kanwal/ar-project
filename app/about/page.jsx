@@ -7,18 +7,33 @@ export default function WhyARHeatingPage() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-[#027cc1] text-white text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <h1 className="text-5xl font-extrabold mb-6">Why AR-Heating</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas. We specialise in all types of gas services including boiler & heating repair, installation, and servicing. We provide engineers who are always available, and we have a 24/7 Emergency Call out service.
-            
-           Whether you are looking to have major works or something small and simple to be repaired or installed, Harrow Boiler Heating Services can help.
+    {/* Hero Section */}
+<section className="relative py-24 text-center overflow-hidden">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <Image 
+      src="/general_installation.jpg" // Apni image ka path dein
+      alt="Hero Background" 
+      fill 
+      className="object-cover" 
+    />
+  </div>
 
+  {/* White Blur Overlay */}
+  <div className="absolute inset-0 z-0 bg-white/20 backdrop-blur-md" />
 
-          </p>
-        </div>
-      </section>
+  {/* Content */}
+  <div className="relative z-10 max-w-5xl mx-auto px-6">
+    <h1 className="text-5xl font-extrabold mb-6 text-gray-900">Why AR-Heating</h1>
+    <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
+      AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas. 
+      We specialise in all types of gas services including boiler & heating repair, installation, and servicing. 
+      We provide engineers who are always available, and we have a 24/7 Emergency Call out service.
+      <br /><br />
+      Whether you are looking to have major works or something small and simple to be repaired or installed, Harrow Boiler Heating Services can help.
+    </p>
+  </div>
+</section>
 
       {/* Main Content Area - GAP BARA DIYA */}
       <section className="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">

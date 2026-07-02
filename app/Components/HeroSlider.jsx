@@ -6,13 +6,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const SLIDES = [
-  { title: "Heating Installation", desc: "We can offer free no obligation quotes and the best possible advice on different types of heating systems, boilers and the best options that will suit your needs.", img: "/slide3.jpg", buttonText: "Heating Installation", buttonLink: "/heating-installation" },
-  { title: "General Installation", desc: "AR Boiler Heating offers a range of general services to complement our boiler, heating, and plumbing offerings.", img: "/slide4.jpg", buttonText: "General Installation", buttonLink: "/general-installation" },
-  { title: "Heating & Plumbing", desc: "AR Heating offers an extensive range of premium quality central heating design, installation, repairs and associated plumbing services.", img: "/slide5.jpg", buttonText: "Heating & Plumbing", buttonLink: "/heating-plumbing" },
-  { title: "Power Flushing", desc: "A Powerflush is a process for your boiler that removes any dirt, sludge, rust and debris accumulated within your system over time.", img: "/HeatingHot.jpg", buttonText: "Power Flushing", buttonLink: "/power-flushing" },
-  { title: "Megaflo Cylinder Installation", desc: "Are you looking to install a Megaflo unvented cylinder heating system? We provide a professional and cost effective solution.", img: "/megaflow-slide.jpg", buttonText: "Megaflo Installation", buttonLink: "/megaflo-installation" },
-  { title: "Hive Thermostat Installation", desc: "AR Heating Services Gas Safe Registered engineers are qualified for Hive installations, we can install Hive on its own and for a new boiler installation.", img: "/nestheat.jpg", buttonText: "Hive Thermostat Installation", buttonLink: "/hive-installation" },
-  { title: "Boiler Installation", desc: "AR Heating Service provide excellent services for installation of new boilers. Our expert Gas Safe engineers specialise in fitting world class eco-efficient boilers.", img: "/slide2.jpg", buttonText: "Boiler Installation", buttonLink: "/boiler-installation" },
+  { title: "Boiler Installation in Watford & Harrow", desc: "New A-rated combi and system boilers from Worcester Bosch, Vaillant, Ideal and Baxi installed by Gas Safe engineers with warranties up to [X] years. Free fixed-price quotes.", img: "/heating_installation.jpg", buttonText: "Heating Installation", buttonLink: "/heating-installation" },
+
+  { title: "Gas Appliance & General Installation", desc: "Gas cookers, hobs, washing machines and dishwashers  installed safely and compliantly by qualified engineers alongside our boiler, heating and plumbing services.", img: "/general_installation.jpg", buttonText: "General Installation", buttonLink: "/general-installation" },
+  
+  { title: "Heating & Plumbing Services", desc: "From leaking taps to complete system repairs — premium central heating and plumbing services across Watford, Harrow and Hemel Hempstead, with same-day appointments available.", img: "/plumbing.jpg", buttonText: "Heating & Plumbing", buttonLink: "/heating-plumbing" },
+
+  { title: "Power Flushing Specialists", desc: "Cold radiators or a noisy boiler? Our power flush removes sludge, rust and debris from your heating system restoring heat output and extending your boiler's life.", img: "/power.jpg", buttonText: "Power Flushing", buttonLink: "/power-flushing" },
+
+  { title: "Megaflo Unvented Cylinder Installation", desc: "High-pressure hot water for busy homes. G3-qualified engineers supply and install Megaflo unvented cylinders  professional, certified and cost-effective.", img: "/megaflow-slide.jpg", buttonText: "Megaflo Installation", buttonLink: "/megaflo-installation" },
+
+  { title: "Hive Smart Thermostat Installation", desc: "Control your heating from your phone and cut energy bills. Gas Safe engineers install and configure Hive standalone or with your new boiler.", img: "/nestheat.jpg", buttonText: "Hive Thermostat Installation", buttonLink: "/hive-installation" },
+
+  { title: "Gas Appliance & General Installation", desc: " Gas cookers, hobs, washing machines and dishwashers installed safely and compliantly by qualified engineers alongside our boiler, heating and plumbing services.", img: "/slide2.jpg", buttonText: "Boiler Installation", buttonLink: "/boiler-installation" },
 ];
 
 export default function HeroSlider() {
@@ -34,13 +40,19 @@ export default function HeroSlider() {
       {/* 1. Dynamic Background Layer */}
       <div className="absolute inset-0 z-0">
         {SLIDES.map((slide, index) => (
-          <div 
-            key={index}
-            // Yahan opacity-500 ko fix karke opacity-100 kar diya hai
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === selectedIndex ? "opacity-100" : "opacity-0"}`} 
-          >
-            <Image src={slide.img} alt="Background" fill className="object-cover" priority />
-          </div>
+      <div 
+  key={index}
+  className={`absolute inset-0 transition-opacity duration-1000 ${index === selectedIndex ? "opacity-100" : "opacity-0"}`} 
+>
+  <Image 
+    src={slide.img} 
+    alt="Background" 
+    fill 
+    // Yahan -scale-x-100 ya scale-x-[-1] add karein
+    className="object-cover scale-x-[-1]" 
+    priority 
+  />
+</div>
         ))}
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-[1]" />

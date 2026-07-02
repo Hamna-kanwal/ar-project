@@ -5,17 +5,17 @@ export default function Strategy() {
   const features = [
     {
       title: "Our Strategy",
-      description: "Our Strategy is valuable, unique, and simple. We provide our clients with efficient, quick, and best quality heating services at affordable prices.",
-      icon: <Settings size={32} className="text-[#005f93]" />
+      description: " Fixed prices quoted upfront, quality parts, and workmanship guaranteed. Efficient, honest heating services at prices local families can afford.",
+       icon: <Settings size={32} className="text-[#005f93]" />
     },
     {
       title: "Our Priority",
-      description: "We have Gas Safe registered heating engineers, so our first priority is your satisfaction. All gas work carried out will be done by professionals.",
+      description: "Your safety and satisfaction. Every engineer is Gas Safe registered (No. 574111). Verify us on the official Gas Safe Register before we even arrive. All gas work is carried out by qualified professionals onl",
       icon: <ShieldCheck size={32} className="text-[#005f93]" />
     },
     {
       title: "Our Coverage",
-      description: "We are based in Watford and are strategically located to serve local areas in Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip, Northolt and Greater London.",
+      description: " Based in Watford and minutes from Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip, Northolt and Greater London, which is how we keep emergency response times to 60–90 minutes.",
       icon: <MapPin size={32} className="text-[#005f93]" />
     }
   ];

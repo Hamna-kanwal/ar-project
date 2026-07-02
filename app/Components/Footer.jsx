@@ -4,22 +4,22 @@ import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12 px-8">
+    <footer className="bg-[#027cc1] text-white py-12 px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Column 1: Logo & Contact */}
-        <div className="space-y-4">
+        <div className="flex flex-col items-start justify-start">
           <Image 
             src="/footer.png" 
             alt="AR Heating Logo" 
-            width={200} 
-            height={200} 
-            className="w-auto h-22" 
+            width={400} 
+            height={400} 
+            className="w-auto h-32"
           />
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed text-left">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
           </p>
-          <div className="space-y-3 text-sm">
+          <div className="space-y-3 text-sm text-left">
             <p className="flex items-center gap-2"><MdEmail className="text-lg" /> info@arheatingservice.co.uk</p>
             <p className="flex items-center gap-2"><MdSmartphone className="text-lg" /> +447800657141</p>
             <p className="flex items-start gap-2"><MdLocationOn className="text-xl mt-0.5" /> Unit 24 The Roundway Watford, WD18 6LB</p>
@@ -29,7 +29,7 @@ export default function Footer() {
         {/* Column 2: Our Services */}
         <div>
           <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Our Services</h3>
-          <ul className="space-y-2 text-sm cursor-pointer">
+          <ul className="space-y-5 text-sm cursor-pointer">
             <li className="hover:text-yellow-500 transition-colors">Boiler Installation</li>
             <li className="hover:text-yellow-500 transition-colors">Heating Installation</li>
             <li className="hover:text-yellow-500 transition-colors">Landlord Certificate</li>
@@ -66,14 +66,12 @@ export default function Footer() {
               <Image 
                 src="/gas-register.png" 
                 alt="Gas Safe" 
-                width={120} 
-                height={120} 
+                width={80} 
+                height={80} 
                 className="cursor-pointer bg-white p-1 rounded"
               />
             </Link>
-            <Link href="/sitemap" className="text-yellow-400 font-bold hover:underline">
-              Site Map
-            </Link>
+        
           </div>
         </div>
       </div>

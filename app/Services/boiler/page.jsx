@@ -39,25 +39,31 @@ export default function ServicesAndFAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/boiler.jpg')" }} 
-        />
-        <div className="absolute inset-0 bg-[#0056b3]/90" />
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
-            Boiler <span className="text-orange-400">Services</span> 
-          </h1>
-          <p className="text-lg md:text-xl text-blue-50 leading-relaxed font-medium">
-            Whatever the issue with your boiler, we can help. Our friendly and professional engineers 
-            can assist with all manner of repairs, including low boiler pressure, a leaking boiler, 
-            a boiler not igniting, a boiler making a banging noise, no hot water being produced, 
-            central heating not firing up and central heating leaks. We also offer servicing, 
-            making sure your boiler meets current safety regulations and is operating at full efficiency.
-          </p>
-        </div>
-      </section>
+   {/* Hero Section - Updated */}
+<section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+  {/* Background Image with Blur Effect */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center"
+    style={{ backgroundImage: "url('/boiler.jpg')" }} 
+  />
+  
+  {/* Glassmorphism/White Blur Overlay */}
+  <div className="absolute inset-0 bg-white/20 backdrop-blur-md" />
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-6 max-w-4xl">
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-gray-900">
+      Boiler <span className="text-orange-500">Services</span> 
+    </h1>
+    <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
+      Whatever the issue with your boiler, we can help. Our friendly and professional engineers 
+      can assist with all manner of repairs, including low boiler pressure, a leaking boiler, 
+      a boiler not igniting, a boiler making a banging noise, no hot water being produced, 
+      central heating not firing up and central heating leaks. We also offer servicing, 
+      making sure your boiler meets current safety regulations and is operating at full efficiency.
+    </p>
+  </div>
+</section>
 
       {/* Services Section */}
       <section className="py-20 bg-gray-50">

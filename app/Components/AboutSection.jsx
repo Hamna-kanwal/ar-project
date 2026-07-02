@@ -28,10 +28,17 @@ export  default function AboutSection() {
 
             <div className="space-y-4 text-[#2d4a4a]">
               <p>
-                AR Heating Services are your local and reliable expert plumbers and heating engineers in Harrow, Watford, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip, Northolt, HA1, HA3, HA2, HA5, HA7, HA0, HA9, WD1, WD2, WD3, WD4, WD5, WD6, WD7, WD17, WD18, WD19, WD23, WD24, WD25, AL1, AL2, AL3, AL4, AL5.
+                Gas Safe Heating Engineers in Watford, Harrow & Hemel Hempstead
+
               </p>
               <p>
-                We specialise in all types of gas services including boiler & heating repair, installation, and servicing. We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.
+               AR Heating Services is a Gas Safe registered (No. 574111) heating and plumbing company based at Unit 24, The Roundway, Watford, WD18 6LB. Since 2012, our local engineers have installed, repaired and serviced boilers for homeowners and landlords across Watford, Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip and Northolt.
+
+              </p>
+                <p>
+             We specialise in boiler installation, boiler repair, annual servicing, power flushing, Megaflo cylinders, smart thermostats and landlord gas safety certificates (CP12)  all at fixed, affordable prices agreed before work starts. No job is too big or too small. Need help urgently? Our 24-hour emergency call-out service aims to have an engineer at your door within 60–90 minutes, or at a time that suits you.
+
+
               </p>
             </div>
           </div>

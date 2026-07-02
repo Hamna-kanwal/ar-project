@@ -11,24 +11,24 @@ import {
 } from 'lucide-react';
 
 const SERVICES = [
-  { name: "Boiler Installation", desc: "We provide expert installation for all types of boilers, ensuring efficiency and safety for your home.", icon: <Wrench />, link: "/boiler-installation" },
-  { name: "Boiler Services", desc: "Annual maintenance checks to keep your heating system running safely and efficiently all year.", icon: <Settings />, link: "/boiler-services" },
-  { name: "Heating Installation", desc: "Premium central heating design and installation services tailored to your specific home requirements.", icon: <Flame />, link: "/heating-installation" },
-  { name: "Boiler Repair", desc: "Fast and reliable emergency response for all boiler breakdowns and heating system failures.", icon: <AlertTriangle />, link: "/repair" },
-  { name: "Central Heating", desc: "Comprehensive system design, installation, and fitting for optimal home comfort.", icon: <ThermometerSun />, link: "/central-heating" },
-  { name: "Underfloor Heating", desc: "Professional installation of efficient, comfortable, and modern floor heating solutions.", icon: <Home />, link: "/underfloor-heating" },
-  { name: "General Installation", desc: "Expert advice and installation for gas cookers and various heating system components.", icon: <Briefcase />, link: "/general-installation" },
-  { name: "Thermostat Install", desc: "Installation of modern smart thermostats for better energy management and control.", icon: <Thermometer />, link: "/thermostat" },
-  { name: "Landlord Certificate", desc: "Gas Safe registered engineer inspections and certification for rental properties.", icon: <ShieldCheck />, link: "/landlord-certificate" },
-  { name: "Emergency Services", desc: "Available 24/7 for emergency plumbing and heating disasters to keep your home safe.", icon: <Zap />, link: "/emergency" },
-  { name: "General Plumbing", desc: "Expert solutions for all plumbing repairs, from leaking pipes to major system issues.", icon: <Droplets />, link: "/plumbing" },
-  { name: "Power Flushing", desc: "Deep cleaning process to remove sludge and debris, improving your boiler's performance.", icon: <Filter />, link: "/power-flushing" },
-  { name: "Hive Thermostat", desc: "Advanced smart home climate control installation for your ultimate convenience.", icon: <Cpu />, link: "/hive-thermostat" },
-  { name: "Megaflo Cylinder", desc: "Professional and cost-effective installation of Megaflo unvented cylinder systems.", icon: <Anchor />, link: "/megaflo" },
-  { name: "Gas Cooker", desc: "Safe, compliant installation services for all types of gas cooking appliances.", icon: <Flame />, link: "/gas-cooker" },
-  { name: "Nest Thermostat", desc: "Intelligent learning thermostat installation to optimize your home heating habits.", icon: <Sparkles />, link: "/nest-thermostat" },
-  { name: "Washing Machine", desc: "Quick, secure, and professional connection for your laundry appliances.", icon: <Monitor />, link: "/washing-machine" },
-  { name: "Dishwasher Install", desc: "Reliable plumbing and connection services for your new kitchen dishwasher.", icon: <Disc />, link: "/dishwasher" },
+  { name: "Boiler Installation", desc: " A-rated combi, system and conventional boilers installed with manufacturer warranties up to 10 years.", icon: <Wrench />, link: "/boiler-installation" },
+  { name: "Boiler Services", desc: " Annual servicing that keeps your warranty valid, your bills lower and your family safe.", icon: <Settings />, link: "/boiler-services" },
+  { name: "Heating Installation", desc: "Complete central heating design and installation, tailored to your home and budget.", icon: <Flame />, link: "/heating-installation" },
+  { name: "Boiler Repair", desc: "Same day diagnosis and repair for all major boiler brands, error codes and breakdowns.", icon: <AlertTriangle />, link: "/repair" },
+  { name: "Central Heating", desc: "Radiators, pipework and controls designed, fitted and balanced for even, efficient warmth.", icon: <ThermometerSun />, link: "/central-heating" },
+  { name: "Underfloor Heating", desc: "Wet and electric underfloor heating installed for modern, energy-efficient comfort.", icon: <Home />, link: "/underfloor-heating" },
+  { name: "General Installation", desc: "Safe, certified installation of gas cookers, hobs and heating system components.", icon: <Briefcase />, link: "/general-installation" },
+  { name: "Thermostat Install", desc: "Smart and programmable thermostats fitted for better control and lower energy bills.", icon: <Thermometer />, link: "/thermostat" },
+  { name: "Landlord Certificate", desc: "CP12 gas safety inspections for rental properties, with same-day certificates issued.", icon: <ShieldCheck />, link: "/landlord-certificate" },
+  { name: "Emergency Services", desc: "24/7 emergency plumbers and heating engineers at your door in 60–90 minutes.", icon: <Zap />, link: "/emergency" },
+  { name: "General Plumbing", desc: "Leaks, taps, toilets, pipework and bathroom repairs fixed fast by local plumbers.", icon: <Droplets />, link: "/plumbing" },
+  { name: "Power Flushing", desc: "Deep system clean that removes sludge and rust to restore radiator and boiler performance", icon: <Filter />, link: "/power-flushing" },
+  { name: "Hive Thermostat", desc: "Hive smart heating installed and paired to your phone before we leave.", icon: <Cpu />, link: "/hive-thermostat" },
+  { name: "Megaflo Cylinder", desc: "G3-certified installation of Megaflo unvented cylinders for powerful mains-pressure hot water.", icon: <Anchor />, link: "/megaflo" },
+  { name: "Gas Cooker", desc: " Gas Safe installation and connection of all cooker and hob types, fully compliant.", icon: <Flame />, link: "/gas-cooker" },
+  { name: "Nest Thermostat", desc: "Google Nest learning thermostats are installed to cut heating costs automatically.", icon: <Sparkles />, link: "/nest-thermostat" },
+  { name: "Washing Machine", desc: "Quick, secure plumbing and connection for new washing machines.", icon: <Monitor />, link: "/washing-machine" },
+  { name: "Dishwasher Install", desc: "Reliable water supply, drainage and connection for your new dishwasher.", icon: <Disc />, link: "/dishwasher" },
 ];
 
 // ... (imports wahi rahengi)
@@ -44,7 +44,7 @@ export default function ServicesList() {
   return (
     <section className="py-20 relative overflow-hidden bg-white">
       <div className="max-w-[90rem] mx-auto px-16 relative">
-        <h1 className="text-5xl font-bold text-[#0056b3] mb-12">Our Expertise</h1>
+        <h1 className="text-5xl font-bold text-[#027cc1] mb-12">Our Expertise</h1>
         
         <div className="overflow-hidden" ref={emblaRef}>
           {/* gap-4 add kiya taake boxes ke beech space rahe */}
@@ -53,7 +53,7 @@ export default function ServicesList() {
               // flex-[0_0_20%] ka matlab 1 row mein 5 cards
               <Link href={item.link} key={index} className="flex-[0_0_20%] pl-4">
                 {/* h-72 se box chota ho gaya, p-6 padding kam kar di */}
-                <div className="bg-[#0056b3] p-4 rounded-2xl flex flex-col items-center justify-center text-white hover:bg-[#004494] transition-all cursor-pointer shadow-lg h-72 group">
+                <div className="bg-[#027cc1] p-4 rounded-2xl flex flex-col items-center justify-center text-white hover:bg-[#004494] transition-all cursor-pointer shadow-lg h-72 group">
                   <div className="mb-4 p-4 bg-white/10 rounded-xl text-white group-hover:scale-110 transition-transform">
                     {React.cloneElement(item.icon, { size: 30 })}
                   </div>

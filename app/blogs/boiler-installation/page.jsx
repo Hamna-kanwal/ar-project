@@ -9,7 +9,8 @@ export default function BoilerInstallationPage() {
         {/* Title Section */}
         <header className="mb-10 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#027cc1] mb-6 leading-tight">
-            Boiler Installation: The Complete Buyer’s Guide
+            Boiler Installation: 
+            <span className="text-orange-500"><br/>The Complete Buyer’s Guide</span>
           </h1>
           <div className="w-20 h-1.5 bg-[#027cc1] mx-auto rounded-full"></div>
         </header>
@@ -66,9 +67,7 @@ export default function BoilerInstallationPage() {
           <Link href="/" className="text-[#e77600] font-bold hover:underline flex items-center">
             ← Back to Home
           </Link>
-          <button className="bg-[#2d1b4e] text-white px-8 py-3 rounded-full font-bold hover:bg-[#3d2764] transition-colors">
-            Get a Free Quote
-          </button>
+          
         </div>
       </div>
     </article>

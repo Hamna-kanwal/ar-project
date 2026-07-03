@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from "next/link"; // 'Link' capital hona chahiye
+import Link from "next/link"; 
 
 const BlogCard = ({ title, excerpt, image, slug }) => (
   <div className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 mt-12">
@@ -22,9 +22,9 @@ const BlogCard = ({ title, excerpt, image, slug }) => (
       </p>
       
       <div className="text-center">
-        {/* Link component ka use */}
+        {/* Dynamic slug route */}
         <Link 
-          href={`/blog/${slug}`} 
+          href={`/blogs/${slug}`} 
           className="font-bold text-xs uppercase tracking-widest text-gray-800 hover:text-orange-700 transition-colors"
         >
           Read More →
@@ -35,6 +35,7 @@ const BlogCard = ({ title, excerpt, image, slug }) => (
 );
 
 const BlogGrid = () => {
+  // Yahan slug define hain
   const posts = [
     { slug: "boiler-installation", title: "Boiler Installation", excerpt: "Professional tips for choosing the right boiler for your home.", image: "/boiler.jpg" },
     { slug: "power-flushing", title: "Power Flushing", excerpt: "Keep your central heating system running efficiently like new.", image: "/power.jpg" },
@@ -42,15 +43,15 @@ const BlogGrid = () => {
   ];
 
   return (
-    <div className="bg-slate-100 py-20 ">
-      <div className="text-center">
-        <h2 className="text-4xl font-bold text-[#027cc1]  mb-2">Our Latest Insights</h2>
+    <div className="bg-slate-100 py-20 px-6">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-[#027cc1] mb-2">Our Latest Insights</h2>
         <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
       </div>
       
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {posts.map((post, index) => (
-          <BlogCard key={index} {...post} />
+        {posts.map((post) => (
+          <BlogCard key={post.slug} {...post} />
         ))}
       </div>
     </div>

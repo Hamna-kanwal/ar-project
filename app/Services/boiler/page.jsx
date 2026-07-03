@@ -38,29 +38,24 @@ export default function ServicesAndFAQ() {
 
   return (
     <>
-      {/* Hero Section */}
-   {/* Hero Section - Updated */}
-<section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-  {/* Background Image with Blur Effect */}
+ <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+  {/* The Image */}
   <div 
-    className="absolute inset-0 bg-cover bg-center"
+    className="absolute inset-0 bg-cover bg-center" 
     style={{ backgroundImage: "url('/boiler.jpg')" }} 
   />
   
-  {/* Glassmorphism/White Blur Overlay */}
-  <div className="absolute inset-0 bg-white/20 backdrop-blur-md" />
+  {/* The Subtle White Overlay (bg-white/60 gives a light wash) */}
+  <div className="absolute inset-0 bg-white/80" /> 
 
-  {/* Content */}
   <div className="relative z-10 text-center px-6 max-w-4xl">
-    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-gray-900">
-      Boiler <span className="text-orange-500">Services</span> 
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+      Boiler 
+
+      <span className="text-orange-500"> Services</span>
     </h1>
-    <p className="text-lg md:text-xl text-white leading-relaxed font-medium">
-      Whatever the issue with your boiler, we can help. Our friendly and professional engineers 
-      can assist with all manner of repairs, including low boiler pressure, a leaking boiler, 
-      a boiler not igniting, a boiler making a banging noise, no hot water being produced, 
-      central heating not firing up and central heating leaks. We also offer servicing, 
-      making sure your boiler meets current safety regulations and is operating at full efficiency.
+    <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
+      Whatever the issue with your boiler, we can help. Our friendly and professional engineers can assist with all manner of repairs, including low boiler pressure, a leaking boiler, a boiler not igniting, a boiler making a banging noise, no hot water being produced, central heating not firing up and central heating leaks. We also offer servicing, making sure your boiler meets current safety regulations and is operating at full efficiency
     </p>
   </div>
 </section>

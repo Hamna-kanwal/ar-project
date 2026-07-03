@@ -8,29 +8,23 @@ export default function WhyARHeatingPage() {
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
     {/* Hero Section */}
-<section className="relative py-24 text-center overflow-hidden">
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image 
-      src="/general_installation.jpg" // Apni image ka path dein
-      alt="Hero Background" 
-      fill 
-      className="object-cover" 
-    />
-  </div>
+<section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+  {/* The Image */}
+  <div 
+    className="absolute inset-0 bg-cover bg-center" 
+    style={{ backgroundImage: "url('/boiler.jpg')" }} 
+  />
+  
+  {/* The Subtle White Overlay (bg-white/60 gives a light wash) */}
+  <div className="absolute inset-0 bg-white/80" /> 
 
-  {/* White Blur Overlay */}
-  <div className="absolute inset-0 z-0 bg-white/20 backdrop-blur-md" />
-
-  {/* Content */}
-  <div className="relative z-10 max-w-5xl mx-auto px-6">
-    <h1 className="text-5xl font-extrabold mb-6 text-gray-900">Why AR-Heating</h1>
-    <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-      AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas. 
-      We specialise in all types of gas services including boiler & heating repair, installation, and servicing. 
-      We provide engineers who are always available, and we have a 24/7 Emergency Call out service.
-      <br /><br />
-      Whether you are looking to have major works or something small and simple to be repaired or installed, Harrow Boiler Heating Services can help.
+  <div className="relative z-10 text-center px-6 max-w-4xl">
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+      Why AR-Heating
+      
+    </h1>
+    <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
+      If your business wants to understand its energy or water costs more clearly, our experts can provide <span className="italic underline">independent review and guidance.</span>
     </p>
   </div>
 </section>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const faqs = [
   { q: "How much does a new boiler cost in Watford?", a: "A new combi boiler installation typically costs between £1,800 and £3,500, including installation and warranty, depending on brand and complexity. AR Heating Services gives free fixed-price quotes. Call 07800 657141 for an exact price for your home." },
-  { q: "How quickly can you attend an emergency? ", a: "How quickly can you attend an emergency? " },
+  { q: "How quickly can you attend an emergency? ", a: "Our engineers reach most addresses in Watford, Harrow, Hemel Hempstead and St. Albans within 60–90 minutes, 24 hours a day, 7 days a week. " },
   { q: "Are you Gas Safe registered?", a: "Yes, AR Heating Services is Gas Safe registered (No. 574111). You can verify our registration on the official Gas Safe Register via the badge in our footer." },
     { q: "How often should a boiler be serviced?", a: "Once every 12 months. Annual servicing keeps your manufacturer's warranty valid, maintains efficiency and checks for dangerous faults. Landlords must have gas appliances checked annually (CP12)." },
     { q: "Do I need a power flush? ", a: "If your radiators are cold at the bottom, slow to heat, or your boiler is noisy, sludge build-up is the likely cause. A power flush removes it and restores performance." },

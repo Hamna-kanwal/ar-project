@@ -7,10 +7,10 @@ export default function CTA() {
       position: 'relative', 
       width: '100%', 
       height: '400px',
-      marginBottom: '60px' // Yahan 100vh ki jagah fixed height dein
+      marginBottom: '60px'
     }}>
       <Image
-        src="/cta_section.jpg" // Filename mein space na rakhein (cta-section.jpg behtar hai)
+        src="/AR Cta.png" // Filename mein space na rakhein (cta-section.jpg behtar hai)
         alt="CTA section"
         fill
         style={{ objectFit: 'cover' }}

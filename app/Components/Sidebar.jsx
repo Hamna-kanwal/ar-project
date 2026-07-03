@@ -19,7 +19,7 @@ const navItems = [
   { label: "About Us", href: "/expertise" },
   { label: "Area We Cover", href: "/complaints-procedure" },
   { label: "Landlord Certificate", href: "/contact" },
-  { label: "Blogs", href: "/contact" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
 ];
 

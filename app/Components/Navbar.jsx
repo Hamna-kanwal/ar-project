@@ -9,7 +9,7 @@ export default function Navbar({ onOpenSidebar }) {
     <>
       {/* Top Contact Bar */}
       {/* Padding px-14 se badal kar px-12 kr di */}
-      <div className="relative z-50 bg-[#027cc1] text-white py-6 px-14 flex items-center justify-between text-xs border-b border-white/10">
+      <div className="relative  bg-[#027cc1] text-white py-6 px-14 flex items-center justify-between text-xs border-b border-white/10">
         <div className="flex items-center gap-6">
           <a href="mailto:info@arheatingservice.co.uk" className="flex items-center gap-2 hover:text-gray-200">
             <Mail size={22} /> info@arheatingservice.co.uk

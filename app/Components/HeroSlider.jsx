@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const SLIDES = [
-  { title: "Boiler Installation in Watford & Harrow", desc: "New A rated combi and system boilers from Worcester Bosch, Vaillant, Ideal and Baxi installed by Gas Safe engineers with warranties up to 10 years. Free fixed-price quotes.", img: "/heating_installation.jpg", buttonText: "Heating Installation", buttonLink: "/heating-installation" },
+  { title: "Boiler Installation in Watford & Harrow", desc: "New A rated combi and system boilers from Worcester Bosch, Vaillant, Ideal and Baxi installed by Gas Safe engineers with warranties up to [X] years. Free fixed-price quotes.", img: "/heating_installation.jpg", buttonText: "Heating Installation", buttonLink: "/heating-installation" },
   { title: "Gas Appliance & General Installation", desc: "Gas cookers, hobs, washing machines and dishwashers installed safely and compliantly by qualified engineers alongside our boiler, heating and plumbing services.", img: "/general_installation.jpg", buttonText: "General Installation", buttonLink: "/general-installation" },
   { title: "Heating & Plumbing Services", desc: "From leaking taps to complete system repairs  premium central heating and plumbing services across Watford, Harrow and Hemel Hempstead, with same day appointments available.", img: "/plumbing.jpg", buttonText: "Heating & Plumbing", buttonLink: "/heating-plumbing" },
   { title: "Power Flushing Specialists", desc: "Cold radiators or a noisy boiler? Our power flush removes sludge, rust and debris from your heating system restoring heat output and extending your boiler's life.", img: "/power.jpg", buttonText: "Power Flushing", buttonLink: "/power-flushing" },

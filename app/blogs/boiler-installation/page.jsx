@@ -8,9 +8,9 @@ export default function BoilerInstallationPage() {
         
         {/* Title Section */}
         <header className="mb-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#027cc1] mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-orange-600 mb-6 leading-tight">
             Boiler Installation: 
-            <span className="text-orange-500"><br/>The Complete Buyer’s Guide</span>
+            <span className="text-[#027cc1]"><br/>The Complete Buyer’s Guide</span>
           </h1>
           <div className="w-20 h-1.5 bg-[#027cc1] mx-auto rounded-full"></div>
         </header>

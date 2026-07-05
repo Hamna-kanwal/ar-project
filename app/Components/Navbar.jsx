@@ -26,16 +26,16 @@ export default function Navbar({ onOpenSidebar }) {
         </div>
       </div>
 
-      {/* Header / Logo and Menu */}
+    
       <header className="absolute top-6  left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
         <nav className="py-6 px-10 flex items-center justify-between">
-          <Link href="/" className="relative mt-5 w-[120px] h-[80px] block">
+          <Link href="/" className="relative mt-2 w-[120px] h-[40px] block">
           <Image 
   src="/ar-logo.png" 
   alt="Logo" 
-  width={500}       // Yahan width apni zaroorat ke mutabiq adjust karein
-  height={300}      // Yahan height set karein
+  width={200}       // Yahan width apni zaroorat ke mutabiq adjust karein
+  height={100}      // Yahan height set karein
   className="object-contain rounded-4xl" 
 />
           </Link>

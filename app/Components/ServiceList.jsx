@@ -50,7 +50,7 @@ export default function ServicesList() {
           {/* gap-4 add kiya taake boxes ke beech space rahe */}
           <div className="flex -ml-4">
             {SERVICES.map((item, index) => (
-              <Link href={item.link} key={index} className="pl-4 flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.333333%] lg:flex-[0_0_20%]">
+              <Link href={item.link} key={index} className="pl-4 flex-[0_0_100%] sm:flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333333%] xl:flex-[0_0_20%]">
                 <div className="bg-[#027cc1] p-4 rounded-2xl flex flex-col items-center justify-center text-white hover:bg-[#004494] transition-all cursor-pointer shadow-lg h-72 group">
                   <div className="mb-4 p-4 bg-white/10 rounded-xl text-white group-hover:scale-110 transition-transform">
                     {React.cloneElement(item.icon, { size: 30 })}

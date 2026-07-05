@@ -44,7 +44,7 @@ export default function Navbar({ onOpenSidebar }) {
 
           <button 
             onClick={onOpenSidebar} 
-            className="p-2 bg-[#027cc1] mt-10 hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all order border-white/20"
+            className="p-2 bg-[#027cc1] mt-9 hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all order border-white/20"
           >
             <Menu className="w-8 h-8 text-white" />
           </button>

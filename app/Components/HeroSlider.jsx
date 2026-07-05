@@ -65,7 +65,7 @@ export default function HeroSlider() {
                 <h1 className="text-2xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
                   {slide.title}
                 </h1>
-                <p className="text-gray-800 text-lg mb-8 max-w-xl mx-auto xl:mx-0 font-medium">
+                <p className="text-gray-800 text-lg mb-4 max-w-xl mx-auto xl:mx-0 font-medium">
                   {slide.desc}
                 </p>
                 <Link 

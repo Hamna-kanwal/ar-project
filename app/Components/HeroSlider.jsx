@@ -61,8 +61,8 @@ export default function HeroSlider() {
         <div className="flex">
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
-              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-8 md:p-10 text-center xl:text-left shadow-lg">
-                <h1 className="text-3xl md:text-3xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
+              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-10 md:p-10 text-center xl:text-left shadow-lg">
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
                   {slide.title}
                 </h1>
                 <p className="text-gray-800 text-lg mb-8 max-w-xl mx-auto xl:mx-0 font-medium">

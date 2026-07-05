@@ -35,7 +35,7 @@ export default function HeroSlider() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative overflow-hidden bg-white min-h-[60vh] w-full">
+    <section className="relative overflow-hidden bg-white min-h-[80vh] w-full">
       {/* 1. Dynamic Background Layer */}
       <div className="absolute inset-0 z-0">
         {SLIDES.map((slide, index) => (
@@ -56,12 +56,12 @@ export default function HeroSlider() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-[1]" />
       </div>
 
-      {/* 2. Carousel Layer */}
-      <div className="relative z-10 pt-16 lg:pt-24 mb-16" ref={emblaRef}>
-        <div className="flex">
+ <div className="relative z-10 w-full min-h-[80vh] flex items-center" ref={emblaRef}>
+        <div className="flex w-full">
           {SLIDES.map((slide, index) => (
-            <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
-              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-10 md:p-10 text-center xl:text-left shadow-lg">
+            <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 py-3">
+              {/* Box container */}
+              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-10 md:p-8 text-center xl:text-left shadow-lg">
                 <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 tracking-tight">
                   {slide.title}
                 </h1>

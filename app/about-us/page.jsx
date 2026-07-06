@@ -5,16 +5,18 @@ export default function AboutUs() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section - White/Blue professional theme */}
-      <section className="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=2000" 
-          className="absolute inset-0 w-full h-full object-cover" 
-          alt="About Us Background" 
-        />
-        <div className="absolute inset-0 bg-[#027cc1]/80" /> 
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-2">About Us</h1>
-          <p className="text-lg opacity-90">Reliable Heating & Plumbing Experts in Harrow</p>
+            <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.jpg')" }} />
+        <div className="absolute inset-0 bg-white/80" /> 
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+            Contact <span className="text-orange-500"> Us</span>
+          </h1>
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
+           Reliable Heating & Plumbing Experts in Harrow
+
+
+          </p>
         </div>
       </section>
 

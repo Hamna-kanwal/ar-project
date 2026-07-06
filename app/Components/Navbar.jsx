@@ -29,9 +29,9 @@ export default function Navbar({ onOpenSidebar }) {
 </div>
 
     
-      <header className="absolute top-6  left-0 w-full z-50 bg-transparent">
+      <header className="absolute top-10  left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
-        <nav className="py-6 px-8 flex items-center justify-between mt-2 md:mt-0">
+        <nav className="py-6 px-8 flex items-center justify-between mt-6 md:mt-0">
           <Link href="/" className="relative block">
           <Image 
   src="/ar-logo.png" 

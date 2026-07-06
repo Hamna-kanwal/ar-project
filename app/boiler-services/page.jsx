@@ -21,8 +21,8 @@ const serviceData = {
         ]
       },
         { 
-        subtitle: "Boiler Replacement", 
-        text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
+        subtitle: "New boiler installation options", 
+        text: "Getting a new boiler is a decision that will affect your life for many years to come, that’s why we recommend an A-rated boiler, that is more efficient and cost-effective that will save a lot of trouble in the long run.Listed below are boiler main types you can choose from:Combi boilers are suitable for smaller properties that don’t have additional water tank or need hot water all the time. Combi boilers can be fired by a different type of fuel or electricity.", 
         img: "/heating_installation.jpg",
         listItems: [
           "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
@@ -32,8 +32,8 @@ const serviceData = {
         ]
       },
         { 
-        subtitle: "Boiler Replacement", 
-        text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
+        subtitle: "New boiler installation options", 
+        text: "Regular boilers This type of boiler is perfect for homes with hot water running same time in more than one room. This type will need a hot and cold water storage tank in your loft.System boilers Used in a house with more than one bathroom, they are easier to install and do not require additional space. You provide supply as many hot taps without any limits in number of taps.", 
         img: "/heating_installation.jpg",
         listItems: [
           "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
@@ -82,16 +82,31 @@ function ServicesContent() {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center transition-all duration-500" style={{ backgroundImage: `url('${serviceData[activeTab].heroImg}')` }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/80" /> 
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">{serviceData[activeTab].title}</h1>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">{serviceData[activeTab].desc}</p>
-        </div>
-      </section>
+     {/* Hero Section */}
+<section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+  <div className="absolute inset-0 bg-cover bg-center transition-all duration-500" style={{ backgroundImage: `url('${serviceData[activeTab].heroImg}')` }} />
+  <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/80" /> 
+  <div className="relative z-10 text-center px-6 max-w-4xl">
+    
+    {/* Dynamic Title with Split Coloring */}
+    <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+      {serviceData[activeTab].title.split(' ').length > 1 ? (
+        <>
+          {serviceData[activeTab].title.split(' ').slice(0, -1).join(' ')}{' '}
+          <span className="text-orange-600">
+            {serviceData[activeTab].title.split(' ').slice(-1)}
+          </span>
+        </>
+      ) : (
+        serviceData[activeTab].title
+      )}
+    </h1>
 
-      <div className="sticky top-0 z-40 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100">
+    <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">{serviceData[activeTab].desc}</p>
+  </div>
+</section>
+
+      <div className=" top-0 z-40 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto flex justify-center gap-2 overflow-x-auto px-4">
           {Object.keys(serviceData).map((slug) => (
             <button key={slug} onClick={() => handleTabChange(slug)} className={`px-6 py-2.5 rounded-full font-semibold transition-all whitespace-nowrap border ${activeTab === slug ? "bg-[#027cc1] border-[#027cc1] text-white shadow-lg" : "bg-white border-gray-200 text-gray-600 hover:border-[#027cc1] hover:text-[#027cc1]"}`}>
@@ -120,9 +135,6 @@ function ServicesContent() {
                   </ul>
                 )}
 
-                <div className="flex items-center gap-2 text-[#027cc1] font-semibold">
-                  <CheckCircle2 size={20} /> Professional & Certified Service
-                </div>
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-xl">

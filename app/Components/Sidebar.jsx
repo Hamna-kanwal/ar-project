@@ -16,7 +16,7 @@ const navItems = [
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },
-  { label: "About Us", href: "/expertise" },
+  { label: "About Us", href: "/about-us" },
   { label: "Area We Cover", href: "/complaints-procedure" },
   { label: "Landlord Certificate", href: "/contact" },
   { label: "Blogs", href: "/blogs" },

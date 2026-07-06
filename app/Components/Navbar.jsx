@@ -28,6 +28,7 @@ export default function Navbar({ onOpenSidebar }) {
   </div>
 </div>
 
+
     
       <header className="absolute top-6  left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}

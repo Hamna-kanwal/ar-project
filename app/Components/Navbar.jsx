@@ -29,7 +29,7 @@ export default function Navbar({ onOpenSidebar }) {
 </div>
 
     
-<header className="absolute top-4 left-0 w-full z-50 bg-transparent">
+<header className="absolute mt-6 top-4 left-0 w-full z-50 bg-transparent">
   {/* py-6 aur mt-2 hata diya gaya hai */}
   <nav className="px-10 flex items-center justify-between">
     <Link href="/" className="relative w-[120px] h-[40px] block">

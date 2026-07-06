@@ -32,19 +32,19 @@ export default function Navbar({ onOpenSidebar }) {
       <header className="absolute top-6  left-0 w-full z-50 bg-transparent">
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
         <nav className="py-6 px-8 flex items-center justify-between mt-2 md:mt-0">
-          <Link href="/" className="relative  w-[120px] h-[75px] block">
+          <Link href="/" className="relative block">
           <Image 
   src="/ar-logo.png" 
   alt="Logo" 
-  width={200}       // Yahan width apni zaroorat ke mutabiq adjust karein
-  height={100}      // Yahan height set karein
+  width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
+  height={200}      // Yahan height set karein
   className="object-contain rounded-4xl" 
 />
           </Link>
 
           <button 
             onClick={onOpenSidebar} 
-            className="p-2 bg-[#027cc1] mt-12 hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all order border-white/20"
+            className="p-2 bg-[#027cc1] hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all order border-white/20"
           >
             <Menu className="w-8 h-8 text-white" />
           </button>

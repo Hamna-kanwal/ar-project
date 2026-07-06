@@ -75,12 +75,14 @@ export default function ServicesAndFAQ() {
                       <li key={idx} className="flex items-center gap-2 text-sm">✓ {item}</li>
                     ))}
                   </ul>
-                 <Link 
-  href={`/${s.slug}`} 
-  className="inline-block border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition"
->
-  View More →
-</Link>
+                  
+                  {/* UPDATE: Yeh link ab direct page ke bajaye query param (?tab=...) ke sath single page par le kar jayega */}
+                  <Link 
+                    href={`/boiler-services?tab=${s.slug}`} 
+                    className="inline-block border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition"
+                  >
+                    View More →
+                  </Link>
                 </div>
               </div>
             ))}

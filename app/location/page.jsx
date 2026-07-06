@@ -17,7 +17,7 @@ export default function AreasWeCover() {
           className="absolute inset-0 w-full h-full object-cover" 
           alt="Areas We Cover Background" 
         />
-        <div className="absolute inset-0 bg-[#027cc1]/85" /> {/* Blue Overlay */}
+        <div className="absolute inset-0 bg-[#027cc1]/40" /> {/* Blue Overlay */}
         
         <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-5xl font-bold mb-2">Areas We Cover</h1>

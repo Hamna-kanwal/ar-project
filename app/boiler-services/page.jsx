@@ -1,16 +1,48 @@
 "use client";
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Wrench, Settings, Home, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const serviceData = {
   "boiler-installation": {
     title: "Boiler Installation",
-    desc: "Our Gas Safe engineers specialise in fitting world-class eco-efficient boilers tailored to your home's needs.",
+    desc: "It is our priority to gain the trust of our customers and ensure satisfaction with our services provided. Our engineers are Gas Safe qualified and accredited by most of the boiler manufacturers. Our engineers will come fully prepared with all the right tools and skills to install both electric and gas boilers. In addition, you can also benefit from up to 10 years of manufacturer’s guarantee.",
     heroImg: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=2000",
     sections: [
-      { subtitle: "Boiler Replacement", text: "Old boilers become inefficient and costly. We provide modern, A-rated replacements that significantly lower your energy bills.", img: "https://images.unsplash.com/photo-1621905251189-08b45d6a265e?q=80&w=800" },
-      { subtitle: "Top-Tier Brands", text: "We install industry-leading brands including Vaillant, Worcester Bosch, Baxi, and Viessmann for maximum reliability.", img: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=800" }
+      { 
+        subtitle: "Boiler Replacement", 
+        text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
+        img: "/heating_installation.jpg",
+        listItems: [
+          "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
+          "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",
+          "Your current boiler has poor energy efficiency, leading to expensive gas bills and replacement boiler is the best option.",
+          "If your boiler leaks causing expensive call outs, then a replacement boiler will be the best option."
+        ]
+      },
+        { 
+        subtitle: "Boiler Replacement", 
+        text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
+        img: "/heating_installation.jpg",
+        listItems: [
+          "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
+          "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",
+          "Your current boiler has poor energy efficiency, leading to expensive gas bills and replacement boiler is the best option.",
+          "If your boiler leaks causing expensive call outs, then a replacement boiler will be the best option."
+        ]
+      },
+        { 
+        subtitle: "Boiler Replacement", 
+        text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
+        img: "/heating_installation.jpg",
+        listItems: [
+          "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
+          "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",
+          "Your current boiler has poor energy efficiency, leading to expensive gas bills and replacement boiler is the best option.",
+          "If your boiler leaks causing expensive call outs, then a replacement boiler will be the best option."
+        ]
+      },
+     
     ]
   },
   "boiler-repairs": {
@@ -50,67 +82,69 @@ function ServicesContent() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-all duration-500" 
-          style={{ backgroundImage: `url('${serviceData[activeTab].heroImg}')` }} 
-        />
+        <div className="absolute inset-0 bg-cover bg-center transition-all duration-500" style={{ backgroundImage: `url('${serviceData[activeTab].heroImg}')` }} />
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/80" /> 
-        
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
-            {serviceData[activeTab].title}
-          </h1>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
-            {serviceData[activeTab].desc}
-          </p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">{serviceData[activeTab].title}</h1>
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">{serviceData[activeTab].desc}</p>
         </div>
       </section>
 
-      {/* Sticky Tabs */}
       <div className="sticky top-0 z-40 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto flex justify-center gap-2 overflow-x-auto px-4">
           {Object.keys(serviceData).map((slug) => (
-            <button
-              key={slug}
-              onClick={() => handleTabChange(slug)}
-              className={`px-6 py-2.5 rounded-full font-semibold transition-all whitespace-nowrap border ${
-                activeTab === slug 
-                  ? "bg-[#027cc1] border-[#027cc1] text-white shadow-lg" 
-                  : "bg-white border-gray-200 text-gray-600 hover:border-[#027cc1] hover:text-[#027cc1]"
-              }`}
-            >
+            <button key={slug} onClick={() => handleTabChange(slug)} className={`px-6 py-2.5 rounded-full font-semibold transition-all whitespace-nowrap border ${activeTab === slug ? "bg-[#027cc1] border-[#027cc1] text-white shadow-lg" : "bg-white border-gray-200 text-gray-600 hover:border-[#027cc1] hover:text-[#027cc1]"}`}>
               {serviceData[slug].title}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Content Sections */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
-        <div className="space-y-16">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="space-y-20">
           {serviceData[activeTab].sections.map((section, idx) => (
-            <div key={idx} className="grid md:grid-cols-2 gap-12 items-center bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
-              <div className={idx % 2 !== 0 ? "md:order-2" : ""}>
-                <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle2 className="text-orange-500" />
-                  <h2 className="text-2xl font-bold text-gray-900">{section.subtitle}</h2>
+            <div key={idx} className="grid md:grid-cols-2 gap-12 items-start">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">{section.subtitle}</h2>
+                <p className="text-gray-600 text-lg mb-8 leading-relaxed">{section.text}</p>
+                
+                {section.listItems && (
+                  <ul className="space-y-4 mb-8">
+                    {section.listItems.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-gray-700">
+                        <CheckCircle2 className="text-orange-500 shrink-0 mt-1" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div className="flex items-center gap-2 text-[#027cc1] font-semibold">
+                  <CheckCircle2 size={20} /> Professional & Certified Service
                 </div>
-                <p className="text-gray-600 leading-relaxed text-lg">{section.text}</p>
               </div>
-              <div className={`relative h-64 w-full rounded-2xl overflow-hidden shadow-md ${idx % 2 !== 0 ? "md:order-1" : ""}`}>
-                <img src={section.img} alt={section.subtitle} className="w-full h-full object-cover" />
+
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img src={section.img} alt={section.subtitle} className="w-full h-80 object-cover" />
+                <div className="absolute bottom-0 left-0 bg-[#027cc1] p-6 text-white w-full md:w-3/4 rounded-tr-3xl">
+                  <div className="space-y-1 text-sm font-medium">
+                    <p>📞 +447800657141</p>
+                    <p>🌐 www.arheatingservice.co.uk</p>
+                    <p>✉️ info@arheatingservice.co.uk</p>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="w-8 h-8" />
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* CTA Section */}
       <section className="bg-gray-900 py-20 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to book your service?</h2>
-        <p className="text-gray-400 mb-8 max-w-lg mx-auto">Get a free no-obligation quote from our professional engineers today.</p>
         <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105">
           Call Now: 0800 XXX XXX
         </button>

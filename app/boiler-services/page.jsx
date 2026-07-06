@@ -155,12 +155,7 @@ function ServicesContent() {
         </div>
       </div>
 
-      <section className="bg-gray-900 py-20 text-center text-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to book your service?</h2>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105">
-          Call Now: 0800 XXX XXX
-        </button>
-      </section>
+   
     </div>
   );
 }

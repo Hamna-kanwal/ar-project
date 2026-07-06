@@ -20,7 +20,9 @@ export default function AreasWeCover() {
         <div className="absolute inset-0 bg-[#027cc1]/40" /> {/* Blue Overlay */}
         
         <div className="relative z-10 text-center text-white px-6">
-          <h1 className="text-5xl font-bold mb-2">Areas We Cover</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+            Area We <span className="text-orange-500">Cover</span>
+          </h1>
           <p className="text-lg opacity-90">Professional heating and plumbing services in your neighborhood.</p>
         </div>
       </section>

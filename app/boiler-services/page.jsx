@@ -2,13 +2,11 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Wrench, Settings, Home, CheckCircle2 } from 'lucide-react';
-import NextImage from 'next/image';
 
 const serviceData = {
   "boiler-installation": {
     title: "Boiler Installation",
     desc: "Our Gas Safe engineers specialise in fitting world-class eco-efficient boilers tailored to your home's needs.",
-    icon: <Wrench size={32} />,
     heroImg: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=2000",
     sections: [
       { subtitle: "Boiler Replacement", text: "Old boilers become inefficient and costly. We provide modern, A-rated replacements that significantly lower your energy bills.", img: "https://images.unsplash.com/photo-1621905251189-08b45d6a265e?q=80&w=800" },
@@ -18,7 +16,6 @@ const serviceData = {
   "boiler-repairs": {
     title: "Boiler Repairs",
     desc: "Sudden breakdown? Our expert engineers provide rapid, reliable solutions to get your heating back on track.",
-    icon: <Settings size={32} />,
     heroImg: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2000",
     sections: [
       { subtitle: "Expert Diagnosis", text: "We use advanced diagnostic tools to pinpoint the root cause of the breakdown, ensuring we fix the problem, not just the symptom.", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800" },
@@ -28,7 +25,6 @@ const serviceData = {
   "boiler-servicing": {
     title: "Boiler Servicing",
     desc: "Maintain your boiler's health and efficiency with our comprehensive annual service checks.",
-    icon: <Home size={32} />,
     heroImg: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?q=80&w=2000",
     sections: [
       { subtitle: "Full Safety Inspection", text: "We test pressure, ventilation, and flue integrity to ensure your appliance meets all current UK safety regulations.", img: "https://images.unsplash.com/photo-1621905252507-b35496cc04f4?q=80&w=800" },
@@ -55,25 +51,25 @@ function ServicesContent() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center" 
+          className="absolute inset-0 bg-cover bg-center transition-all duration-500" 
           style={{ backgroundImage: `url('${serviceData[activeTab].heroImg}')` }} 
         />
-        <div className="absolute inset-0" /> 
-        <div className="relative z-10 text-center px-6 max-w-4xl pt-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/50 to-white/80" /> 
+        
+        <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
             {serviceData[activeTab].title}
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
             {serviceData[activeTab].desc}
           </p>
         </div>
       </section>
 
       {/* Sticky Tabs */}
-   {/* Sticky Tabs - Border hata diya gaya hai */}
-      <div className="sticky top-0 z-40 py-4">
+      <div className="sticky top-0 z-40 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-4xl mx-auto flex justify-center gap-2 overflow-x-auto px-4">
           {Object.keys(serviceData).map((slug) => (
             <button
@@ -91,7 +87,7 @@ function ServicesContent() {
         </div>
       </div>
 
-      {/* Dynamic Content Sections */}
+      {/* Content Sections */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="space-y-16">
           {serviceData[activeTab].sections.map((section, idx) => (
@@ -104,12 +100,7 @@ function ServicesContent() {
                 <p className="text-gray-600 leading-relaxed text-lg">{section.text}</p>
               </div>
               <div className={`relative h-64 w-full rounded-2xl overflow-hidden shadow-md ${idx % 2 !== 0 ? "md:order-1" : ""}`}>
-                {/* Note: Next.js mein external images ke liye next.config.js mein 'images.remotePatterns' set karna hoga */}
-                <img 
-                  src={section.img} 
-                  alt={section.subtitle} 
-                  className="w-full h-full object-cover" 
-                />
+                <img src={section.img} alt={section.subtitle} className="w-full h-full object-cover" />
               </div>
             </div>
           ))}

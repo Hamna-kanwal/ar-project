@@ -61,20 +61,24 @@ export default function HeroSlider() {
         <div className="flex">
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
-              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-2 md:p-10 text-center xl:text-left shadow-lg">
-                <h1 className="text-2xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
-                  {slide.title}
-                </h1>
-                <p className="text-gray-800 text-lg mb-4 max-w-xl mx-auto xl:mx-0 font-medium">
-                  {slide.desc}
-                </p>
-                <Link 
-                  href={slide.buttonLink} 
-                  className="inline-flex items-center px-8 py-4 bg-[#027cc1] hover:bg-[#0266a1] text-white font-semibold rounded-full transition-all active:scale-95 shadow-md"
-                >
-                  {slide.buttonText} <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
+           {/* p-6 (mobile) aur md:p-8 (desktop) padding set kar di */}
+<div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-3xl p-6 md:p-8 text-center xl:text-left shadow-lg">
+  <h1 className="text-xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+    {slide.title}
+  </h1>
+  
+  {/* Description ki bhi padding (mb-4) thori kam kar di */}
+  <p className="text-gray-800 text-lg mb-6 max-w-xl mx-auto xl:mx-0 font-medium">
+    {slide.desc}
+  </p>
+  
+  <Link 
+    href={slide.buttonLink} 
+    className="inline-flex items-center px-6 py-3 bg-[#027cc1] hover:bg-[#0266a1] text-white font-semibold rounded-full transition-all active:scale-95 shadow-md"
+  >
+    {slide.buttonText} <ArrowRight className="ml-2 w-4 h-4" />
+  </Link>
+</div>
             </div>
           ))}
         </div>

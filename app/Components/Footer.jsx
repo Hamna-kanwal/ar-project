@@ -1,85 +1,55 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
+import Link from "next/link";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12 px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[#007cc1] text-white pt-12 pb-6">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
         
-        {/* Column 1: Logo & Contact */}
-        <div className="flex flex-col items-start justify-start">
-          <Image 
-            src="/footer.png" 
-            alt="AR Heating Logo" 
-            width={400} 
-            height={400} 
-            className="w-auto h-32"
-          />
-          <p className="text-sm leading-relaxed text-left">
-            Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
+        {/* Brand Column */}
+        <div className="space-y-4">
+          <Image src="/logo.png" alt="AR Heating" width={120} height={40} />
+          <p className="text-sm text-blue-50 leading-relaxed opacity-90">
+            Empowering UK homes with reliable, Gas Safe certified heating and plumbing solutions.
           </p>
-          <div className="space-y-3 text-sm text-left">
-            <p className="flex items-center gap-2"><MdEmail className="text-lg" /> info@arheatingservice.co.uk</p>
-            <p className="flex items-center gap-2"><MdSmartphone className="text-lg" /> +447800657141</p>
-            <p className="flex items-start gap-2"><MdLocationOn className="text-xl mt-0.5" /> Unit 24 The Roundway Watford, WD18 6LB</p>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center gap-2"><Mail size={16} /> info@arheatingservice.co.uk</div>
+            <div className="flex items-center gap-2"><Phone size={16} /> +447800657141</div>
+            <div className="flex items-start gap-2"><MapPin size={16} /> Unit 24 The Roundway, Watford, WD18 6LB</div>
           </div>
         </div>
 
-        {/* Column 2: Our Services */}
-        <div>
-          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Our Services</h3>
-          <ul className="space-y-5 text-sm cursor-pointer">
-            <li className="hover:text-yellow-500 transition-colors">Boiler Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Heating Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Landlord Certificate</li>
-            <li className="hover:text-yellow-500 transition-colors">Dishwasher Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Power Flushing</li>
-          </ul>
-        </div>
-
-        {/* Column 3: Quick Links */}
-        <div>
-          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Quick Links</h3>
-          <ul className="space-y-2 text-sm cursor-pointer">
-            <li className="hover:text-yellow-500 transition-colors">Why AR-Heating</li>
-            <li className="hover:text-yellow-500 transition-colors">About Us</li>
-            <li className="hover:text-yellow-500 transition-colors">Area We Cover</li>
-            <li className="hover:text-yellow-500 transition-colors">Blogs</li>
-          </ul>
-        </div>
-
-        {/* Column 4: Support & Badge */}
-        <div className="flex flex-col gap-6">
-          <div>
-            <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Support</h3>
-            <ul className="space-y-2 text-sm cursor-pointer">
-              <li className="hover:text-yellow-500 transition-colors">FAQ</li>
-              <li className="hover:text-yellow-500 transition-colors">Privacy Policy</li>
-              <li className="hover:text-yellow-500 transition-colors">Terms & Conditions</li>
-              <li className="hover:text-yellow-500 transition-colors">Contact Us</li>
+        {/* Links Columns - Compact Style */}
+        {[
+          { title: "Services", links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher", "Power Flushing"] },
+          { title: "Quick Links", links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] },
+          { title: "Support", links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] }
+        ].map((section) => (
+          <div key={section.title}>
+            <h4 className="font-bold text-lg mb-4 border-l-4 border-orange-400 pl-3 uppercase tracking-wider text-sm">
+              {section.title}
+            </h4>
+            <ul className="space-y-2">
+              {section.links.map((link) => (
+                <li key={link}>
+                  <Link href="#" className="text-blue-50 hover:text-orange-300 transition-colors text-sm font-medium">
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-
-          <div className="flex flex-col items-start gap-2">
-            <Link href="https://www.gassaferegister.co.uk/find-an-engineer/check-a-business/?id=z6Bj0%2b9BiC3wfVafaxt2%2bA%3d%3d&st=registration" target="_blank" rel="noopener noreferrer">
-              <Image 
-                src="/gas-register.png" 
-                alt="Gas Safe" 
-                width={80} 
-                height={80} 
-                className="cursor-pointer bg-white p-1 rounded"
-              />
-            </Link>
-        
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between text-xs text-gray-300 gap-4">
-        <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
-        <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
+      <div className="max-w-7xl mx-auto px-6 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs opacity-70">
+        <p>© 2026 AR HEATING. ALL RIGHTS RESERVED.</p>
+        <div className="flex gap-6 mt-4 md:mt-0">
+          <Link href="#">Modern Slavery Statement</Link>
+          <p>POWERED BY TEQNOOR</p>
+        </div>
       </div>
     </footer>
   );

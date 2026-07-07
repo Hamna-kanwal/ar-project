@@ -8,36 +8,48 @@ export default function Navbar({ onOpenSidebar }) {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-[#027cc1] text-white py-2 px-4 md:px-14 flex flex-wrap items-center justify-center md:justify-between gap-y-2 text-[10px] md:text-xs">
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-          <a href="mailto:info@arheatingservice.co.uk" className="flex items-center gap-2 hover:text-gray-200">
-            <Mail size={14} /> info@arheatingservice.co.uk
-          </a>
-          <a href="tel:+447800657141" className="flex items-center gap-2 hover:text-gray-200">
-            <Phone size={14} /> +447800657141
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <a href="#"><FaFacebook size={16} /></a>
-          <a href="#"><FaInstagram size={16} /></a>
-        </div>
-      </div>
+      {/* Padding px-14 se badal kar px-12 kr di */}
+     <div className="bg-[#027cc1] text-white py-4 px-4 md:px-14 flex flex-wrap items-center justify-center md:justify-between gap-y-3 text-[11px] md:text-xs border-b border-white/10">
+  
+  {/* Left Section - Contact Info */}
+  <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+    <a href="mailto:info@arheatingservice.co.uk" className="flex items-center gap-2 hover:text-gray-200">
+      <Mail size={16} /> info@arheatingservice.co.uk
+    </a>
+    <a href="tel:+447800657141" className="flex items-center gap-2 hover:text-gray-200">
+      <Phone size={16} /> +447800657141
+    </a>
+  </div>
 
-      {/* Main Navbar */}
-     {/* Main Navbar */}
-<header className="sticky top-0 w-full z-50 bg-transparent"> 
-  <nav className="max-w-7xl mx-auto py-4 px-4 md:px-12 flex items-center justify-between">
-    <Link href="/">
-      <Image src="/ar-logo.png" alt="Logo" width={100} height={40} className="object-contain" />
-    </Link>
-    <button 
-      onClick={onOpenSidebar} 
-      className="p-2 bg-[#027cc1] rounded-lg text-white hover:bg-[#0266a1] transition-all"
-    >
-      <Menu className="w-6 h-6" />
-    </button>
-  </nav>
-</header>
+  {/* Right Section - Social Media */}
+  <div className="flex items-center gap-4">
+    <a href="#" className="hover:text-gray-200"><FaFacebook size={18} /></a>
+    <a href="#" className="hover:text-gray-200"><FaInstagram size={18} /></a>
+  </div>
+</div>
+
+    
+      <header className="absolute top-10  left-0 w-full z-50 bg-transparent">
+        {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
+        <nav className="py-6 px-8 flex items-center justify-between mt-6 md:mt-0">
+          <Link href="/" className="relative block">
+          <Image 
+  src="/ar-logo.png" 
+  alt="Logo" 
+  width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
+  height={200}      // Yahan height set karein
+  className="object-contain rounded-4xl" 
+/>
+          </Link>
+
+          <button 
+            onClick={onOpenSidebar} 
+            className="p-2 bg-[#027cc1] hover:bg-[#027cc1] backdrop-blur-sm rounded-[8px] transition-all order border-white/20"
+          >
+            <Menu className="w-8 h-8 text-white" />
+          </button>
+        </nav>
+      </header>
     </>
   );
 }

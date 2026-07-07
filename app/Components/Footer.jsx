@@ -4,7 +4,7 @@ import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12 px-4 sm:px-6 lg:px-20 xl:px-20">
+    <footer className="bg-[#027cc1] text-white py-12 px-4 sm:px-6 lg:px-32 xl:px-20">
       
       {/* Grid container */}
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12">

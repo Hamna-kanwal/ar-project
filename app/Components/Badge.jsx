@@ -13,30 +13,38 @@ export default function TrustSection() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#f97316] rounded-full mix-blend-multiply filter blur-[128px] opacity-20" />
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         
         {/* Left Side: Certificate Card */}
-        <div className="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl relative border-b-8 border-[#f97316]">
-          {/* Badge Image */}
-        
-
-          <div className="flex flex-col items-center text-center">
-          
-              <Image 
-                src="/gas-register.png" 
-                alt="Gas Safe" 
-                width={100} 
-                height={100} 
-                className="cursor-pointer bg-white p-1 shadow-lg"
-              />
-            
-            <h3 className="text-2xl font-bold mb-2">Gas Safe Registered</h3>
-            <p className="text-gray-600 italic mb-6">"Official Registration No. 574111"</p>
-            <Link href="https://www.gassaferegister.co.uk/find-an-engineer/check-a-business/?id=z6Bj0%2b9BiC3wfVafaxt2%2bA%3d%3d&st=registration" target="_blank" rel="noopener noreferrer" className="text-[#f97316] font-bold hover:underline flex items-center gap-1">
-              Verify Registration ↗
-            </Link>
-          </div>
-        </div>
+        {/* Left Side: Certificate Card */}
+<div className="bg-white text-gray-900 rounded-3xl p-4 shadow-2xl relative border-b-8 border-[#f97316]">
+  
+  <div className="flex flex-col items-center text-center space-y-4">
+    
+    <Image 
+      src="/gas-register.png" 
+      alt="Gas Safe" 
+      width={90} 
+      height={90} 
+      className="cursor-pointer bg-white p-1 shadow-lg"
+    />
+    
+    <div className="space-y-1">
+      <h3 className="text-2xl font-bold">Gas Safe Registered</h3>
+      <p className="text-gray-600 italic">"Official Registration No. 574111"</p>
+    </div>
+    
+    <Link 
+      href="https://www.gassaferegister.co.uk/find-an-engineer/check-a-business/?id=z6Bj0%2b9BiC3wfVafaxt2%2bA%3d%3d&st=registration" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-[#f97316] font-bold hover:underline flex items-center gap-1 pt-2"
+    >
+      Verify Registration ↗
+    </Link>
+    
+  </div>
+</div>
 
         {/* Right Side: Trust Text */}
         <div>

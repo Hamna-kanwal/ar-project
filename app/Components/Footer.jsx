@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 items-start">
         
         {/* Column 1: Logo aur info */}
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start -mt-7">
           <Image 
             src="/footer.png" 
             alt="AR Heating Logo" 
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         {/* Column 2 */}
-        <div className="text-left pt-2"> {/* pt-2 add kiya taake heading exact align ho */}
+        <div className="text-left pt-4"> {/* pt-2 add kiya taake heading exact align ho */}
           <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Our Services</h3>
           <ul className="space-y-3 text-sm cursor-pointer">
             <li className="hover:text-yellow-500 transition-colors">Boiler Installation</li>
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         {/* Column 3 */}
-        <div className="text-left pt-2">
+        <div className="text-left pt-4">
           <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Quick Links</h3>
           <ul className="space-y-3 text-sm cursor-pointer">
             <li className="hover:text-yellow-500 transition-colors">Why AR-Heating</li>
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         {/* Column 4 */}
-        <div className="text-left pt-2">
+        <div className="text-left pt-4">
           <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Support</h3>
           <ul className="space-y-3 text-sm cursor-pointer">
             <li className="hover:text-yellow-500 transition-colors">FAQ</li>

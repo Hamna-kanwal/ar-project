@@ -14,10 +14,7 @@ export default function CtaBanner() {
           className="object-cover opacity-70" // Thora opacity kam kiya taake background focus na kare
           priority
         />
-        {/* Subtle gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
-      </div>
-
+       </div>
       {/* Content overlay */}
       <div className="relative z-10 max-w-3xl px-8 md:px-14 py-20 md:py-28">
         <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5 drop-shadow-md">

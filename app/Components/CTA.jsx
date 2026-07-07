@@ -1,41 +1,40 @@
-// components/CtaBanner.jsx
 "use client";
 import Image from "next/image";
 import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
 
 export default function CtaBanner() {
   return (
-    <section className="relative overflow-hidden p-20">
+    <section className="relative overflow-hidden bg-gray-900">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <Image
           src="/home-cta.png"
           alt="Get a free quote"
           fill
-          className="object-cover"
+          className="object-cover opacity-70" // Thora opacity kam kiya taake background focus na kare
           priority
         />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Subtle gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-10 max-w-3xl px-8 md:px-14 py-14 md:py-20">
-        <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5">
+      <div className="relative z-10 max-w-3xl px-8 md:px-14 py-20 md:py-28">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5 drop-shadow-md">
           Free, No-Obligation Quotes With the{" "}
-          <span className="text-[#f5a623]">Best Possible Advice</span>
+          <span className="text-[#f5a623] drop-shadow-sm">Best Possible Advice</span>
         </h2>
 
-        <p className="text-white/90 text-base md:text-lg mb-8 max-w-xl">
+        <p className="text-white/80 text-base md:text-lg mb-8 max-w-xl font-medium">
           Speak to a local Gas Safe engineer today. Fixed prices. Emergency
           response in 60–90 minutes, 7 days a week.
         </p>
 
-        {/* Buttons */}
+        {/* Buttons - Added hover lift effect */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <a
             href="tel:+447800657141"
-            className="flex items-center gap-2 bg-[#f5a623] hover:bg-[#e0951a] text-white font-semibold px-6 py-3 rounded-full transition"
+            className="flex items-center gap-2 bg-[#f5a623] hover:bg-[#e0951a] text-white font-bold px-7 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f5a623]/20"
           >
             <Phone size={18} />
             Call Us
@@ -45,7 +44,7 @@ export default function CtaBanner() {
             href="https://wa.me/447800657141"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 border border-white/70 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition"
+            className="flex items-center gap-2 border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition-all duration-300"
           >
             <MessageCircle size={18} />
             WhatsApp Us
@@ -53,24 +52,24 @@ export default function CtaBanner() {
 
           <a
             href="#quote"
-            className="flex items-center gap-2 border border-white/70 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition"
+            className="flex items-center gap-2 border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition-all duration-300"
           >
             Get a Free Quote
           </a>
         </div>
 
-        {/* Contact info */}
-        <div className="flex flex-wrap items-center gap-6 text-white/90 text-sm">
+        {/* Contact info - Improved contrast */}
+        <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm font-medium">
           <a
             href="https://www.arheatingservice.co.uk"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:opacity-90"
+            className="flex items-center gap-2 hover:text-[#f5a623] transition-colors"
           >
             <ShieldCheck size={16} />
             www.arheatingservice.co.uk
           </a>
-          <a href="tel:+447800657141" className="flex items-center gap-2 hover:opacity-90">
+          <a href="tel:+447800657141" className="flex items-center gap-2 hover:text-[#f5a623] transition-colors">
             <Phone size={16} />
             +44 7800 657141
           </a>

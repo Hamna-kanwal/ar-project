@@ -4,7 +4,7 @@ import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
 
 export default function CtaBanner() {
   return (
-    <section className="relative overflow-hidden bg-gray-900">
+    <section className="relative overflow-hidden bg-gray-900 mb-11">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -16,7 +16,7 @@ export default function CtaBanner() {
         />
        </div>
       {/* Content overlay */}
-      <div className="relative z-10 max-w-3xl px-8 md:px-14 py-20 md:py-28">
+      <div className="relative z-10 max-w-3xl px-8 md:px-14 py-10 md:py-10">
         <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5 drop-shadow-md">
           Free, No-Obligation Quotes With the{" "}
           <span className="text-[#f5a623] drop-shadow-sm">Best Possible Advice</span>

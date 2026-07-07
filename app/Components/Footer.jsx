@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Brand Column */}
         <div className="space-y-4">
-          <Image src="/logo.png" alt="AR Heating" width={120} height={40} />
+          <Image src="/heating-logo.png" alt="AR Heating" width={120} height={40} />
           <p className="text-sm text-blue-50 leading-relaxed opacity-90">
             Empowering UK homes with reliable, Gas Safe certified heating and plumbing solutions.
           </p>

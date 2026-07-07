@@ -1,48 +1,81 @@
-import Link from 'next/link';
-import { MdCheckCircle } from 'react-icons/md';
+// components/CtaBanner.jsx
+"use client";
+import Image from "next/image";
+import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
 
-export default function CTA() {
+export default function CtaBanner() {
   return (
-    <div className="relative w-full h-[400px] overflow-hidden flex items-center mb-16">
-      {/* Background Image side with Diagonal Cut */}
-      <div 
-        className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-center"
-        style={{ 
-          backgroundImage: 'url(/home-cta.png)', // Apni image file ka naam check kar lein
-          clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)' 
-        }}
-      />
+    <section className="relative overflow-hidden p-20">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/home-cta.png"
+          alt="Get a free quote"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
-      {/* Content Side */}
-      <div className="relative z-10 w-full md:w-2/3 px-6 md:px-16 text-white flex flex-col justify-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-          Need a Reliable <span className="text-orange-500">Plumber</span> Today?
+      {/* Content overlay */}
+      <div className="relative z-10 max-w-3xl px-8 md:px-14 py-14 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5">
+          Free, No-Obligation Quotes With the{" "}
+          <span className="text-[#f5a623]">Best Possible Advice</span>
         </h2>
-        <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
-          Fast, professional plumbing services for homes and businesses. 
-          Get expert solutions with transparent pricing and same-day service.
+
+        <p className="text-white/90 text-base md:text-lg mb-8 max-w-xl">
+          Speak to a local Gas Safe engineer today. Fixed prices. Emergency
+          response in 60–90 minutes, 7 days a week.
         </p>
-        
+
         {/* Buttons */}
-        <div className="flex flex-wrap gap-4 mb-8">
-          <Link href="/contact" className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full transition shadow-lg">
-            GET FREE QUOTE
-          </Link>
-          <Link href="tel:+447800657141" className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-[#0d2341] text-white font-bold rounded-full transition">
-            CALL NOW
-          </Link>
+        <div className="flex flex-wrap items-center gap-4 mb-8">
+          <a
+            href="tel:+447800657141"
+            className="flex items-center gap-2 bg-[#f5a623] hover:bg-[#e0951a] text-white font-semibold px-6 py-3 rounded-full transition"
+          >
+            <Phone size={18} />
+            Call Us
+          </a>
+
+          <a
+            href="https://wa.me/447800657141"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-white/70 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition"
+          >
+            <MessageCircle size={18} />
+            WhatsApp Us
+          </a>
+
+          <a
+            href="#quote"
+            className="flex items-center gap-2 border border-white/70 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition"
+          >
+            Get a Free Quote
+          </a>
         </div>
 
-        {/* Checkmarks Row */}
-        <div className="flex flex-wrap gap-4 text-xs md:text-sm font-medium">
-          {['Licensed & Certified', 'Insured for Your Peace of Mind', '24/7 Emergency Service', 'Free Estimates'].map((item) => (
-            <div key={item} className="flex items-center gap-2">
-              <MdCheckCircle className="text-white text-lg" />
-              {item}
-            </div>
-          ))}
+        {/* Contact info */}
+        <div className="flex flex-wrap items-center gap-6 text-white/90 text-sm">
+          <a
+            href="https://www.arheatingservice.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:opacity-90"
+          >
+            <ShieldCheck size={16} />
+            www.arheatingservice.co.uk
+          </a>
+          <a href="tel:+447800657141" className="flex items-center gap-2 hover:opacity-90">
+            <Phone size={16} />
+            +44 7800 657141
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

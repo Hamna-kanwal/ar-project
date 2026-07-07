@@ -4,10 +4,11 @@ import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12 px-4 sm:px-6 lg:px-32 xl:px-20">
+    // yahan humne 'w-full' aur 'px-6' use kiya hai taake screen choti hone par bhi balance rahe
+    <footer className="bg-[#027cc1] text-white py-12">
       
-      {/* Grid container */}
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+      {/* max-w-7xl aur mx-auto content ko center mein rakhega aur side se equal space dega */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
         
         {/* Column 1 */}
         <div className="flex flex-col items-start">
@@ -63,8 +64,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-gray-300 gap-4 w-full">
+      {/* Bottom Bar: Yahan bhi max-w-7xl aur px-6 use kiya taake alignment same rahe */}
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>

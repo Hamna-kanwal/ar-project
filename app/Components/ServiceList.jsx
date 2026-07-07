@@ -43,7 +43,10 @@ export default function ServicesList() {
 
   return (
     <section className="py-10 relative overflow-hidden bg-white">
+      
       <div className="max-w-[90rem] mx-auto px-16 relative">
+
+
         <h1 className="text-5xl font-bold text-[#027cc1] mb-12">Our Expertise</h1>
         
         <div className="overflow-hidden" ref={emblaRef}>

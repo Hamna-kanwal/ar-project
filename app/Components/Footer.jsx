@@ -35,7 +35,7 @@ export default function Footer() {
         ].map((col, index) => (
           <div key={index} className="text-right flex flex-col items-end">
             {/* Heading aur border-right ka use kiya taake right alignment mein achha lage */}
-            <h3 className="font-bold mb-4 border-r-4 border-yellow-500 pr-2">
+            <h3 className="font-bold mb-4 border-r-4 border-yellow-500 pl-2">
               {col.title}
             </h3>
             <ul className="space-y-3 text-sm cursor-pointer">

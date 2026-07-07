@@ -43,9 +43,9 @@ export default function Footer() {
             links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] 
           }
         ].map((col, index) => (
-          <div key={index} className="text-left flex flex-col items-end md:pl-20">
+          <div key={index} className="text-right flex flex-col items-end md:pl-10">
             {/* Right-aligned heading with right border */}
-            <h3 className="font-bold mb-4 border-l-4 border-yellow-500">
+            <h3 className="font-bold mb-4 border-r-4 border-yellow-500 pr-2">
               {col.title}
             </h3>
             <ul className="space-y-3 text-sm cursor-pointer">

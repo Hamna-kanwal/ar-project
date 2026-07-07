@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
+import { MdEmail, MdSmartphone, MdLocationOn } from "react-icons/md";
 
 export default function Footer() {
   return (
     <footer className="bg-[#027cc1] text-white py-12 px-6 lg:px-20">
       
+      {/* Main Grid Container */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 items-start">
         
         {/* Column 1: Logo aur info (Left Aligned) */}
@@ -29,24 +30,36 @@ export default function Footer() {
 
         {/* Columns 2, 3, 4 (Right Aligned) */}
         {[
-          { title: "Our Services", links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher Installation", "Power Flushing"] },
-          { title: "Quick Links", links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] },
-          { title: "Support", links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] }
+          { 
+            title: "Our Services", 
+            links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher Installation", "Power Flushing"] 
+          },
+          { 
+            title: "Quick Links", 
+            links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] 
+          },
+          { 
+            title: "Support", 
+            links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] 
+          }
         ].map((col, index) => (
-          <div key={index} className="text-right flex flex-col items-end">
-            {/* Heading aur border-right ka use kiya taake right alignment mein achha lage */}
-            <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">
+          <div key={index} className="text-right flex flex-col items-end md:pl-20">
+            {/* Right-aligned heading with right border */}
+            <h3 className="font-bold mb-4 border-r-4 border-yellow-500 pr-2">
               {col.title}
             </h3>
             <ul className="space-y-3 text-sm cursor-pointer">
               {col.links.map((link) => (
-                <li key={link} className="hover:text-yellow-500 transition-colors">{link}</li>
+                <li key={link} className="hover:text-yellow-500 transition-colors">
+                  {link}
+                </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
 
+      {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>

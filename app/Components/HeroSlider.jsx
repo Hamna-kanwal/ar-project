@@ -61,23 +61,25 @@ export default function HeroSlider() {
         <div className="flex">
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
-           {/* p-6 (mobile) aur md:p-8 (desktop) padding set kar di */}
-<div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-3xl p-6 md:p-8 text-center xl:text-left shadow-lg">
-  <h1 className="text-xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
+{/* min-h-[350px] add kiya hai taake box height fix rahe */}
+<div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-3xl p-6 md:p-5 text-center xl:text-left shadow-lg min-h-[350px] flex flex-col justify-center">
+  
+  <h1 className="text-4xl md:text-2xl font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
     {slide.title}
   </h1>
   
-  {/* Description ki bhi padding (mb-4) thori kam kar di */}
   <p className="text-gray-800 text-lg mb-6 max-w-xl mx-auto xl:mx-0 font-medium">
     {slide.desc}
   </p>
   
-  <Link 
-    href={slide.buttonLink} 
-    className="inline-flex items-center px-6 py-3 bg-[#027cc1] hover:bg-[#0266a1] text-white font-semibold rounded-full transition-all active:scale-95 shadow-md"
-  >
-    {slide.buttonText} <ArrowRight className="ml-2 w-4 h-4" />
-  </Link>
+  <div className="mt-auto">
+    <Link 
+      href={slide.buttonLink} 
+      className="inline-flex items-center px-6 py-3 bg-[#027cc1] hover:bg-[#0266a1] text-white font-semibold rounded-full transition-all active:scale-95 shadow-md"
+    >
+      {slide.buttonText} <ArrowRight className="ml-2 w-4 h-4" />
+    </Link>
+  </div>
 </div>
             </div>
           ))}

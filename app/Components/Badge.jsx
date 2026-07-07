@@ -13,7 +13,7 @@ export default function TrustSection() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#f97316] rounded-full mix-blend-multiply filter blur-[128px] opacity-20" />
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center relative z-10">
         
         {/* Left Side: Certificate Card */}
         {/* Left Side: Certificate Card */}

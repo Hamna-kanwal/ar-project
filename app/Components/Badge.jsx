@@ -25,8 +25,8 @@ export default function TrustSection() {
               <Image 
                 src="/gas-register.png" 
                 alt="Gas Safe" 
-                width={80} 
-                height={80} 
+                width={100} 
+                height={100} 
                 className="cursor-pointer bg-white p-1 shadow-lg"
               />
             

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function TrustSection() {
   return (
-    <section className="bg-[#0f4d6d] py-16 px-6 text-white relative overflow-hidden">
+    <section className="bg-[#027cc1] py-16 px-6 text-white relative overflow-hidden">
       {/* BACKGROUND DECORATIVE ELEMENTS (Blobs & Circles) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Organic Circle (Jaisa aapne red mark kiya tha) */}

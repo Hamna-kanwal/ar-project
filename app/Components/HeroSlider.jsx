@@ -62,7 +62,7 @@ export default function HeroSlider() {
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
 {/* min-h-[350px] add kiya hai taake box height fix rahe */}
-<div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-3xl p-6 md:p-5 text-center xl:text-left shadow-lg min-h-[350px] flex flex-col justify-center">
+<div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-3xl p-6 md:p-8 text-center xl:text-left shadow-lg min-h-[350px] flex flex-col justify-center">
   
   <h1 className="text-4xl md:text-2xl font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
     {slide.title}

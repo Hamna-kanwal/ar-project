@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Logo & Info */}
         <div className="space-y-6">
-          <Image src="/logo.png" alt="AR Heating" width={140} height={50} />
+          <Image src="/footer.png" alt="AR Heating" width={140} height={50} />
           <p className="text-sm text-blue-100 leading-relaxed max-w-xs">
             Expert heating and plumbing solutions for homes and businesses. 
             Reliable, Gas Safe certified, and always at your service.

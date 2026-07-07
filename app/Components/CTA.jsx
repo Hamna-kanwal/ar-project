@@ -3,12 +3,12 @@ import { MdCheckCircle } from 'react-icons/md';
 
 export default function CTA() {
   return (
-    <div className="relative w-full h-[400px] bg-[#0d2341] overflow-hidden flex items-center mb-16">
+    <div className="relative w-full h-[400px] overflow-hidden flex items-center mb-16">
       {/* Background Image side with Diagonal Cut */}
       <div 
         className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-center"
         style={{ 
-          backgroundImage: 'url(/AR-Cta.png)', // Apni image file ka naam check kar lein
+          backgroundImage: 'url(/home-cta.png)', // Apni image file ka naam check kar lein
           clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)' 
         }}
       />

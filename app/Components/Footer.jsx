@@ -1,21 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MdEmail, MdPhone, MdLocationOn, MdSmartphone } from "react-icons/md";
+
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12">
+    <footer className="bg-[#027cc1] text-white py-12 px-6 lg:px-20">
       
-      {/* items-start add kiya hai taake saare columns upar se align ho jayein */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 items-start">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 items-start">
         
-        {/* Column 1: Logo aur info */}
-        <div className="flex flex-col items-start -mt-7">
+        {/* Column 1: Logo aur info (Left Aligned) */}
+        <div className="flex flex-col items-start">
           <Image 
             src="/footer.png" 
             alt="AR Heating Logo" 
             width={400} 
             height={400} 
-            className="w-auto h-24 mb-4" // yahan height thodi kam ki hai taake balance bane
+            className="w-auto h-24 mb-4"
           />
           <p className="text-sm leading-relaxed text-left mb-6">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
@@ -27,42 +27,27 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Column 2 */}
-        <div className="text-left pt-4"> {/* pt-2 add kiya taake heading exact align ho */}
-          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Our Services</h3>
-          <ul className="space-y-3 text-sm cursor-pointer">
-            <li className="hover:text-yellow-500 transition-colors">Boiler Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Heating Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Landlord Certificate</li>
-            <li className="hover:text-yellow-500 transition-colors">Dishwasher Installation</li>
-            <li className="hover:text-yellow-500 transition-colors">Power Flushing</li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div className="text-left pt-4">
-          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Quick Links</h3>
-          <ul className="space-y-3 text-sm cursor-pointer">
-            <li className="hover:text-yellow-500 transition-colors">Why AR-Heating</li>
-            <li className="hover:text-yellow-500 transition-colors">About Us</li>
-            <li className="hover:text-yellow-500 transition-colors">Area We Cover</li>
-            <li className="hover:text-yellow-500 transition-colors">Blogs</li>
-          </ul>
-        </div>
-
-        {/* Column 4 */}
-        <div className="text-left pt-4">
-          <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">Support</h3>
-          <ul className="space-y-3 text-sm cursor-pointer">
-            <li className="hover:text-yellow-500 transition-colors">FAQ</li>
-            <li className="hover:text-yellow-500 transition-colors">Privacy Policy</li>
-            <li className="hover:text-yellow-500 transition-colors">Terms & Conditions</li>
-            <li className="hover:text-yellow-500 transition-colors">Contact Us</li>
-          </ul>
-        </div>
+        {/* Columns 2, 3, 4 (Right Aligned) */}
+        {[
+          { title: "Our Services", links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher Installation", "Power Flushing"] },
+          { title: "Quick Links", links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] },
+          { title: "Support", links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] }
+        ].map((col, index) => (
+          <div key={index} className="text-right flex flex-col items-end">
+            {/* Heading aur border-right ka use kiya taake right alignment mein achha lage */}
+            <h3 className="font-bold mb-4 border-r-4 border-yellow-500 pr-2">
+              {col.title}
+            </h3>
+            <ul className="space-y-3 text-sm cursor-pointer">
+              {col.links.map((link) => (
+                <li key={link} className="hover:text-yellow-500 transition-colors">{link}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>

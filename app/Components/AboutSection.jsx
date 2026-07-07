@@ -9,7 +9,7 @@ export  default function AboutSection() {
   return (
     <section 
       id="about"
-      className="py-20 bg-[#f9f9f7] overflow-hidden" 
+      className="py-11 bg-[#f9f9f7] overflow-hidden" 
       suppressHydrationWarning={true}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,15 +45,16 @@ export  default function AboutSection() {
 
           {/* Visual - Updated Image Component */}
           <div className="relative" suppressHydrationWarning={true}>
-            <div className="aspect-square rounded-2xl overflow-hidden bg-white border-4 border-white shadow-xl relative">
-              <Image 
-                src="/heating.jpg" 
-                alt="Heating Service"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/5 pointer-events-none" />
-            </div>
+           <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-white border-4 border-white shadow-xl">
+  <Image 
+    src="/heating.jpg" 
+    alt="Heating Service"
+    fill
+    className="object-cover" // Image ko box mein fit karega
+    sizes="(max-width: 768px) 100vw, 400px" // Next.js performance ke liye zaroori hai
+  />
+  <div className="absolute inset-0 bg-black/5 pointer-events-none" />
+</div>
 
             {/* Decorative Elements */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#8dae39]/20 rounded-2xl -z-10 animate-pulse" />

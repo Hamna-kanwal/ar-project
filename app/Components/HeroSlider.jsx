@@ -54,7 +54,7 @@ export default function HeroSlider() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-[1]" />
       </div>
 
-      <div className="relative z-10 pt-16 mt-28 lg:pt-24 mb-16" ref={emblaRef}>
+      <div className="relative z-10 pt-16 mt-14 lg:pt-24 mb-16" ref={emblaRef}>
         <div className="flex">
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">

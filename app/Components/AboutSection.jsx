@@ -53,7 +53,7 @@ export  default function AboutSection() {
     </div>
 
     {/* Dusri Image (Hands style - Jo thoda aage nikal rahi hai) */}
-    <div className="relative ml-10 mt-40 w-40 h-40 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
+    <div className="relative ml-40 mt-60 w-40 h-40 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
       <img src="/vertical.jpg" alt="Hands" className="object-cover" />
     </div>
 

@@ -3,19 +3,16 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 
-// Naya content jo aapne diya
 const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
-    img: "/installation.jpg", 
-    items: ["Prevents small faults from growing", "Ensures the boiler burns clean", "Reduces gas consumption", "Keeps boiler warranties valid"]
+    img: "/installation.jpg"
   },
   {
     title: "What do you check in a service?",
     desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
-    img: "/Boiler_servicing.jpg",
-    items: ["Full inspection of main parts", "Cleaning of essential components", "Gas pressure and flow testing", "Safety check for leaks and report"]
+    img: "/Boiler_servicing.jpg"
   }
 ];
 
@@ -49,7 +46,7 @@ export default function ServicesAndFAQ() {
         </div>
       </section>
 
-      {/* Zig-Zag Service Section */}
+      {/* Zig-Zag Service Section (Without Items) */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
           {serviceDetails.map((s, i) => (
@@ -59,14 +56,7 @@ export default function ServicesAndFAQ() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
-                <p className="text-gray-600 mb-6 text-lg">{s.desc}</p>
-                <ul className="space-y-3">
-                  {s.items.map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3 font-medium text-gray-700">
-                      <span className="text-orange-500 text-xl">✓</span> {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
               </div>
             </div>
           ))}

@@ -61,7 +61,7 @@ export default function HeroSlider() {
               <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-8 md:p-10 text-center xl:text-left shadow-lg">
                 
                 {/* Yahan whitespace-nowrap add kar diya hai */}
-                <h1 className="whitespace-nowrap text-xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
+                <h1 className=" text-xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
                   {slide.title}
                 </h1>
                 

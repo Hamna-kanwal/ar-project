@@ -36,7 +36,6 @@ export default function HeroSlider() {
 
   return (
     <section className="relative overflow-hidden bg-white h-full w-full">
-      {/* 1. Dynamic Background Layer */}
       <div className="absolute inset-0 z-0">
         {SLIDES.map((slide, index) => (
           <div 
@@ -52,19 +51,20 @@ export default function HeroSlider() {
             />
           </div>
         ))}
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-[1]" />
       </div>
 
-      {/* 2. Carousel Layer */}
-      <div className="relative z-10 pt-16 lg:pt-24 mb-16" ref={emblaRef}>
+      <div className="relative z-10 pt-16 mt-28 lg:pt-24 mb-16" ref={emblaRef}>
         <div className="flex">
           {SLIDES.map((slide, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 px-4 md:px-12 flex justify-center xl:justify-start items-center min-h-[50vh]">
-              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-2 md:p-10 text-center xl:text-left shadow-lg">
-                <h1 className="text-2xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+              <div className="w-full max-w-4xl bg-white/0 backdrop-blur-md border-2 border-[#027cc1] rounded-[2.5rem] p-8 md:p-10 text-center xl:text-left shadow-lg">
+                
+                {/* Yahan whitespace-nowrap add kar diya hai */}
+                <h1 className="whitespace-nowrap text-xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-4">
                   {slide.title}
                 </h1>
+                
                 <p className="text-gray-800 text-lg mb-4 max-w-xl mx-auto xl:mx-0 font-medium">
                   {slide.desc}
                 </p>
@@ -80,7 +80,6 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* 3. Pagination Dots */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center gap-3 z-20">
         {SLIDES.map((_, index) => (
           <button

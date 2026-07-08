@@ -49,7 +49,7 @@ export default function TrustSection() {
         {/* Right Side: Trust Text */}
         <div>
           <h2 className="text-2xl md:text-2xl font-bold mb-6 leading-tight">
-            Trusted by Households, <br />
+            Trusted by Households, 
 Backed by Expertise.
           </h2>
           <p className="text-lg text-gray-200 mb-8">
@@ -58,13 +58,13 @@ Backed by Expertise.
           </p>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white/10 p-5 rounded-2xl border border-white/10 hover:border-[#f97316] transition-all">
-              <Clock className="w-8 h-8 mb-3 text-[#f97316]" />
+            <div className="bg-white/10 p-5 rounded-2xl border border-white/10 hover:border-white transition-all">
+              <Clock className="w-8 h-8 mb-3 text-white" />
               <h4 className="font-bold text-lg">24/7 Support</h4>
               <p className="text-sm text-gray-300">Always here when you need us</p>
             </div>
-            <div className="bg-white/10 p-5 rounded-2xl border border-white/10 hover:border-[#f97316] transition-all">
-              <ShieldCheck className="w-8 h-8 mb-3 text-[#f97316]" />
+            <div className="bg-white/10 p-5 rounded-2xl border border-white/10 hover:border-white transition-all">
+              <ShieldCheck className="w-8 h-8 mb-3 text-white" />
               <h4 className="font-bold text-lg">Fully Insured</h4>
               <p className="text-sm text-gray-300">Your home is in safe hands</p>
             </div>

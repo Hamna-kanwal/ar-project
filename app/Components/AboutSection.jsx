@@ -43,25 +43,24 @@ export  default function AboutSection() {
             </div>
           </div>
 
-          {/* Visual - Updated Image Component */}
-          <div className="relative" suppressHydrationWarning={true}>
-           <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-white border-4 border-white shadow-xl">
-  <Image 
-    src="/heating.jpg" 
-    alt="Heating Service"
-    fill
-    className="object-cover" // Image ko box mein fit karega
-    sizes="(max-width: 768px) 100vw, 400px" // Next.js performance ke liye zaroori hai
-  />
-  <div className="absolute inset-0 bg-black/5 pointer-events-none" />
-</div>
+<div className="relative w-full max-w-2xl mx-auto p-10">
+  {/* Red Border Wala Area (Background) */}
+  <div className="relative bg-gray-200 p-8 rounded-lg">
+    
+    {/* Pehli Image (Black & White style) */}
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-xl shadow-2xl z-10">
+      <img src="/horizontal.jpg" alt="Student" className="w-full h-full object-cover grayscale" />
+    </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#8dae39]/20 rounded-2xl -z-10 animate-pulse" />
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#8b5aa6]/10 rounded-2xl -z-10" />
-          </div>
+    {/* Dusri Image (Hands style - Jo thoda aage nikal rahi hai) */}
+    <div className="relative ml-32 mt-20 w-30 h-80 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
+      <img src="/vertical.jpg" alt="Hands" className="object-cover" />
+    </div>
+
+  </div>
+</div>
         </div>
       </div>
     </section>
   );
-}
+}       

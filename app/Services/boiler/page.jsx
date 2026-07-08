@@ -1,33 +1,21 @@
 "use client";
 import { useState } from 'react';
-import { Wrench, Settings, Home } from 'lucide-react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 
-const services = [
+// Naya content jo aapne diya
+const serviceDetails = [
   {
-    title: "Boiler Installation",
-    desc: "Our Gas Safe engineers specialise in fitting world-class eco-efficient boilers.",
-    img: "/installation.jpg",
-    slug: "boiler-installation",
-    items: ["Vaillant, Potterton, Glo-Worm", "Ariston, Baxi, Worcester, Vokera", "Viessmann, Ferroli, Grant", "Free, no-obligation quote provided"],
-    icon: <Wrench size={32} />
+    title: "Why does my boiler need a yearly service?",
+    desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
+    img: "/installation.jpg", 
+    items: ["Prevents small faults from growing", "Ensures the boiler burns clean", "Reduces gas consumption", "Keeps boiler warranties valid"]
   },
   {
-    title: "Boiler Repairs",
-    desc: "Your boiler not working properly? Our expert engineers find the best solution.",
-    img: "/boiler-repairs.jpg",
-    slug: "boiler-repairs",
-    items: ["Diagnose the root cause accurately", "Find the correct solution", "Implement a lasting repair", "Affordable range of cost"],
-    icon: <Settings size={32} />
-  },
-  {
-    title: "Boiler Servicing",
-    desc: "To ensure continued health and efficiency, we recommend a full service every 12 months.",
+    title: "What do you check in a service?",
+    desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
     img: "/Boiler_servicing.jpg",
-    slug: "boiler-servicing",
-    items: ["Full appliance inspection", "Pressure and ventilation tested", "Safety regulations checked", "Any issues flagged and reported"],
-    icon: <Home size={32} />
+    items: ["Full inspection of main parts", "Cleaning of essential components", "Gas pressure and flow testing", "Safety check for leaks and report"]
   }
 ];
 
@@ -51,69 +39,54 @@ export default function ServicesAndFAQ() {
             Boiler <span className="text-orange-500"> Services</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
-            Whatever the issue with your boiler, we can help. Our friendly and professional engineers can assist with all manner of repairs. We also offer servicing, making sure your boiler meets current safety regulations and is operating at full efficiency.
+            A yearly boiler check keeps your home safe and your boiler running well. A small spend now saves a big bill later. 
+            Our Gas Safe engineers give your boiler a full once over, so you head into winter with peace of mind.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <Link href="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-600">Get my free quote</Link>
+            <a href="tel:+447800657141" className="border-2 border-[#027cc1] text-[#027cc1] px-8 py-3 rounded-lg font-bold hover:bg-[#027cc1] hover:text-white">Call: +44 7800 657141</a>
+          </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Zig-Zag Service Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Everything your boiler needs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((s, i) => (
-              <div key={i} className="bg-white rounded-2xl border border-gray-200 hover:shadow-xl transition-all overflow-hidden">
-                <div className="relative w-full h-48">
-                  <NextImage src={s.img} alt={s.title} fill className="object-cover" />
-                </div>
-                <div className="p-8">
-                  <div className="text-orange-500 mb-6">{s.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
-                  <p className="text-gray-600 mb-6">{s.desc}</p>
-                  <ul className="space-y-3 mb-8">
-                    {s.items.map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm">✓ {item}</li>
-                    ))}
-                  </ul>
-                  
-                  {/* UPDATE: Yeh link ab direct page ke bajaye query param (?tab=...) ke sath single page par le kar jayega */}
-                  <Link 
-                    href={`/boiler-services?tab=${s.slug}`} 
-                    className="inline-block border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition"
-                  >
-                    View More →
-                  </Link>
-                </div>
+        <div className="max-w-7xl mx-auto px-6 space-y-20">
+          {serviceDetails.map((s, i) => (
+            <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+              <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-xl">
+                <NextImage src={s.img} alt={s.title} fill className="object-cover" />
               </div>
-            ))}
-          </div>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
+                <p className="text-gray-600 mb-6 text-lg">{s.desc}</p>
+                <ul className="space-y-3">
+                  {s.items.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3 font-medium text-gray-700">
+                      <span className="text-orange-500 text-xl">✓</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
-            {faqs.map((faq, i) => {
-              const isOpen = openIndex === i;
-              return (
-                <div key={i} className={`border-2 rounded-xl overflow-hidden transition-all duration-500 ${isOpen ? 'border-orange-500' : 'border-gray-200'}`}>
-                  <button 
-                    onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
-                    className={`w-full p-6 text-left font-semibold flex justify-between items-center transition-colors ${isOpen ? 'bg-orange-50' : 'bg-white hover:bg-gray-50'}`}
-                  >
-                    <span className="text-gray-900 font-bold">{faq.q}</span>
-                    <span className="w-8 h-8 flex items-center justify-center rounded-full text-white font-bold bg-orange-500">
-                      {isOpen ? '×' : '+'}
-                    </span>
-                  </button>
-                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="p-6 pt-0 text-gray-600 bg-white">{faq.a}</div>
-                  </div>
-                </div>
-              );
-            })}
+            {faqs.map((faq, i) => (
+              <div key={i} className={`border-2 rounded-xl overflow-hidden transition-all ${openIndex === i ? 'border-orange-500' : 'border-gray-200'}`}>
+                <button onClick={() => setOpenIndex(openIndex === i ? -1 : i)} className="w-full p-6 text-left font-bold flex justify-between items-center bg-white hover:bg-gray-50">
+                  {faq.q}
+                  <span className="text-xl">{openIndex === i ? '×' : '+'}</span>
+                </button>
+                {openIndex === i && <div className="p-6 pt-0 text-gray-600 bg-white border-t">{faq.a}</div>}
+              </div>
+            ))}
           </div>
         </div>
       </section>

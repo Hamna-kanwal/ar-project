@@ -49,11 +49,11 @@ export  default function AboutSection() {
     
     {/* Pehli Image (Black & White style) */}
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-xl shadow-2xl z-10">
-      <img src="/horizontal.jpg" alt="Student" className="w-full h-full object-cover grayscale" />
+      <img src="/horizontal.jpg" alt="Student" className="w-full h-full object-cover" />
     </div>
 
     {/* Dusri Image (Hands style - Jo thoda aage nikal rahi hai) */}
-    <div className="relative ml-32 mt-20 w-30 h-80 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
+    <div className="relative ml-10 mt-40 w-40 h-40 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
       <img src="/vertical.jpg" alt="Hands" className="object-cover" />
     </div>
 

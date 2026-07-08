@@ -4,12 +4,12 @@ import { MdEmail, MdSmartphone, MdLocationOn } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white py-12 px-6 lg:px-20">
+    <footer className="bg-[#027cc1] text-white pt-12 pb-6 px-6 lg:px-20">
       
-      {/* Main Grid Container */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 items-start">
+      {/* 1. Main Grid: Logo aur Links ke liye */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         
-        {/* Column 1: Logo aur info (Left Aligned) */}
+        {/* Column 1: Logo aur Intro */}
         <div className="flex flex-col items-start">
           <Image 
             src="/footer.png" 
@@ -18,17 +18,12 @@ export default function Footer() {
             height={400} 
             className="w-auto h-24 mb-4"
           />
-          <p className="text-sm leading-relaxed text-left mb-6">
+          <p className="text-sm leading-relaxed text-left">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
           </p>
-          <div className="space-y-3 text-sm text-left">
-            <p className="flex items-center gap-2"><MdEmail className="text-lg" /> info@arheatingservice.co.uk</p>
-            <p className="flex items-center gap-2"><MdSmartphone className="text-lg" /> +447800657141</p>
-            <p className="flex items-start gap-2"><MdLocationOn className="text-xl mt-0.5" /> Unit 24 The Roundway Watford, WD18 6LB</p>
-          </div>
         </div>
 
-        {/* Columns 2, 3, 4 (Left Aligned) */}
+        {/* Columns 2, 3, 4: Generated Links */}
         {[
           { 
             title: "Our Services", 
@@ -44,7 +39,6 @@ export default function Footer() {
           }
         ].map((col, index) => (
           <div key={index} className="text-left flex flex-col items-start">
-            {/* Left-aligned heading with left border */}
             <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">
               {col.title}
             </h3>
@@ -59,8 +53,26 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+      {/* 2. Full Width Contact Box (Rectangle with White Stroke) */}
+      <div className="max-w-7xl mx-auto border-2 border-white rounded-xl p-6 mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+          <div className="flex items-center gap-3">
+            <MdEmail className="text-2xl text-yellow-400" /> 
+            <span>info@arheatingservice.co.uk</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdSmartphone className="text-2xl text-yellow-400" /> 
+            <span>+447800657141</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdLocationOn className="text-2xl text-yellow-400" /> 
+            <span>Unit 24 The Roundway Watford, WD18 6LB</span>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. Bottom Bar */}
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>

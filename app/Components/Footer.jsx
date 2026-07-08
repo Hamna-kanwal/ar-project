@@ -43,23 +43,23 @@ export default function Footer() {
           </div>
         ))}
 
-        {/* Contact Box: Grid ke andar hi hai lekin col-span-4 karke poori width le raha hai */}
-        <div className="md:col-span-3 border-2 border-white rounded-xl p-6 mt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-            <div className="flex items-center gap-3">
-              <MdEmail className="text-2xl text-white" /> 
-              <span>info@arheatingservice.co.uk</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdSmartphone className="text-2xl text-white" /> 
-              <span>+447800657141</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MdLocationOn className="text-2xl text-white" /> 
-              <span>Unit 24 The Roundway Watford, WD18 6LB</span>
-            </div>
-          </div>
-        </div>
+      {/* Contact Box: md:col-start-2 ka matlab hai pehli column chhor kar baki 3 par aaye */}
+<div className="md:col-start-2 md:col-span-3 border-2 border-white rounded-xl p-6 mt-6">
+  <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+    <div className="flex items-center gap-3">
+      <MdEmail className="text-2xl text-white" /> 
+      <span>info@arheatingservice.co.uk</span>
+    </div>
+    <div className="flex items-center gap-3">
+      <MdSmartphone className="text-2xl text-white" /> 
+      <span>+447800657141</span>
+    </div>
+    <div className="flex items-center gap-3">
+      <MdLocationOn className="text-2xl text-white" /> 
+      <span>Unit 24 The Roundway Watford, WD18 6LB</span>
+    </div>
+  </div>
+</div>
       </div>
 
       {/* Bottom Bar */}

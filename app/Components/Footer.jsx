@@ -16,7 +16,7 @@ export default function Footer() {
             alt="AR Heating Logo" 
             width={400} 
             height={400} 
-            className="w-auto h-24 mb-4"
+            className="w-auto h-32 mb-4"
           />
           <p className="text-sm leading-relaxed text-left">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.

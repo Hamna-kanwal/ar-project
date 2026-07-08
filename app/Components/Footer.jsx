@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#027cc1] text-white pt-12 pb-6 px-6 lg:px-20">
       
-      {/* 1. Main Grid: Logo aur Links ke liye */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      {/* Grid container */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Column 1: Logo aur Intro */}
         <div className="flex flex-col items-start">
@@ -16,27 +16,18 @@ export default function Footer() {
             alt="AR Heating Logo" 
             width={400} 
             height={400} 
-            className="w-auto h-26 mb-4"
+            className="w-auto h-24 mb-4"
           />
           <p className="text-sm leading-relaxed text-left">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
           </p>
         </div>
 
-        {/* Columns 2, 3, 4: Generated Links */}
+        {/* Columns 2, 3, 4 */}
         {[
-          { 
-            title: "Our Services", 
-            links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher Installation", "Power Flushing"] 
-          },
-          { 
-            title: "Quick Links", 
-            links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] 
-          },
-          { 
-            title: "Support", 
-            links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] 
-          }
+          { title: "Our Services", links: ["Boiler Installation", "Heating Installation", "Landlord Certificate", "Dishwasher Installation", "Power Flushing"] },
+          { title: "Quick Links", links: ["Why AR-Heating", "About Us", "Area We Cover", "Blogs"] },
+          { title: "Support", links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] }
         ].map((col, index) => (
           <div key={index} className="text-left flex flex-col items-start">
             <h3 className="font-bold mb-4 border-l-4 border-yellow-500 pl-2">
@@ -51,28 +42,28 @@ export default function Footer() {
             </ul>
           </div>
         ))}
-      </div>
 
-      {/* 2. Full Width Contact Box (Rectangle with White Stroke) */}
-      <div className="max-w-7xl mx-auto border-2 border-white rounded-xl p-6 mb-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-          <div className="flex items-center gap-3">
-            <MdEmail className="text-2xl text-yellow-400" /> 
-            <span>info@arheatingservice.co.uk</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MdSmartphone className="text-2xl text-yellow-400" /> 
-            <span>+447800657141</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <MdLocationOn className="text-2xl text-yellow-400" /> 
-            <span>Unit 24 The Roundway Watford, WD18 6LB</span>
+        {/* Contact Box: Grid ke andar hi hai lekin col-span-4 karke poori width le raha hai */}
+        <div className="md:col-span-4 border-2 border-white rounded-xl p-6 mt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+            <div className="flex items-center gap-3">
+              <MdEmail className="text-2xl text-yellow-400" /> 
+              <span>info@arheatingservice.co.uk</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdSmartphone className="text-2xl text-yellow-400" /> 
+              <span>+447800657141</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MdLocationOn className="text-2xl text-yellow-400" /> 
+              <span>Unit 24 The Roundway Watford, WD18 6LB</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 3. Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+      {/* Bottom Bar */}
+      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>

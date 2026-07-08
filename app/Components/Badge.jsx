@@ -48,10 +48,9 @@ export default function TrustSection() {
 
         {/* Right Side: Trust Text */}
         <div>
-          <h2 className="text-2xl md:text-2xl nowrap font-bold mb-2 leading-tight">
-            Trusted by Households, 
-Backed by Expertise.
-          </h2>
+          <h2 className="text-2xl md:text-2xl whitespace-nowrap font-bold mb-2 leading-tight">
+  Trusted by Households, Backed by Expertise.
+</h2>
           <p className="text-lg text-gray-200 mb-3">
             We bring over 15 years of industry experience to help Watford & Harrow 
             residents navigate heating and plumbing issues with complete confidence.

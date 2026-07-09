@@ -32,7 +32,7 @@ export default function ServicesAndFAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden mt-16 md:mt-0">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.jpg')" }} />
         <div className="absolute inset-0 bg-white/80" /> 
         <div className="relative z-10 text-center px-6 max-w-4xl">

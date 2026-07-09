@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: " Which boiler is best for my home? ",
     desc: "The best boiler is the one built for your home and your water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose. ",
-    img: "/bolierservice3.jpg"
+    img: "/boilerservice3.jpg"
   }
 ];
 
@@ -92,7 +92,7 @@ We help you pick the right boiler, give you a fixed price up front, and finish m
       </section>
       
   <section className="py-16 px-6 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-[#027cc1] text-center mb-12">Compare Our Boiler Types</h2>
+     
       
       <div className="grid md:grid-cols-3 gap-8">
         {boilerData.map((item, index) => (

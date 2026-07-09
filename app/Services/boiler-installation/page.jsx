@@ -120,9 +120,7 @@ export default function ServicesAndFAQ() {
             </div>
 
             {/* Button */}
-            <button className="w-full mt-6 py-3 rounded-xl border border-[#f97316] text-[#f97316] font-bold hover:bg-[#f97316] hover:text-white transition-colors">
-              Learn More
-            </button>
+          
           </div>
         ))}
       </div>

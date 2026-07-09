@@ -13,13 +13,13 @@ export default function TrustSection() {
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#f97316] rounded-full mix-blend-multiply filter blur-[128px] opacity-20" />
       </div>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center relative z-10">
+      <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center relative z-10">
         
         {/* Left Side: Certificate Card */}
         {/* Left Side: Certificate Card */}
 <div className="bg-white text-gray-900 rounded-3xl p-4 shadow-2xl relative border-b-8 border-[#f97316]">
   
-  <div className="flex flex-col items-center text-center space-y-4">
+  <div className="flex flex-col items-center text-center space-y-2">
     
     <Image 
       src="/gas-register.png" 

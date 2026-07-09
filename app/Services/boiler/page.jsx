@@ -16,10 +16,13 @@ const serviceDetails = [
   }
 ];
 
+
 const faqs = [
-  { q: "What does AR Heating Service provide?", a: "AR Heating Service provides a full range of boiler services including installation, repairs, and annual servicing." },
-  { q: "How often should you carry out a boiler service check?", a: "We recommend a full boiler service every 12 months to ensure safety and efficiency." },
-  { q: "Do you issue a Landlord Gas Safety Certificate?", a: "Yes, we issue Landlord Gas Safety Certificates (CP12) after completing a full inspection." }
+  { q: "How often should I service my boiler?", a: "Once a year is best. A yearly check keeps your boiler safe and your warranty valid. " },
+  { q: "How long does a service take? ", a: "Most services take under an hour. We work fast and leave no mess." },
+  { q: "Does a service keep my warranty valid? ", a: "In most cases, yes. Many makers ask for a yearly service to keep the warranty live. Keep your record safe. " },
+    { q: "Do you check for carbon monoxide? ", a: "Yes. We make sure your boiler burns safe and does not leak fumes into your home. " },
+   
 ];
 
 export default function ServicesAndFAQ() {
@@ -64,22 +67,40 @@ export default function ServicesAndFAQ() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <div key={i} className={`border-2 rounded-xl overflow-hidden transition-all ${openIndex === i ? 'border-orange-500' : 'border-gray-200'}`}>
-                <button onClick={() => setOpenIndex(openIndex === i ? -1 : i)} className="w-full p-6 text-left font-bold flex justify-between items-center bg-white hover:bg-gray-50">
-                  {faq.q}
-                  <span className="text-xl">{openIndex === i ? '×' : '+'}</span>
+    <section className="py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-10">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div 
+                key={i} 
+                className={`border-2 rounded-xl overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'border-orange-500' : 'border-gray-200'}`}
+              >
+                <button 
+                  onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
+                  className={`w-full p-6 text-left font-semibold flex justify-between items-center transition-colors duration-300 ${isOpen ? 'bg-orange-50' : 'bg-white hover:bg-gray-50'}`}
+                >
+                  <span className="text-gray-900 font-bold">{faq.q}</span>
+                  <span className={`w-8 h-8 flex items-center justify-center rounded-full text-white font-bold transition-transform duration-300 ${isOpen ? 'bg-orange-500' : 'bg-orange-500'}`}>
+                    {isOpen ? '×' : '+'}
+                  </span>
                 </button>
-                {openIndex === i && <div className="p-6 pt-0 text-gray-600 bg-white border-t">{faq.a}</div>}
+                
+                <div 
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}
+                >
+                  <div className="p-6 pt-0 text-gray-600 bg-white">
+                    {faq.a}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
+    </section>
     </>
   );
 }

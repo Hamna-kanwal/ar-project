@@ -11,7 +11,7 @@ const navItems = [
     isDropdown: true, 
     subItems: [
       { label: "Boiler Repair", href: "/Services/boiler" },
-      { label: "Gas Safety Check", href: "/services/gas-safety" },
+      { label: "Boiler Installation", href: "/Services/boiler-installation" },
       { label: "Heating Installation", href: "/services/heating" },
     ] 
   },

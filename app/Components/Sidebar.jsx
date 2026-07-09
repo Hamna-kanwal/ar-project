@@ -13,6 +13,7 @@ const navItems = [
       { label: "Boiler Services", href: "/Services/boiler" },
       { label: "Boiler Installation", href: "/Services/boiler-installation" },
       { label: "Heating Installation", href: "/Services/heating-installation" },
+      { label: "Boiler Breakdown & Repair", href: "/Services/boiler-breakdown" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

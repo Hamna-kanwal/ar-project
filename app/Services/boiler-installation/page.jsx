@@ -79,32 +79,22 @@ We help you pick the right boiler, give you a fixed price up front, and finish m
         </div>
       </section>
 
-   {/* Zig-Zag Service Section (Modified) */}
-<section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6 space-y-20">
-    {serviceDetails.map((s, i) => (
-      <div 
-        key={i} 
-        className={`grid md:grid-cols-2 gap-12 items-center ${
-          i === 0 
-            ? "" // Pehla item normal (Text left, Image right)
-            : "md:flex flex-col-reverse" // Dusra item: Image niche, Text upar
-        }`}
-      >
-        {/* Text Side */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
-          <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
+      {/* Zig-Zag Service Section (Without Items) */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 space-y-20">
+          {serviceDetails.map((s, i) => (
+            <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+              <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-xl">
+                <NextImage src={s.img} alt={s.title} fill className="object-cover" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
+                <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
-
-        {/* Image Side */}
-        <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-xl">
-          <NextImage src={s.img} alt={s.title} fill className="object-cover" />
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
       
   <section className="py-16 px-6 max-w-7xl mx-auto">
      

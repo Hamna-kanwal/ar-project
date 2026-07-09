@@ -6,23 +6,23 @@ import CtaBanner from '../../Components/CTA';
 
 const serviceDetails = [
   {
-    title: "Why does my boiler need a yearly service?",
-    desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
+    title: "How do you plan heating for my home? ",
+    desc: "No two homes heat the same way. We look at your rooms, your water use, and how many people live with you, then size the system so each room stays warm. Good planning means lower bills and even heat.",
     img: "/boiler11.jpg"
   },
   {
-    title: "What do you check in a service?",
-    desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
+    title: "Is the fit clean and tidy? ",
+    desc: "We fit the boiler, pipes, and radiators with care and clean up when we finish. We show you how the system works, so you feel in charge from day one. ",
     img: "/boiler12.jpg"
   }
 ];
 
 
 const faqs = [
-  { q: "How often should I service my boiler?", a: "Once a year is best. A yearly check keeps your boiler safe and your warranty valid. " },
-  { q: "How long does a service take? ", a: "Most services take under an hour. We work fast and leave no mess." },
-  { q: "Does a service keep my warranty valid? ", a: "In most cases, yes. Many makers ask for a yearly service to keep the warranty live. Keep your record safe. " },
-    { q: "Do you check for carbon monoxide? ", a: "Yes. We make sure your boiler burns safe and does not leak fumes into your home. " },
+  { q: "How long does a heating fit take? ", a: "Most jobs take one to three days, based on the size of your home. We give you a clear plan before we start. " },
+  { q: "Can you work around my old pipes? ", a: "Often, yes. We check your set up first and reuse what still does the job. " },
+  { q: "Will new heating cut my bills? ", a: "In most cases, yes. A modern system uses less gas for the same warmth.  " },
+   
    
 ];
 

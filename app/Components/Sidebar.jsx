@@ -10,9 +10,9 @@ const navItems = [
     label: "Services", 
     isDropdown: true, 
     subItems: [
-      { label: "Boiler Repair", href: "/Services/boiler" },
+      { label: "Boiler Services", href: "/Services/boiler" },
       { label: "Boiler Installation", href: "/Services/boiler-installation" },
-      { label: "Heating Installation", href: "/services/heating" },
+      { label: "Heating Installation", href: "/Services/heating-installation" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

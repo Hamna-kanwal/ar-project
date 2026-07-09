@@ -3,6 +3,7 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import { Zap, Users, Home } from 'lucide-react';
+import CtaBanner from '../../Components/CTA';
 
 const serviceDetails = [
   {
@@ -13,16 +14,20 @@ const serviceDetails = [
   {
     title: " Which boiler is best for my home? ",
     desc: "The best boiler is the one built for your home and your water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose. ",
-    img: "/boilerservice3.jpg"
+    img: "/boilerss.jpg"
   }
 ];
 
 
 const faqs = [
-  { q: "How often should I service my boiler?", a: "Once a year is best. A yearly check keeps your boiler safe and your warranty valid. " },
-  { q: "How long does a service take? ", a: "Most services take under an hour. We work fast and leave no mess." },
-  { q: "Does a service keep my warranty valid? ", a: "In most cases, yes. Many makers ask for a yearly service to keep the warranty live. Keep your record safe. " },
-    { q: "Do you check for carbon monoxide? ", a: "Yes. We make sure your boiler burns safe and does not leak fumes into your home. " },
+ { q: "Can I fit a boiler myself? ", a: "No. By law, a gas boiler must go in by a Gas Safe engineer. A bad fit brings leaks, safety risks, and a void warranty. " },
+  { q: "How long does a boiler fit take?  ", a: "Most swaps take one day. A move to a new spot or a change of boiler type can take two. We give you a clear time before we start." },
+  { q: "How much does a new boiler cost? ", a: "The price depends on the boiler and the work. We give you a fixed quote up front, so you know the full cost before you say yes. " },
+    { q: "How long does a boiler last?  ", a: "A well kept boiler lasts around ten to fifteen years. A yearly service helps yours reach the top end. " },
+
+       { q: "Combi or system boiler, which is best?  ", a: "A combi suits small homes with one bathroom. A system boiler suits homes with two or more bathrooms. We help you pick. " },
+          { q: "Can I pay for a boiler over time?  ", a: "Ask us about pay over time plans when you get your quote. " },
+                { q: "Do you take the old boiler away? ", a: "Yes. We remove your old boiler in a safe way and leave the place tidy.  " },
    
 ];
 const boilerData = [
@@ -74,22 +79,32 @@ We help you pick the right boiler, give you a fixed price up front, and finish m
         </div>
       </section>
 
-      {/* Zig-Zag Service Section (Without Items) */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 space-y-20">
-          {serviceDetails.map((s, i) => (
-            <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-              <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-xl">
-                <NextImage src={s.img} alt={s.title} fill className="object-cover" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
-                <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
-              </div>
-            </div>
-          ))}
+   {/* Zig-Zag Service Section (Modified) */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6 space-y-20">
+    {serviceDetails.map((s, i) => (
+      <div 
+        key={i} 
+        className={`grid md:grid-cols-2 gap-12 items-center ${
+          i === 0 
+            ? "" // Pehla item normal (Text left, Image right)
+            : "md:flex flex-col-reverse" // Dusra item: Image niche, Text upar
+        }`}
+      >
+        {/* Text Side */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
+          <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
         </div>
-      </section>
+
+        {/* Image Side */}
+        <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-xl">
+          <NextImage src={s.img} alt={s.title} fill className="object-cover" />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
       
   <section className="py-16 px-6 max-w-7xl mx-auto">
      
@@ -165,6 +180,7 @@ We help you pick the right boiler, give you a fixed price up front, and finish m
         </div>
       </div>
     </section>
+    <CtaBanner />
     </>
   );
 }

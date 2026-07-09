@@ -2,17 +2,18 @@
 import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
+import CtaBanner from '../../Components/CTA';
 
 const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
-    img: "/installation.jpg"
+    img: "/boiler11.jpg"
   },
   {
     title: "What do you check in a service?",
     desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
-    img: "/Boiler_servicing.jpg"
+    img: "/boiler12.jpg"
   }
 ];
 
@@ -101,6 +102,7 @@ export default function ServicesAndFAQ() {
         </div>
       </div>
     </section>
+     <CtaBanner />
     </>
   );
 }

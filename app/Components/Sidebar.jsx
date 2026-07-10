@@ -19,6 +19,10 @@ const navItems = [
           { label: "General Installation ", href: "/Services/general-installation" },
            { label: "Thermostat Installation  ", href: "/Services/thermostat-installation" },
             { label: "Emergency Services  ", href: "/Services/emergency-services" },
+             { label: " General Plumbing & Repair  ", href: "/Services/general-plumbing" },
+              { label: " Power Flushing  ", href: "/Services/power-flushing" },
+              { label: "  Hive Thermostat Installation  ", href: "/Services/hive" },
+    
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

@@ -18,7 +18,7 @@ const navItems = [
          { label: "Underfloor Heating System Installation", href: "/Services/underfloor-heating" },
           { label: "General Installation ", href: "/Services/general-installation" },
            { label: "Thermostat Installation  ", href: "/Services/thermostat-installation" },
-            { label: "Emergency Services  ", href: "/Services/emergency-installation" },
+            { label: "Emergency Services  ", href: "/Services/emergency-services" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

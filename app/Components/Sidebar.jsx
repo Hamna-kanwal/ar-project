@@ -14,6 +14,10 @@ const navItems = [
       { label: "Boiler Installation", href: "/Services/boiler-installation" },
       { label: "Heating Installation", href: "/Services/heating-installation" },
       { label: "Boiler Breakdown & Repair", href: "/Services/boiler-breakdown" },
+         { label: "Central Heating System Installation", href: "/Services/central-heating" },
+         { label: "Underfloor Heating System Installation", href: "/Services/underfloor-heating" },
+          { label: "General Installation ", href: "/Services/general-installation" },
+           { label: "Thermostat Installation  ", href: "/Services/thermostat-installation" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

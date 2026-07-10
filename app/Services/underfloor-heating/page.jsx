@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "What makes underfloor heating good?  ",
     desc: "Heat rises from the floor and fills the room in an even way. You gain back the wall space radiators use, and your feet stay warm on cold days. ",
-    img: "/boiler11.jpg"
+    img: "/undergroundheating2.jpeg"
   },
   {
     title: "Is underfloor heating easy to run?  ",
     desc: "We set up the controls so you can pick the warmth you want with ease. Pair the system with a smart control and you can run your heat from your phone.  ",
-    img: "/boiler12.jpg"
+    img: "/undergroundheating3.jpg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/boiler.jpg"
+          src="/undergroundheating1.jpg"
           alt="Heating installation background"
           fill
           priority

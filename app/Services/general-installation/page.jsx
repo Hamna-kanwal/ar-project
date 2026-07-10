@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "What jobs do you take on?  ",
     desc: "From taps and valves to whole appliances, we cover the small jobs many firms turn down. One call, one team, job done. ",
-    img: "/generalinstallation2.jpg"
+    img: "/installation2.jpg"
   },
   {
     title: "Are your prices clear? ",
     desc: "We quote up front, turn up on time, and leave the place clean. No hidden costs, no mess left behind.  ",
-    img: "/generalinstallation 3.jpg"
+    img: "/installation3.jpg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/genera_linstallation.jpg"
+          src="/installation1.jpg"
           alt="Heating installation background"
           fill
           priority

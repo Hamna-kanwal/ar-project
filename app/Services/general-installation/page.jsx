@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear? ",
     desc: "We quote up front, turn up on time, and leave the place clean. No hidden costs, no mess left behind.  ",
-    img: "/generalinstallation3.jpg"
+    img: "/generalinstallation 3.jpg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/generalinstallation1.jpg"
+          src="/generalinstallation 1.jpg"
           alt="Heating installation background"
           fill
           priority

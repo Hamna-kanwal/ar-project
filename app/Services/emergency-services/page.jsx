@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Are you safe to call for gas faults?  ",
     desc: "Our Gas Safe engineers deal with leaks and faults the right way. We keep you and your home safe, then get things working again.  ",
-    img: "/heatingstallation3.jpg"
+    img: "/emergencie.jpg"
   }
 ];
 

@@ -6,21 +6,21 @@ import CtaBanner from '../../Components/CTA';
 
 const serviceDetails = [
   {
-    title: "Can I run my heating from my phone? ",
-    desc: "Warm the home before you get in, or turn the heat off from bed. Hive puts full control in your hand, wherever you are ",
-    img: "/hive2.jpg"
+    title: " What is a Megaflo unvented cylinder? ",
+    desc: "A Megaflo works off the mains, so you get powerful hot water with no cold tank in the loft. Great for homes with more than one bathroom.  ",
+    img: "/1.jpg"
   },
   {
-    title: " Do you set Hive up for me? ",
-    desc: "We wire in Hive, connect the app to your phone, and test the link to your boiler. You leave the job ready to run your heat with a tap.o go. ",
-    img: "/hive3.jpg"
+    title: "Is a Megaflo fitted safely? ",
+    desc: "We size the cylinder to your home, fit the safety parts, and test the flow. You get steady, strong hot water you can count on.  ",
+    img: "/2.jpg"
   }
 ];
 
 const faqs = [
-  { q: "Do I need wifi for Hive? ", a: "Yes. Hive uses your home wifi to link to the app. " },
-  { q: "Can Hive save me money? ", a: "Used well, yes. Better control means less wasted heat.  " },
-  { q: "Can you move my old thermostat to Hive?   ", a: "Yes. We swap your old control for Hive and set the whole thing up.  " },
+  { q: "Do I have space for a Megaflo? ", a: "Most homes do. We check the space and advise on the right size. " },
+  { q: "Is a Megaflo safe? ", a: "Yes. We fit all the safety parts and test the system in full.   " },
+  { q: "How much hot water does a Megaflo hold? ", a: "Sizes vary. We help you pick one to match your home. " },
 ];
 
 export default function ServicesAndFAQ() {
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/hive1.jpg"
+          src="/3.jpg"
           alt="Heating installation background"
           fill
           priority
@@ -46,12 +46,14 @@ export default function ServicesAndFAQ() {
 
  
 
-Hive Thermostat<span className="text-orange-500"> Installation</span>
+ 
+
+Megaflo Unvented <span className="text-orange-500">Cylinder Installation</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
-      Hive lets you run your heating from your phone. Turn the heat on from work, set a plan, and keep an eye on your use. 
+   A Megaflo cylinder gives you strong hot water at every tap. Run two showers at once with no drop in flow. 
 
-We fit Hive, link the app, and show you how the system works. 
+We fit and test the cylinder, so your hot water stays strong across the home.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <Link href="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-600">Get my free quote</Link>

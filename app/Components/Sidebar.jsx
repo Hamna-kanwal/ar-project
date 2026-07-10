@@ -22,6 +22,7 @@ const navItems = [
              { label: " General Plumbing & Repair  ", href: "/Services/general-plumbing" },
               { label: " Power Flushing  ", href: "/Services/power-flushing" },
               { label: "  Hive Thermostat Installation  ", href: "/Services/hive" },
+              { label: "  Gas Cooker Installation   ", href: "/Services/gas-cooker" },
     
     ] 
   },

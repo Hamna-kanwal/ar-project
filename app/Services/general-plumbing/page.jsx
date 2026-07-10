@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "What plumbing jobs do you fix?  ",
     desc: "Leaks, blocked drains, dodgy taps, and low pressure. We handle the common faults fast, before a small drip turns into a big bill. ",
-    img: "/boiler11.jpg"
+    img: "/plumbing2.jpg"
   },
   {
     title: "Are your prices clear? ",
     desc: "We quote before we start and stick to the price. No mess, no surprise costs, no job too small.  ",
-    img: "/boiler12.jpg"
+    img: "/plumbing3.jpg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/boiler.jpg"
+          src="/plumbing1.jpg"
           alt="Heating installation background"
           fill
           priority

@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Is the fit clean and tidy? ",
     desc: "We fit the boiler, pipes, and radiators with care and clean up when we finish. We show you how the system works, so you feel in charge from day one. ",
-    img: "/heating_installation3.jpeg"
+    img: "/heating_nstallation3.jpeg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/heating_installation1.jpg"
+          src="/heating_installation1.png"
           alt="Heating installation background"
           fill
           priority

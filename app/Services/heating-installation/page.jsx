@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "How do you plan heating for my home? ",
     desc: "No two homes heat the same way. We look at your rooms, your water use, and how many people live with you, then size the system so each room stays warm. Good planning means lower bills and even heat.",
-    img: "/heatinginstallation2.jpeg"
+    img: "/heating_installation2.jpeg"
   },
   {
     title: "Is the fit clean and tidy? ",
     desc: "We fit the boiler, pipes, and radiators with care and clean up when we finish. We show you how the system works, so you feel in charge from day one. ",
-    img: "/heatinginstallation3.jpeg"
+    img: "/heating_installation3.jpeg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/heatinginstallation1.jpg"
+          src="/heating_installation1.jpg"
           alt="Heating installation background"
           fill
           priority

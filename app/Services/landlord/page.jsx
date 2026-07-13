@@ -9,14 +9,7 @@ const serviceDetails = [
   {
     title: "Can I run my heating from my phone?",
     desc: "Warm the home before you get in, or turn the heat off from bed. Hive puts full control in your hand, wherever you are.",
-    features: [
-      "Remote heating control",
-      "Real-time usage monitoring",
-      "Smart scheduling plans",
-      "Energy saving insights",
-      "Easy mobile app access",
-      "Instant status notifications"
-    ],
+  
     img: "/hive2.jpg"
   },
   {

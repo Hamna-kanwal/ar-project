@@ -44,7 +44,7 @@ export default function Footer() {
         ))}
 
       {/* Contact Box: positioned over center area on md+ screens */}
-        <div className="w-full md:absolute md:left-[80%] md:-translate-x-1/2 md:top-40 lg:left-[65%] lg:top-44 md:w-8/12 lg:w-7/12 border-2 border-white rounded-xl py-6 px-6 z-10">
+        <div className="w-full md:absolute md:left-[80%] md:-translate-x-1/2 md:top-60 lg:left-[65%] lg:top-44 md:w-8/12 lg:w-7/12 border-2 border-white rounded-xl py-4 px-4 z-10">
   <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
     <div className="flex items-center gap-3">
       <MdEmail className="text-2xl text-white" /> 

@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Will I know the cost first? ",
     desc: "Before we start, we tell you the fault and the cost. No shocks on the bill, no work you did not agree to. If a new boiler makes more sense than a repair, we say so.  ",
-    img: "/heatinginstallation3.jpg"
+    img: "/cost.jpg"
   }
 ];
 

@@ -8,7 +8,7 @@ const serviceDetails = [
   {
     title: "Why fit a new thermostat? ",
     desc: "Set the warmth you want, when you want. A good thermostat means less waste and a home ready for you when you walk in. ",
-    img: "/thermostate2.jpg"
+    img: "/thermostate12.png"
   },
   {
     title: "Do you set the thermostat up for me?  ",

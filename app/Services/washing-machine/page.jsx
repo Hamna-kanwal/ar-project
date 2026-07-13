@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: " How do you fit my washing machine?   ",
     desc: "We connect your machine to the water and waste, level the base, and make sure the fit is sound. No leaks, no wobble.  ",
-    img: "/undergroundheating2.jpeg"
+    img: "/machine3.webp"
   },
   {
     title: "Do you test for leaks? ",
     desc: "We run a cycle to check the machine works and the joints hold. You leave the job with a machine ready to use.  ",
-    img: "/undergroundheating3.png"
+    img: "/machine2.jpg"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/undergroundheating1.png"
+          src="/machine1.jpg"
           alt="Heating installation background"
           fill
           priority

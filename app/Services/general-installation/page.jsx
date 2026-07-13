@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear? ",
     desc: "We quote up front, turn up on time, and leave the place clean. No hidden costs, no mess left behind.  ",
-    img: "/calculation.jpg"
+    img: "/analysis.jpg"
   }
 ];
 

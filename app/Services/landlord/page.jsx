@@ -85,7 +85,7 @@ export default function ServicesAndFAQ() {
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">{s.desc}</p>
                 {/* 6 Lines with Check Icons */}
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {s.features.map((feature, index) => (
+                  {(s.features || []).map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-700 font-medium">
                       <MdCheckCircle className="text-orange-500 text-xl mr-2" />
                       {feature}

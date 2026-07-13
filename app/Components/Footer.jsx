@@ -44,25 +44,28 @@ export default function Footer() {
         ))}
 
         {/* Column 5: Contact Us (Naya alag column) */}
-        <div className="text-left flex flex-col items-start">
-          <h3 className="font-bold border-l-4 border-yellow-500 pl-3 mb-6 uppercase text-sm tracking-wider">
-            Contact Us
-          </h3>
-          <div className="space-y-4 text-sm">
-            <div className="flex items-start gap-3">
-              <MdEmail className="text-xl text-yellow-500 mt-1" />
-              <span>info@arheatingservice.co.uk</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <MdSmartphone className="text-xl text-yellow-500 mt-1" />
-              <span>+44 7800 657141</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <MdLocationOn className="text-xl text-yellow-500 mt-1" />
-              <span>Unit 24 The Roundway, Watford, WD18 6LB</span>
-            </div>
-          </div>
-        </div>
+      <div className="text-left flex flex-col items-start">
+  <h3 className="font-bold border-l-4 border-yellow-500 pl-3 mb-6 uppercase text-sm tracking-wider">
+    Contact Us
+  </h3>
+  <div className="space-y-4 text-sm">
+    <div className="flex items-start gap-3">
+      {/* Icon size changed to 32px */}
+      <MdEmail className="text-[32px] text-yellow-500 mt-0" />
+      <span className="mt-1">info@arheatingservice.co.uk</span>
+    </div>
+    <div className="flex items-start gap-3">
+      {/* Icon size changed to 32px */}
+      <MdSmartphone className="text-[32px] text-yellow-500 mt-0" />
+      <span className="mt-1">+44 7800 657141</span>
+    </div>
+    <div className="flex items-start gap-3">
+      {/* Icon size changed to 32px */}
+      <MdLocationOn className="text-[32px] text-yellow-500 mt-0" />
+      <span className="mt-1">Unit 24 The Roundway, Watford, WD18 6LB</span>
+    </div>
+  </div>
+</div>
 
       </div>
 

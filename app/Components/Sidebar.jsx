@@ -25,6 +25,7 @@ const navItems = [
               { label: "  Gas Cooker Installation   ", href: "/Services/gas-cooker" },
                { label: "  Nest Thermostat Installation", href: "/Services/nest" },
                      { label: "  Washing Machine Installation    ", href: "/Services/washing-machine" },
+                      { label: "  Dishwasher Installation    ", href: "/Services/dishwasher" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

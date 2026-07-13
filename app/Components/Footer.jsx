@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#027cc1] text-white pt-12 pb-6 px-6 lg:px-20">
       
-      {/* Grid container */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      {/* Grid container (Sirf Links aur Logo ke liye) */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
         
         {/* Column 1: Logo aur Intro */}
         <div className="flex flex-col items-start">
@@ -30,7 +30,7 @@ export default function Footer() {
           { title: "Support", links: ["FAQ", "Privacy Policy", "Terms & Conditions", "Contact Us"] }
         ].map((col, index) => (
           <div key={index} className="text-left flex flex-col items-start ">
-            <h3 className="font-bold  border-l-4 border-yellow-500 pl-2">
+            <h3 className="font-bold border-l-4 border-yellow-500 pl-2">
               {col.title}
             </h3>
             <ul className="space-y-3 text-sm cursor-pointer">
@@ -42,28 +42,28 @@ export default function Footer() {
             </ul>
           </div>
         ))}
+      </div>
 
-      {/* Contact Box: md:col-start-2 ka matlab hai pehli column chhor kar baki 3 par aaye */}
-<div className="md:col-start-2 md:col-span-3 border-2 border-white rounded-xl p-6">
-  <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-    <div className="flex items-center gap-3">
-      <MdEmail className="text-2xl text-white" /> 
-      <span>info@arheatingservice.co.uk</span>
-    </div>
-    <div className="flex items-center gap-3">
-      <MdSmartphone className="text-2xl text-white" /> 
-      <span>+447800657141</span>
-    </div>
-    <div className="flex items-center gap-3">
-      <MdLocationOn className="text-2xl text-white" /> 
-      <span>Unit 24 The Roundway Watford, WD18 6LB</span>
-    </div>
-  </div>
-</div>
+      {/* Contact Box: GRID se bahar nikal diya taake ye poori width le sakay */}
+      <div className="max-w-7xl mx-auto border-2 border-white rounded-xl p-6 mb-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+          <div className="flex items-center gap-3">
+            <MdEmail className="text-2xl text-white" /> 
+            <span>info@arheatingservice.co.uk</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdSmartphone className="text-2xl text-white" /> 
+            <span>+447800657141</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <MdLocationOn className="text-2xl text-white" /> 
+            <span>Unit 24 The Roundway Watford, WD18 6LB</span>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
+      <div className="max-w-7xl mx-auto pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-300 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
         <p className="cursor-pointer hover:text-white">MODERN SLAVERY STATEMENT</p>
       </div>

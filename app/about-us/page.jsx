@@ -86,10 +86,10 @@ export default function AboutUs() {
           </p>
          <div className="grid md:grid-cols-2 gap-8 mt-12">
   {[
-    { title: "Local Company", desc: "Serving Harrow and surrounding areas since 2012.", icon: MapPin },
-    { title: "Our Services", desc: "Expert boiler installation, servicing, and repairs.", icon: Wrench },
-    { title: "Safety First", desc: "Certified Gas Safe Registered engineers.", icon: ShieldCheck },
-    { title: "Affordable", desc: "Competitive prices with no hidden costs.", icon: HandCoins }
+    { title: "Local Company", desc: "AR Heating & Plumbing Services is a local company established in 2012. We cover Harrow and surrounding areas, including Rickmansworth, Hemel Hempstead, St Albans, Harrow. We pride ourselves on the quality of our work at very competitive prices. Our work and your satisfaction are guaranteed.", icon: MapPin },
+    { title: "Our Services", desc: "We provide a complete range of services including installation, servicing, and repairs for all brands of boilers, heating systems and gas appliances. We also offer plumbing services associated with your boiler and heating needs. Our other services include Landlord Certificates, Power Flushes, and more.", icon: Wrench },
+    { title: "Safety First", desc: "We consider safety as the highest priority throughout the works we carry out. All our engineers are highly trained, have considerable experience, and are Gas Safe Registered (formerly known as Corgi registered). Our engineers deliver a high level of quality work.", icon: ShieldCheck },
+    { title: "Affordable", desc: "Our relationship with key manufacturers of boilers and heating systems means we are able to secure better trade prices, savings which we pass on to our customers. Our labour charges are the most competitive in the market. Call us today on 07800 657141 for a no-obligation quote or general advice.", icon: HandCoins }
   ].map((item, i) => (
     <div 
       key={i} 

@@ -145,7 +145,7 @@ const EazySwitchPage = () => {
 </div>
 
         <div className="rounded-3xl p-8 shadow-xl flex-grow" style={{ backgroundColor: '#027cc1' }}>
-          <p className="text-sm font-extrabold text-orange-600 tracking-wider">DIRECT CONTACT</p>
+          <p className="text-sm font-extrabold text-white tracking-wider">DIRECT CONTACT</p>
           <h4 className="text-[15px] font-bold text-white mt-4">Switchboard: <span className="block text-lg font-semibold">+44-7800 657 141</span></h4>
           <h4 className="text-[20px] font-bold text-white mt-4">Support:  <span className="block text-lg font-semibold">info@arheatingservice.co.uk</span></h4>
           

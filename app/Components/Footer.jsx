@@ -4,7 +4,7 @@ import { MdEmail, MdSmartphone, MdLocationOn } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#027cc1] text-white pt-12 pb-6 px-6 lg:px-20">
+  <footer className="relative bg-[#027cc1] text-white pt-12 pb-20 px-6 lg:px-20">
       
       {/* Grid container */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -43,8 +43,8 @@ export default function Footer() {
           </div>
         ))}
 
-      {/* Contact Box: md:col-start-2 ka matlab hai pehli column chhor kar baki 3 par aaye */}
-<div className="md:col-start-2 md:col-span-3 border-2 border-white rounded-xl -mt-11">
+      {/* Contact Box: positioned over center area on md+ screens */}
+      <div className="w-full md:absolute md:left-1/2 md:-translate-x-1/2 md:top-24 md:w-10/12 border-2 border-white rounded-xl py-6 px-6">
   <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
     <div className="flex items-center gap-3">
       <MdEmail className="text-2xl text-white" /> 

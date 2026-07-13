@@ -23,7 +23,8 @@ const navItems = [
               { label: " Power Flushing  ", href: "/Services/power-flushing" },
               { label: "  Hive Thermostat Installation  ", href: "/Services/hive" },
               { label: "  Gas Cooker Installation   ", href: "/Services/gas-cooker" },
-    
+               { label: "  Nest Thermostat Installation", href: "/Services/nest" },
+                     { label: "  Washing Machine Installation    ", href: "/Services/washing-machine" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

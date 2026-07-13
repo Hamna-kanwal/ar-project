@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, CheckCircle2 } from 'lucide-react';
+import { MapPin } from 'lucide-react'; // CheckCircle2 ki jagah MapPin import kiya
 
 const areas = [
   "Watford", "Harrow", "Pinner", "Uxbridge", "Southall", 
@@ -10,14 +10,14 @@ export default function AreasWeCover() {
   return (
     <div className="bg-gray-50 min-h-screen">
       
-      {/* Hero Header with Background Image */}
+      {/* Hero Header */}
       <section className="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
         <img 
           src="/location.jpg" 
           className="absolute inset-0 w-full h-full object-cover" 
           alt="Areas We Cover Background" 
         />
-        <div className="absolute inset-0 bg-[#027cc1]/40" /> {/* Blue Overlay */}
+        <div className="absolute inset-0 bg-[#027cc1]/40" />
         
         <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
@@ -29,7 +29,8 @@ export default function AreasWeCover() {
 
       {/* Main Content */}
       <section className="py-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Map Placeholder Card */}
+        
+        {/* Map Placeholder */}
         <div className="bg-white p-4 rounded-3xl shadow-lg border border-gray-100">
           <div className="w-full h-[450px] bg-gray-200 rounded-2xl flex items-center justify-center overflow-hidden">
             <iframe 
@@ -45,9 +46,10 @@ export default function AreasWeCover() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Service Locations</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {areas.map((area, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-100 hover:border-orange-300 transition group">
-                <CheckCircle2 className="text-orange-500 w-5 h-5" />
-                <span className="font-medium text-gray-700 group-hover:text-orange-600 transition">{area}</span>
+              <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-100 hover:border-red-300 transition group">
+                {/* Red MapPin icon */}
+                <MapPin className="text-red-500 w-5 h-5" /> 
+                <span className="font-medium text-gray-700 group-hover:text-red-600 transition">{area}</span>
               </div>
             ))}
           </div>

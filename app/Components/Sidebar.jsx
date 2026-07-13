@@ -26,6 +26,7 @@ const navItems = [
                { label: "  Nest Thermostat Installation", href: "/Services/nest" },
                      { label: "  Washing Machine Installation    ", href: "/Services/washing-machine" },
                       { label: "  Dishwasher Installation    ", href: "/Services/dishwasher" },
+                      { label: " Landlord Certificate     ", href: "/Services/landlord" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },

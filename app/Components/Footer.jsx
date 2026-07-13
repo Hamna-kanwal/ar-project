@@ -44,7 +44,7 @@ export default function Footer() {
         ))}
 
         {/* Contact Box: Ab ye 4th column ki jagah le lega ya columns ke neeche adjust hoga */}
-        <div className="md:col-start-2 md:col-span-3 border-2 border-white rounded-xl p-6 mt-8">
+        <div className="md:col-start-2 md:col-span-3 border-2 border-white rounded-xl p-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
             <div className="flex items-center gap-3">
               <MdEmail className="text-2xl text-white" /> 

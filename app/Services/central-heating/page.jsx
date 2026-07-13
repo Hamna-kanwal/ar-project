@@ -8,7 +8,7 @@ const serviceDetails = [
   {
     title: "How do you build the system for my home? ",
     desc: "We map out your rooms and your daily use, then pick the right boiler size and radiators. A well sized system heats fast, holds warmth, and does not waste gas. ",
-    img: "/heatingstallation2.jpg"
+    img: "/calculation.jpg"
   },
   {
     title: "Will the system last?  ",

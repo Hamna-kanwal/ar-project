@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { MapPin } from 'lucide-react';
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 
-// Map ko dynamic load karna zaruri hai taake "window is not defined" error na aaye
+// Sahi path: ../ nikalne ke liye (1: location se bahar, 2: app folder se bahar)
 const MapComponent = dynamic(() => import('../Components/MapSection'), {
   ssr: false,
   loading: () => <div className="h-[450px] w-full bg-gray-200 animate-pulse rounded-2xl" />

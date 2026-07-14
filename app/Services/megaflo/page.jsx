@@ -29,7 +29,7 @@ export default function ServicesAndFAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
           src="/3.jpg"
           alt="Heating installation background"

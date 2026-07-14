@@ -1,6 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { Mail, Phone, Building2, CheckCircle2, UploadCloud, MapPin, Clock3 } from 'lucide-react';
-import MapSection from '../Components/MapSection';
+
+const MapSection = dynamic(() => import('../Components/MapSection'), {
+  ssr: false,
+  loading: () => <div className="h-[450px] w-full bg-gray-200 animate-pulse rounded-2xl" />,
+});
 
 const EazySwitchPage = () => {
   const primaryColor = '#027cc1'; 

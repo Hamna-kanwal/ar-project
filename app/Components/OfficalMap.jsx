@@ -8,7 +8,7 @@ const OfficeLocationMap = () => {
   const [leafletLib, setLeafletLib] = useState(null);
   
   // Watford coordinates: 51.6565, -0.3903
-  const position = [51.64309196014379, -0.415585515343604]]; 
+  const position = [51.64309196014379, -0.415585515343604]; 
 
   useEffect(() => {
     setIsClient(true);

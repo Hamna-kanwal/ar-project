@@ -58,7 +58,7 @@ export default function ServicesAndFAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[1000px] flex items-center justify-center overflow-hidden">
         <NextImage
           src="/boilerservice1.jpg"
           alt="Boiler installation background"

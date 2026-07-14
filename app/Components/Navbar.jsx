@@ -33,13 +33,13 @@ export default function Navbar({ onOpenSidebar }) {
         {/* Padding px-8 se badal kar px-12 kr di taake top bar se match ho */}
         <nav className="py-6 px-8 flex items-center justify-between mt-6 md:mt-0">
           <Link href="/" className="relative block">
-          <Image 
-  src="/heating-logo.png" 
-  alt="Logo" 
-  width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
-  height={200}      // Yahan height set karein
-  className="object-contain rounded-4xl" 
-/>
+            <Image 
+              src="/heating-logo.png" 
+              alt="Logo" 
+              width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
+              height={80}      // Height lighter kar di taake header compact nazar aaye
+              className="object-contain rounded-4xl" 
+            />
           </Link>
 
           <button 

@@ -1,10 +1,12 @@
+"use client";
+
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { Mail, Phone, Building2, CheckCircle2, UploadCloud, MapPin, Clock3 } from 'lucide-react';
 
-const MapSection = dynamic(() => import('../Components/MapSection'), {
+const Officalmap = dynamic(() => import('../Components/OfficalMap'), {
   ssr: false,
-  loading: () => <div className="h-[450px] w-full bg-gray-200 animate-pulse rounded-2xl" />,
+  loading: () => <div className="h-[550px] w-full bg-gray-100 animate-pulse rounded-3xl flex items-center justify-center text-gray-400">Loading Map Data...</div>,
 });
 
 const EazySwitchPage = () => {
@@ -123,7 +125,7 @@ const EazySwitchPage = () => {
       
       {/* Map Section */}
             <div className="w-full h-full p-2">
-        <MapSection />
+        <Officalmap />
       </div>
 
       {/* Aside - mt-9 ya koi bhi margin hata dein */}

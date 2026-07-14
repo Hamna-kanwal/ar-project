@@ -39,25 +39,29 @@ export default function ServicesAndFAQ() {
           quality={70}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-white/80" />
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
-             
+       <div className="absolute inset-0 bg-white/80" /> {/* Background opacity halki kar di */}
 
- 
+<div className="relative z-10 text-center px-4 max-w-5xl w-full"> {/* px-4 aur w-full add kiya */}
+  <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-[#027cc1] leading-tight">
+    Hive Thermostat <br className="md:hidden" /> {/* Mobile par line break */}
+    <span className="text-orange-500 whitespace-nowrap">Installation</span>
+  </h1>
+  
+  <p className="text-base md:text-lg text-gray-900 max-w-2xl mx-auto mt-6 font-semibold bg-white/40 p-2 rounded-lg">
+    {/* Text ke peeche halka background add kiya taake readability barhe */}
+    Hive lets you run your heating from your phone. Turn the heat on from work, set a plan, and keep an eye on your use. 
+    We fit Hive, link the app, and show you how the system works. 
+  </p>
 
-Hive Thermostat<span className="text-orange-500 whitespace-nowrap"> Installation</span>
-          </h1>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
-      Hive lets you run your heating from your phone. Turn the heat on from work, set a plan, and keep an eye on your use. 
-
-We fit Hive, link the app, and show you how the system works. 
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-10">
-            <Link href="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-600">Get my free quote</Link>
-            <a href="tel:+447800657141" className="border-2 border-[#027cc1] text-[#027cc1] px-8 py-3 rounded-lg font-bold hover:bg-[#027cc1] hover:text-white">Call: +44 7800 657141</a>
-          </div>
-        </div>
+  <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+    <Link href="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-600 transition-all">
+      Get my free quote
+    </Link>
+    <a href="tel:+447800657141" className="border-2 border-[#027cc1] text-[#027cc1] px-8 py-3 rounded-lg font-bold hover:bg-[#027cc1] hover:text-white transition-all">
+      Call: +44 7800 657141
+    </a>
+  </div>
+</div>
       </section>
 
       {/* Zig-Zag Service Section */}

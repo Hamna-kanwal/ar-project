@@ -46,7 +46,7 @@ export default function ServicesAndFAQ() {
 
  
 
-Hive Thermostat<span className="text-orange-500"> Installation</span>
+Hive Thermostat<span className="text-orange-500 whitespace-nowrap"> Installation</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
       Hive lets you run your heating from your phone. Turn the heat on from work, set a plan, and keep an eye on your use. 

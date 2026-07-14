@@ -46,7 +46,7 @@ export default function ServicesAndFAQ() {
 
  
 
-Nest Thermostat<span className="text-orange-500">Installation</span>
+Nest Thermostat<span className="text-orange-500 whitespace-nowrap"> Installation</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
       Nest learns how you like your home and adjusts to save you money. We fit Nest and set the whole thing up. 

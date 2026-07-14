@@ -44,7 +44,7 @@ export default function ServicesAndFAQ() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
              
 
-Dishwasher<span className="text-orange-500">Installation</span>
+Dishwasher<span className="text-orange-500 whitespace-nowrap">Installation</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
 A dishwasher needs a sound, leak free fit to run well. We plumb yours in and test the job before we go. 

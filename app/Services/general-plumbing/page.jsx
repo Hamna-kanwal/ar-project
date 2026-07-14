@@ -42,7 +42,7 @@ export default function ServicesAndFAQ() {
         <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
-            General Plumbing<span className="text-orange-500"> & Repair</span>
+            General Plumbing<span className="text-orange-500 whitespace-nowrap"> & Repair</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
            From a dripping tap to a burst pipe, we cover the day to day plumbing jobs to keep your home running. 

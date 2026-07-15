@@ -44,7 +44,7 @@ export default function GasSafetyPage() {
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans antialiased">
       
       {/* Hero Section */}
-      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[800px] flex items-center justify-center overflow-hidden">
         <NextImage
           src="/certification.jpg"
           alt="Boiler breakdown and repair background"

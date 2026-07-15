@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <main className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.jpg')" }} />
         <div className="absolute inset-0 bg-white/80" /> 
         <div className="relative z-10 text-center px-6 max-w-4xl">

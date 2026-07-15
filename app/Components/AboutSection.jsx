@@ -52,7 +52,7 @@ export  default function AboutSection() {
     src="/horizontal.jpg" 
     alt="Student" 
     // Mobile ke liye h-64 aur width full, desktop ke liye h-auto
-    className="w-28 h-64 md:h-auto object-contain" 
+    className="w-96 h-80 md:h-auto " 
   />
 </div>
     {/* Dusri Image (Mobile par hidden, Desktop par wahi position) */}

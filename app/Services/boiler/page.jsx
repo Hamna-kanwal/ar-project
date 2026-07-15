@@ -32,7 +32,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/boiler.jpg"
+          src="/boiler.jpg"faqs
           alt="Boiler service background"
           fill
           priority

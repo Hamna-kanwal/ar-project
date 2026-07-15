@@ -32,7 +32,7 @@ const navItems = [
   { label: "Why AR-Heating", href: "/about" },
   { label: "About Us", href: "/about-us" },
   { label: "Area We Cover", href: "/location" },
-  { label: "Landlord Certificate", href: "/contact" },
+  { label: "Landlord Certificate", href: "/landlord-certificate" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -116,3 +116,4 @@ export default function Sidebar({ isOpen, onClose }) {
     </AnimatePresence>
   );
 }
+       

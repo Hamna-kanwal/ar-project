@@ -42,9 +42,9 @@ export  default function AboutSection() {
               </p>
             </div>
           </div>
-<div className="relative w-full max-w-2xl mx-auto p-10">
+<div className="relative w-full max-w-2xl mx-auto md:p-10">
   {/* Red Border Wala Area (Background) */}
-  <div className="relative  p-8 rounded-lg flex flex-col items-center">
+  <div className="relative  md:p-8 rounded-lg flex flex-col items-center">
     
     {/* Pehli Image */}
     <div className="relative w-full overflow-hidden rounded-xl shadow-2xl z-10">
@@ -52,7 +52,7 @@ export  default function AboutSection() {
     src="/horizontal.jpg" 
     alt="Student" 
     // Mobile ke liye h-64 aur width full, desktop ke liye h-auto
-    className="w-96 h-80 md:h-auto " 
+    className="w-96 h-64 md:h-auto " 
   />
 </div>
     {/* Dusri Image (Mobile par hidden, Desktop par wahi position) */}

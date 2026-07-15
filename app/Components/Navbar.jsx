@@ -23,8 +23,8 @@ export default function Navbar({ onOpenSidebar }) {
 
   {/* Right Section - Social Media */}
   <div className="flex items-center gap-4">
-    <a href="#" className="hover:text-gray-200"><FaFacebook size={18} /></a>
-    <a href="#" className="hover:text-gray-200"><FaInstagram size={18} /></a>
+    <a href="https://www.facebook.com/arheatingservice" className="hover:text-gray-200"><FaFacebook size={18} /></a>
+    <a href="https://www.instagram.com/arheatingservice/" className="hover:text-gray-200"><FaInstagram size={18} /></a>
   </div>
 </div>
 

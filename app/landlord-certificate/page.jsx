@@ -27,9 +27,9 @@ const LandlordGasSafety = () => {
           quality={70}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white drop-shadow-lg">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1] drop-shadow-lg">
             Landlord Gas Safety <span className="text-orange-500">Certificates</span>
           </h1>
         </div>

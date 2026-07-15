@@ -45,7 +45,7 @@ export default function ServicesAndFAQ() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
              
 
-Power<span className="text-orange-500">Flushing</span>
+Power<span className="text-orange-500"> Flushing</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
       Over time, sludge clogs your pipes and radiators, so cold spots creep in and your boiler works harder. A power flush clears the lot. 

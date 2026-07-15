@@ -39,15 +39,14 @@ export default function ServicesAndFAQ() {
           quality={70}
           className="object-cover"
         />
-       <div className="absolute inset-0 bg-white/80" /> {/* Background opacity halki kar di */}
-
-<div className="relative z-10 text-center px-4 max-w-5xl w-full"> {/* px-4 aur w-full add kiya */}
-  <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-[#027cc1] leading-tight">
+ <div className="absolute inset-0 bg-white/80" />
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
     Hive Thermostat <br className="md:hidden" /> {/* Mobile par line break */}
     <span className="text-orange-500 whitespace-nowrap">Installation</span>
   </h1>
   
-  <p className="text-base md:text-lg text-gray-900 max-w-2xl mx-auto mt-6 font-semibold bg-white/40 p-2 rounded-lg">
+  <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
     {/* Text ke peeche halka background add kiya taake readability barhe */}
     Hive lets you run your heating from your phone. Turn the heat on from work, set a plan, and keep an eye on your use. 
     We fit Hive, link the app, and show you how the system works. 

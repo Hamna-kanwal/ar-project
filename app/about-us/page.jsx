@@ -13,7 +13,7 @@ export default function AboutUs() {
             About<span className="text-orange-500"> Us</span>
           </h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
-           Reliable Heating & Plumbing Experts in Harrow
+           AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas.We specialise in all types of gas services including boiler & heating repair, installation, and servicing.
 
 
           </p>
@@ -27,9 +27,9 @@ export default function AboutUs() {
             <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800" alt="Engineer" />
           </div>
           <div>
-            <h2 className="text-4xl font-bold text-[#027cc1] mb-6">AR Heating & Plumbing Services.</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas.We specialise in all types of gas services including boiler & heating repair, installation, and servicing. We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.
+            <h2 className="text-4xl font-bold text-[#027cc1] mb-3">AR Heating & Plumbing Services.</h2>
+            <p className="text-gray-600  leading-relaxed mb-3">
+               We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-700 font-medium">
@@ -43,7 +43,7 @@ export default function AboutUs() {
             </p>
             </div>
             {/* Orange button for highlight */}
-            <button className="mt-8 bg-orange-500 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-md">
+            <button className=" bg-orange-500 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-md">
               Get In Touch
             </button>
           </div>

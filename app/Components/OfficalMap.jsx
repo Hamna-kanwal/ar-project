@@ -19,7 +19,7 @@ const OfficeLocationMap = () => {
 
   if (!isClient || !leafletLib) {
     return (
-      <div className="h-[550px] w-full bg-gray-100 animate-pulse rounded-3xl flex items-center justify-center text-gray-400">
+      <div className="h-[450px] w-full bg-gray-100 animate-pulse rounded-3xl flex items-center justify-center text-gray-400">
         Loading Map Data...
       </div>
     );
@@ -38,7 +38,7 @@ const OfficeLocationMap = () => {
   });
 
   return (
-    <div className="w-full h-[550px] rounded-3xl overflow-hidden border-8 border-white shadow-2xl relative z-0">
+    <div className="w-full h-[450px] rounded-3xl overflow-hidden border-8 border-white shadow-2xl relative z-0">
       <MapContainer 
         center={position} 
         zoom={15} 

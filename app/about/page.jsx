@@ -47,7 +47,7 @@ From a new boiler to a quick repair, we give you fixed prices, plain advice, and
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-10 text-[#027cc1]">Questions people ask</h2>
+          <h2 className="text-4xl font-bold mb-10 text-black">Frequently Asked Question</h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <div key={i} className={`border-2 rounded-xl overflow-hidden transition-all ${openIndex === i ? 'border-orange-500' : 'border-gray-200'}`}>

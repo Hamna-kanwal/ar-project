@@ -17,15 +17,15 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen bg-[#F7F7F5]">
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/conditions.jpg"
-          alt="Privacy Policy background"
-          fill
-          priority
-          sizes="100vw"
-          quality={70}
-          className="object-cover"
-        />
+   <Image
+  src="/conditions.jpg"
+  alt="Heating installation background"
+  fill
+  priority
+  sizes="100vw"
+  unoptimized // <-- Yeh add kar dein
+  className="object-cover"
+/>
         <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">

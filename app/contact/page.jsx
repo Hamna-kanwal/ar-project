@@ -127,7 +127,7 @@ const ContactPage = () => {
       </section>
 
       {/* Offices + Map Section */}
-      <section className="py-16 px-4 md:px-12 lg:px-24 bg-gray-50">
+      <section className="py-16 px-4 md:px-12 lg:px-14 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10">
             <h3 className="text-3xl font-extrabold text-[#027cc1]">Our Offices</h3>
@@ -140,7 +140,7 @@ const ContactPage = () => {
               <div className="rounded-2xl bg-white border border-gray-100 p-6 shadow-sm">
                 <div className="text-[#027cc1] mb-4"><Clock3 size={24} /></div>
                 <p className="text-xs font-bold text-gray-600 tracking-wider mb-2">BUSINESS HOURS</p>
-                <div className="flex justify-between items-center mb-2"><p className="font-bold text-[#027cc1]">Monday - Friday</p><p className="font-bold text-[#027cc1]">09:00 - 18:00</p></div>
+                <div className="flex justify-between items-center mb-2"><p className="font-bold text-[#027cc1]">Monday - Friday</p><p className="font-bold text-[#027cc1]">09:00 - 08:00</p></div>
                 <div className="flex justify-between items-center"><p className="font-bold text-gray-600">Weekend</p><p className="font-bold text-gray-600">Closed</p></div>
               </div>
               <div className="rounded-3xl p-8 shadow-xl flex-grow" style={{ backgroundColor: '#027cc1' }}>

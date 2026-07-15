@@ -21,15 +21,15 @@ export default function TermsPage() {
       {/* Header / Hero */}
      {/* Hero Section */}
            <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
-             <Image
-               src="/conditions.jpg"
-               alt="Heating installation background"
-               fill
-               priority
-               sizes="100vw"
-               quality={70}
-               className="object-cover"
-             />
+     <Image
+  src="/conditions.jpg"
+  alt="Heating installation background"
+  fill
+  priority
+  sizes="100vw"
+  unoptimized // <-- Yeh add kar dein
+  className="object-cover"
+/>
              <div className="absolute inset-0 bg-white/80" />
              <div className="relative z-10 text-center px-6 max-w-4xl">
                <h1 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">

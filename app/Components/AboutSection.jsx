@@ -42,20 +42,18 @@ export  default function AboutSection() {
               </p>
             </div>
           </div>
-
 <div className="relative w-full max-w-2xl mx-auto p-10">
   {/* Red Border Wala Area (Background) */}
-  <div className="relative bg-gray-200 p-8 rounded-lg">
+  <div className="relative  p-8 rounded-lg flex flex-col items-center">
     
-    {/* Pehli Image (Black & White style) */}
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-xl shadow-2xl z-10">
+    {/* Pehli Image */}
+    <div className="relative w-full overflow-hidden rounded-xl shadow-2xl z-10">
       <img src="/horizontal.jpg" alt="Student" className="w-full h-full object-cover" />
     </div>
-
-    {/* Dusri Image (Hands style - Jo thoda aage nikal rahi hai) */}
-    <div className="relative ml-50 mt-60 w-80 h-52 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
-      <img src="/vertical.jpg" alt="Hands" className="object-cover" />
-    </div>
+    {/* Dusri Image (Mobile par hidden, Desktop par wahi position) */}
+<div className="hidden md:block relative md:absolute md:ml-50 md:mt-60 w-80 h-52 mt-8 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
+  <img src="/vertical.jpg" alt="Hands" className="w-full h-full object-cover" />
+</div>
 
   </div>
 </div>

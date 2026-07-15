@@ -3,18 +3,22 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import 'react-quill-new/dist/quill.snow.css';
-
+ 
 // Dynamic import required for Next.js SSR compatibility
 const ReactQuill = dynamic(() => import('react-quill-new'), { ssr: false });
-
+ 
 export default function AdminBlogs() {
   const router = useRouter();
   const [blogs, setBlogs] = useState([]);
-  
+ 
   // Track whether we are creating or editing
   const [editingSlug, setEditingSlug] = useState(null);
   const [initialFormData, setInitialFormData] = useState(null);
-
+ 
+  // Pagination State
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 5;
+ 
   const emptyFormData = {
     title: '',
     slug: '',
@@ -26,11 +30,11 @@ export default function AdminBlogs() {
     pageDescription: '',
     keywords: '',
   };
-
+ 
   const [formData, setFormData] = useState(emptyFormData);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
-
+ 
   // Helper function to show floating toast messages
   const showToast = (message, type = 'success') => {
     setToast({ show: true, message, type });
@@ -38,7 +42,7 @@ export default function AdminBlogs() {
       setToast({ show: false, message: '', type: 'success' });
     }, 3500);
   };
-
+ 
   // Security Check & Initial Data Load
   useEffect(() => {
     const token = localStorage.getItem('admin_token');
@@ -48,7 +52,7 @@ export default function AdminBlogs() {
       fetchBlogs();
     }
   }, [router]);
-
+ 
   const fetchBlogs = async () => {
     try {
       const res = await fetch('/api/blogs');
@@ -59,17 +63,18 @@ export default function AdminBlogs() {
       console.error('Failed to fetch blogs', err);
     }
   };
-
+ 
   const handleBackToDashboard = (e) => {
     e.preventDefault();
     window.location.href = '/admin';
   };
-
-const handleTitleChange = (e) => {
+ 
+  const handleTitleChange = (e) => {
     const title = e.target.value;
     // Keep title updated without automatically touching the slug
     setFormData((prev) => ({ ...prev, title }));
   };
+ 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -85,7 +90,7 @@ const handleTitleChange = (e) => {
       reader.readAsDataURL(file);
     }
   };
-
+ 
   const handleEditClick = (blog) => {
     const dataToSet = {
       title: blog.title || '',
@@ -103,16 +108,16 @@ const handleTitleChange = (e) => {
     setInitialFormData(dataToSet);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+ 
   const resetForm = () => {
     setEditingSlug(null);
     setInitialFormData(null);
     setFormData(emptyFormData);
   };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+ 
     // Check if in edit mode and no changes were made
     if (editingSlug && initialFormData) {
       const isUnchanged = JSON.stringify(formData) === JSON.stringify(initialFormData);
@@ -121,20 +126,20 @@ const handleTitleChange = (e) => {
         return;
       }
     }
-
+ 
     setLoading(true);
-
+ 
     try {
       const isEditing = Boolean(editingSlug);
       const url = isEditing ? `/api/blogs/${editingSlug}` : '/api/blogs';
       const method = isEditing ? 'PUT' : 'POST';
-
+ 
       const res = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
+ 
       const data = await res.json();
       if (data.success) {
         showToast(isEditing ? 'Blog updated successfully!' : 'Blog published successfully!', 'success');
@@ -149,10 +154,10 @@ const handleTitleChange = (e) => {
       setLoading(false);
     }
   };
-
+ 
   const handleDelete = async (slug) => {
     if (!confirm('Are you sure you want to delete this blog?')) return;
-
+ 
     try {
       const res = await fetch(`/api/blogs/${slug}`, { method: 'DELETE' });
       const data = await res.json();
@@ -167,7 +172,7 @@ const handleTitleChange = (e) => {
       showToast('Failed to delete blog', 'error');
     }
   };
-
+ 
   // Custom configuration for Quill Editor Toolbar
   const quillModules = {
     toolbar: [
@@ -177,7 +182,7 @@ const handleTitleChange = (e) => {
       ['link', 'clean'],
     ],
   };
-
+ 
   const inputStyle = {
     width: '100%',
     padding: '10px',
@@ -189,10 +194,16 @@ const handleTitleChange = (e) => {
     fontSize: '14px',
     outline: 'none'
   };
-
+ 
+  // Pagination Slice Calculations
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+  const totalPages = Math.ceil(blogs.length / blogsPerPage);
+ 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#ffffff', padding: '40px 20px', fontFamily: 'sans-serif', position: 'relative' }}>
-      
+     
       {/* FLOATING TOAST NOTIFICATION (Strictly Red or Green) */}
       {toast.show && (
         <div style={{
@@ -215,20 +226,20 @@ const handleTitleChange = (e) => {
           {toast.message}
         </div>
       )}
-
+ 
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        
+       
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ color: '#0080C8', fontSize: '28px', fontWeight: 'bold', margin: 0 }}>Admin Panel - Manage Blogs</h1>
-          
-          <button 
+         
+          <button
             type="button"
             onClick={handleBackToDashboard}
-            style={{ 
-              padding: '10px 18px', 
-              backgroundColor: '#0080C8', 
-              color: '#ffffff', 
-              borderRadius: '8px', 
+            style={{
+              padding: '10px 18px',
+              backgroundColor: '#0080C8',
+              color: '#ffffff',
+              borderRadius: '8px',
               border: 'none',
               fontWeight: 'bold',
               fontSize: '14px',
@@ -240,9 +251,9 @@ const handleTitleChange = (e) => {
             ← Back to Dashboard
           </button>
         </div>
-
+ 
         <hr style={{ marginBottom: '30px', marginTop: '15px', borderColor: '#E85A00', borderWidth: '1px' }} />
-
+ 
         {/* CREATE / EDIT BLOG FORM */}
         <section style={{ backgroundColor: '#ffffff', padding: '30px', borderRadius: '16px', marginBottom: '40px', color: '#111111', border: '2px solid #E85A00', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
@@ -259,7 +270,7 @@ const handleTitleChange = (e) => {
               </button>
             )}
           </div>
-
+ 
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
             <div>
               <label style={{ color: '#222222' }}><b>Blog Title:</b></label>
@@ -272,7 +283,7 @@ const handleTitleChange = (e) => {
                 style={inputStyle}
               />
             </div>
-
+ 
             <div>
               <label style={{ color: '#222222' }}><b>URL Slug:</b></label>
               <input
@@ -283,7 +294,7 @@ const handleTitleChange = (e) => {
                 style={inputStyle}
               />
             </div>
-
+ 
             <div>
               <label style={{ color: '#222222' }}><b>Tag / Category:</b></label>
               <input
@@ -295,7 +306,7 @@ const handleTitleChange = (e) => {
                 style={inputStyle}
               />
             </div>
-
+ 
             <div>
               <label style={{ color: '#222222' }}><b>Short Excerpt:</b></label>
               <input
@@ -307,24 +318,24 @@ const handleTitleChange = (e) => {
                 style={inputStyle}
               />
             </div>
-
+ 
             <div>
               <label style={{ color: '#222222' }}><b>Cover Image (Max 2MB):</b></label>
               <input type="file" accept="image/*" onChange={handleImageUpload} style={{ marginTop: '8px', display: 'block', color: '#111111' }} />
-              
+             
               {/* IMAGE PREVIEW SECTION */}
               {formData.image && (
                 <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   <small style={{ color: '#28a745', fontWeight: 'bold' }}>Image loaded / Preview:</small>
-                  <img 
-                    src={formData.image} 
-                    alt="Cover Preview" 
-                    style={{ maxHeight: '150px', maxWidth: '250px', objectFit: 'cover', borderRadius: '8px', border: '1.5px solid #0080C8' }} 
+                  <img
+                    src={formData.image}
+                    alt="Cover Preview"
+                    style={{ maxHeight: '150px', maxWidth: '250px', objectFit: 'cover', borderRadius: '8px', border: '1.5px solid #0080C8' }}
                   />
                 </div>
               )}
             </div>
-
+ 
             {/* VISUAL RICH TEXT EDITOR (REACT-QUILL) */}
             <div>
               <label style={{ color: '#222222', display: 'block', marginBottom: '8px' }}><b>Main Content:</b></label>
@@ -339,7 +350,7 @@ const handleTitleChange = (e) => {
                 />
               </div>
             </div>
-
+ 
             <h3 style={{ marginTop: '10px', color: '#0080C8', fontSize: '18px' }}>SEO Options (Optional)</h3>
             <div>
               <input
@@ -364,7 +375,7 @@ const handleTitleChange = (e) => {
                 style={inputStyle}
               />
             </div>
-
+ 
             <button
               type="submit"
               disabled={loading}
@@ -374,7 +385,7 @@ const handleTitleChange = (e) => {
             </button>
           </form>
         </section>
-
+ 
         {/* EXISTING BLOGS LIST */}
         <section style={{ backgroundColor: '#ffffff', padding: '25px', borderRadius: '16px', border: '2px solid #0080C8', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)' }}>
           <h2 style={{ color: '#0080C8', marginTop: 0, fontSize: '22px' }}>Existing Blogs</h2>
@@ -382,7 +393,7 @@ const handleTitleChange = (e) => {
             <p style={{ color: '#666666' }}>No blogs published yet.</p>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {blogs.map((blog) => (
+              {currentBlogs.map((blog) => (
                 <div key={blog._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', backgroundColor: '#f8fbfe', border: '1px solid #0080C8', borderRadius: '10px' }}>
                   <div>
                     <strong style={{ color: '#111111', fontSize: '16px' }}>{blog.title}</strong>
@@ -404,6 +415,153 @@ const handleTitleChange = (e) => {
                   </div>
                 </div>
               ))}
+ 
+              {/* --- Optimized Pagination Navigation --- */}
+              {totalPages > 1 && (
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', marginTop: '25px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                   
+                    {/* First Page Button */}
+                    <button
+                      type="button"
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage(1)}
+                      style={{
+                        padding: '8px 12px',
+                        border: '1.5px solid #0080C8',
+                        borderRadius: '8px',
+                        backgroundColor: currentPage === 1 ? '#f5f5f5' : '#ffffff',
+                        color: currentPage === 1 ? '#999999' : '#0080C8',
+                        cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: '13px'
+                      }}
+                    >
+                      « First
+                    </button>
+ 
+                    {/* Prev Button */}
+                    <button
+                      type="button"
+                      disabled={currentPage === 1}
+                      onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                      style={{
+                        padding: '8px 12px',
+                        border: '1.5px solid #0080C8',
+                        borderRadius: '8px',
+                        backgroundColor: currentPage === 1 ? '#f5f5f5' : '#ffffff',
+                        color: currentPage === 1 ? '#999999' : '#0080C8',
+                        cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: '13px',
+                        marginRight: '4px'
+                      }}
+                    >
+                      ‹ Prev
+                    </button>
+ 
+                    {/* Dynamic Page Numbers with Ellipses */}
+                    {(() => {
+                      const pages = [];
+                      const range = 1; // Number of pages to show on either side of the active page
+ 
+                      for (let i = 1; i <= totalPages; i++) {
+                        // Always show the first page, last page, and the range surrounding the active page
+                        if (
+                          i === 1 ||
+                          i === totalPages ||
+                          (i >= currentPage - range && i <= currentPage + range)
+                        ) {
+                          pages.push(
+                            <button
+                              key={i}
+                              type="button"
+                              onClick={() => setCurrentPage(i)}
+                              style={{
+                                padding: '8px 14px',
+                                border: '1.5px solid #0080C8',
+                                borderRadius: '8px',
+                                backgroundColor: currentPage === i ? '#0080C8' : '#ffffff',
+                                color: currentPage === i ? '#ffffff' : '#0080C8',
+                                cursor: 'pointer',
+                                fontWeight: 'bold',
+                                fontSize: '13px',
+                                minWidth: '40px'
+                              }}
+                            >
+                              {i}
+                            </button>
+                          );
+                        } else if (
+                          i === currentPage - range - 1 ||
+                          i === currentPage + range + 1
+                        ) {
+                          // Render an ellipses divider if there is a gap
+                          pages.push(
+                            <span
+                              key={`ellipsis-${i}`}
+                              style={{
+                                color: '#0080C8',
+                                padding: '0 8px',
+                                fontWeight: 'bold',
+                                userSelect: 'none'
+                              }}
+                            >
+                              ...
+                            </span>
+                          );
+                        }
+                      }
+                      return pages;
+                    })()}
+ 
+                    {/* Next Button */}
+                    <button
+                      type="button"
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                      style={{
+                        padding: '8px 12px',
+                        border: '1.5px solid #0080C8',
+                        borderRadius: '8px',
+                        backgroundColor: currentPage === totalPages ? '#f5f5f5' : '#ffffff',
+                        color: currentPage === totalPages ? '#999999' : '#0080C8',
+                        cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: '13px',
+                        marginLeft: '4px'
+                      }}
+                    >
+                      Next ›
+                    </button>
+ 
+                    {/* Last Page Button */}
+                    <button
+                      type="button"
+                      disabled={currentPage === totalPages}
+                      onClick={() => setCurrentPage(totalPages)}
+                      style={{
+                        padding: '8px 12px',
+                        border: '1.5px solid #0080C8',
+                        borderRadius: '8px',
+                        backgroundColor: currentPage === totalPages ? '#f5f5f5' : '#ffffff',
+                        color: currentPage === totalPages ? '#999999' : '#0080C8',
+                        cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+                        fontWeight: 'bold',
+                        fontSize: '13px'
+                      }}
+                    >
+                      Last »
+                    </button>
+ 
+                  </div>
+ 
+                  {/* Showing entries range indicator */}
+                  <span style={{ fontSize: '13px', color: '#666666', fontWeight: '500' }}>
+                    Showing {indexOfFirstBlog + 1} to {Math.min(indexOfLastBlog, blogs.length)} of {blogs.length} entries
+                  </span>
+                </div>
+              )}
             </div>
           )}
         </section>
@@ -411,3 +569,4 @@ const handleTitleChange = (e) => {
     </div>
   );
 }
+ 

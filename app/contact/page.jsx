@@ -377,7 +377,7 @@ const ContactPage = () => {
 <p className="text-xs font-bold text-gray-600 tracking-wider mb-2">BUSINESS HOURS</p>
 <div className="flex justify-between items-center mb-2">
 <p className="font-bold text-[#027cc1]">Monday - Friday</p>
-<p className="font-bold text-[#027cc1]">09:00 - 18:00</p>
+<p className="font-bold text-[#027cc1]">09:00 - 08:00</p>
 </div>
 <div className="flex justify-between items-center">
 <p className="font-bold text-gray-600">Weekend</p>
@@ -386,7 +386,7 @@ const ContactPage = () => {
 </div>
  
               <div className="rounded-3xl p-8 shadow-xl flex-grow" style={{ backgroundColor: '#027cc1' }}>
-<p className="text-sm font-extrabold text-orange-400 tracking-wider">DIRECT CONTACT</p>
+<p className="text-sm font-extrabold text-white tracking-wider">DIRECT CONTACT</p>
 <h4 className="text-[15px] font-bold text-white mt-4">Switchboard: <span className="block text-lg font-semibold">+44 793 050 6303</span></h4>
 <h4 className="text-[20px] font-bold text-white mt-4">Support: <span className="block text-lg font-semibold">sultan@eazy-switch.com</span></h4>
 </div>

@@ -48,8 +48,13 @@ export  default function AboutSection() {
     
     {/* Pehli Image */}
     <div className="relative w-full overflow-hidden rounded-xl shadow-2xl z-10">
-      <img src="/horizontal.jpg" alt="Student" className="w-full h-full object-cover" />
-    </div>
+  <img 
+    src="/horizontal.jpg" 
+    alt="Student" 
+    // Mobile ke liye h-64 aur width full, desktop ke liye h-auto
+    className="w-28 h-64 md:h-auto object-contain" 
+  />
+</div>
     {/* Dusri Image (Mobile par hidden, Desktop par wahi position) */}
 <div className="hidden md:block relative md:absolute md:ml-50 md:mt-60 w-80 h-52 mt-8 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white">
   <img src="/vertical.jpg" alt="Hands" className="w-full h-full object-cover" />

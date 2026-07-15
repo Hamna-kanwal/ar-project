@@ -179,7 +179,7 @@ const ContactPage = () => {
           <p className="text-xs font-bold text-gray-400 tracking-wider mb-2">BUSINESS HOURS</p>
           <div className="flex justify-between items-center mb-2">
             <p className="font-bold text-gray-800">Monday - Friday</p>
-            <p className="font-bold text-[#027cc1]">09:00 - 18:00</p>
+            <p className="font-bold text-[#027cc1]">09:00 - 08:00</p>
           </div>
           <div className="flex justify-between items-center">
             <p className="font-bold text-gray-800">Weekend</p>

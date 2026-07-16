@@ -37,13 +37,13 @@ export default function Footer() {
     <footer className="relative bg-[#027cc1] text-white pt-16 pb-8 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
         
-        <div className="flex flex-col items-start md:col-span-1">
+        <div className="flex flex-col items-start md:col-span-1 -mt-4">
           <Image 
             src="/footer.png" 
             alt="AR Heating Logo" 
             width={400} 
             height={200} 
-            className="w-auto h-24"
+            className="w-auto h-28"
           />
           <p className="text-sm leading-relaxed text-left opacity-90">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
@@ -91,11 +91,15 @@ export default function Footer() {
   </div>
 </div>
       </div>
-
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs opacity-70 gap-4">
-        <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
-       
-      </div>
+<div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs opacity-70 gap-4">
+  {/* <p> ko <div> ya <span> se replace karein */}
+  <div className="text-center">
+    © 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY{' '}
+    <a href="https://teqnoor.com" className="text-white hover:underline text">
+      TEQNOOR
+    </a>
+  </div>
+</div>
     </footer>
   );
 }

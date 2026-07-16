@@ -29,7 +29,7 @@ export default function AreasWeCover() {
       {/* Hero Header */}
       <section className="relative w-full h-[300px] flex items-center justify-center overflow-hidden">
         <img src="/location.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Background" />
-        <div className="absolute inset-0 bg-[#027cc1]/40" />
+        <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-5xl font-bold text-[#027cc1]">Area We <span className="text-orange-500">Cover</span></h1>
         </div>

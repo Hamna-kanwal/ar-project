@@ -41,9 +41,9 @@ export default function Footer() {
           <Image 
             src="/footer.png" 
             alt="AR Heating Logo" 
-            width={300} 
-            height={150} 
-            className="w-auto h-24 mb-6"
+            width={400} 
+            height={200} 
+            className="w-auto h-24"
           />
           <p className="text-sm leading-relaxed text-left opacity-90">
             Empowering UK businesses with transparent energy solutions. We simplify procurement, reduce costs, and drive sustainability.
@@ -94,9 +94,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs opacity-70 gap-4">
         <p>© 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY TEQNOOR</p>
-        <Link href="/modern-slavery-statement" className="cursor-pointer hover:text-white underline">
-          MODERN SLAVERY STATEMENT
-        </Link>
+       
       </div>
     </footer>
   );

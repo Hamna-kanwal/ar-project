@@ -1,5 +1,6 @@
 import HeroSlider from "./Components/HeroSlider";
 import ServiceList from "./Components/ServiceList";
+import VideoSection from "./Components/VideoSection";
 import AboutSection from "./Components/AboutSection";
 import TrustSection from "./Components/Badge"
 import Strategy from "./Components/Strategy";
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <HeroSlider />
       <ServiceList />
+      <VideoSection/>
       <AboutSection />
       <TrustSection />
       <Strategy /> 

@@ -10,7 +10,7 @@ export default function Strategy() {
     },
     {
       title: "Our Priority",
-      description: "Your safety and satisfaction. Every engineer is Gas Safe registered (No. 574111). Verify us on the official Gas Safe Register before we even arrive. All gas work is carried out by qualified professionals onl",
+      description: "Your safety and satisfaction. Every engineer is Gas Safe registered (No. 574111). Verify us on the official Gas Safe Register before we even arrive. All gas work is carried out by qualified professionals only.",
       icon: <ShieldCheck size={32} className="text-[#005f93]" />
     },
     {

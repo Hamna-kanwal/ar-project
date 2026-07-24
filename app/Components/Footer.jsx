@@ -65,41 +65,51 @@ export default function Footer() {
           </div>
         ))}
 
-      <div className="text-left flex flex-col items-start">
-  <h3 className="font-bold border-l-4 text-yellow-400 pl-3 mb-6 uppercase text-sm tracking-wider">
-    Contact Us
-  </h3>
-  
-  <div className="space-y-4 text-sm">
-    {/* Email */}
-    <div className="flex items-center gap-3">
-      <MdEmail className="text-[28px] text-yellow-400" />
-      <span>info@arheatingservice.co.uk</span>
-    </div>
-    
-    {/* Phone */}
-    <div className="flex items-center gap-3">
-      <MdSmartphone className="text-[28px] text-yellow-400" />
-      <span>+44 7800 657141</span>
-    </div>
-    
-    {/* Address - Agar text lamba ho toh items-start behtar hota hai */}
-    <div className="flex items-start gap-3">
-      <MdLocationOn className="text-[28px] text-yellow-400 shrink-0" />
-      <span>Unit 24 The Roundway, Watford, WD18 6LB</span>
-    </div>
-  </div>
-</div>
+        <div className="text-left flex flex-col items-start">
+          <h3 className="font-bold border-l-4 text-yellow-400 pl-3 mb-6 uppercase text-sm tracking-wider">
+            Contact Us
+          </h3>
+          
+          <div className="space-y-4 text-sm">
+            {/* Email */}
+            <div className="flex items-center gap-3">
+              <MdEmail className="text-[28px] text-yellow-400 shrink-0" />
+              <a 
+                href="mailto:info@arheatingservice.co.uk" 
+                className="hover:text-yellow-400 transition-colors"
+              >
+                info@arheatingservice.co.uk
+              </a>
+            </div>
+            
+            {/* Phone */}
+            <div className="flex items-center gap-3">
+              <MdSmartphone className="text-[28px] text-yellow-400 shrink-0" />
+              <a 
+                href="tel:+447800657141" 
+                className="hover:text-yellow-400 transition-colors"
+              >
+                +44 7800 657141
+              </a>
+            </div>
+            
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <MdLocationOn className="text-[28px] text-yellow-400 shrink-0" />
+              <span className="opacity-90">Unit 24 The Roundway, Watford, WD18 6LB</span>
+            </div>
+          </div>
+        </div>
       </div>
-<div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs opacity-70 gap-4">
-  {/* <p> ko <div> ya <span> se replace karein */}
-  <div className="text-center">
-    © 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY{' '}
-    <a href="https://teqnoor.com" className="text-white hover:underline text">
-      TEQNOOR
-    </a>
-  </div>
-</div>
+
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-xs opacity-70 gap-4">
+        <div className="text-center">
+          © 2026 AR HEATING. ALL RIGHTS RESERVED. | POWERED BY{' '}
+          <a href="https://teqnoor.com" className="text-white hover:underline">
+            TEQNOOR
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }

@@ -48,7 +48,7 @@ export default function CtaBanner() {
           </a>
 
           <a
-            href="#quote"
+            href="/contact"
             className="flex items-center gap-2 border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 text-white font-semibold px-7 py-3 rounded-full transition-all duration-300"
           >
             Get a Free Quote

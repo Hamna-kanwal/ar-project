@@ -36,7 +36,7 @@ export default function ServicesAndFAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
           src="/boiler.jpg"
           alt="Boiler service background"
@@ -51,7 +51,7 @@ export default function ServicesAndFAQ() {
           <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight text-[#027cc1]">
             Boiler <span className="text-orange-500"> Services </span>
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto font-medium">
+          <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto font-medium">
             A yearly boiler check keeps your home safe and your boiler running well. A small spend now saves a big bill later.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -77,7 +77,7 @@ export default function ServicesAndFAQ() {
                       />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
+                      <h2 className="text-3xl font-bold text-gray-900 mb-1">{s.title}</h2>
                       <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
                     </div>
                   </div>

@@ -74,7 +74,7 @@ We make things safe, find the fault, and fix the problem, so your home is back t
                 />
               </div>
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">{s.title}</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-1">{s.title}</h2>
                 <p className="text-gray-600 text-lg leading-relaxed">{s.desc}</p>
               </div>
             </div>

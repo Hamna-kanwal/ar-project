@@ -34,7 +34,7 @@ export default function Navbar({ onOpenSidebar }) {
         <nav className="py-6 px-8 flex items-center justify-between mt-6 md:mt-0">
           <Link href="/" className="relative block">
             <Image 
-              src="/heating-logo.png" 
+              src="/new-logo.png" 
               alt="Logo" 
               width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
               height={80}      // Height lighter kar di taake header compact nazar aaye

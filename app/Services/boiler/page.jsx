@@ -8,12 +8,18 @@ const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
-    img: "/boiler11.jpg"
+    img: "/boiler11.jpg",
+    // Blue glass theme styling
+    bgGlass: "bg-sky-50/80 backdrop-blur-md border-sky-100",
+    accentColor: "text-[#027cc1]"
   },
   {
     title: "What do you check in a service?",
     desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
-    img: "/boiler12.jpg"
+    img: "/boiler12.jpg",
+    // Orange glass theme styling
+    bgGlass: "bg-orange-50/80 backdrop-blur-md border-orange-100",
+    accentColor: "text-orange-500"
   }
 ];
 
@@ -42,10 +48,10 @@ export default function ServicesAndFAQ() {
         />
         <div className="absolute inset-0 bg-white/85" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-[#027cc1]">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight text-[#027cc1]">
             Boiler <span className="text-orange-500"> Services </span>
           </h1>
-          <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto font-medium">
+          <p className="text-base md:text-xl text-gray-700 max-w-2xl mx-auto font-medium">
             A yearly boiler check keeps your home safe and your boiler running well. A small spend now saves a big bill later.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
@@ -55,32 +61,48 @@ export default function ServicesAndFAQ() {
         </div>
       </section>
 
-      {/* Modern Card Grid Section with Synchronized Rows */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {serviceDetails.map((s, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 flex flex-col hover:shadow-lg transition-shadow">
-                <div className="relative h-[400px] w-full shrink-0">
+      {/* Modern Alternating Glass Cards Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 space-y-12">
+          {serviceDetails.map((s, i) => {
+            const isEven = i % 2 === 0;
+            return (
+              <div 
+                key={i} 
+                className={`rounded-3xl p-6 md:p-10 shadow-lg border backdrop-blur-xl transition-all duration-300 hover:shadow-xl ${s.bgGlass} flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+              >
+                {/* Image Container */}
+                <div className="relative h-[320px] md:h-[380px] w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md shrink-0">
                   <NextImage
                     src={s.img}
                     alt={s.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                     priority={i === 0}
                   />
                 </div>
-                {/* CSS Grid forces headings and paragraphs to lock into identical vertical tracks */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="grid grid-rows-[64px_1fr] ">
-                    <h3 className="text-2xl font-bold text-gray-900 flex items-center">{s.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{s.desc}</p>
+
+                {/* Content Container */}
+                <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-4 px-2">
+                  <h3 className={`text-2xl md:text-3xl font-bold ${s.accentColor}`}>
+                    {s.title}
+                  </h3>
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                    {s.desc}
+                  </p>
+                  <div className="pt-2">
+                    <Link 
+                      href="/contact" 
+                      className={`inline-flex items-center font-bold text-sm hover:underline ${s.accentColor}`}
+                    >
+                      Enquire about this service &rarr;
+                    </Link>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 

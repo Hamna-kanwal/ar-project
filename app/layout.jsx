@@ -9,6 +9,9 @@ const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 export const metadata = { 
   title: "Business Energy Solutions UK",
   description: "Cut your business energy costs with Eazy Switch.",
+  verification: {
+    google: "69Wr8UzTD9qZr3Uq0jA1I88oqtPasMHAWp3zTBOgHlA",
+  },
 };
 
 export default function RootLayout({ children }) {

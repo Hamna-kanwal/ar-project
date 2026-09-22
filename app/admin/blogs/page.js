@@ -25,7 +25,6 @@ export default function AdminBlogs() {
     excerpt: '',
     description: '',
     image: '',
-    tag: '',
     pagetitle: '',
     pageDescription: '',
     keywords: '',
@@ -98,7 +97,6 @@ export default function AdminBlogs() {
       excerpt: blog.excerpt || '',
       description: blog.description || '',
       image: blog.image || '',
-      tag: blog.tag || '',
       pagetitle: blog.pagetitle || '',
       pageDescription: blog.pageDescription || '',
       keywords: blog.keywords || '',
@@ -296,18 +294,6 @@ export default function AdminBlogs() {
             </div>
  
             <div>
-              <label style={{ color: '#222222' }}><b>Tag / Category:</b></label>
-              <input
-                type="text"
-                required
-                value={formData.tag}
-                onChange={(e) => setFormData({ ...formData, tag: e.target.value })}
-                placeholder="e.g., Boiler Services"
-                style={inputStyle}
-              />
-            </div>
- 
-            <div>
               <label style={{ color: '#222222' }}><b>Short Excerpt:</b></label>
               <input
                 type="text"
@@ -394,12 +380,37 @@ export default function AdminBlogs() {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {currentBlogs.map((blog) => (
-                <div key={blog._id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', backgroundColor: '#f8fbfe', border: '1px solid #0080C8', borderRadius: '10px' }}>
-                  <div>
-                    <strong style={{ color: '#111111', fontSize: '16px' }}>{blog.title}</strong>
-                    <p style={{ margin: '4px 0 0', color: '#555555', fontSize: '14px' }}>Tag: {blog.tag} | Slug: /{blog.slug}</p>
+                <div
+                  key={blog._id}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    gap: '12px',
+                    padding: '14px',
+                    backgroundColor: '#f8fbfe',
+                    border: '1px solid #0080C8',
+                    borderRadius: '10px',
+                  }}
+                >
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <h3
+                      style={{
+                        margin: 0,
+                        color: '#0080C8',
+                        fontSize: '16px',
+                        fontWeight: 'bold',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      {blog.title}
+                    </h3>
+                    <small style={{ color: '#666666' }}>/{blog.slug}</small>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px' }}>
+
+                  <div style={{ display: 'flex', gap: '8px', flexShrink: 0 }}>
                     <button
                       onClick={() => handleEditClick(blog)}
                       style={{ background: '#0080C8', color: '#fff', border: 'none', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontWeight: 'bold' }}
@@ -569,4 +580,3 @@ export default function AdminBlogs() {
     </div>
   );
 }
- 

@@ -7,8 +7,11 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = { 
-  title: "Business Energy Solutions UK",
-  description: "Cut your business energy costs with Eazy Switch.",
+  title: "Gas Safe Heating Engineers in Watford | AR Heating ",
+  description: "Boiler installation, repair and servicing in Watford and Harrow. Gas Safe No. 574111. Free fixed price quotes. Emergency callouts 24 hours. ",
+  alternates: {
+    canonical: "https://www.arheatingservice.co.uk/",
+  },
   verification: {
     google: "69Wr8UzTD9qZr3Uq0jA1I88oqtPasMHAWp3zTBOgHlA",
   },

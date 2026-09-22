@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "Underfloor Heating Watford | AR Heating & Plumbing",
-  description: " Underfloor heating fits in Watford for new builds and rooms you do up. Even warmth. Free quotes. Call today",
+  title: "Underfloor Heating Watford | AR Heating ",
+  description: "Wet and electric underfloor heating fitted in Watford for new builds and rooms you are doing up. Even warmth. Free quotes. Call AR Heating. ",
+       alternates: {
+    canonical: "https://www.arheatingservice.co.uk/Services/underfloor-installation",
+  },
 };
 
 export default function BoilerLayout({ children }) {

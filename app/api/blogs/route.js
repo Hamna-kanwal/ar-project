@@ -27,7 +27,7 @@ export async function POST(request) {
     const body = await request.json();
     
     const { 
-      title, slug, description, excerpt, image, tag, 
+      title, slug, description, excerpt, image,
       pagetitle, pageDescription, keywords 
     } = body;
 
@@ -37,7 +37,6 @@ export async function POST(request) {
     if (!description) return NextResponse.json({ success: false, message: "Description content is required" }, { status: 400 });
     if (!excerpt) return NextResponse.json({ success: false, message: "Excerpt summary is required" }, { status: 400 });
     if (!image) return NextResponse.json({ success: false, message: "Image is required" }, { status: 400 });
-    if (!tag) return NextResponse.json({ success: false, message: "Tag is required" }, { status: 400 });
 
     // Base64 format validation from your friend's project
     if (typeof image === 'string' && !image.startsWith("data:image/")) {
@@ -53,7 +52,6 @@ export async function POST(request) {
       description,
       excerpt,
       image,
-      tag,
       pagetitle: pagetitle || null,
       pageDescription: pageDescription || null,
       keywords: keywords || null

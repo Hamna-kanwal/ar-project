@@ -1,7 +1,12 @@
 export const metadata = {
-  title: "Plumbing & Repairs in Watford | AR Heating & Plumbing",
-  description: "Plumbing repairs in Watford. Leaks, taps, and blocked drains sorted fast with clear prices. Call today",
+  title: "Plumbing Repairs in Watford | AR Heating ",
+  description: "Leaks, taps, toilets, pipework and bathroom repairs fixed fast in Watford. Clear prices from local plumbers. Call AR Heating today. ",
+       alternates: {
+    canonical: "https://www.arheatingservice.co.uk/Services/general-plumbing",
+  },
+  
 };
+
 
 export default function BoilerLayout({ children }) {
   return <>{children}</>;

@@ -108,9 +108,6 @@ export default function BlogDetailPage({ params: paramsPromise }) {
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}
         <header className="mb-10 text-center">
-          <span className="text-black font-bold text-sm uppercase tracking-wider mb-2 block">
-            {blog.tag || "Service Article"}
-          </span>
 
           <FormattedTitle title={blog.title} />
 

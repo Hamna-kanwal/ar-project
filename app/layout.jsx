@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         </ConditionalLayout>
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
-          data-key="5npPMldp5pxeXYta6DKYPQ"
+          data-key="95ut7u7gscwdh4k9xw6cqvr7fmvquu1g"
           strategy="afterInteractive"
           async
         />

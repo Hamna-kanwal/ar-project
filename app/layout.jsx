@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'leaflet/dist/leaflet.css';
 import ConditionalLayout from "./Components/ConditionalLayout";
+import Script from "next/script";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
@@ -24,6 +25,12 @@ export default function RootLayout({ children }) {
         <ConditionalLayout>
           {children}
         </ConditionalLayout>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="5npPMldp5pxeXYta6DKYPQ"
+          strategy="afterInteractive"
+          async
+        />
       </body>
     </html>
   );

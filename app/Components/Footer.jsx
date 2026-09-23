@@ -9,8 +9,8 @@ export default function Footer() {
       links: [
         { name: "Boiler Installation", path: "/Services/boiler-installation" },
         { name: "Heating Installation", path: "/Services/heating-installation" },
-        { name: "Landlord Certificate", path: "/Services/landlord-certificate" },
-        { name: "Dishwasher Installation", path: "/Services/appliance-installation" },
+        { name: "Landlord Certificate", path: "/landlord-certificate" },
+        { name: "Dishwasher Installation", path: "/Services/dishwasher" },
         { name: "Power Flushing", path: "/Services/power-flushing" }
       ]
     },

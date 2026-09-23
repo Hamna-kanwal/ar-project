@@ -23,7 +23,7 @@ const SERVICES = [
   { name: "General Plumbing", desc: "Leaks, taps, toilets, pipework and bathroom repairs fixed fast by local plumbers.", icon: <Droplets />, link: "/Services/general-plumbing" },
   { name: "Power Flushing", desc: "Deep system clean that removes sludge and rust to restore radiator and boiler performance", icon: <Filter />, link: "/Services/power-flushing" },
   { name: "Hive Thermostat", desc: "Hive smart heating installed and paired to your phone before we leave.", icon: <Cpu />, link: "/Services/hive" },
-  { name: "Megaflo Cylinder", desc: "G3-certified installation of Megaflo unvented cylinders for powerful mains-pressure hot water.", icon: <Anchor />, link: "/megaflo" },
+  { name: "Megaflo Cylinder", desc: "G3-certified installation of Megaflo unvented cylinders for powerful mains-pressure hot water.", icon: <Anchor />, link: "/Services/megaflo" },
   { name: "Gas Cooker", desc: " Gas Safe installation and connection of all cooker and hob types, fully compliant.", icon: <Flame />, link: "/Services/gas-cooker" },
   { name: "Nest Thermostat", desc: "Google Nest learning thermostats are installed to cut heating costs automatically.", icon: <Sparkles />, link: "/Services/nest" },
   { name: "Washing Machine", desc: "Quick, secure plumbing and connection for new washing machines.", icon: <Monitor />, link: "/Services/washing-machine" },

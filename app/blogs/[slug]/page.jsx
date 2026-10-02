@@ -22,13 +22,6 @@ function cleanBlogContent(html) {
     .replace(/\s+/g, " ");
 }
 
-function getStatus(text) {
-  const t = text.toLowerCase();
-  if (/below 0\.5|above 2\.5/.test(t)) return "danger";
-  if (/0\.5 to 1|2 to 2\.5/.test(t)) return "warn";
-  return "ok";
-}
-
 function isQuestionElement(el) {
   const text = (el.textContent || "").trim();
   if (!text.endsWith("?") || text.length > 160) return false;
@@ -57,6 +50,15 @@ function enhanceBlogContent(html, title) {
   );
   if (internalIdx !== -1) {
     children.slice(internalIdx).forEach((el) => el.remove());
+  }
+
+  // 1b. Remove the pasted FAQ schema block if it exists in the content
+  children = Array.from(body.children);
+  const schemaIdx = children.findIndex((el) =>
+    /faqpage schema/i.test((el.textContent || "").slice(0, 80))
+  );
+  if (schemaIdx !== -1) {
+    children.slice(schemaIdx).forEach((el) => el.remove());
   }
 
   // 2. Remove first heading if it duplicates the page title
@@ -116,7 +118,7 @@ function enhanceBlogContent(html, title) {
     }
   }
 
-  // 4. Tables: direct answer callout, pressure chart, generic wrapper
+  // 4. Tables: direct answer callout, then ONE consistent style for every other table
   Array.from(body.querySelectorAll("table")).forEach((table) => {
     const rows = Array.from(table.querySelectorAll("tr"));
     if (!rows.length) return;
@@ -140,25 +142,48 @@ function enhanceBlogContent(html, title) {
       return;
     }
 
-    // Detect the pressure chart: 3 columns and some row starting with a "bar" reading
-    const isChart =
+    // Single column or odd table: just wrap it
+    if (firstRowCells.length < 2) {
+      table.classList.add("plain-table");
+      const wrap = doc.createElement("div");
+      wrap.className = "table-wrap";
+      table.replaceWith(wrap);
+      wrap.appendChild(table);
+      return;
+    }
+
+    // Pressure chart (3 columns and a row starting with a "bar" reading)
+    const isPressureChart =
       firstRowCells.length === 3 &&
       rows.some((r) => /\bbar\b/i.test(r.children[0]?.textContent || ""));
 
-    if (isChart) {
-      // The first row is a header if it has <th> or contains no digits
-      const firstRowIsHeader =
+    // Is the first row a header row?
+    let firstRowIsHeader;
+    if (isPressureChart) {
+      firstRowIsHeader =
         !!rows[0].querySelector("th") || !/\d/.test(firstCellText);
+    } else {
+      firstRowIsHeader =
+        !!rows[0].querySelector("th") ||
+        !!rows[0].querySelector("strong, b, mark, [style*='background']") ||
+        !/\d/.test(firstCellText);
+    }
 
-      const headerLabels = firstRowIsHeader
-        ? firstRowCells.map((c) => c.textContent.trim())
-        : ["Reading", "What it means", "What to do"];
-      const dataRows = firstRowIsHeader ? rows.slice(1) : rows;
+    let headerLabels = null;
+    if (firstRowIsHeader) {
+      headerLabels = firstRowCells.map((c) => c.textContent.trim());
+    } else if (isPressureChart) {
+      headerLabels = ["Reading", "What it means", "What to do"];
+    }
+    const dataRows = firstRowIsHeader ? rows.slice(1) : rows;
 
-      // Rebuild the table from scratch to drop any old inline styles and borders
-      const newTable = doc.createElement("table");
-      newTable.className = "chart-table";
+    // Rebuild the table from scratch to drop any old inline styles, highlights and borders
+    const newTable = doc.createElement("table");
+    newTable.className = isPressureChart
+      ? "chart-table bold-first"
+      : "chart-table";
 
+    if (headerLabels) {
       const thead = doc.createElement("thead");
       const headTr = doc.createElement("tr");
       headerLabels.forEach((h) => {
@@ -168,36 +193,29 @@ function enhanceBlogContent(html, title) {
       });
       thead.appendChild(headTr);
       newTable.appendChild(thead);
-
-      const tbody = doc.createElement("tbody");
-      dataRows.forEach((row) => {
-        const cells = Array.from(row.children);
-        if (!cells.length) return;
-        const tr = doc.createElement("tr");
-        tr.className = `row-${getStatus(cells[0].textContent || "")}`;
-        cells.forEach((cell, idx) => {
-          const td = doc.createElement("td");
-          td.innerHTML = cell.innerHTML;
-          if (headerLabels[idx]) td.setAttribute("data-label", headerLabels[idx]);
-          tr.appendChild(td);
-        });
-        tbody.appendChild(tr);
-      });
-      newTable.appendChild(tbody);
-
-      const wrap = doc.createElement("div");
-      wrap.className = "table-wrap";
-      wrap.appendChild(newTable);
-      table.replaceWith(wrap);
-      return;
     }
 
-    // Any other table: just wrap it
-    table.classList.add("plain-table");
+    const tbody = doc.createElement("tbody");
+    dataRows.forEach((row) => {
+      const cells = Array.from(row.children);
+      if (!cells.length) return;
+      const tr = doc.createElement("tr");
+      cells.forEach((cell, idx) => {
+        const td = doc.createElement("td");
+        td.innerHTML = cell.innerHTML;
+        if (headerLabels && headerLabels[idx]) {
+          td.setAttribute("data-label", headerLabels[idx]);
+        }
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    newTable.appendChild(tbody);
+
     const wrap = doc.createElement("div");
     wrap.className = "table-wrap";
+    wrap.appendChild(newTable);
     table.replaceWith(wrap);
-    wrap.appendChild(table);
   });
 
   // 5. FAQ section -> accordion
@@ -248,6 +266,28 @@ function enhanceBlogContent(html, title) {
   }
 
   return body.innerHTML;
+}
+
+// Builds FAQPage JSON-LD from the rendered FAQ accordion so schema always matches the page
+function buildFaqSchema(html) {
+  if (!html || typeof window === "undefined") return null;
+
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const items = Array.from(doc.querySelectorAll(".faq-item"));
+  if (!items.length) return null;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.querySelector("summary")?.textContent.trim() || "",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: (item.querySelector(".faq-answer")?.textContent || "").trim(),
+      },
+    })),
+  };
 }
 
 const blogStyles = `
@@ -338,7 +378,7 @@ const blogStyles = `
   background: #ffffff;
 }
 
-/* Pressure chart table (important flags override any global table styles) */
+/* Tables (important flags override any global table styles) */
 .blog-content .table-wrap table {
   width: 100% !important;
   border-collapse: separate !important;
@@ -373,8 +413,8 @@ const blogStyles = `
   border-top: none !important;
 }
 
-/* First column: bold only (no coloured bar, white background) */
-.blog-content .chart-table td:first-child {
+/* Pressure chart only: bold first column, no wrapping */
+.blog-content .chart-table.bold-first td:first-child {
   font-weight: 700 !important;
   color: #111827 !important;
   white-space: nowrap;
@@ -594,10 +634,18 @@ export default function BlogDetailPage({ params: paramsPromise }) {
     cleanBlogContent(blog.description),
     blog.title
   );
+  const faqSchema = buildFaqSchema(cleanContent);
 
   return (
     <article className="mt-[50px] w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
       <style dangerouslySetInnerHTML={{ __html: blogStyles }} />
+
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}

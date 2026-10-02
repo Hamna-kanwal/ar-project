@@ -77,11 +77,6 @@ export default function AdminBlogs() {
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
-      if (file.size > 2 * 1024 * 1024) {
-        showToast('File size too large! Upload an image under 2MB.', 'error');
-        e.target.value = '';
-        return;
-      }
       const reader = new FileReader();
       reader.onloadend = () => {
         setFormData((prev) => ({ ...prev, image: reader.result }));
@@ -306,7 +301,7 @@ export default function AdminBlogs() {
             </div>
  
             <div>
-              <label style={{ color: '#222222' }}><b>Cover Image (Max 2MB):</b></label>
+              <label style={{ color: '#222222' }}><b>Cover Image:</b></label>
               <input type="file" accept="image/*" onChange={handleImageUpload} style={{ marginTop: '8px', display: 'block', color: '#111111' }} />
              
               {/* IMAGE PREVIEW SECTION */}

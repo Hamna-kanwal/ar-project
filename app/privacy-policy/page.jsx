@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
    <Image
-  src="/conditions.jpg"
+  src="/privacy-policy.jpg"
   alt="Heating installation background"
   fill
   priority

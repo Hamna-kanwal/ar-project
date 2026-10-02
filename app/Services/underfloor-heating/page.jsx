@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Is underfloor heating easy to run?  ",
     desc: "We set up the controls so you can pick the warmth you want with ease. Pair the system with a smart control and you can run your heat from your phone.  ",
-    img: "/undergroundheating3.png"
+    img: "/undergroundheating3.jpg"
   }
 ];
 

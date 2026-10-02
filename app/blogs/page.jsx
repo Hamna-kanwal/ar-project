@@ -66,7 +66,7 @@ const BlogGrid = () => {
   return (
     <div className="bg-slate-100 py-20 px-6">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#027cc1] mb-2">Our Latest Insights</h2>
+        <h1 className="text-4xl font-bold text-[#027cc1] mb-2">Our Latest Insights</h1>
         <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
       </div>
       

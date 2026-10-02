@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/3.jpg"
+          src="/megaflo.jpg"
           alt="Heating installation background"
           fill
           priority

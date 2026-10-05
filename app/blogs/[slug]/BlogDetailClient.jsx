@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 function cleanBlogContent(html) {
@@ -567,31 +568,31 @@ function FormattedTitle({ title }) {
 }
 
 export default function BlogDetailClient({ blog }) {
-  const [enhancedContent, setEnhancedContent] = useState(null);
-  const [faqSchema, setFaqSchema] = useState(null);
+  const contentRef = useRef(null);
+  const faqSchemaRef = useRef(null);
 
   useEffect(() => {
     const cleanContent = enhanceBlogContent(
       cleanBlogContent(blog.description),
       blog.title
     );
-    setEnhancedContent(cleanContent);
-    setFaqSchema(buildFaqSchema(cleanContent));
-  }, [blog.description, blog.title]);
 
-  const cleanContent =
-    enhancedContent ?? cleanBlogContent(blog.description);
+    if (contentRef.current) {
+      contentRef.current.innerHTML = cleanContent;
+    }
+    if (faqSchemaRef.current) {
+      const faqSchema = buildFaqSchema(cleanContent);
+      faqSchemaRef.current.textContent = faqSchema
+        ? JSON.stringify(faqSchema)
+        : "";
+    }
+  }, [blog.description, blog.title]);
 
   return (
     <article className="mt-[50px] w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
       <style dangerouslySetInnerHTML={{ __html: blogStyles }} />
 
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+      <script ref={faqSchemaRef} type="application/ld+json" />
 
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}
@@ -604,17 +605,24 @@ export default function BlogDetailClient({ blog }) {
 
         {/* Featured Image */}
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
-          <img
+          <Image
             src={`/api/blogs/${encodeURIComponent(blog.slug)}/image`}
             alt={blog.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 896px"
+            unoptimized
+            fetchPriority="high"
+            className="object-cover"
           />
         </div>
 
         {/* Render Cleaned Content */}
         <div
+          ref={contentRef}
           className="blog-content text-gray-700 text-base md:text-lg w-full"
-          dangerouslySetInnerHTML={{ __html: cleanContent }}
+          dangerouslySetInnerHTML={{
+            __html: cleanBlogContent(blog.description),
+          }}
         />
 
         {/* Navigation Footer */}

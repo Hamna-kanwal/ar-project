@@ -1,6 +1,7 @@
 // app/sitemap.ts
 
 import { MetadataRoute } from 'next';
+import { getPublicBlogs } from '@/lib/blogs';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.arheatingservice.co.uk';
@@ -40,17 +41,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   try {
-    // 2. Dynamic Blogs — apni existing /api/blogs API se fetch
-    const res = await fetch(`${baseUrl}/api/blogs`, {
-      next: { revalidate: 3600 }, // Har 1 ghante baad sitemap refresh hoga
-    });
+    const blogs = await getPublicBlogs();
 
-    const data = await res.json();
-    const blogs = data.blogs || [];
-
-    const blogPages = (Array.isArray(blogs) ? blogs : []).map((post: any) => ({
+    const blogPages = blogs.map((post) => ({
       url: `${baseUrl}/blogs/${post.slug}`,
-      lastModified: new Date(post.updatedAt || post.createdAt || Date.now()),
+      lastModified: new Date(post.updatedAt || Date.now()),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
     }));

@@ -1,95 +1,81 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getPublicBlogs } from '@/lib/blogs';
 
-const BlogCard = ({ title, excerpt, image, slug }) => (
-  <div className="group bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 mt-12">
-    <div className="relative h-56 w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent z-10" />
-      <img 
-        src={image || '/boiler.jpg'} 
-        alt={title} 
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-      />
-    </div>
+export const dynamic = 'force-dynamic';
 
-    <div className="p-8 bg-gradient-to-b from-white to-gray-50">
-      <h4 className="text-[#027cc1] font-extrabold text-xl text-center uppercase mb-3 tracking-tight">
-        {title}
-      </h4>
-      <p className="text-gray-600 text-sm text-center mb-6 leading-relaxed line-clamp-3">
-        {excerpt}
-      </p>
-      
-      <div className="text-center">
-        <Link 
-          href={`/blogs/${slug}`} 
-          className="font-bold text-xs uppercase tracking-widest text-gray-800 hover:text-orange-700 transition-colors"
+function BlogCard({ title, excerpt, slug, priority }) {
+  return (
+    <article className="group mt-12 overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+      <div className="relative h-56 w-full overflow-hidden">
+        <Link
+          href={`/blogs/${slug}`}
+          aria-label={`Read ${title}`}
+          className="absolute inset-0"
         >
-          Read More →
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-900/60 to-transparent" />
+          <Image
+            src={`/api/blogs/${encodeURIComponent(slug)}/image`}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            unoptimized
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+          />
         </Link>
       </div>
-    </div>
-  </div>
-);
 
-const BlogGrid = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+      <div className="bg-gradient-to-b from-white to-gray-50 p-8">
+        <h2 className="mb-3 text-center text-xl font-extrabold uppercase tracking-tight text-[#027cc1]">
+          {title}
+        </h2>
+        <p className="mb-6 line-clamp-3 text-center text-sm leading-relaxed text-gray-600">
+          {excerpt}
+        </p>
 
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const res = await fetch('/api/blogs');
-        const data = await res.json();
-        if (data.success) {
-          setPosts(data.blogs);
-        }
-      } catch (err) {
-        console.error('Error fetching blogs:', err);
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchBlogs();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="bg-slate-100 py-20 text-center text-gray-500 font-medium">
-        Loading insights...
+        <div className="text-center">
+          <Link
+            href={`/blogs/${slug}`}
+            className="text-xs font-bold uppercase tracking-widest text-gray-800 transition-colors hover:text-orange-700"
+          >
+            Read More →
+          </Link>
+        </div>
       </div>
-    );
-  }
+    </article>
+  );
+}
+
+export default async function BlogGrid() {
+  const posts = await getPublicBlogs();
 
   return (
-    <div className="bg-slate-100 py-20 px-6">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#027cc1] mb-2">Our Latest Insights</h1>
-        <div className="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
-      </div>
-      
+    <main className="bg-slate-100 px-6 py-20">
+      <header className="mb-12 text-center">
+        <h1 className="mb-2 text-4xl font-bold text-[#027cc1]">Our Latest Insights</h1>
+        <div className="mx-auto h-1.5 w-20 rounded-full bg-orange-500" />
+      </header>
+
       {posts.length === 0 ? (
-        <div className="text-center py-12 text-gray-500">
+        <div className="py-12 text-center text-gray-500">
           <p className="text-lg">No published blogs found.</p>
           <p className="text-sm">Create your first blog post from the admin dashboard!</p>
         </div>
       ) : (
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <BlogCard 
-              key={post._id || post.slug} 
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+          {posts.map((post, index) => (
+            <BlogCard
+              key={post.slug}
               title={post.title}
               excerpt={post.excerpt}
-              image={post.image}
               slug={post.slug}
+              priority={index < 3}
             />
           ))}
         </div>
       )}
-    </div>
+    </main>
   );
-};
-
-export default BlogGrid;
+}

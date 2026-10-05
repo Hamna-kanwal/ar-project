@@ -1,3 +1,5 @@
+import { getPublicBlog } from '@/lib/blogs';
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.arheatingservice.co.uk/";
 
 function stripHtml(html = "") {
@@ -16,16 +18,7 @@ function truncate(text, max = 160) {
 }
 
 async function getBlog(slug) {
-  try {
-    const res = await fetch(`${SITE_URL}/api/blogs/${slug}`, {
-      next: { revalidate: 60 },
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.success ? data.blog : null;
-  } catch {
-    return null;
-  }
+  return getPublicBlog(slug);
 }
 
 export async function generateMetadata({ params }) {
@@ -39,11 +32,12 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const title = blog.metaTitle || blog.title;
+  const title = blog.pagetitle || blog.title;
   const description = truncate(
-    blog.metaDescription || blog.excerpt || stripHtml(blog.description)
+    blog.pageDescription || blog.excerpt || stripHtml(blog.description)
   );
   const canonical = `/blogs/${slug}`;
+  const image = `${SITE_URL.replace(/\/+$/, '')}/api/blogs/${encodeURIComponent(slug)}/image`;
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -55,13 +49,13 @@ export async function generateMetadata({ params }) {
       description,
       url: canonical,
       type: "article",
-      images: blog.image ? [{ url: blog.image }] : undefined,
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: blog.image ? [blog.image] : undefined,
+      images: [image],
     },
   };
 }

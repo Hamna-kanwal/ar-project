@@ -1,4 +1,5 @@
 import { dbConnect } from '@/lib/db';
+import { revalidateTag } from 'next/cache';
 import Blog from '@/models/Blog';
 
 // GET SINGLE BLOG BY SLUG
@@ -38,6 +39,8 @@ export async function PUT(req, { params }) {
       return Response.json({ success: false, message: 'Blog not found' }, { status: 404 });
     }
 
+    revalidateTag('public-blogs', 'max');
+
     return Response.json({ success: true, blog: updatedBlog });
   } catch (error) {
     return Response.json({ success: false, message: 'Failed to update blog' }, { status: 500 });
@@ -55,6 +58,8 @@ export async function DELETE(req, { params }) {
     if (!deleted) {
       return Response.json({ success: false, message: 'Blog not found' }, { status: 404 });
     }
+
+    revalidateTag('public-blogs', 'max');
 
     return Response.json({ success: true, message: 'Blog deleted successfully' });
   } catch (error) {

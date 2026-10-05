@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidateTag } from 'next/cache';
 import { dbConnect } from '@/lib/db';
 import Blog from '@/models/Blog';
 
@@ -56,6 +57,8 @@ export async function POST(request) {
       pageDescription: pageDescription || null,
       keywords: keywords || null
     });
+
+    revalidateTag('public-blogs', 'max');
 
     return NextResponse.json({ 
       success: true, 

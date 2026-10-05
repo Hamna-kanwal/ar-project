@@ -606,11 +606,11 @@ export default function BlogDetailClient({ blog }) {
         {/* Featured Image */}
         <div className="relative w-full h-[300px] sm:h-[400px] md:h-[450px] mb-12 rounded-3xl overflow-hidden shadow-2xl">
           <Image
-            src={`/api/blogs/${encodeURIComponent(blog.slug)}/image`}
+            src={`/api/blogs/${encodeURIComponent(blog.slug)}/image${blog.updatedAt ? `/${encodeURIComponent(blog.updatedAt)}` : ''}`}
             alt={blog.title}
             fill
             sizes="(max-width: 768px) 100vw, 896px"
-            unoptimized
+            preload
             fetchPriority="high"
             className="object-cover"
           />

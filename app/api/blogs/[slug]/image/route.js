@@ -20,7 +20,7 @@ export async function GET(_request, { params }) {
     return new Response(Buffer.from(match[2], 'base64'), {
       headers: {
         'Content-Type': match[1],
-        'Cache-Control': 'public, max-age=60, stale-while-revalidate=300',
+        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
       },
     });
   } catch (error) {

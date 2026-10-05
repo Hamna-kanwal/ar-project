@@ -37,7 +37,13 @@ export async function generateMetadata({ params }) {
     blog.pageDescription || blog.excerpt || stripHtml(blog.description)
   );
   const canonical = `/blogs/${slug}`;
-  const image = `${SITE_URL.replace(/\/+$/, '')}/api/blogs/${encodeURIComponent(slug)}/image`;
+  const imageUrl = new URL(
+    `/api/blogs/${encodeURIComponent(slug)}/image${
+      blog.updatedAt ? `/${encodeURIComponent(blog.updatedAt)}` : ''
+    }`,
+    SITE_URL
+  );
+  const image = imageUrl.toString();
 
   return {
     metadataBase: new URL(SITE_URL),

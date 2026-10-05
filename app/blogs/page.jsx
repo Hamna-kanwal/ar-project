@@ -4,7 +4,10 @@ import { getPublicBlogs } from '@/lib/blogs';
 
 export const dynamic = 'force-dynamic';
 
-function BlogCard({ title, excerpt, slug, priority }) {
+function BlogCard({ title, excerpt, slug, updatedAt, priority }) {
+  const imageVersion = updatedAt ? `/${encodeURIComponent(updatedAt)}` : '';
+  const imageSrc = `/api/blogs/${encodeURIComponent(slug)}/image${imageVersion}`;
+
   return (
     <article className="group mt-12 overflow-hidden rounded-3xl bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
       <div className="relative h-56 w-full overflow-hidden">
@@ -15,11 +18,10 @@ function BlogCard({ title, excerpt, slug, priority }) {
         >
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-blue-900/60 to-transparent" />
           <Image
-            src={`/api/blogs/${encodeURIComponent(slug)}/image`}
+            src={imageSrc}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
-            unoptimized
             loading={priority ? 'eager' : 'lazy'}
             fetchPriority={priority ? 'high' : 'auto'}
             className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -71,7 +73,8 @@ export default async function BlogGrid() {
               title={post.title}
               excerpt={post.excerpt}
               slug={post.slug}
-              priority={index < 3}
+              updatedAt={post.updatedAt}
+              priority={index === 0}
             />
           ))}
         </div>

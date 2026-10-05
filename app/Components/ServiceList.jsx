@@ -30,8 +30,6 @@ const SERVICES = [
   { name: "Dishwasher Install", desc: "Reliable water supply, drainage and connection for your new dishwasher.", icon: <Disc />, link: "/Services/dishwasher" },
 ];
 
-// ... (imports wahi rahengi)
-
 export default function ServicesList() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [
     AutoScroll({ playOnInit: true, stopOnInteraction: false, stopOnMouseEnter: true, speed: 0.5, delay: 2000 })
@@ -46,10 +44,10 @@ export default function ServicesList() {
       <div className="max-w-[90rem] mx-auto px-16 relative">
 
 
-        <h1 className="text-5xl font-bold text-[#027cc1] mb-12">Our Expertise</h1>
+        <h2 className="text-5xl font-bold text-[#027cc1] mb-12">Our Expertise</h2>
         
         <div className="overflow-hidden" ref={emblaRef}>
-          {/* gap-4 add kiya taake boxes ke beech space rahe */}
+          {/* Negative left margin + pl-4 on items keeps the gap between boxes */}
           <div className="flex -ml-4">
             {SERVICES.map((item, index) => (
               <Link href={item.link} key={index} className="pl-4 flex-[0_0_100%] sm:flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333333%] xl:flex-[0_0_20%]">
@@ -67,7 +65,7 @@ export default function ServicesList() {
           </div>
         </div>
 
-        {/* Buttons ko thora adjust kiya */}
+        {/* Carousel navigation buttons */}
         <button onClick={scrollPrev} className="absolute left-2 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a]"><ChevronLeft size={40} /></button>
         <button onClick={scrollNext} className="absolute right-2 top-1/2 p-2 text-[#0056b3] hover:text-[#003d7a]"><ChevronRight size={40} /></button>
       </div>

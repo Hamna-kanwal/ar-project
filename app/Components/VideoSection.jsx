@@ -8,10 +8,10 @@ export default function HeatingSection() {
         
         {/* Left Column: Content */}
         <div className="space-y-6">
-          {/* Main Heading using #005f93 */}
-          <h1 className="text-3xl lg:text-4xl font-bold text-[#005f93] leading-tight">
+          {/* Section Heading using #005f93 */}
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#005f93] leading-tight">
             Expert Heating & Plumbing Services in Watford, Harrow & Hemel Hempstead
-          </h1>
+          </h2>
 
           {/* Descriptive Paragraphs */}
           <p className="text-gray-600 text-base leading-relaxed">
@@ -62,7 +62,7 @@ export default function HeatingSection() {
                 preload="metadata"
                 poster="/heating_installation.jpg"
               >
-                {/* Agar video public folder mein hai toh src="/ar-heating.mp4" likh dein */}
+                {/* If the video is in the public folder, use src="/ar-heating.mp4" */}
                 <source src="/ar-heating.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

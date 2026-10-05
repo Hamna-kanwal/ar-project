@@ -1,83 +1,115 @@
-'use client';
-import { useState } from 'react';
-import { ShieldCheck, MapPin, BadgeDollarSign, HeartHandshake, Sparkles, Zap, Phone, LayoutGrid } from 'lucide-react';
-import CtaBanner from '../Components/CTA';
+import React from 'react';
+import { ShieldCheck, Clock, Users, Wrench, Zap, Award, MapPin, HandCoins } from 'lucide-react';
+import RelatedServices from '../Components/RelatedServices';
 
-const faqs = [
-  { q: "Are you Gas Safe registered?", a: "Yes. Our number is 574111. Check us on the Gas Safe Register any time." },
-  { q: "Where are you based?", a: "In Watford, at Unit 24, The Roundway, WD18 6LB. We cover Watford and the towns close by." },
-  { q: "Do you give free quotes?", a: "Yes. We give free, fixed price quotes with honest advice, and no pressure to go ahead." },
-  { q: "Do you offer emergency help?", a: "Yes. Call us when a heating or gas fault cannot wait, and we work to reach you fast." },
-];
-
-export default function AboutPage() {
-  const [openIndex, setOpenIndex] = useState(0);
-
+export default function AboutUs() {
   return (
-    <main className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
+    <div className="bg-gray-50">
+      {/* Hero Section - White/Blue professional theme */}
+      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.jpg')" }} />
-        <div className="absolute inset-0 bg-white/80" /> 
+        <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
-            Why AR<span className="text-orange-500"> Heating</span>
+            About<span className="text-orange-500"> Us</span>
           </h1>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium leading-relaxed">
-        AR Heating & Plumbing is a Gas Safe registered heating and plumbing team in Watford. Fixed prices, honest advice, and tidy work across Watford and the towns close by.
-You want a heating and plumbing team you can trust in your home. We are a local, Gas Safe registered team based in Watford, and we treat every job with care.
-From a new boiler to a quick repair, we give you fixed prices, plain advice, and clean work. Here is why homes across Watford pick us.
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
+           AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas.We specialise in all types of gas services including boiler & heating repair, installation, and servicing.
           </p>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <InfoCard icon={<ShieldCheck size={32} />} title="Gas Safe Registered" text="Every gas job we do is by the book. Our Gas Safe number is 574111, and you can check us on the Gas Safe Register." />
-          <InfoCard icon={<MapPin size={32} />} title="Local to Watford" text="We are based in Watford and work across the towns close by. A local team means a quick reply and a face you can trust." />
-          <InfoCard icon={<BadgeDollarSign size={32} />} title="Fixed Prices" text="We give you a clear, fixed price before we start. No hidden costs, no surprise on the bill." />
-          <InfoCard icon={<HeartHandshake size={32} />} title="Honest Advice" text="If a repair beats a new fit, we say so. We would rather keep you for years than sell you more than you need." />
-          <InfoCard icon={<Sparkles size={32} />} title="Tidy Work" text="We treat your home with care and clean up when we finish. We leave your home clean, with the job done." />
-          <InfoCard icon={<Zap size={32} />} title="Fast Help" text="Heating faults do not wait, so nor do we. Call us and we work to reach you soon." />
-          <InfoCard icon={<LayoutGrid size={32} />} title="One team for the whole home" text="From boilers to plumbing to smart controls, we cover a wide range of jobs. One call sorts the lot." />
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold mb-10 text-black">Frequently Asked Question</h2>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <div key={i} className={`border-2 rounded-xl overflow-hidden transition-all ${openIndex === i ? 'border-orange-500' : 'border-gray-200'}`}>
-                <button 
-                  onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
-                  className={`w-full p-6 text-left font-semibold flex justify-between items-center ${openIndex === i ? 'bg-orange-50' : 'bg-white'}`}
-                >
-                  <span className="text-gray-900 font-bold">{faq.q}</span>
-                  <span className="w-8 h-8 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold">
-                    {openIndex === i ? '×' : '+'}
-                  </span>
-                </button>
-                <div className={`overflow-hidden transition-all duration-500 ${openIndex === i ? 'max-h-40' : 'max-h-0'}`}>
-                  <div className="p-6 pt-0 text-gray-600">{faq.a}</div>
-                </div>
+      {/* About Content */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="rounded-3xl overflow-hidden shadow-xl">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800" alt="Engineer" />
+          </div>
+          <div>
+            <h2 className="text-4xl font-bold text-[#027cc1] mb-3">AR Heating & Plumbing Services.</h2>
+            <p className="text-gray-600  leading-relaxed mb-3">
+               We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 text-gray-700 font-medium">
+                <ShieldCheck className="text-orange-500" /> 24hr Emergency Call out service
               </div>
-            ))}
+              <div className="flex items-center gap-3 text-gray-700 font-medium">
+                <Award className="text-orange-500" /> Many satisfied customers in Harrow
+              </div>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+             We believe in giving our customers the best value possible and focus on providing complete dedication with an eye to quality. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.
+            </p>
+            </div>
+            {/* Orange button for highlight */}
+            <button className=" bg-orange-500 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-md">
+              Get In Touch
+            </button>
           </div>
         </div>
       </section>
 
-          <CtaBanner />
-    </main>
+      {/* Stats Section */}
+  <section className="py-20 px-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { val: "24/7", label: "Emergency Support", icon: Clock, color: "text-blue-600" },
+          { val: "60-90", label: "Mins Response Time", icon: Zap, color: "text-amber-500" },
+          { val: "10+", label: "Certified Experts", icon: Users, color: "text-emerald-600" }
+        ].map((stat, i) => (
+          <div 
+            key={i} 
+            className="group relative bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          >
+            {/* Icon container with soft background */}
+            <div className={`w-16 h-16 mx-auto rounded-2xl bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-blue-50 transition-colors`}>
+              <stat.icon className={`w-8 h-8 ${stat.color}`} />
+            </div>
+            
+            <h3 className="text-5xl font-extrabold text-gray-900 mb-2">{stat.val}</h3>
+            <p className="text-gray-600 font-medium text-lg uppercase tracking-wider text-sm">{stat.label}</p>
+            
+            {/* Decorative bottom line */}
+            <div className="absolute bottom-0 left-1/2 w-0 h-1 bg-[#027cc1] group-hover:w-full group-hover:left-0 transition-all duration-500 rounded-b-3xl"></div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+      {/* Features Grid */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Why AR Heating & Plumbing?</h2>
+          <p>
+            Many satisfied customers in Harrow, Watford and London show the dedication of our engineers backed up by competitive rates and services completed on schedule. Whether you are looking to have major works or something small and simple to be repaired or installed, AR Heating Services can help. We believe in giving our customers the best value possible and focus on providing complete dedication with an eye for quality.We are a heating & plumbers company based in Birmingham, West Midlands with extensive experience installing and maintaining heating systems, emergency plumber service, installing bathrooms and kitchens etc...
+          </p>
+         <div className="grid md:grid-cols-2 gap-8 mt-12">
+  {[
+    { title: "Local Company", desc: "AR Heating & Plumbing Services is a local company established in 2012. We cover Harrow and surrounding areas, including Rickmansworth, Hemel Hempstead, St Albans, Harrow. We pride ourselves on the quality of our work at very competitive prices. Our work and your satisfaction are guaranteed.", icon: MapPin },
+    { title: "Our Services", desc: "We provide a complete range of services including installation, servicing, and repairs for all brands of boilers, heating systems and gas appliances. We also offer plumbing services associated with your boiler and heating needs. Our other services include Landlord Certificates, Power Flushes, and more.", icon: Wrench },
+    { title: "Safety First", desc: "We consider safety as the highest priority throughout the works we carry out. All our engineers are highly trained, have considerable experience, and are Gas Safe Registered (formerly known as Corgi registered). Our engineers deliver a high level of quality work.", icon: ShieldCheck },
+    { title: "Affordable", desc: "Our relationship with key manufacturers of boilers and heating systems means we are able to secure better trade prices, savings which we pass on to our customers. Our labour charges are the most competitive in the market. Call us today on 07800 657141 for a no-obligation quote or general advice.", icon: HandCoins }
+  ].map((item, i) => (
+    <div 
+      key={i} 
+      className="flex items-start gap-5 p-8 bg-white rounded-3xl border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300 group"
+    >
+      <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+        <item.icon className="w-8 h-8 text-orange-600" />
+      </div>
+      
+      <div>
+        <h4 className="font-bold text-2xl mb-1.5 text-gray-900">{item.title}</h4>
+        <p className="text-gray-600 text-base leading-relaxed">{item.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+          {/* Related Services */}
+          <RelatedServices className="mt-12 mb-0" />
+        </div>
+      </section>
+    </div>
   );
 }
-
-const InfoCard = ({ icon, title, text }) => (
-  <div className="p-6 bg-white border-t-4 border-orange-500 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
-    <div className="text-[#027cc1] mb-4">{icon}</div>
-    <h3 className="text-lg font-bold text-[#027cc1] mb-2">{title}</h3>
-    <p className="text-gray-600 text-sm">{text}</p>
-  </div>
-);

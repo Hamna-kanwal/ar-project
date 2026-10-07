@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: " What is a Megaflo unvented cylinder? ",
     desc: "A Megaflo works off the mains, so you get powerful hot water with no cold tank in the loft. Great for homes with more than one bathroom.  ",
-    img: "/megaflo1.png"
+    img: "/megaflo1.webp"
   },
   {
     title: "Is a Megaflo fitted safely? ",
     desc: "We size the cylinder to your home, fit the safety parts, and test the flow. You get steady, strong hot water you can count on.  ",
-    img: "/megaflo2.png"
+    img: "/megaflo2.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/megaflo.jpg"
+          src="/megaflo.webp"
           alt="Heating installation background"
           fill
           priority

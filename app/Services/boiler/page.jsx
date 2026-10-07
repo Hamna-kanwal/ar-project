@@ -8,7 +8,7 @@ const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     desc: "A yearly check spots small faults before they grow. A well kept boiler burns clean, uses less gas, and breaks down far less often. Many boiler warranties also ask for a yearly service to stay valid.",
-    img: "/boiler11.jpg",
+    img: "/boiler11.webp",
     // Blue glass theme styling
     bgGlass: "bg-sky-50/80 backdrop-blur-md border-sky-100",
     accentColor: "text-[#027cc1]"
@@ -16,7 +16,7 @@ const serviceDetails = [
   {
     title: "What do you check in a service?",
     desc: "We look at the main parts, clean what needs a clean, and test the gas pressure and flow. We make sure your boiler burns in a safe way with no leaks. You get a clear report at the end and a heads up on anything worth a watch.",
-    img: "/boiler12.jpg",
+    img: "/boiler12.webp",
     // Orange glass theme styling
     bgGlass: "bg-orange-50/80 backdrop-blur-md border-orange-100",
     accentColor: "text-orange-500"
@@ -38,7 +38,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/boiler.jpg"
+          src="/boiler.webp"
           alt="Boiler service background"
           fill
           priority

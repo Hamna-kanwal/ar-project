@@ -34,7 +34,7 @@ export default function Navbar({ onOpenSidebar }) {
         <nav className="py-6 px-8 flex items-center justify-between mt-6 md:mt-0">
           <Link href="/" aria-label="AR Heating home" className="relative block">
             <Image 
-              src="/logoo.png" 
+              src="/logoo.webp" 
               alt="AR Heating"
               width={110}       // Yahan width apni zaroorat ke mutabiq adjust karein
               height={80}      // Height lighter kar di taake header compact nazar aaye

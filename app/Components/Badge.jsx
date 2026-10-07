@@ -22,7 +22,7 @@ export default function TrustSection() {
   <div className="flex flex-col items-center text-center space-y-2">
     
     <Image 
-      src="/gas-register.png" 
+      src="/gas-register.webp" 
       alt="Gas Safe" 
       width={90} 
       height={90} 

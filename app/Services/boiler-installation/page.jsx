@@ -9,12 +9,12 @@ const serviceDetails = [
   {
     title: "How do I know I need a new boiler? ",
     desc: " Boilers rarely quit all at once. Most drop hints first. Watch for higher bills for no clear reason, radiators slow to warm, odd bangs or gurgles, a yellow flame in place of a blue one, and repair bills piling up. A boiler past ten years old on a second or third fix is often near the end.",
-    img: "/boilerservice2.jpg"
+    img: "/boilerservice2.webp"
   },
   {
     title: " Which boiler is best for my home? ",
     desc: "The best boiler is the one built for your home and your water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose. ",
-    img: "/boilerss.jpg"
+    img: "/boilerss.webp"
   }
 ];
 
@@ -60,7 +60,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/boilerservice1.jpg"
+          src="/boilerservice1.webp"
           alt="Boiler installation background"
           fill
           priority

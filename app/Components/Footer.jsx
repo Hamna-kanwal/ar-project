@@ -39,7 +39,7 @@ export default function Footer() {
         
         <div className="flex flex-col items-start md:col-span-1 -mt-4">
           <Image 
-            src="/logo-footer.png" 
+            src="/logo-footer.webp" 
             alt="AR Heating Logo" 
             width={400} 
             height={200} 

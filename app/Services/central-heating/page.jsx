@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "How do you build the system for my home? ",
     desc: "We map out your rooms and your daily use, then pick the right boiler size and radiators. A well sized system heats fast, holds warmth, and does not waste gas. ",
-    img: "/calculation.jpg"
+    img: "/calculation.webp"
   },
   {
     title: "Will the system last?  ",
     desc: "We use trusted parts and fit them with care. You get a system built for years of steady, safe heat, with simple controls you can trust. ",
-    img: "/heatingstallation3.jpg"
+    img: "/heatingstallation3.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/heatingstallation1.jpg"
+          src="/heatingstallation1.webp"
           alt="Boiler breakdown and repair background"
           fill
           priority

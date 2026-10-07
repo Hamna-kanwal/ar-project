@@ -5,7 +5,7 @@ const BlogDetailPage = () => {
   // Dummy Blog Data
   const post = {
     title: "Boiler Installation",
-    image: "/boiler.jpg",
+    image: "/boiler.webp",
     content: [
       {
         heading: "Choosing the Right Boiler for Your Home",

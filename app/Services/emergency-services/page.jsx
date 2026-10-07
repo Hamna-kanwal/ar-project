@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "How fast can you reach me?  ",
     desc: "We know a heating or gas fault can turn serious fast. We aim to reach you soon, make the area safe, and sort the fault.  ",
-    img: "/fast.png"
+    img: "/fast.webp"
   },
   {
     title: "Are you safe to call for gas faults?  ",
     desc: "Our Gas Safe engineers deal with leaks and faults the right way. We keep you and your home safe, then get things working again.  ",
-    img: "/emergencie.png"
+    img: "/emergencie.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/heatingstallation1.jpg"
+          src="/heatingstallation1.webp"
           alt="Boiler breakdown and repair background"
           fill
           priority

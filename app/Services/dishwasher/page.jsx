@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "How do you fit my dishwasher?  ",
     desc: "We connect your dishwasher to the water and waste, tuck the pipes away neat, and make sure the fit holds firm.  ",
-    img: "/dishwasher2.jpg"
+    img: "/dishwasher2.webp"
   },
   {
     title: "Is the fit leak checked?   ",
     desc: "We check every joint for leaks and run the machine to be sure. You leave the job ready for the first wash. ",
-    img: "/dishwasher3.jpg"
+    img: "/dishwasher3.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/dishwasher1.jpg"
+          src="/dishwasher1.webp"
           alt="Boiler breakdown and repair background"
           fill
           priority

@@ -13,7 +13,7 @@ const serviceDetails = [
   {
     title: "Do you test for leaks? ",
     desc: "We run a cycle to check the machine works and the joints hold. You leave the job with a machine ready to use.  ",
-    img: "/machine2.jpg"
+    img: "/machine2.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/machine1.jpg"
+          src="/machine1.webp"
           alt="Heating installation background"
           fill
           priority

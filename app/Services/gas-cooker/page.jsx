@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "Is a gas cooker safe to fit? ",
     desc: "A gas cooker fitted wrong can leak or worse. We do the job by the book, so you can cook with no worry.  ",
-    img: "/gas2.jpg"
+    img: "/gas2.webp"
   },
   {
     title: "How quick is the fit?  ",
     desc: "We connect your cooker, check every joint for leaks, and clean up after. You are ready to cook the same day.  ",
-    img: "/gas3.jpg"
+    img: "/gas3.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/gas1.jpg"
+          src="/gas1.webp"
           alt="Heating installation background"
           fill
           priority

@@ -60,7 +60,7 @@ export default function HeatingSection() {
                 className="w-full h-full object-cover"
                 controls
                 preload="metadata"
-                poster="/heating_installation.jpg"
+                poster="/heating_installation.webp"
               >
                 {/* If the video is in the public folder, use src="/ar-heating.mp4" */}
                 <source src="/ar-heating.mp4" type="video/mp4" />

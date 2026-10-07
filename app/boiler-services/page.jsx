@@ -12,7 +12,7 @@ const serviceData = {
       { 
         subtitle: "Boiler Replacement", 
         text: "With regular servicing, some old boiler models can withstand many years of use but decision to replace your old boiler with a new one as repair bills can stack up, especially if you don’t have boiler cover plan. Listed below are some indicators you need a replacement boiler:", 
-        img: "/heating_installation.jpg",
+        img: "/heating_installation.webp",
         listItems: [
           "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
           "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",
@@ -23,7 +23,7 @@ const serviceData = {
         { 
         subtitle: "New boiler installation options", 
         text: "Getting a new boiler is a decision that will affect your life for many years to come, that’s why we recommend an A-rated boiler, that is more efficient and cost-effective that will save a lot of trouble in the long run.Listed below are boiler main types you can choose from:Combi boilers are suitable for smaller properties that don’t have additional water tank or need hot water all the time. Combi boilers can be fired by a different type of fuel or electricity.", 
-        img: "/heating_installation.jpg",
+        img: "/heating_installation.webp",
         listItems: [
           "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
           "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",
@@ -34,7 +34,7 @@ const serviceData = {
         { 
         subtitle: "New boiler installation options", 
         text: "Regular boilers This type of boiler is perfect for homes with hot water running same time in more than one room. This type will need a hot and cold water storage tank in your loft.System boilers Used in a house with more than one bathroom, they are easier to install and do not require additional space. You provide supply as many hot taps without any limits in number of taps.", 
-        img: "/heating_installation.jpg",
+        img: "/heating_installation.webp",
         listItems: [
           "Your current boiler is beyond economical repair (BER) and it is cheaper to get a new boiler. The new boiler will provide a saving on your heating bills.",
           "You are experiencing frequent issues like your boiler requires servicing more than once a year and several call out expenses therefore, replacement boiler is the best option.",

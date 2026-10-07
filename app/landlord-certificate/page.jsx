@@ -46,7 +46,7 @@ export default function GasSafetyPage() {
       {/* Hero Section */}
       <section className="relative w-full h-[800px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/certification.jpg"
+          src="/certification.webp"
           alt="Boiler breakdown and repair background"
           fill
           priority

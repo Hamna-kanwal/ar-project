@@ -9,12 +9,12 @@ const serviceDetails = [
   {
     title: "What is a landlord gas safety certificate (CP12)? ",
     desc: "A yearly gas safety check is a legal must for landlords. We check the boiler, cooker, and other gas fittings, then give you the paperwork you need. The record is known as a CP12. ",
-    img: "/landlord2.jpg"
+    img: "/landlord2.webp"
   },
   {
     title: "How quick is the check? ",
     desc: "We work around your tenants and get the check done with little fuss. You get your certificate fast, well before your due date. ",
-    img: "/landlord3.jpg"
+    img: "/landlord3.webp"
   }
 ];
 
@@ -33,7 +33,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/landlord1.jpg"
+          src="/landlord1.webp"
           alt="Boiler service background"
           fill
           priority

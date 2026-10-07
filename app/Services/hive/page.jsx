@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "Can I run my heating from my phone? ",
     desc: "Warm the home before you get in, or turn the heat off from bed. Hive puts full control in your hand, wherever you are ",
-    img: "/hive2.jpg"
+    img: "/hive2.webp"
   },
   {
     title: " Do you set Hive up for me? ",
     desc: "We wire in Hive, connect the app to your phone, and test the link to your boiler. You leave the job ready to run your heat with a tap.o go. ",
-    img: "/hive3.jpg"
+    img: "/hive3.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/hive1.jpg"
+          src="/hive1.webp"
           alt="Heating installation background"
           fill
           priority

@@ -22,7 +22,7 @@ export default function TermsPage() {
      {/* Hero Section */}
            <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
      <Image
-  src="/terms-conditions.jpg"
+  src="/terms-conditions.webp"
   alt="Heating installation background"
   fill
   priority

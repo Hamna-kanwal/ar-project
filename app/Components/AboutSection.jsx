@@ -45,7 +45,7 @@ export default function AboutSection() {
               {/* Horizontal Image */}
               <div className="relative w-full overflow-hidden rounded-xl shadow-2xl z-10">
                 <Image 
-                  src="/horizontal.jpg" 
+                  src="/horizontal.webp" 
                   alt="Boiler Heating Services in Watford" 
                   width={600} 
                   height={400}
@@ -56,7 +56,7 @@ export default function AboutSection() {
               {/* Vertical Image (Overlapping on Desktop) */}
               <div className="hidden md:block absolute right-4 -bottom-10 w-72 h-52 overflow-hidden rounded-xl shadow-2xl z-20 border-4 border-white bg-white">
                 <Image 
-                  src="/vertical.jpg" 
+                  src="/vertical.webp" 
                   alt="Heating Engineer at Work" 
                   width={300} 
                   height={200}

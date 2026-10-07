@@ -8,7 +8,7 @@ export default function CtaBanner() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home-cta.png"
+          src="/home-cta.webp"
           alt="Get a free quote"
           fill
           className="object-cover opacity-70" // Thora opacity kam kiya taake background focus na kare

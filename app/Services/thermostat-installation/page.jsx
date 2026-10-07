@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "Why fit a new thermostat? ",
     desc: "Set the warmth you want, when you want. A good thermostat means less waste and a home ready for you when you walk in. ",
-    img: "/thermostate2.jpg"
+    img: "/thermostate2.webp"
   },
   {
     title: "Do you set the thermostat up for me?  ",
     desc: "We wire in your thermostat, test the link to your boiler, and walk you through the controls. You leave the job ready to go. ",
-    img: "/thermostate12.png"
+    img: "/thermostate12.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/thermostate1.jpg"
+          src="/thermostate1.webp"
           alt="Heating installation background"
           fill
           priority

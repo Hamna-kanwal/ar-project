@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "What causes sludge in a heating system? ",
     desc: "Rust and dirt gather inside your heating system as the years pass. The build up blocks flow, leaves radiators cold at the base, and makes your boiler strain. ",
-    img: "/power2.jpg"
+    img: "/power2.webp"
   },
   {
     title: "How does a power flush work?  ",
     desc: "We push a strong flow through your system to clear the sludge and grime. Heat spreads even again, your radiators warm up in full, and your boiler runs with less strain.  ",
-    img: "/power3.jpg"
+    img: "/power3.webp"
   }
 ];
 
@@ -32,7 +32,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/power1.jpg"
+          src="/power1.webp"
           alt="Heating installation background"
           fill
           priority

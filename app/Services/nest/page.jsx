@@ -8,12 +8,12 @@ const serviceDetails = [
   {
     title: "How does Nest save me money? ",
     desc: "Nest picks up your routine and warms your home for the times you are in. Less waste, more comfort, lower bills. ",
-    img: "/nest1.jpg"
+    img: "/nest1.webp"
   },
   {
     title: "Do you set Nest up for me?  ",
     desc: "We wire in Nest, connect the app, and test the link to your boiler. You leave the job ready to go.  ",
-    img: "/nest3.jpg"
+    img: "/nest3.webp"
   }
 ];
 
@@ -31,7 +31,7 @@ export default function ServicesAndFAQ() {
       {/* Hero Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
         <NextImage
-          src="/nest4.jpg"
+          src="/nest4.webp"
           alt="Heating installation background"
           fill
           priority

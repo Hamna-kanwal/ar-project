@@ -49,7 +49,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gray-50 font-sans">
       {/* Hero Section */}
       <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/boiler.webp')" }} />
         <div className="absolute inset-0 bg-white/80" />
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#027cc1]">Contact <span className="text-orange-500">Us</span></h1>

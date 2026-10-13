@@ -247,7 +247,7 @@ export default function ServicesAndFAQ() {
       )}
 
       {/* ============ HERO ============ */}
-      <section className="relative w-full min-h-[680px] flex items-center overflow-hidden pb-32 pt-20">
+      <section className="relative w-full min-h-[680px] flex items-center overflow-hidden pb-32 pt-36">
         <NextImage
           src="/boiler.webp"
           alt="Boiler service background"
@@ -259,16 +259,16 @@ export default function ServicesAndFAQ() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
         <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
-        <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
+        <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-5 gap-12 items-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-10 w-full grid lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-3 text-center lg:text-left">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
               Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
             </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-white leading-[1.05]">
-              Boiler Service <span className="text-orange-400">in Watford</span>
+            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05]">
+              Boiler Service <span className="text-orange-500">in Watford</span>
             </h1>
             <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
               A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
@@ -285,7 +285,7 @@ export default function ServicesAndFAQ() {
 
           <div className="lg:col-span-2 hidden lg:block">
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
-              <p className="text-orange-300 font-bold uppercase tracking-widest text-xs mb-4">What you get</p>
+              <p className="text-orange-500 font-bold uppercase tracking-widest text-xs mb-4">What you get</p>
               <ul className="space-y-4">
                 {heroPoints.map((p, i) => (
                   <li key={i} className="flex items-center gap-3 text-white font-semibold">

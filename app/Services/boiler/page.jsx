@@ -146,12 +146,6 @@ const trustItems = [
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
 
-const heroPoints = [
-  "Full safety check and clean",
-  "Written service record",
-  "Fixed price before we start",
-  "Gas Safe engineers, No. 574111",
-];
 
 // TODO: replace with 3 real Google reviews about boiler servicing
 const reviews = [
@@ -246,63 +240,47 @@ export default function ServicesAndFAQ() {
         </div>
       )}
 
-      {/* ============ HERO ============ */}
-      <section className="relative w-full min-h-[680px] flex items-center overflow-hidden pb-32 pt-36">
-        <NextImage
-          src="/boiler.webp"
-          alt="Boiler service background"
-          fill
-          priority
-          sizes="100vw"
-          quality={70}
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
-        <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
-        <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
+    {/* ============ HERO ============ */}
+<section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
+  <NextImage
+    src="/boiler.webp"
+    alt="Boiler service background"
+    fill
+    priority
+    sizes="100vw"
+    quality={70}
+    className="object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
+  <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
+  <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
 
-        <div className="relative z-20 max-w-7xl mx-auto px-10 w-full grid lg:grid-cols-5 gap-12 items-center">
-          <div className="lg:col-span-3 text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
-              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
-            </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05]">
-              Boiler Service <span className="text-orange-500">in Watford</span>
-            </h1>
-            <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
-              A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
-            </p>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-9">
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
-                Get my free quote <IconArrow />
-              </Link>
-              <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
-                <IconPhone /> Call: {PHONE_DISPLAY}
-              </a>
-            </div>
-          </div>
+  <div className="relative z-20 w-full px-4 sm:px-8 lg:px-12 flex flex-col items-center justify-center text-center">
+    <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+      <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
+        <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+        Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
+      </span>
 
-          <div className="lg:col-span-2 hidden lg:block">
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
-              <p className="text-orange-500 font-bold uppercase tracking-widest text-xs mb-4">What you get</p>
-              <ul className="space-y-4">
-                {heroPoints.map((p, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white font-semibold">
-                    <span className="w-8 h-8 shrink-0 rounded-full bg-orange-500 flex items-center justify-center">
-                      <IconCheck className="w-4 h-4" />
-                    </span>
-                    {p}
-                  </li>
-                ))}
-              </ul>
-              <a href={`tel:${PHONE_TEL}`} className="mt-8 block text-center bg-white text-[#027cc1] font-bold rounded-xl py-3 hover:bg-orange-50 transition-colors">
-                Book by phone
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">
+        Boiler Service <span className="text-orange-500">in Watford</span>
+      </h1>
+
+      <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed text-center">
+        A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
+      </p>
+
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-9 w-full">
+        <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
+          Get my free quote <IconArrow />
+        </Link>
+        <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
+          <IconPhone /> Call: {PHONE_DISPLAY}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ============ TRUST STRIP (floating) ============ */}
       <section className="relative z-20 -mt-16 px-6">

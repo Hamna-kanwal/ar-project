@@ -3,22 +3,21 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
+import ReviewsSection from '../../Components/ReviewsSection';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
 const WHATSAPP_NUMBER = "447800657141";
-const GOOGLE_REVIEWS_URL = "#"; // TODO: replace with the real Google reviews link
 
 // Seasonal offer: keep false until the client confirms a real offer with an end date
 const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
-const blockImages = ["/boiler11.webp", "/boiler12.webp"];
-
 const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     tab: "Yearly Service",
+    image: "/YEARLY SERVICE.png",
     paras: [
       "A yearly check spots small faults before they grow into big repair bills. A well kept boiler burns gas cleanly, uses less fuel and breaks down far less often. Most boiler makers also ask for a yearly service to keep your warranty valid, so skipping a year can cost you a free repair later.",
       "A service also keeps your home safe. A boiler with a blocked flue or a worn seal can leak carbon monoxide, a gas you cannot see or smell. Our engineer tests for this on every visit.",
@@ -28,6 +27,7 @@ const serviceDetails = [
   {
     title: "What do you check in a boiler service?",
     tab: "Service Checks",
+    image: "/SERVICE CHECKS.png",
     paras: [
       "Every service follows the same full check, and you get a written record at the end:",
     ],
@@ -44,6 +44,7 @@ const serviceDetails = [
   {
     title: "How much does a boiler service cost?",
     tab: "Service Cost",
+    image: "/SERVICE COST.png",
     paras: [
       "We give you a fixed price before any work starts, with no hidden extras. Send us your boiler make on WhatsApp or call 07800 657141 for an exact price. If we find a fault, we explain the problem and give you a fixed repair price first. Nothing extra goes ahead without your OK.",
       "Landlords can book a boiler service and a gas safety certificate (CP12) on one visit. A CP12 on its own costs £80 to £120.",
@@ -53,6 +54,7 @@ const serviceDetails = [
   {
     title: "Is a boiler service worth the cost?",
     tab: "Worth It?",
+    image: "/WORTH IT.png",
     paras: [
       "Yes, for most homes. A yearly service finds worn parts early, when they are cheap to replace, and stops small faults turning into a breakdown in the middle of winter. A clean boiler also burns gas more efficiently, so less of your money goes up the flue.",
       "Most importantly, a service keeps your manufacturer warranty valid. If your boiler breaks down while under warranty and you have no service record, the maker may refuse a free repair.",
@@ -62,6 +64,7 @@ const serviceDetails = [
   {
     title: "Signs your boiler needs a service now",
     tab: "Warning Signs",
+    image: "/WARNING SIGNS.png",
     paras: [
       "Book a service soon if you see a yellow or orange flame, hear banging or gurgling, notice the pressure dropping often, find radiators slow to warm, or see black marks around the boiler. If your last service was over 12 months ago, book now. If you smell gas, leave the house and call the National Gas Emergency line on 0800 111 999 first.",
     ],
@@ -70,6 +73,7 @@ const serviceDetails = [
   {
     title: "Boiler service for landlords",
     tab: "Landlords",
+    image: "/LANDLORDS.png",
     paras: [
       "Landlords must have every gas appliance checked each year and hold a valid gas safety certificate (CP12). We can service the boiler and carry out the CP12 check on the same visit, so your tenants only need to let us in once.",
       "Send us your tenant contact details and our team books the visit around their schedule. A CP12 on its own costs £80 to £120, and you get a digital certificate within 24 hours.",
@@ -79,6 +83,7 @@ const serviceDetails = [
   {
     title: "Which boilers and areas do you cover?",
     tab: "Areas Covered",
+    image: "/AREAS.png",
     paras: [
       "We service combi, system and regular gas boilers from all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi. We are based at Unit 24, The Roundway, Watford, WD18 6LB, and cover Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt.",
     ],
@@ -87,6 +92,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
+    image: "/gas-register.webp",
     paras: [
       "We are Gas Safe registered (No. 574111), and you can check our number on the Gas Safe Register before we arrive. We are a local Watford company, fully insured, open 7 days a week, and every price is fixed before we start.",
       "From your first call to the written record at the end, you deal with one local team who know the homes and boilers of Watford.",
@@ -146,13 +152,6 @@ const trustItems = [
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
 
-
-// TODO: replace with 3 real Google reviews about boiler servicing
-const reviews = [
-  { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
-  { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
-  { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
-];
 
 // TODO: replace with real engineer details supplied by the client
 const engineer = {
@@ -328,8 +327,6 @@ export default function ServicesAndFAQ() {
         {/* Panels (all stay in the DOM, only the active one is visible) */}
         <div className="max-w-6xl mx-auto px-6 py-16">
           {serviceDetails.map((s, i) => {
-            const primary = blockImages[i % blockImages.length];
-            const fallback = blockImages[(i + 1) % blockImages.length];
             return (
               <div
                 key={i}
@@ -342,17 +339,11 @@ export default function ServicesAndFAQ() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
                   <div className="relative h-[360px] md:h-[420px] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-gray-200">
-                    <img
-                      src={primary}
+                    <NextImage
+                      src={s.image}
                       alt={s.alt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      onError={(e) => {
-                        const img = e.currentTarget;
-                        if (img.dataset.fallbackUsed !== "1") {
-                          img.dataset.fallbackUsed = "1";
-                          img.src = fallback;
-                        }
-                      }}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
                       className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#021f33]/40 via-transparent to-transparent" />
@@ -416,40 +407,7 @@ export default function ServicesAndFAQ() {
         </div>
       </section>
 
-      {/* ============ REVIEWS ============ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <Eyebrow>Reviews</Eyebrow>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#03304b]">What Our Customers Say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div key={i} className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">&ldquo;</span>
-                <div className="text-orange-400 text-xl tracking-widest mb-4 mt-2" aria-label={`${r.rating} out of 5 stars`}>
-                  {"★".repeat(r.rating)}
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{r.text}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                    {r.name.charAt(0)}
-                  </span>
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">{r.town}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#027cc1] font-bold hover:text-orange-500 transition-colors">
-              Read all our Google reviews <IconArrow />
-            </a>
-          </div>
-        </div>
-      </section>
+      <ReviewsSection />
 
       {/* ============ FAQ ============ */}
       <section className="py-24 bg-gray-50">

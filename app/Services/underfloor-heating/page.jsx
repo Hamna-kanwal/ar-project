@@ -153,10 +153,10 @@ const IconSliders = ({ className = "w-7 h-7" }) => (
 );
 
 const trustItems = [
-  { icon: <IconShield />, label: "Gas Safe No. 574111[cite: 6]" },
-  { icon: <IconPin />, label: "Local since 2012[cite: 6]" },
-  { icon: <IconTag />, label: "Fixed price before we start[cite: 6]" },
-  { icon: <IconClock />, label: "Open 7 days a week[cite: 6]" },
+  { icon: <IconShield />, label: "Gas Safe No. 574111" },
+  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconTag />, label: "Fixed price before we start" },
+  { icon: <IconClock />, label: "Open 7 days a week" },
 ];
 
 const reviews = [
@@ -305,7 +305,7 @@ export default function UnderfloorHeatingPage() {
       {/* ============ HERO SECTION ============ */}
       <section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
         <NextImage
-          src="/undergroundheating1.png"
+          src="/undergroundheating1.webp"
           alt="Underfloor heating installation background[cite: 6]"
           fill
           priority

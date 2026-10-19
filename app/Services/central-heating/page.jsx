@@ -14,14 +14,14 @@ const OFFER_TEXT = "Offer text and end date go here.";
 
 // All 8 service blocks images rotating or matched nicely
 const blockImages = [
-  "/calculation.webp",
-  "/heatingstallation3.webp",
-  "/boiler11.webp",
-  "/boiler12.webp",
-  "/calculation.webp",
-  "/heatingstallation3.webp",
-  "/boiler11.webp",
-  "/boiler12.webp"
+  "/c2.png",
+  "/c1.png",
+  "/c3.png",
+  "/c4.png",
+  "/c5.png",
+  "/c6.png",
+  "/c7.png",
+  "/c8.png"
 ];
 
 const serviceDetails = [

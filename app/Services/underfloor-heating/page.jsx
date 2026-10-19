@@ -13,14 +13,14 @@ const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
 const blockImages = [
-  "/undergroundheating2.jpeg",
-  "/undergroundheating3.jpg",
-  "/undergroundheating1.png",
-  "/undergroundheating2.jpeg",
-  "/undergroundheating3.jpg",
-  "/undergroundheating1.png",
-  "/undergroundheating2.jpeg",
-  "/undergroundheating3.jpg"
+  "/u1.png",
+  "/u2.png",
+  "/u3.png",
+  "/u4.png",
+  "/u5.png",
+  "/u6.png",
+  "/u7.png",
+  "/u8.png"
 ];
 
 const serviceDetails = [

@@ -4,6 +4,7 @@ import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
 import ReviewsSection from '../../Components/ReviewsSection';
+import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
@@ -165,7 +166,7 @@ const relatedServices = [
   {
     title: "Landlord Gas Safety Certificate",
     desc: "CP12 from £80 to £120, done on the same visit as your service.",
-    href: "/Services/landlord-gas-safety-certificate", // TODO: confirm the real landlord certificate URL
+    href: "/Services/landlord", // TODO: confirm the real landlord certificate URL
     icon: <IconCert />,
   },
   {
@@ -239,47 +240,47 @@ export default function ServicesAndFAQ() {
         </div>
       )}
 
-    {/* ============ HERO ============ */}
-<section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
-  <NextImage
-    src="/boiler.webp"
-    alt="Boiler service background"
-    fill
-    priority
-    sizes="100vw"
-    quality={70}
-    className="object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
-  <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
-  <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
+      {/* ============ HERO ============ */}
+      <section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
+        <NextImage
+          src="/boiler.webp"
+          alt="Boiler service background"
+          fill
+          priority
+          sizes="100vw"
+          quality={70}
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
 
-  <div className="relative z-20 w-full px-4 sm:px-8 lg:px-12 flex flex-col items-center justify-center text-center">
-    <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
-      <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
-        <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-        Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
-      </span>
+        <div className="relative z-20 w-full px-4 sm:px-8 lg:px-12 flex flex-col items-center justify-center text-center">
+          <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
+            </span>
 
-      <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">
-        Boiler Service <span className="text-orange-500">in Watford</span>
-      </h1>
+            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">
+              Boiler Service <span className="text-orange-500">in Watford</span>
+            </h1>
 
-      <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed text-center">
-        A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
-      </p>
+            <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed text-center">
+              A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
+            </p>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 mt-9 w-full">
-        <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
-          Get my free quote <IconArrow />
-        </Link>
-        <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
-          <IconPhone /> Call: {PHONE_DISPLAY}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-9 w-full">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
+                Get my free quote <IconArrow />
+              </Link>
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center justify-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
+                <IconPhone /> Call: {PHONE_DISPLAY}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ============ TRUST STRIP (floating) ============ */}
       <section className="relative z-20 -mt-16 px-6">
@@ -325,7 +326,7 @@ export default function ServicesAndFAQ() {
         </div>
 
         {/* Panels (all stay in the DOM, only the active one is visible) */}
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           {serviceDetails.map((s, i) => {
             return (
               <div
@@ -334,19 +335,18 @@ export default function ServicesAndFAQ() {
                 role="tabpanel"
                 aria-labelledby={`service-tab-${i}`}
                 hidden={activeTab !== i}
-                className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center"
+                className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
               >
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                  <div className="relative h-[360px] md:h-[420px] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-gray-200">
+                  <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
                     <NextImage
                       src={s.image}
                       alt={s.alt}
                       fill
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      sizes="(min-width: 768px) 55vw, 100vw"
+                      className="object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#021f33]/40 via-transparent to-transparent" />
                     <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -380,32 +380,7 @@ export default function ServicesAndFAQ() {
         </div>
       </section>
 
-      {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="relative flex flex-col md:flex-row items-center gap-10">
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-orange-500 translate-x-2 translate-y-2" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white bg-gray-200">
-                <img src={engineer.photo} alt="Lead AR Heating engineer" className="absolute inset-0 w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="text-center md:text-left text-white">
-              <Eyebrow light>Meet your engineer</Eyebrow>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{engineer.name}</h2>
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconShield className="w-5 h-5 text-orange-300" /> {engineer.gasSafeId}
-                </span>
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconClock className="w-5 h-5 text-orange-300" /> {engineer.experience}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MeetYourEngineer />
 
       <ReviewsSection />
 

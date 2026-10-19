@@ -3,6 +3,8 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
+import ReviewsSection from '../../Components/ReviewsSection';
+import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
@@ -12,7 +14,16 @@ const GOOGLE_REVIEWS_URL = "#";
 const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
-const blockImages = ["/fast.webp", "/boiler12.webp"];
+const blockImages = [
+  "/fast.webp",
+  "/boiler-intial checks.png",
+  "/boiler-faults and fix.png",
+  "/boiler-fixed pricing.png",
+  "/repair vs replace.png",
+  "/prevention.png",
+  "/boiler-why us.png",
+  "/areas.png"
+];
 
 const repairServices = [
   {
@@ -213,7 +224,6 @@ const Eyebrow = ({ children, light = false }) => (
   </p>
 );
 
-
 export default function BoilerBreakdownPage() {
   const [openIndex, setOpenIndex] = useState(0);
   const [activeTab, setActiveTab] = useState(0);
@@ -378,10 +388,11 @@ export default function BoilerBreakdownPage() {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           {repairServices.map((s, i) => {
             const primary = blockImages[i % blockImages.length];
             const fallback = blockImages[(i + 1) % blockImages.length];
+            const hasList = Boolean(s.list);
             return (
               <div
                 key={i}
@@ -389,11 +400,11 @@ export default function BoilerBreakdownPage() {
                 role="tabpanel"
                 aria-labelledby={`repair-tab-${i}`}
                 hidden={activeTab !== i}
-                className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center"
+                className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
               >
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                  <div className="relative h-[360px] md:h-[420px] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-gray-200">
+                  <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
                     <img
                       src={primary}
                       alt={s.alt}
@@ -405,9 +416,8 @@ export default function BoilerBreakdownPage() {
                           img.src = fallback;
                         }
                       }}
-                      className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      className="absolute inset-0 w-full h-full object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#021f33]/40 via-transparent to-transparent" />
                     <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -415,19 +425,19 @@ export default function BoilerBreakdownPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-extrabold text-[#03304b] mb-5 leading-tight">
+                  <h2 className={`font-extrabold text-[#03304b] leading-tight ${hasList ? "text-2xl md:text-3xl mb-4" : "text-3xl md:text-4xl mb-5"}`}>
                     {s.title}
                   </h2>
-                  <div className="w-16 h-1.5 rounded-full bg-orange-500 mb-6" />
+                  <div className={`w-16 h-1.5 rounded-full bg-orange-500 ${hasList ? "mb-4" : "mb-6"}`} />
                   {s.paras && s.paras.map((p, pi) => (
-                    <p key={pi} className="text-gray-600 text-lg leading-relaxed mb-4">{p}</p>
+                    <p key={pi} className={`text-gray-600 leading-relaxed ${hasList ? "text-base mb-3" : "text-lg mb-4"}`}>{p}</p>
                   ))}
                   {s.list && (
-                    <ul className="grid sm:grid-cols-2 gap-3 mt-2 mb-4">
+                    <ul className="space-y-2 mt-3 mb-4">
                       {s.list.map((item, li) => (
-                        <li key={li} className="flex items-start gap-3 bg-sky-50/70 border border-sky-100 rounded-xl p-3 text-gray-700 font-medium">
-                          <span className="w-6 h-6 shrink-0 rounded-full bg-orange-500 text-white flex items-center justify-center mt-0.5">
-                            <IconCheck className="w-3.5 h-3.5" />
+                        <li key={li} className="flex items-center gap-3 bg-sky-50/70 border border-sky-100 rounded-xl px-3 py-2 text-gray-700 font-medium text-sm md:text-[15px] leading-snug">
+                          <span className="w-5 h-5 shrink-0 rounded-full bg-orange-500 text-white flex items-center justify-center">
+                            <IconCheck className="w-3 h-3" />
                           </span>
                           {item}
                         </li>
@@ -444,67 +454,9 @@ export default function BoilerBreakdownPage() {
         </div>
       </section>
 
-      {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="relative flex flex-col md:flex-row items-center gap-10">
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-orange-500 translate-x-2 translate-y-2" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white bg-gray-200">
-                <img src={engineer.photo} alt="Lead Breakdown Engineer" className="absolute inset-0 w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="text-center md:text-left text-white">
-              <Eyebrow light>Meet your engineer</Eyebrow>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{engineer.name}</h2>
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconShield className="w-5 h-5 text-orange-300" /> {engineer.gasSafeId}
-                </span>
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconClock className="w-5 h-5 text-orange-300" /> {engineer.experience}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ CUSTOMER REVIEWS ============ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <Eyebrow>Reviews</Eyebrow>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#03304b]">What Our Customers Say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div key={i} className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">&ldquo;</span>
-                <div className="text-orange-400 text-xl tracking-widest mb-4 mt-2" aria-label={`${r.rating} out of 5 stars`}>
-                  {"★".repeat(r.rating)}
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{r.text}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                    {r.name.charAt(0)}
-                  </span>
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">{r.town}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#027cc1] font-bold hover:text-orange-500 transition-colors">
-              Read all our Google reviews <IconArrow />
-            </a>
-          </div>
-        </div>
-      </section>
+     <MeetYourEngineer />
+  
+        <ReviewsSection />
 
       {/* ============ FREQUENTLY ASKED QUESTIONS ============ */}
       <section className="py-24 bg-gray-50">

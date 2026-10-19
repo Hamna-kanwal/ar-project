@@ -1,17 +1,8 @@
 import { NextResponse } from "next/server";
+import { unstable_cache } from "next/cache";
 
-export async function GET() {
-  const token = process.env.APIFY_API_TOKEN;
-  const mapsUrl = process.env.GOOGLE_MAPS_URL;
-
-  if (!token || !mapsUrl) {
-    return NextResponse.json(
-      { error: "APIFY_API_TOKEN ya GOOGLE_MAPS_URL missing hai" },
-      { status: 500 }
-    );
-  }
-
-  try {
+const getCachedReviews = unstable_cache(
+  async (token, mapsUrl) => {
     const actorId = "compass~google-maps-reviews-scraper";
     const runUrl = `https://api.apify.com/v2/acts/${actorId}/runs?token=${token}`;
 
@@ -25,66 +16,57 @@ export async function GET() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(inputData),
+      cache: "no-store",
     });
 
     if (!runRes.ok) {
-      const errorText = await runRes.text();
-      return NextResponse.json(
-        { error: "Apify run start nahi hui", details: errorText },
-        { status: 500 }
-      );
+      throw new Error(`Apify run start nahi hui: ${await runRes.text()}`);
     }
 
     const runJson = await runRes.json();
     const runId = runJson?.data?.id || runJson?.id;
-    const datasetId = runJson?.data?.defaultDatasetId || runJson?.defaultDatasetId;
+    let datasetId = runJson?.data?.defaultDatasetId || runJson?.defaultDatasetId;
 
     if (!runId) {
-      return NextResponse.json(
-        { error: "Scraper run ID nahi mila" },
-        { status: 500 }
-      );
+      throw new Error("Scraper run ID nahi mila");
     }
 
     let status = runJson?.data?.status || "READY";
 
-    for (let attempt = 0; attempt < 25; attempt += 1) {
-      if (status === "SUCCEEDED") break;
-
-      if (status === "FAILED" || status === "ABORTED" || status === "TIMED_OUT") {
-        break;
+    for (let attempt = 0; attempt < 25 && status !== "SUCCEEDED"; attempt += 1) {
+      if (["FAILED", "ABORTED", "TIMED_OUT"].includes(status)) {
+        throw new Error(`Apify scraper ${status.toLowerCase()} ho gaya`);
       }
 
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       const statusRes = await fetch(
-        `https://api.apify.com/v2/acts/${actorId}/runs/${runId}?token=${token}`
+        `https://api.apify.com/v2/acts/${actorId}/runs/${runId}?token=${token}`,
+        { cache: "no-store" }
       );
 
-      if (!statusRes.ok) break;
+      if (!statusRes.ok) {
+        throw new Error(`Apify run status fetch nahi ho saka: ${await statusRes.text()}`);
+      }
 
       const statusJson = await statusRes.json();
       status = statusJson?.data?.status || status;
+      datasetId = statusJson?.data?.defaultDatasetId || datasetId;
     }
 
-    const finalDatasetId = datasetId || runJson?.data?.defaultDatasetId;
-
-    if (!finalDatasetId) {
-      return NextResponse.json(
-        { error: "Dataset ID nahi mila, review scrape complete nahi hui" },
-        { status: 500 }
-      );
+    if (status !== "SUCCEEDED") {
+      throw new Error("Apify scraper waqt par complete nahi hua");
     }
 
-    const itemsUrl = `https://api.apify.com/v2/datasets/${finalDatasetId}/items?token=${token}`;
-    const itemsRes = await fetch(itemsUrl, { next: { revalidate: 86400 } });
+    if (!datasetId) {
+      throw new Error("Dataset ID nahi mila, review scrape complete nahi hui");
+    }
+
+    const itemsUrl = `https://api.apify.com/v2/datasets/${datasetId}/items?token=${token}`;
+    const itemsRes = await fetch(itemsUrl, { cache: "no-store" });
 
     if (!itemsRes.ok) {
-      const errorText = await itemsRes.text();
-      return NextResponse.json(
-        { error: "Dataset se reviews fetch nahi hui", details: errorText },
-        { status: 500 }
-      );
+      throw new Error(`Dataset se reviews fetch nahi hui: ${await itemsRes.text()}`);
     }
 
     const rawData = await itemsRes.json();
@@ -94,7 +76,7 @@ export async function GET() {
         ? rawData.items
         : [];
 
-    const formattedReviews = rawReviews.map((r) => ({
+    return rawReviews.map((r) => ({
       name: r.name || r.author || "Customer",
       rating: Number(r.stars || r.rating || 5),
       text: r.text || r.textTranslated || "Great service!",
@@ -103,8 +85,25 @@ export async function GET() {
         ? new Date(r.publishedAtDate).toLocaleDateString()
         : r.relativeTime || "Recently",
     }));
+  },
+  ["google-maps-reviews"],
+  { revalidate: 3600, tags: ["google-reviews"] }
+);
 
-    return NextResponse.json({ reviews: formattedReviews });
+export async function GET() {
+  const token = process.env.APIFY_API_TOKEN;
+  const mapsUrl = process.env.GOOGLE_MAPS_URL;
+
+  if (!token || !mapsUrl) {
+    return NextResponse.json(
+      { error: "APIFY_API_TOKEN ya GOOGLE_MAPS_URL missing hai" },
+      { status: 500 }
+    );
+  }
+
+  try {
+    const reviews = await getCachedReviews(token, mapsUrl);
+    return NextResponse.json({ reviews });
   } catch (error) {
     console.error("Reviews API error:", error);
     return NextResponse.json(

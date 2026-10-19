@@ -3,22 +3,24 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
+import ReviewsSection from '../../Components/ReviewsSection';
+import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
 const WHATSAPP_NUMBER = "447800657141";
-const GOOGLE_REVIEWS_URL = "#"; // TODO: replace with the real Google reviews link
+const GOOGLE_REVIEWS_URL = "#"; 
 
-// Seasonal offer: keep false until the client confirms a real offer with an end date
 const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
-const blockImages = ["/boilerservice2.webp", "/boilerss.webp", "/boiler11.webp", "/boiler12.webp"];
+const resolveTabImage = (src) => encodeURI(src);
 
 const serviceDetails = [
   {
     title: "How do I know I need a new boiler?",
     tab: "Need New Boiler?",
+    image: "/new boiler.png",
     paras: [
       "Boilers rarely quit all at once. Watch for higher bills with no clear reason, radiators slow to warm, banging or gurgling, a yellow flame instead of a blue one, and repair bills piling up. A boiler over ten years old on its second or third repair is often near the end, and a new one can cost less over time than more fixes.",
       "Older boilers also tend to waste more gas, so a new A rated boiler can help bring your heating bills down as well as end the cycle of call outs.",
@@ -28,6 +30,7 @@ const serviceDetails = [
   {
     title: "Should I repair or replace my boiler?",
     tab: "Repair or Replace",
+    image: "/repairings.png", // <-- Doosri tab ki image
     paras: [
       "If your boiler is under ten years old and the fault is a single worn part, a repair is usually the better choice. If the boiler is older, needs parts which are hard to find, or has broken down several times in a year, replacing it often costs less over time.",
       "Our engineers give you an honest answer. If a repair makes more sense, we will tell you, and quote for the repair instead.",
@@ -37,6 +40,7 @@ const serviceDetails = [
   {
     title: "Which boiler is best for my home?",
     tab: "Which Boiler?",
+    image: "/which boiler.png", // <-- Teesri tab ki image
     paras: [
       "The best boiler is the one built for your home and your hot water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose.",
     ],
@@ -45,6 +49,7 @@ const serviceDetails = [
   {
     title: "How much does a new boiler cost in Watford?",
     tab: "Costs",
+    image: "/costs.png", // <-- Chauthi tab ki image
     paras: [
       "A new combi boiler, fitted, usually costs between £1,800 and £3,500. The price depends on the boiler type, brand and model, moving the boiler to a new spot, changing boiler type, and extras such as a power flush or a new flue. We visit, look at your home and give you a fixed price in writing. The price we quote is the price you pay.",
     ],
@@ -53,6 +58,7 @@ const serviceDetails = [
   {
     title: "Combi or system boiler: what is the difference in cost?",
     tab: "Combi vs System",
+    image: "/combi vs system.png", // <-- Paanchvi tab ki image
     paras: [
       "A combi swap is usually the quickest and lowest cost fit, as there is no tank or cylinder to replace. A system or regular boiler fit costs more, because the cylinder and pipework also need work. Changing from one boiler type to another, such as a regular boiler to a combi, adds time and cost too.",
       "The right choice depends on your bathrooms and hot water use, not just the price. We explain both options in your quote, so you can compare them side by side.",
@@ -62,6 +68,7 @@ const serviceDetails = [
   {
     title: "Which boiler brands do you fit?",
     tab: "Brands",
+    image: "/brands.png", // <-- Chhati tab ki image
     paras: [
       "We fit A rated boilers from Worcester Bosch, Vaillant, Ideal and Baxi. Most come with a manufacturer warranty of up to 10 years, depending on the model, and we register the warranty for you after fitting.",
     ],
@@ -70,6 +77,7 @@ const serviceDetails = [
   {
     title: "What happens on fitting day?",
     tab: "Fitting Day",
+    image: "/fittings.png", // <-- Sātvi tab ki image
     paras: [
       "Here is how a boiler fit works with us:",
     ],
@@ -86,6 +94,7 @@ const serviceDetails = [
   {
     title: "Can you add smart controls?",
     tab: "Smart Controls",
+    image: "/smart control.png", // <-- Aathvi tab ki image
     paras: [
       "Yes. Add a Hive or Google Nest smart thermostat with your new boiler and control your heating from your phone. A power flush before fitting clears sludge from your pipes and helps your new boiler last longer.",
     ],
@@ -94,6 +103,8 @@ const serviceDetails = [
   {
     title: "Where do you fit boilers?",
     tab: "Areas Covered",
+    image: "/installation-area.jpeg",
+    customLayout: true,
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit boilers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
       "From the first visit to the warranty paperwork, one local team handles the whole job.",
@@ -123,7 +134,6 @@ const boilerData = [
   },
 ];
 
-/* ---------- Icons (inline SVG, no extra dependencies) ---------- */
 const svgProps = {
   viewBox: "0 0 24 24",
   fill: "none",
@@ -174,21 +184,12 @@ const trustItems = [
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
 
-const heroPoints = [
-  "Fixed price before we start",
-  "Most fits done in one day",
-  "Warranties up to 10 years",
-  "Gas Safe engineers, No. 574111",
-];
-
-// TODO: replace with 3 real Google reviews about boiler installation
 const reviews = [
   { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
   { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
   { name: "First name", town: "Town", rating: 5, text: "Real Google review text goes here." },
 ];
 
-// TODO: replace with real engineer details supplied by the client
 const engineer = {
   name: "Engineer name",
   gasSafeId: "Gas Safe ID card number",
@@ -266,55 +267,52 @@ export default function ServicesAndFAQ() {
 
   return (
     <div className="pb-20 md:pb-0 bg-white text-gray-900">
-      {/* Optional Seasonal Offer Banner */}
       {SHOW_OFFER && (
         <div className="bg-orange-500 text-white text-center text-sm md:text-base font-semibold px-6 py-3">
           {OFFER_TEXT}
         </div>
       )}
 
-   {/* ============ HERO ============ */}
-{/* ============ HERO ============ */}
-<section className="relative w-full min-h-[680px] flex items-center overflow-hidden pb-32 pt-20">
-  <NextImage
-    src="/boilerservice1.webp"
-    alt="Boiler installation background"
-    fill
-    priority
-    sizes="100vw"
-    quality={70}
-    className="object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
-  <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
-  <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
+      {/* ============ HERO ============ */}
+      <section className="relative w-full min-h-[680px] flex items-center overflow-hidden pb-32 pt-20">
+        <NextImage
+          src="/boilerservice1.webp"
+          alt="Boiler installation background"
+          fill
+          priority
+          sizes="100vw"
+          quality={70}
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#021f33]/95 via-[#02466f]/90 to-[#027cc1]/70" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-orange-500/20 blur-3xl" />
+        <div className="absolute -bottom-20 -left-24 w-96 h-96 rounded-full bg-sky-400/20 blur-3xl" />
 
-  {/* Full width container with centered content */}
-  <div className="relative z-20 w-full px-6 md:px-12 flex justify-center items-center">
-    <div className="max-w-4xl text-center">
-      <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
-        <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-        Gas Safe No. 574111 &nbsp;|&nbsp; Combi boilers fitted from £1,800 &nbsp;|&nbsp; Warranties up to 10 years
-      </span>
-      <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05]">
-        Boiler Installation <span className="text-orange-500">in Watford</span>
-      </h1>
-      <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed">
-        New combi, system and regular boilers fitted by Gas Safe engineers (No. 574111), local to Watford since 2012. We help you pick the right boiler, give you a fixed price before work starts, and finish most fits in one day.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4 mt-9">
-        <Link href="/contact" className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
-          Get my free quote <IconArrow />
-        </Link>
-        <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
-          <IconPhone /> Call: {PHONE_DISPLAY}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+        <div className="relative z-20 w-full px-6 md:px-12 flex justify-center items-center">
+          <div className="max-w-4xl text-center">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
+              <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
+              Gas Safe No. 574111 &nbsp;|&nbsp; Combi boilers fitted from £1,800 &nbsp;|&nbsp; Warranties up to 10 years
+            </span>
+            <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05]">
+              Boiler Installation <span className="text-orange-500">in Watford</span>
+            </h1>
+            <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed">
+              New combi, system and regular boilers fitted by Gas Safe engineers (No. 574111), local to Watford since 2012. We help you pick the right boiler, give you a fixed price before work starts, and finish most fits in one day.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-9">
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">
+                Get my free quote <IconArrow />
+              </Link>
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 border-2 border-white/70 text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-[#027cc1] transition-colors">
+                <IconPhone /> Call: {PHONE_DISPLAY}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* ============ TRUST STRIP (floating) ============ */}
+      {/* ============ TRUST STRIP ============ */}
       <section className="relative z-20 -mt-16 px-6">
         <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl shadow-sky-900/10 border border-gray-100 grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-gray-100">
           {trustItems.map((t, i) => (
@@ -330,7 +328,6 @@ export default function ServicesAndFAQ() {
 
       {/* ============ SERVICE BLOCKS (TABS) ============ */}
       <section className="bg-white">
-        {/* Tab bar */}
         <div className="py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100 mt-10 px-4 flex justify-center">
           <div
             role="tablist"
@@ -357,11 +354,8 @@ export default function ServicesAndFAQ() {
           </div>
         </div>
 
-        {/* Panels (all stay in the DOM, only the active one is visible) */}
-        <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           {serviceDetails.map((s, i) => {
-            const primary = blockImages[i % blockImages.length];
-            const fallback = blockImages[(i + 1) % blockImages.length];
             return (
               <div
                 key={i}
@@ -369,25 +363,19 @@ export default function ServicesAndFAQ() {
                 role="tabpanel"
                 aria-labelledby={`service-tab-${i}`}
                 hidden={activeTab !== i}
-                className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center"
+                className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
               >
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                  <div className="relative h-[360px] md:h-[420px] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-gray-200">
-                    <img
-                      src={primary}
+                  <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+                    <NextImage
+                      src={resolveTabImage(s.image)}
                       alt={s.alt}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      onError={(e) => {
-                        const img = e.currentTarget;
-                        if (img.dataset.fallbackUsed !== "1") {
-                          img.dataset.fallbackUsed = "1";
-                          img.src = fallback;
-                        }
-                      }}
-                      className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 55vw"
+                      priority={i === 0}
+                      className="object-contain"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#021f33]/40 via-transparent to-transparent" />
                     <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -456,67 +444,9 @@ export default function ServicesAndFAQ() {
         </div>
       </section>
 
-      {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="relative flex flex-col md:flex-row items-center gap-10">
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-orange-500 translate-x-2 translate-y-2" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white bg-gray-200">
-                <img src={engineer.photo} alt="Lead AR Heating engineer" className="absolute inset-0 w-full h-full object-cover" />
-              </div>
-            </div>
-            <div className="text-center md:text-left text-white">
-              <Eyebrow light>Meet your engineer</Eyebrow>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{engineer.name}</h2>
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconShield className="w-5 h-5 text-orange-300" /> {engineer.gasSafeId}
-                </span>
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconClock className="w-5 h-5 text-orange-300" /> {engineer.experience}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <MeetYourEngineer/>
 
-      {/* ============ REVIEWS ============ */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <Eyebrow>Reviews</Eyebrow>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#03304b]">What Our Customers Say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div key={i} className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">&ldquo;</span>
-                <div className="text-orange-400 text-xl tracking-widest mb-4 mt-2" aria-label={`${r.rating} out of 5 stars`}>
-                  {"★".repeat(r.rating)}
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{r.text}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                    {r.name.charAt(0)}
-                  </span>
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">{r.town}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#027cc1] font-bold hover:text-orange-500 transition-colors">
-              Read all our Google reviews <IconArrow />
-            </a>
-          </div>
-        </div>
-      </section>
+      <ReviewsSection />
 
       {/* ============ FAQ ============ */}
       <section className="py-24 bg-white">

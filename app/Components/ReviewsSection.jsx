@@ -31,28 +31,45 @@ const FALLBACK_REVIEWS = [
 
 export default function ReviewsSection() {
   const [reviews, setReviews] = useState(FALLBACK_REVIEWS);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function getReviews() {
+    const cacheKey = "google-reviews-v1";
+
+    try {
+      const cachedReviews = JSON.parse(localStorage.getItem(cacheKey) || "null");
+      if (
+        Array.isArray(cachedReviews) &&
+        cachedReviews.length > 0 &&
+        cachedReviews.every(
+          (review) =>
+            typeof review?.name === "string" &&
+            typeof review?.text === "string" &&
+            typeof review?.rating === "number" &&
+            typeof review?.photo === "string" &&
+            typeof review?.relativeTime === "string"
+        )
+      ) {
+        Promise.resolve().then(() => setReviews(cachedReviews));
+      }
+    } catch (err) {
+      console.error("Saved reviews read karne mein masla aaya:", err);
+    }
+
+    async function refreshReviews() {
       try {
         const res = await fetch("/api/reviews", { cache: "no-store" });
         const data = await res.json();
 
         if (res.ok && Array.isArray(data?.reviews) && data.reviews.length > 0) {
           setReviews(data.reviews);
-        } else {
-          setReviews(FALLBACK_REVIEWS);
+          localStorage.setItem(cacheKey, JSON.stringify(data.reviews));
         }
       } catch (err) {
         console.error("Reviews load karne mein masla aaya:", err);
-        setReviews(FALLBACK_REVIEWS);
-      } finally {
-        setLoading(false);
       }
     }
 
-    getReviews();
+    refreshReviews();
   }, []);
 
   return (
@@ -67,61 +84,50 @@ export default function ReviewsSection() {
           </h2>
         </div>
 
-        {loading ? (
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {reviews.map((r, i) => (
+            <div
+              key={i}
+              className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col"
+            >
+              <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">
+                &ldquo;
+              </span>
+
               <div
-                key={i}
-                className="bg-gray-50 border border-gray-200 rounded-3xl p-8 h-64 animate-pulse"
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div
-                key={i}
-                className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col"
+                className="text-orange-400 text-xl tracking-widest mb-4 mt-2"
+                aria-label={`${r.rating} out of 5 stars`}
               >
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">
-                  &ldquo;
-                </span>
-
-                <div
-                  className="text-orange-400 text-xl tracking-widest mb-4 mt-2"
-                  aria-label={`${r.rating} out of 5 stars`}
-                >
-                  {"★".repeat(r.rating)}
-                  {"☆".repeat(5 - r.rating)}
-                </div>
-
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1 line-clamp-4">
-                  {r.text}
-                </p>
-
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  {r.photo ? (
-                    <img
-                      src={r.photo}
-                      alt={r.name}
-                      className="w-11 h-11 rounded-full object-cover"
-                    />
-                  ) : (
-                    <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                      {r.name.charAt(0)}
-                    </span>
-                  )}
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">
-                      {r.relativeTime}
-                    </span>
-                  </p>
-                </div>
+                {"★".repeat(r.rating)}
+                {"☆".repeat(5 - r.rating)}
               </div>
-            ))}
-          </div>
-        )}
+
+              <p className="text-gray-600 leading-relaxed mb-6 flex-1 line-clamp-4">
+                {r.text}
+              </p>
+
+              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                {r.photo ? (
+                  <img
+                    src={r.photo}
+                    alt={r.name}
+                    className="w-11 h-11 rounded-full object-cover"
+                  />
+                ) : (
+                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
+                    {r.name.charAt(0)}
+                  </span>
+                )}
+                <p className="font-bold text-gray-900 leading-tight">
+                  {r.name}
+                  <span className="block text-sm text-gray-500 font-medium">
+                    {r.relativeTime}
+                  </span>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <div className="text-center mt-12">
           <a

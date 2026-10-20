@@ -22,7 +22,7 @@ const blockImages = [
   "/o7.png",
   "/o8.png",
   "/o9.png",
-  "/o10.png",
+  "/o11.png",
 ];
 
 const serviceDetails = [

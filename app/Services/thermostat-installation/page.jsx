@@ -13,16 +13,16 @@ const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
 const blockImages = [
-  "/installation1.webp",
-  "/analysis.webp",
-  "/installation2.webp",
-  "/analysis.webp",
-  "/installation1.webp",
-  "/analysis.webp",
-  "/installation2.webp",
-  "/analysis.webp",
-  "/installation1.webp",
-  "/installation2.webp"
+  "/t1.png",
+  "/t2.png",
+  "/t3.png",
+  "/t4.png",
+  "/t5.png",
+  "/t6.png",
+  "/t7.png",
+  "/t8.png",
+  "/t9.png",
+  "/t10.png"
 ];
 
 const serviceDetails = [

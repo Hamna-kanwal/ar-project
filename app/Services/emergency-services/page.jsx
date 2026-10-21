@@ -20,7 +20,7 @@ const serviceDetails = [
   {
     title: "How fast can you reach me?",
     tab: "Response Time",
-    image: "/fast.webp",
+    image: "/e1.png",
     paras: [
       "We aim to have an engineer at your door within 60 to 90 minutes, or at a time which suits you. We are based in Watford, close to Harrow, Hemel Hempstead and St Albans, which is how we keep response times short. When you call, tell us what has happened and your postcode, and we will give you an arrival time."
     ],
@@ -29,7 +29,7 @@ const serviceDetails = [
   {
     title: "What should I do if I smell gas?",
     tab: "Gas Leak",
-    image: "/emergencie.webp",
+    image: "/e2.png",
     paras: [
       "Your safety comes first. If you smell gas, follow these steps immediately:"
     ],
@@ -49,7 +49,7 @@ const serviceDetails = [
   {
     title: "What should I do if a pipe bursts?",
     tab: "Burst Pipes",
-    image: "/heatingstallation1.webp",
+    image: "/e3.png",
     paras: [
       "Turn off your water at the stop tap straight away. It is usually under the kitchen sink or where the water pipe enters your home. Switch off the electrics in any area where water is near sockets or lights, and turn off your boiler. Then call us. We stop the leak, repair the pipe and get your water back on."
     ],
@@ -58,7 +58,7 @@ const serviceDetails = [
   {
     title: "What emergencies do you cover?",
     tab: "Faults Covered",
-    image: "/boiler12.webp",
+    image: "/e4.png",
     paras: [
       "Our engineers handle urgent heating, gas and plumbing faults, including:"
     ],
@@ -76,7 +76,7 @@ const serviceDetails = [
   {
     title: "Are you safe to call for gas faults?",
     tab: "Gas Safe",
-    image: "/gas-register.webp",
+    image: "/e5.png",
     paras: [
       "Yes. Every engineer who works on gas for us is Gas Safe registered under our registration, No. 574111. You can check our number on the Gas Safe Register. We follow the correct safety steps on every job, and will not turn an appliance back on until it is safe."
     ],
@@ -85,7 +85,7 @@ const serviceDetails = [
   {
     title: "Will I know the cost before you start?",
     tab: "Fixed Pricing",
-    image: "/fast.webp",
+    image: "/e6.png",
     paras: [
       "Yes. We tell you the cost before any work starts, even in an emergency. Our first job is to make your home safe. Then we explain the fault, give you a fixed price for the repair, and only go ahead with your OK."
     ],
@@ -94,7 +94,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Choose Us",
-    image: "/boiler.webp",
+    image: "/e7.png",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start any repair, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
     ],
@@ -103,7 +103,7 @@ const serviceDetails = [
   {
     title: "How can I prevent a winter emergency?",
     tab: "Winter Tips",
-    image: "/YEARLY SERVICE.png",
+    image: "/e8.png",
     paras: [
       "Many winter call outs can be avoided. Book a yearly boiler service before the cold weather. Lag pipes in lofts and garages. Know where your stop tap is and check it turns. Keep the heating on low when you go away in winter. If your condensate pipe freezes, pouring warm, not boiling, water over it can often get your boiler going again."
     ],

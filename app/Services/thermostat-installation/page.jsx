@@ -3,6 +3,8 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
+import ReviewsSection from '../../Components/ReviewsSection';
+import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
@@ -453,67 +455,10 @@ export default function ThermostatInstallationPage() {
         </div>
       </section>
 
-      {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="relative flex flex-col md:flex-row items-center gap-10">
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-orange-500 translate-x-2 translate-y-2" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white bg-gray-200">
-                <NextImage src={engineer.photo} alt="Lead Installation Engineer" fill className="object-cover" />
-              </div>
-            </div>
-            <div className="text-center md:text-left text-white">
-              <Eyebrow light>Meet your engineer</Eyebrow>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{engineer.name}</h2>
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconShield className="w-5 h-5 text-orange-300" /> {engineer.gasSafeId}
-                </span>
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconClock className="w-5 h-5 text-orange-300" /> {engineer.experience}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <MeetYourEngineer />
 
-      {/* ============ CUSTOMER REVIEWS ============ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <Eyebrow>Reviews</Eyebrow>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#03304b]">What Our Customers Say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div key={i} className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">&ldquo;</span>
-                <div className="text-orange-400 text-xl tracking-widest mb-4 mt-2" aria-label={`${r.rating} out of 5 stars`}>
-                  {"★".repeat(r.rating)}
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{r.text}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                    {r.name.charAt(0)}
-                  </span>
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">{r.town}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#027cc1] font-bold hover:text-orange-500 transition-colors">
-              Read all our Google reviews <IconArrow />
-            </a>
-          </div>
-        </div>
-      </section>
+      <ReviewsSection />
+  
 
       {/* ============ FREQUENTLY ASKED QUESTIONS ============ */}
       <section className="py-24 bg-gray-50">

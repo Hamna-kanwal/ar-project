@@ -3,6 +3,8 @@ import { useState } from 'react';
 import NextImage from 'next/image';
 import Link from 'next/link';
 import CtaBanner from '../../Components/CTA';
+import ReviewsSection from '../../Components/ReviewsSection';
+import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
@@ -28,84 +30,84 @@ const serviceDetails = [
     title: "What makes underfloor heating good?",
     tab: "Benefits",
     paras: [
-      "Heat rises from the whole floor and spreads evenly across the room, so there are no hot spots near a radiator and no cold corners. You get your wall space back, which helps in kitchens and small bathrooms, and your feet stay warm on cold mornings[cite: 6].",
-      "Because the whole floor gives off heat, the system can run at a lower water temperature than radiators while keeping the room just as warm[cite: 6]."
+      "Heat rises from the whole floor and spreads evenly across the room, so there are no hot spots near a radiator and no cold corners. You get your wall space back, which helps in kitchens and small bathrooms, and your feet stay warm on cold mornings.",
+      "Because the whole floor gives off heat, the system can run at a lower water temperature than radiators while keeping the room just as warm."
     ],
-    alt: "Warm tiled floor with underfloor heating in a Watford home[cite: 6]"
+    alt: "Warm tiled floor with underfloor heating in a Watford home"
   },
   {
     title: "Wet or electric underfloor heating: which is best?",
     tab: "Wet vs Electric",
     paras: [
-      "Wet underfloor heating runs warm water from your boiler through pipes under the floor. It suits larger areas, new builds, extensions and ground floors, and is usually cheaper to run[cite: 6].",
-      "Electric underfloor heating uses thin heating mats under the floor finish. It suits single rooms such as bathrooms and small kitchens, where lifting and raising the whole floor is not practical. We advise which type fits your room in your quote[cite: 6]."
+      "Wet underfloor heating runs warm water from your boiler through pipes under the floor. It suits larger areas, new builds, extensions and ground floors, and is usually cheaper to run.",
+      "Electric underfloor heating uses thin heating mats under the floor finish. It suits single rooms such as bathrooms and small kitchens, where lifting and raising the whole floor is not practical. We advise which type fits your room in your quote."
     ],
-    alt: "Wet underfloor heating pipes laid before screed[cite: 6]"
+    alt: "Wet underfloor heating pipes laid before screed"
   },
   {
     title: "Which rooms suit underfloor heating?",
     tab: "Suitable Rooms",
     paras: [
-      "Underfloor heating works well in[cite: 6]:"
+      "Underfloor heating works well in:"
     ],
     list: [
-      "Kitchens and open plan kitchen diners[cite: 6]",
-      "Bathrooms and en suites[cite: 6]",
-      "New extensions and garden rooms[cite: 6]",
-      "Conservatories[cite: 6]",
-      "Whole ground floors during a renovation[cite: 6]",
-      "New build homes[cite: 6]"
+      "Kitchens and open plan kitchen diners",
+      "Bathrooms and en suites",
+      "New extensions and garden rooms",
+      "Conservatories",
+      "Whole ground floors during a renovation",
+      "New build homes"
     ],
-    alt: "Underfloor heating fitted in a kitchen extension[cite: 6]"
+    alt: "Underfloor heating fitted in a kitchen extension"
   },
   {
     title: "Does underfloor heating work with any floor?",
     tab: "Floor Types",
     paras: [
-      "Most floors, yes. Tile and stone hold heat well and are the best match. Engineered wood and laminate work well with the right system. Carpet can work too, as long as the carpet and underlay are not too thick. We check your chosen floor and advise before we fit[cite: 6]."
+      "Most floors, yes. Tile and stone hold heat well and are the best match. Engineered wood and laminate work well with the right system. Carpet can work too, as long as the carpet and underlay are not too thick. We check your chosen floor and advise before we fit."
     ],
-    alt: "Floor finishes suitable for underfloor heating[cite: 6]"
+    alt: "Floor finishes suitable for underfloor heating"
   },
   {
     title: "Is underfloor heating easy to run?",
     tab: "Controls",
     paras: [
-      "Yes. Each room or zone gets its own thermostat, so you set the warmth you want in each space. Pair the system with a smart control and you can run your heating from your phone[cite: 6].",
-      "Underfloor heating takes longer to warm up than radiators, so it works best on a timer set to suit your day. We set this up with you before we leave[cite: 6]."
+      "Yes. Each room or zone gets its own thermostat, so you set the warmth you want in each space. Pair the system with a smart control and you can run your heating from your phone.",
+      "Underfloor heating takes longer to warm up than radiators, so it works best on a timer set to suit your day. We set this up with you before we leave."
     ],
-    alt: "Smart control for underfloor heating[cite: 6]"
+    alt: "Smart control for underfloor heating"
   },
   {
     title: "How does the installation work?",
     tab: "Installation",
     paras: [
-      "Here is how we fit underfloor heating[cite: 6]:"
+      "Here is how we fit underfloor heating"
     ],
     list: [
-      "Survey: we look at the room, the floor and your boiler[cite: 6]",
-      "Fixed price in writing, with no hidden extras[cite: 6]",
-      "Fitting: insulation, pipes or mats, and the manifold or wiring[cite: 6]",
-      "Floor: screed or the floor finish goes down, by us or your builder[cite: 6]",
-      "Controls: thermostats and smart controls set up[cite: 6]",
-      "Testing and handover: we test the system and show you how to use it[cite: 6]"
+      "Survey: we look at the room, the floor and your boiler",
+      "Fixed price in writing, with no hidden extras",
+      "Fitting: insulation, pipes or mats, and the manifold or wiring",
+      "Floor: screed or the floor finish goes down, by us or your builder",
+      "Controls: thermostats and smart controls set up",
+      "Testing and handover: we test the system and show you how to use it"
     ],
-    alt: "Engineer fitting electric underfloor heating in a bathroom[cite: 6]"
+    alt: "Engineer fitting electric underfloor heating in a bathroom"
   },
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
     paras: [
-      "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you[cite: 6]."
+      "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
     ],
-    alt: "Gas Safe registered AR Heating engineer[cite: 6]"
+    alt: "Gas Safe registered AR Heating engineer"
   },
   {
     title: "Will underfloor heating work with my boiler?",
     tab: "Boiler Compatibility",
     paras: [
-      "Most modern boilers can run a wet underfloor heating system. The system connects to your boiler through a manifold, which sends warm water to each zone. We check your boiler size and type first. If your boiler is too small or near the end of its life, we tell you, and can quote for a new boiler as part of the job[cite: 6]."
+      "Most modern boilers can run a wet underfloor heating system. The system connects to your boiler through a manifold, which sends warm water to each zone. We check your boiler size and type first. If your boiler is too small or near the end of its life, we tell you, and can quote for a new boiler as part of the job."
     ],
-    alt: "Underfloor heating manifold connected to a boiler[cite: 6]"
+    alt: "Underfloor heating manifold connected to a boiler"
   }
 ];
 
@@ -160,14 +162,14 @@ const trustItems = [
 ];
 
 const reviews = [
-  { name: "First name", town: "Watford[cite: 6]", rating: 5, text: "Fantastic underfloor heating installed in our kitchen. Very professional!" },
-  { name: "First name", town: "Bushey[cite: 6]", rating: 5, text: "Extremely tidy work, warm floors and great communication." },
-  { name: "First name", town: "Rickmansworth[cite: 6]", rating: 5, text: "Fixed price, reliable service and excellent results." },
+  { name: "First name", town: "Watford", rating: 5, text: "Fantastic underfloor heating installed in our kitchen. Very professional!" },
+  { name: "First name", town: "Bushey", rating: 5, text: "Extremely tidy work, warm floors and great communication." },
+  { name: "First name", town: "Rickmansworth", rating: 5, text: "Fixed price, reliable service and excellent results." },
 ];
 
 const engineer = {
   name: "Lead Engineer",
-  gasSafeId: "Gas Safe No. 574111[cite: 6]",
+  gasSafeId: "Gas Safe No. 574111",
   experience: "12+ Years Experience",
   photo: "/undergroundheating3.jpg",
 };
@@ -175,37 +177,37 @@ const engineer = {
 const relatedServices = [
   {
     title: "Heating Installation",
-    desc: "Radiators, boilers and controls for the whole home[cite: 6].",
+    desc: "Radiators, boilers and controls for the whole home.",
     href: "/Services/heating-installation",
     icon: <IconFlame />,
   },
   {
     title: "Thermostat Installation",
-    desc: "Smart controls for every room[cite: 6].",
+    desc: "Smart controls for every room.",
     href: "/Services/thermostat-installation",
     icon: <IconSliders />,
   },
   {
     title: "Boiler Installation",
-    desc: "A new boiler to run your wet system[cite: 6].",
+    desc: "A new boiler to run your wet system.",
     href: "/Services/boiler-installation",
     icon: <IconWrench />,
   },
 ];
 
 const faqs = [
-  { q: "Does underfloor heating work with any floor?", a: "Most floors, yes. Tile and stone hold heat best. We advise on wood and carpet before we fit[cite: 6]." },
-  { q: "Is underfloor heating cheap to run?", a: "It can be. It warms the room evenly at a lower temperature, which can use less gas over time when run well[cite: 6]." },
-  { q: "Can you fit underfloor heating in one room only?", a: "Yes. Many customers start with a kitchen or bathroom[cite: 6]." },
-  { q: "Wet or electric: which is cheaper to run?", a: "Wet systems running from your boiler are usually cheaper to run. Electric systems cost less to fit in a single small room[cite: 6]." },
-  { q: "Can I have underfloor heating and radiators together?", a: "Yes. Many homes use underfloor heating on the ground floor and radiators upstairs[cite: 6]." },
-  { q: "Will underfloor heating raise my floor height?", a: "Electric mats add very little height. Wet systems need more depth, which we plan for in new floors and extensions[cite: 6]." },
-  { q: "How long does underfloor heating take to warm up?", a: "Longer than radiators, so it works best on a timer. We set this up for you[cite: 6]." },
-  { q: "Do you work with builders?", a: "Yes. We can fit the system and work with your builder on the screed and floor finish[cite: 6]." },
-  { q: "Does underfloor heating work with my boiler?", a: "Most modern boilers can run a wet system through a manifold. We check your boiler first[cite: 6]." },
-  { q: "How much does underfloor heating cost?", a: "It depends on the room size, wet or electric, and the floor work needed. We give a fixed price after a survey[cite: 6]." },
-  { q: "Is underfloor heating worth it?", a: "For many homes, yes. It gives even warmth, frees wall space and can cost less to run at lower temperatures. It is best value when fitted during a renovation or extension[cite: 6]." },
-  { q: "Are you Gas Safe registered?", a: "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register[cite: 6]." }
+  { q: "Does underfloor heating work with any floor?", a: "Most floors, yes. Tile and stone hold heat best. We advise on wood and carpet before we fit." },
+  { q: "Is underfloor heating cheap to run?", a: "It can be. It warms the room evenly at a lower temperature, which can use less gas over time when run well." },
+  { q: "Can you fit underfloor heating in one room only?", a: "Yes. Many customers start with a kitchen or bathroom." },
+  { q: "Wet or electric: which is cheaper to run?", a: "Wet systems running from your boiler are usually cheaper to run. Electric systems cost less to fit in a single small room." },
+  { q: "Can I have underfloor heating and radiators together?", a: "Yes. Many homes use underfloor heating on the ground floor and radiators upstairs." },
+  { q: "Will underfloor heating raise my floor height?", a: "Electric mats add very little height. Wet systems need more depth, which we plan for in new floors and extensions." },
+  { q: "How long does underfloor heating take to warm up?", a: "Longer than radiators, so it works best on a timer. We set this up for you." },
+  { q: "Do you work with builders?", a: "Yes. We can fit the system and work with your builder on the screed and floor finish." },
+  { q: "Does underfloor heating work with my boiler?", a: "Most modern boilers can run a wet system through a manifold. We check your boiler first." },
+  { q: "How much does underfloor heating cost?", a: "It depends on the room size, wet or electric, and the floor work needed. We give a fixed price after a survey." },
+  { q: "Is underfloor heating worth it?", a: "For many homes, yes. It gives even warmth, frees wall space and can cost less to run at lower temperatures. It is best value when fitted during a renovation or extension." },
+  { q: "Are you Gas Safe registered?", a: "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register." }
 ];
 
 const days = ["Any day", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -306,7 +308,7 @@ export default function UnderfloorHeatingPage() {
       <section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
         <NextImage
           src="/undergroundheating1.webp"
-          alt="Underfloor heating installation background[cite: 6]"
+          alt="Underfloor heating installation background"
           fill
           priority
           sizes="100vw"
@@ -443,67 +445,9 @@ export default function UnderfloorHeatingPage() {
         </div>
       </section>
 
-      {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
-          <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="relative flex flex-col md:flex-row items-center gap-10">
-            <div className="relative shrink-0">
-              <div className="absolute inset-0 rounded-full bg-orange-500 translate-x-2 translate-y-2" />
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white bg-gray-200">
-                <NextImage src={engineer.photo} alt="Lead Underfloor Heating Engineer[cite: 6]" fill className="object-cover" />
-              </div>
-            </div>
-            <div className="text-center md:text-left text-white">
-              <Eyebrow light>Meet your engineer</Eyebrow>
-              <h2 className="text-3xl md:text-4xl font-extrabold mb-5">{engineer.name}</h2>
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconShield className="w-5 h-5 text-orange-300" /> {engineer.gasSafeId}
-                </span>
-                <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur px-4 py-2 rounded-full font-semibold">
-                  <IconClock className="w-5 h-5 text-orange-300" /> {engineer.experience}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ CUSTOMER REVIEWS ============ */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <Eyebrow>Reviews</Eyebrow>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#03304b]">What Our Customers Say</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((r, i) => (
-              <div key={i} className="relative bg-white border border-orange-500 rounded-3xl p-8 shadow-xl shadow-sky-900/5 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                <span className="absolute -top-5 left-8 w-8 h-8 rounded-xl bg-orange-500 text-white text-3xl font-serif flex items-center justify-center leading-none pt-2">&ldquo;</span>
-                <div className="text-orange-400 text-xl tracking-widest mb-4 mt-2" aria-label={`${r.rating} out of 5 stars`}>
-                  {"★".repeat(r.rating)}
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-1">{r.text}</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                  <span className="w-11 h-11 rounded-full bg-gradient-to-br from-[#027cc1] to-sky-400 text-white font-bold flex items-center justify-center">
-                    {r.name.charAt(0)}
-                  </span>
-                  <p className="font-bold text-gray-900 leading-tight">
-                    {r.name}
-                    <span className="block text-sm text-gray-500 font-medium">{r.town}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#027cc1] font-bold hover:text-orange-500 transition-colors">
-              Read all our Google reviews <IconArrow />
-            </a>
-          </div>
-        </div>
-      </section>
+  <MeetYourEngineer />
+  
+        <ReviewsSection />
 
       {/* ============ FREQUENTLY ASKED QUESTIONS ============ */}
       <section className="py-24 bg-gray-50">
@@ -552,9 +496,9 @@ export default function UnderfloorHeatingPage() {
         <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white text-center lg:text-left">
             <Eyebrow light>Quick booking</Eyebrow>
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">Get Your Free Underfloor Heating Quote[cite: 6]</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5">Get Your Free Underfloor Heating Quote</h2>
             <p className="text-sky-100 text-lg mb-8 max-w-lg mx-auto lg:mx-0">
-              Speak to a local engineer. Fixed prices, wet and electric systems[cite: 6].
+              Speak to a local engineer. Fixed prices, wet and electric systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center justify-center gap-2 bg-white text-[#027cc1] font-bold px-6 py-3 rounded-xl hover:bg-orange-50 transition-colors">

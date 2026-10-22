@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
+
 const navItems = [
   { label: "Home", href: "/" },
   { 
@@ -14,35 +15,48 @@ const navItems = [
       { label: "Boiler Installation", href: "/Services/boiler-installation" },
       { label: "Heating Installation", href: "/Services/heating-installation" },
       { label: "Boiler Breakdown & Repair", href: "/Services/boiler-breakdown" },
-         { label: "Central Heating System Installation", href: "/Services/central-heating" },
-         { label: "Underfloor Heating System Installation", href: "/Services/underfloor-heating" },
-          { label: "General Installation ", href: "/Services/general-installation" },
-           { label: "Thermostat Installation  ", href: "/Services/thermostat-installation" },
-            { label: "Emergency Services  ", href: "/Services/emergency-services" },
-             { label: " General Plumbing & Repair  ", href: "/Services/general-plumbing" },
-              { label: " Power Flushing  ", href: "/Services/power-flushing" },
-              { label: "  Hive Thermostat Installation  ", href: "/Services/hive" },
-              { label: "  Gas Cooker Installation   ", href: "/Services/gas-cooker" },
-               { label: "  Nest Thermostat Installation", href: "/Services/nest" },
-                     { label: "  Washing Machine Installation    ", href: "/Services/washing-machine" },
-                      { label: "  Dishwasher Installation    ", href: "/Services/dishwasher" },
-                      { label: " Landlord Certificate     ", href: "/Services/landlord" },
+      { label: "Central Heating System Installation", href: "/Services/central-heating" },
+      { label: "Underfloor Heating System Installation", href: "/Services/underfloor-heating" },
+      { label: "General Installation", href: "/Services/general-installation" },
+      { label: "Thermostat Installation", href: "/Services/thermostat-installation" },
+      { label: "Emergency Services", href: "/Services/emergency-services" },
+      { label: "General Plumbing & Repair", href: "/Services/general-plumbing" },
+      { label: "Power Flushing", href: "/Services/power-flushing" },
+      { label: "Hive Thermostat Installation", href: "/Services/hive" },
+      { label: "Gas Cooker Installation", href: "/Services/gas-cooker" },
+      { label: "Nest Thermostat Installation", href: "/Services/nest" },
+      { label: "Washing Machine Installation", href: "/Services/washing-machine" },
+      { label: "Dishwasher Installation", href: "/Services/dishwasher" },
+      { label: "Landlord Certificate", href: "/Services/landlord" },
     ] 
   },
   { label: "Why AR-Heating", href: "/about" },
   { label: "About Us", href: "/about-us" },
-  { label: "Area We Cover", href: "/location" },
+  { 
+    label: "Area We Cover", 
+    isDropdown: true, 
+    subItems: [
+      { label: "Harrow - Boiler Repair", href: "/harrow/boiler-repair" },
+         { label: "Harrow - Boiler Services", href: "/harrow/boiler-services" },
+       { label: "Harrow - Plumbers", href: "/harrow/plumber" },
+   
+    ]
+  },
   { label: "Landlord Certificate", href: "/landlord-certificate" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Sidebar({ isOpen, onClose }) {
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
   }, [isOpen]);
+
+  const toggleDropdown = (label) => {
+    setOpenDropdown(openDropdown === label ? null : label);
+  };
 
   return (
     <AnimatePresence>
@@ -67,7 +81,6 @@ export default function Sidebar({ isOpen, onClose }) {
               <button onClick={onClose} className="flex bg-[#0077b6] items-center gap-2 font-bold text-white rounded-[30px] px-4 py-2">
                 <ChevronLeft className="w-6 h-6" /> Back
               </button>
-             
             </div>
 
             {/* Links */}
@@ -78,13 +91,13 @@ export default function Sidebar({ isOpen, onClose }) {
                     {item.isDropdown ? (
                       <div className="space-y-2">
                         <button
-                          onClick={() => setServicesOpen(!servicesOpen)}
+                          onClick={() => toggleDropdown(item.label)}
                           className="w-full flex items-center justify-between p-4 bg-[#0077b6] text-white rounded-[12px] hover:bg-[#005f8f] transition-all font-bold"
                         >
                           <span>{item.label}</span>
-                          <ChevronDown className={`w-5 h-5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                          <ChevronDown className={`w-5 h-5 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
                         </button>
-                        {servicesOpen && (
+                        {openDropdown === item.label && (
                           <ul className="pl-4 space-y-2 border-l-2 border-[#0077b6] ml-2">
                             {item.subItems.map((sub) => (
                               <li key={sub.label}>
@@ -116,4 +129,3 @@ export default function Sidebar({ isOpen, onClose }) {
     </AnimatePresence>
   );
 }
-       

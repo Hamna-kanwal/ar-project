@@ -2,7 +2,7 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
 import dynamic from 'next/dynamic';
-import RelatedServices from '../Components/RelatedServices';
+
 
 // Correct path: go up out of the location folder, then out of the app folder
 const MapComponent = dynamic(() => import('../Components/MapSection'), {
@@ -55,10 +55,6 @@ export default function AreasWeCover() {
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="pb-16 px-6 max-w-7xl mx-auto">
-        <RelatedServices className="my-0" />
-      </section>
     </div>
   );
 }

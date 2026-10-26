@@ -6,8 +6,6 @@ import CtaBanner from '../../Components/CTA';
 import ReviewsSection from '../../Components/ReviewsSection';
 import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
-
-
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
 const WHATSAPP_NUMBER = "447800657141";
@@ -19,7 +17,7 @@ const serviceDetails = [
   {
     title: "How do you fit my washing machine?",
     tab: "Fitting Process",
-    image: "/washing-machine-fit.png",
+    image: "/how to fit-01.jpg",
     paras: [
       "We connect the cold water supply, link the waste pipe to your drain, fit a new isolation valve where needed, and tidy the pipework. Then we level the washing machine so it sits firm and runs quietly, slide it into place and test it.",
     ],
@@ -28,7 +26,7 @@ const serviceDetails = [
   {
     title: "Do you test for leaks?",
     tab: "Leak Testing",
-    image: "/connections-check.png",
+    image: "/leak pipe testing-01.jpg",
     paras: [
       "Yes. We check every joint and run a test cycle before we leave, so you know the washing machine fills, drains and runs properly. No leaks, no wobble, and ready to use.",
     ],
@@ -37,7 +35,7 @@ const serviceDetails = [
   {
     title: "What if there is no plumbing in place?",
     tab: "New Plumbing",
-    image: "/new-plumbing.png",
+    image: "/new plumbing-01.jpg",
     paras: [
       "If your kitchen or utility room has no water or waste point for a washing machine, we can add one. We run a new water supply and waste pipe, fit a valve and connect the drain, so the washing machine can go where you want it.",
     ],
@@ -46,7 +44,7 @@ const serviceDetails = [
   {
     title: "Can you fit a washer dryer?",
     tab: "Washer Dryers",
-    image: "/utility-room.png",
+    image: "/washer dryers-01.jpg",
     paras: [
       "Yes. We fit washing machines and washer dryers. For a vented tumble dryer, we can fit a vent through the wall. For condenser dryers stacked on a washing machine, we fit a stacking kit so both sit safely.",
     ],
@@ -55,7 +53,7 @@ const serviceDetails = [
   {
     title: "Can you take my old washing machine away?",
     tab: "Removal",
-    image: "/old-appliance.png",
+    image: "/taking old machine-01.jpg",
     paras: [
       "Yes. We disconnect your old washing machine, cap the pipes if needed, and can take the old machine away and leave the space clear.",
     ],
@@ -64,7 +62,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Pricing",
-    image: "/quote-check.png",
+    image: "/washing-prices.jpg",
     paras: [
       "Yes. You get a fixed price before we start, with no hidden extras. Tell us whether the plumbing is already in place, and whether you want the old machine removed, and we will give you a price.",
     ],
@@ -73,7 +71,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/gas-register.webp",
+    image: "/machine-why.jpg",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -82,7 +80,7 @@ const serviceDetails = [
   {
     title: "Why use a professional to fit a washing machine?",
     tab: "Professional Fit",
-    image: "/water-leak-appliance.png",
+    image: "/professional fit-01.jpg",
     paras: [
       "Plumbing in a washing machine looks simple, but a loose joint or a badly placed waste pipe can leak slowly for weeks before you notice. By then, the water may have damaged your floor or the kitchen units. A poor waste connection can also let dirty water flow back into the machine. We fit it right the first time, test it, and check for leaks before we leave.",
     ],
@@ -91,7 +89,7 @@ const serviceDetails = [
   {
     title: "How do I get ready for the fit?",
     tab: "Preparation",
-    image: "/appliance-box.png",
+    image: "/preperations-01.jpg",
     paras: [
       "Clear the space where the washing machine will go, and make sure the old machine is empty. Keep the new washing machine in its box until we arrive, along with the hoses and fittings which came with it. If your kitchen is being fitted, let us know the date, and we can book the fit to suit your kitchen fitter.",
     ],
@@ -100,7 +98,7 @@ const serviceDetails = [
   {
     title: "What is an isolation valve and do I need one?",
     tab: "Isolation Valve",
-    image: "/isolation-valve.png",
+    image: "/isolation valve-01.jpg",
     paras: [
       "An isolation valve lets you turn off the water to the washing machine without turning off the whole house. If the washing machine leaks, or needs moving or repairing, you can stop the water in seconds. If your kitchen does not have one, we fit one as part of the job.",
     ],
@@ -109,7 +107,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-house.png",
+    image: "/machine-areas.jpg",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit washing machines across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -354,7 +352,6 @@ export default function WashingMachineInstallation() {
 
       {/* ============ SERVICE TABS ============ */}
       <section className="bg-white">
-        {/* Wrapped 2-line layout without horizontal scrolling */}
         <div className="py-4 bg-white/80 backdrop-blur-sm border-b border-gray-100 mt-10 px-4 flex justify-center">
           <div
             role="tablist"
@@ -393,13 +390,14 @@ export default function WashingMachineInstallation() {
             >
               <div className="relative">
                 <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+                {/* Image container updated with object-cover for pristine natural alignment */}
+                <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-gray-100">
                   <NextImage
                     src={s.image}
                     alt={s.alt}
                     fill
                     sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
+                    className="object-cover"
                   />
                   <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
                     {String(i + 1).padStart(2, "0")}

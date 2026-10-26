@@ -6,8 +6,6 @@ import CtaBanner from '../../Components/CTA';
 import ReviewsSection from '../../Components/ReviewsSection';
 import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
-
-
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
 const WHATSAPP_NUMBER = "447800657141";
@@ -19,7 +17,7 @@ const serviceDetails = [
   {
     title: "Is a gas cooker safe to fit?",
     tab: "Safety First",
-    image: "/cooker-fit.png",
+    image: "/safety first-01.jpeg",
     paras: [
       "Yes, when a Gas Safe engineer fits it. A badly fitted cooker can leak gas, which puts your home at risk. We follow the correct steps on every job, from the connection to the final safety checks, so you can cook without worry.",
     ],
@@ -28,7 +26,7 @@ const serviceDetails = [
   {
     title: "What is included in a cooker fit?",
     tab: "What's Included",
-    image: "/leak-test.png",
+    image: "/whats include.jpeg",
     paras: [
       "Every gas cooker or hob fit includes a full safety check and setup to ensure your kitchen is completely secure:",
     ],
@@ -46,7 +44,7 @@ const serviceDetails = [
   {
     title: "How quick is the fit?",
     tab: "Fitting Speed",
-    image: "/cooker-kitchen.png",
+    image: "/fitting speed.jpeg",
     paras: [
       "Most cooker fits take under an hour. Once we have tested every joint and checked the flame, your cooker is safe to use the same day. Book a time to suit you, including fits arranged around a new kitchen.",
     ],
@@ -55,7 +53,7 @@ const serviceDetails = [
   {
     title: "Do you fit gas hobs and range cookers?",
     tab: "Hobs & Ranges",
-    image: "/gas-hob.png",
+    image: "/Hob RANGES-01.jpg",
     paras: [
       "Yes. We fit freestanding gas cookers, built in gas hobs, dual fuel cookers and range cookers. For built in hobs, we connect the gas once the hob is in the worktop. If the gas pipe needs moving or extending for a new kitchen layout, we can do this too.",
     ],
@@ -64,7 +62,7 @@ const serviceDetails = [
   {
     title: "Can you disconnect my old cooker?",
     tab: "Disconnect Old",
-    image: "/old-cooker.png",
+    image: "/disconnect old-01.jpg",
     paras: [
       "Yes. We safely disconnect your old gas cooker, cap the gas supply if needed, and can take the old cooker away. If you are switching from gas to electric, we can cap the gas supply safely so it is left in a safe state.",
     ],
@@ -73,7 +71,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Pricing",
-    image: "/cooker-quote.png",
+    image: "/fixed pricing.jpeg",
     paras: [
       "Yes. You get a fixed price before we start, with no hidden extras. Tell us the make and model of your new cooker, and whether you need the old one removed, and we will give you a price.",
     ],
@@ -82,7 +80,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/gas-register.webp",
+    image: "/boiler-why us.png",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -91,7 +89,7 @@ const serviceDetails = [
   {
     title: "Why does ventilation matter?",
     tab: "Ventilation",
-    image: "/kitchen-vent.png",
+    image: "/ventelation-01.jpg",
     paras: [
       "Gas cookers need fresh air to burn safely. Without enough ventilation, the flame can burn poorly and give off carbon monoxide. We check your kitchen has the right air supply for your cooker, and tell you if anything needs to change before we turn it on. We also recommend a carbon monoxide alarm in any room with a gas appliance.",
     ],
@@ -100,7 +98,7 @@ const serviceDetails = [
   {
     title: "What if my gas connection is old?",
     tab: "Old Connections",
-    image: "/gas-hose.png",
+    image: "/old connection.jpg",
     paras: [
       "Many older kitchens have a worn gas hose or a bayonet fitting which has seen better days. If your connection is not safe or is the wrong type for your new cooker, we replace it. We use parts made for gas cookers, and test the new connection before we leave.",
     ],
@@ -109,7 +107,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-house.png",
+    image: "/Areas-01.jpg",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit gas cookers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -393,17 +391,19 @@ export default function GasCookerInstallation() {
               hidden={activeTab !== i}
               className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
             >
+              {/* Image Container with Natural Auto-Height Sizing */}
               <div className="relative">
                 <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+                <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
                   <NextImage
                     src={s.image}
                     alt={s.alt}
-                    fill
+                    width={800}
+                    height={600}
                     sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
+                    className="w-full h-auto object-cover"
                   />
-                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
+                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg z-10">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>

@@ -18,7 +18,7 @@ const serviceDetails = [
   {
     title: "How does Nest save me money?",
     tab: "Save Money",
-    image: "/nest-wall.png",
+    image: "/safe money-01.jpg",
     paras: [
       "Nest learns when you are home and the temperatures you like, then builds a schedule for you. It warms your home when you are in and cuts back when you are out, which means less waste, more comfort and lower bills, without you having to set it up by hand.",
     ],
@@ -27,7 +27,7 @@ const serviceDetails = [
   {
     title: "Can I control Nest from my phone?",
     tab: "Phone Control",
-    image: "/nest-app.png",
+    image: "/phone control-01.jpg",
     paras: [
       "Yes. The Nest app lets you change the temperature, see your heating history and adjust your schedule from anywhere. Nest can also tell when everyone has left home and turn the heating down for you.",
     ],
@@ -36,7 +36,7 @@ const serviceDetails = [
   {
     title: "What makes Nest different?",
     tab: "Learning Feature",
-    image: "/nest-display.png",
+    image: "/learning feature-01.jpg",
     paras: [
       "Most smart thermostats need you to set a schedule. Nest learns one from how you use it in the first days. After that, it keeps adjusting as your routine changes, and shows you when you have chosen an energy saving setting.",
     ],
@@ -45,7 +45,7 @@ const serviceDetails = [
   {
     title: "Do you set Nest up for me?",
     tab: "Setup Included",
-    image: "/engineer-setup.png",
+    image: "/nest-setup.jpg",
     paras: [
       "Yes. We fit Nest, link the app to your phone, test the connection to your boiler and set your schedule. Then we show you how to use it, from changing the temperature to setting holiday mode. You are ready to go the moment we leave.",
     ],
@@ -54,7 +54,7 @@ const serviceDetails = [
   {
     title: "Can you replace my old thermostat with Nest?",
     tab: "Replace Old Control",
-    image: "/old-thermostat.png",
+    image: "/replace.jpg",
     paras: [
       "Yes. We remove your old thermostat and timer, fit Nest in their place and make good the wall. If your old thermostat is in a bad spot, such as a draughty hallway, we can place Nest somewhere better for an accurate reading.",
     ],
@@ -63,7 +63,7 @@ const serviceDetails = [
   {
     title: "Does Nest work with my boiler?",
     tab: "Boiler Check",
-    image: "/boiler-panel.png",
+    image: "/Boiler-01.jpg",
     paras: [
       "Nest works with most gas boilers and heating systems. We check your boiler and wiring first and confirm it will work before we fit. If you are getting a new boiler, we can fit Nest at the same time.",
     ],
@@ -72,7 +72,7 @@ const serviceDetails = [
   {
     title: "Hive or Nest: which is best for me?",
     tab: "Hive vs Nest",
-    image: "/hive-nest.png",
+    image: "/Hive.jpg",
     paras: [
       "Both are good choices. Hive is simple to use, with an easy app and optional smart radiator valves. Nest learns your routine and adjusts the heating for you. We fit both, and talk you through which suits your home and how you live. See our thermostat installation page for other options.",
     ],
@@ -81,7 +81,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/gas-register.webp",
+    image: "/nest-why us.jpg",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -90,7 +90,7 @@ const serviceDetails = [
   {
     title: "Can you fit Nest with a new boiler?",
     tab: "Fit With New Boiler",
-    image: "/boiler-fit.png",
+    image: "/fit with boiler-01.jpg",
     paras: [
       "Yes, and it is a good time to do it. When we fit your new boiler, we can fit Nest at the same time, wire both together and set them up in one visit. You get a new boiler and smart controls working together from day one.",
     ],
@@ -99,7 +99,7 @@ const serviceDetails = [
   {
     title: "What can I do with Nest day to day?",
     tab: "Day to Day",
-    image: "/holiday-mode.png",
+    image: "/day to day-01.jpg",
     paras: [
       "Set a different schedule for weekdays and weekends. Boost the heating for an hour when it turns cold. Turn the heating down when you go away, and back up before you get home. Check the temperature at home from anywhere. Small changes like these add up over a winter.",
     ],
@@ -108,7 +108,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-house.png",
+    image: "/nest-areas.jpg",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit Nest across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -392,13 +392,14 @@ export default function NestInstallation() {
             >
               <div className="relative">
                 <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+                <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
                   <NextImage
                     src={s.image}
                     alt={s.alt}
-                    fill
+                    width={1200}
+                    height={800}
                     sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
+                    className="w-full h-auto block"
                   />
                   <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
                     {String(i + 1).padStart(2, "0")}

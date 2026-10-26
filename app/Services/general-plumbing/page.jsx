@@ -111,7 +111,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/Areas covered.png",
+    image: "/Areas covered.jpeg",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fix plumbing across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],

@@ -73,7 +73,7 @@ export default function ReviewsSection() {
   }, []);
 
   return (
-    <section className="py-24 bg-white">
+    <section className=" bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <p className="text-orange-500 font-semibold tracking-wider uppercase text-sm">

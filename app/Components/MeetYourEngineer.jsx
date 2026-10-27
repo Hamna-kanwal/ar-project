@@ -24,16 +24,16 @@ const Eyebrow = ({ children, light }) => (
 export default function MeetYourEngineerPage() {
   // Sample Data (Aap ise apne props ya data source se replace kar sakte hain)
   const engineer = {
-    name: "John Doe",
+    name: "Syed Azmat Hussain",
     photo: "/engineer.webp",
-    gasSafeId: "Gas Safe: #584920",
+    gasSafeId: "Gas Safe: 574111",
     experience: "15+ Years Experience",
   };
 
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col justify-center">
       {/* ============ MEET YOUR ENGINEER ============ */}
-      <section className="py-20 px-6 bg-white">
+      <section className="bg-white">
         <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#021f33] via-[#02466f] to-[#027cc1] p-8 md:p-12 shadow-2xl">
           <div className="absolute  -right-20 w-72 h-72 rounded-full bg-orange-500/20 blur-3xl" />
           <div className="relative flex flex-col md:flex-row items-center gap-10">

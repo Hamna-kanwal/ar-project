@@ -17,7 +17,7 @@ const serviceDetails = [
   {
     title: "Is a gas cooker safe to fit?",
     tab: "Safety First",
-    image: "/safety first-01.jpeg",
+    image: "/safety first-01.webp",
     paras: [
       "Yes, when a Gas Safe engineer fits it. A badly fitted cooker can leak gas, which puts your home at risk. We follow the correct steps on every job, from the connection to the final safety checks, so you can cook without worry.",
     ],
@@ -26,7 +26,7 @@ const serviceDetails = [
   {
     title: "What is included in a cooker fit?",
     tab: "What's Included",
-    image: "/whats include.jpeg",
+    image: "/whats include.webp",
     paras: [
       "Every gas cooker or hob fit includes a full safety check and setup to ensure your kitchen is completely secure:",
     ],
@@ -44,7 +44,7 @@ const serviceDetails = [
   {
     title: "How quick is the fit?",
     tab: "Fitting Speed",
-    image: "/fitting speed.jpeg",
+    image: "/fitting speed.webp",
     paras: [
       "Most cooker fits take under an hour. Once we have tested every joint and checked the flame, your cooker is safe to use the same day. Book a time to suit you, including fits arranged around a new kitchen.",
     ],
@@ -53,7 +53,7 @@ const serviceDetails = [
   {
     title: "Do you fit gas hobs and range cookers?",
     tab: "Hobs & Ranges",
-    image: "/Hob RANGES-01.jpg",
+    image: "/Hob RANGES-01.webp",
     paras: [
       "Yes. We fit freestanding gas cookers, built in gas hobs, dual fuel cookers and range cookers. For built in hobs, we connect the gas once the hob is in the worktop. If the gas pipe needs moving or extending for a new kitchen layout, we can do this too.",
     ],
@@ -62,7 +62,7 @@ const serviceDetails = [
   {
     title: "Can you disconnect my old cooker?",
     tab: "Disconnect Old",
-    image: "/disconnect old-01.jpg",
+    image: "/disconnect old-01.webp",
     paras: [
       "Yes. We safely disconnect your old gas cooker, cap the gas supply if needed, and can take the old cooker away. If you are switching from gas to electric, we can cap the gas supply safely so it is left in a safe state.",
     ],
@@ -71,7 +71,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Pricing",
-    image: "/fixed pricing.jpeg",
+    image: "/fixed pricing.webp",
     paras: [
       "Yes. You get a fixed price before we start, with no hidden extras. Tell us the make and model of your new cooker, and whether you need the old one removed, and we will give you a price.",
     ],
@@ -80,7 +80,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/boiler-why us.png",
+    image: "/boiler-why us.webp",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -89,7 +89,7 @@ const serviceDetails = [
   {
     title: "Why does ventilation matter?",
     tab: "Ventilation",
-    image: "/ventelation-01.jpg",
+    image: "/ventelation-01.webp",
     paras: [
       "Gas cookers need fresh air to burn safely. Without enough ventilation, the flame can burn poorly and give off carbon monoxide. We check your kitchen has the right air supply for your cooker, and tell you if anything needs to change before we turn it on. We also recommend a carbon monoxide alarm in any room with a gas appliance.",
     ],
@@ -98,7 +98,7 @@ const serviceDetails = [
   {
     title: "What if my gas connection is old?",
     tab: "Old Connections",
-    image: "/old connection.jpg",
+    image: "/old connection.webp",
     paras: [
       "Many older kitchens have a worn gas hose or a bayonet fitting which has seen better days. If your connection is not safe or is the wrong type for your new cooker, we replace it. We use parts made for gas cookers, and test the new connection before we leave.",
     ],
@@ -107,7 +107,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/Areas-01.jpg",
+    image: "/Areas-01.webp",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit gas cookers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],

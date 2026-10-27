@@ -17,7 +17,7 @@ const serviceDetails = [
   {
     title: "What causes sludge in a heating system?",
     tab: "Sludge Causes",
-    image: "/radiator-cold-bottom.jpg",
+    image: "/flushing-sludge causes-01-optimized.webp",
     paras: [
       "Over time, water and metal inside your pipes and radiators react and form a black sludge of rust and debris. The sludge settles at the bottom of radiators, blocks pipes and valves, and clogs the parts inside your boiler. Your system then has to work harder and burn more gas to keep your home warm.",
     ],
@@ -26,7 +26,7 @@ const serviceDetails = [
   {
     title: "How do I know I need a power flush?",
     tab: "Signs You Need One",
-    image: "/thermal-radiator.jpg",
+    image: "/flushing-signs u need-01-optimized.webp",
     paras: [
       "Common signs include:",
     ],
@@ -44,7 +44,7 @@ const serviceDetails = [
   {
     title: "How does a power flush work?",
     tab: "How It Works",
-    image: "/power-flush-machine.jpg",
+    image: "/flushing-how works-01-optimized.webp",
     paras: [
       "We connect a power flush pump to your heating system and push a strong flow of water and cleaning chemical through the pipes and radiators. We work through each radiator in turn, loosening and pushing out the sludge. When the water runs clear, we refill the system with fresh water and add inhibitor to protect it from new sludge forming.",
     ],
@@ -53,7 +53,7 @@ const serviceDetails = [
   {
     title: "What are the benefits of a power flush?",
     tab: "Benefits",
-    image: "/warm-radiator.jpg",
+    image: "/flushing-benefits-01-optimized.webp",
     paras: [
       "A clean system brings real gains:",
     ],
@@ -69,7 +69,7 @@ const serviceDetails = [
   {
     title: "Do I need a power flush before a new boiler?",
     tab: "New Boilers",
-    image: "/new-boiler-fitting.jpg",
+    image: "/flushing-new boiler-01-optimized.webp",
     paras: [
       "Often, yes. Sludge from an old system can flow into a new boiler and damage it. Many boiler makers recommend cleaning the system when a new boiler goes in, and a dirty system can affect your warranty. We check your system water when we quote for a new boiler, and tell you whether a flush is needed.",
     ],
@@ -78,7 +78,7 @@ const serviceDetails = [
   {
     title: "How long does it take and how much does it cost?",
     tab: "Time & Cost",
-    image: "/engineer-quote.jpg",
+    image: "/flushing-time cost-01-optimized.webp",
     paras: [
       "Most power flushes take a few hours, depending on the size of your system and how many radiators you have. The price depends on the same things. We give you a fixed price before we start, with no hidden extras.",
     ],
@@ -87,7 +87,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/gas-safe-badge.jpg",
+    image: "/flushing-why us-01-optimized.webp",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -96,7 +96,7 @@ const serviceDetails = [
   {
     title: "How do I keep my system clean after a flush?",
     tab: "Aftercare",
-    image: "/inhibitor-bottle.jpg",
+    image: "/flushing-Aftercare-01-optimized.webp",
     paras: [
       "After the flush, we add inhibitor to the system water, which slows down new sludge forming. A yearly boiler service is a good time to check the inhibitor level and top it up. Some homes also benefit from a magnetic filter on the boiler, which catches debris before it reaches the boiler. Ask us and we will advise if one suits your system.",
     ],
@@ -105,7 +105,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/engineers-outside.jpg",
+    image: "/flushing-AREAS-01-optimized.webp",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and power flush heating systems across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -394,6 +394,7 @@ export default function PowerFlushing() {
                     src={s.image}
                     alt={s.alt}
                     fill
+                    loading="eager"
                     sizes="(min-width: 768px) 55vw, 100vw"
                     className="object-cover"
                   />

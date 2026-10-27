@@ -5,6 +5,14 @@ export const metadata = {
   title: "Heating and Boiler Advice | AR Heating Blog ",
   description:
     "Plain advice on boilers, radiators, power flushing and heating costs from the Gas Safe engineers at AR Heating in Watford. ",
+  openGraph: {
+    title: "Heating and Boiler Advice | AR Heating Blog",
+    description:
+      "Plain advice on boilers, radiators, power flushing and heating costs from the Gas Safe engineers at AR Heating in Watford.",
+    url: "https://www.arheatingservice.co.uk/blogs",
+    images: ["https://www.arheatingservice.co.uk/logo-footer.webp"],
+    type: "website",
+  },
   alternates: {
     canonical: "https://www.arheatingservice.co.uk/blogs",
   },

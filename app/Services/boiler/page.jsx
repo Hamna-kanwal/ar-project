@@ -18,7 +18,7 @@ const serviceDetails = [
   {
     title: "Why does my boiler need a yearly service?",
     tab: "Yearly Service",
-    image: "/YEARLY SERVICE.png",
+    image: "/YEARLY SERVICE.webp",
     paras: [
       "A yearly check spots small faults before they grow into big repair bills. A well kept boiler burns gas cleanly, uses less fuel and breaks down far less often. Most boiler makers also ask for a yearly service to keep your warranty valid, so skipping a year can cost you a free repair later.",
       "A service also keeps your home safe. A boiler with a blocked flue or a worn seal can leak carbon monoxide, a gas you cannot see or smell. Our engineer tests for this on every visit.",
@@ -28,7 +28,7 @@ const serviceDetails = [
   {
     title: "What do you check in a boiler service?",
     tab: "Service Checks",
-    image: "/SERVICE CHECKS.png",
+    image: "/SERVICE CHECKS.webp",
     paras: [
       "Every service follows the same full check, and you get a written record at the end:",
     ],
@@ -45,7 +45,7 @@ const serviceDetails = [
   {
     title: "How much does a boiler service cost?",
     tab: "Service Cost",
-    image: "/SERVICE COST.png",
+    image: "/SERVICE COST.webp",
     paras: [
       "We give you a fixed price before any work starts, with no hidden extras. Send us your boiler make on WhatsApp or call 07800 657141 for an exact price. If we find a fault, we explain the problem and give you a fixed repair price first. Nothing extra goes ahead without your OK.",
       "Landlords can book a boiler service and a gas safety certificate (CP12) on one visit. A CP12 on its own costs £80 to £120.",
@@ -55,7 +55,7 @@ const serviceDetails = [
   {
     title: "Is a boiler service worth the cost?",
     tab: "Worth It?",
-    image: "/WORTH IT.png",
+    image: "/WORTH IT.webp",
     paras: [
       "Yes, for most homes. A yearly service finds worn parts early, when they are cheap to replace, and stops small faults turning into a breakdown in the middle of winter. A clean boiler also burns gas more efficiently, so less of your money goes up the flue.",
       "Most importantly, a service keeps your manufacturer warranty valid. If your boiler breaks down while under warranty and you have no service record, the maker may refuse a free repair.",
@@ -65,7 +65,7 @@ const serviceDetails = [
   {
     title: "Signs your boiler needs a service now",
     tab: "Warning Signs",
-    image: "/WARNING SIGNS.png",
+    image: "/WARNING SIGNS.webp",
     paras: [
       "Book a service soon if you see a yellow or orange flame, hear banging or gurgling, notice the pressure dropping often, find radiators slow to warm, or see black marks around the boiler. If your last service was over 12 months ago, book now. If you smell gas, leave the house and call the National Gas Emergency line on 0800 111 999 first.",
     ],
@@ -74,7 +74,7 @@ const serviceDetails = [
   {
     title: "Boiler service for landlords",
     tab: "Landlords",
-    image: "/LANDLORDS.png",
+    image: "/LANDLORDS.webp",
     paras: [
       "Landlords must have every gas appliance checked each year and hold a valid gas safety certificate (CP12). We can service the boiler and carry out the CP12 check on the same visit, so your tenants only need to let us in once.",
       "Send us your tenant contact details and our team books the visit around their schedule. A CP12 on its own costs £80 to £120, and you get a digital certificate within 24 hours.",
@@ -84,7 +84,7 @@ const serviceDetails = [
   {
     title: "Which boilers and areas do you cover?",
     tab: "Areas Covered",
-    image: "/AREAS.png",
+    image: "/AREAS.webp",
     paras: [
       "We service combi, system and regular gas boilers from all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi. We are based at Unit 24, The Roundway, Watford, WD18 6LB, and cover Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt.",
     ],

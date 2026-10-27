@@ -17,7 +17,7 @@ const serviceDetails = [
   {
     title: "How do you fit my washing machine?",
     tab: "Fitting Process",
-    image: "/how to fit-01.jpg",
+    image: "/how to fit-01.webp",
     paras: [
       "We connect the cold water supply, link the waste pipe to your drain, fit a new isolation valve where needed, and tidy the pipework. Then we level the washing machine so it sits firm and runs quietly, slide it into place and test it.",
     ],
@@ -26,7 +26,7 @@ const serviceDetails = [
   {
     title: "Do you test for leaks?",
     tab: "Leak Testing",
-    image: "/leak pipe testing-01.jpg",
+    image: "/leak pipe testing-01.webp",
     paras: [
       "Yes. We check every joint and run a test cycle before we leave, so you know the washing machine fills, drains and runs properly. No leaks, no wobble, and ready to use.",
     ],
@@ -35,7 +35,7 @@ const serviceDetails = [
   {
     title: "What if there is no plumbing in place?",
     tab: "New Plumbing",
-    image: "/new plumbing-01.jpg",
+    image: "/new plumbing-01.webp",
     paras: [
       "If your kitchen or utility room has no water or waste point for a washing machine, we can add one. We run a new water supply and waste pipe, fit a valve and connect the drain, so the washing machine can go where you want it.",
     ],
@@ -44,7 +44,7 @@ const serviceDetails = [
   {
     title: "Can you fit a washer dryer?",
     tab: "Washer Dryers",
-    image: "/washer dryers-01.jpg",
+    image: "/washer dryers-01.webp",
     paras: [
       "Yes. We fit washing machines and washer dryers. For a vented tumble dryer, we can fit a vent through the wall. For condenser dryers stacked on a washing machine, we fit a stacking kit so both sit safely.",
     ],
@@ -53,7 +53,7 @@ const serviceDetails = [
   {
     title: "Can you take my old washing machine away?",
     tab: "Removal",
-    image: "/taking old machine-01.jpg",
+    image: "/taking old machine-01.webp",
     paras: [
       "Yes. We disconnect your old washing machine, cap the pipes if needed, and can take the old machine away and leave the space clear.",
     ],
@@ -62,7 +62,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Pricing",
-    image: "/washing-prices.jpg",
+    image: "/washing-prices.webp",
     paras: [
       "Yes. You get a fixed price before we start, with no hidden extras. Tell us whether the plumbing is already in place, and whether you want the old machine removed, and we will give you a price.",
     ],
@@ -71,7 +71,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/machine-why.jpg",
+    image: "/machine-why.webp",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -80,7 +80,7 @@ const serviceDetails = [
   {
     title: "Why use a professional to fit a washing machine?",
     tab: "Professional Fit",
-    image: "/professional fit-01.jpg",
+    image: "/professional fit-01.webp",
     paras: [
       "Plumbing in a washing machine looks simple, but a loose joint or a badly placed waste pipe can leak slowly for weeks before you notice. By then, the water may have damaged your floor or the kitchen units. A poor waste connection can also let dirty water flow back into the machine. We fit it right the first time, test it, and check for leaks before we leave.",
     ],
@@ -89,7 +89,7 @@ const serviceDetails = [
   {
     title: "How do I get ready for the fit?",
     tab: "Preparation",
-    image: "/preperations-01.jpg",
+    image: "/preperations-01.webp",
     paras: [
       "Clear the space where the washing machine will go, and make sure the old machine is empty. Keep the new washing machine in its box until we arrive, along with the hoses and fittings which came with it. If your kitchen is being fitted, let us know the date, and we can book the fit to suit your kitchen fitter.",
     ],
@@ -98,7 +98,7 @@ const serviceDetails = [
   {
     title: "What is an isolation valve and do I need one?",
     tab: "Isolation Valve",
-    image: "/isolation valve-01.jpg",
+    image: "/isolation valve-01.webp",
     paras: [
       "An isolation valve lets you turn off the water to the washing machine without turning off the whole house. If the washing machine leaks, or needs moving or repairing, you can stop the water in seconds. If your kitchen does not have one, we fit one as part of the job.",
     ],
@@ -107,7 +107,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/machine-areas.jpg",
+    image: "/machine-areas.webp",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit washing machines across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],

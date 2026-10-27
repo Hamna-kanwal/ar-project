@@ -16,14 +16,14 @@ const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
 const blockImages = [
-  "/heating-PLANNING.png",
-  "/heating-Installation work.png",
-  "/heating-new vs upgrade.png",
-  "/heating-underfloor heating.png",
-  "/heating-smart control.png",
-  "/heating-fit cleann and tidy.png",
-  "/heating-cost.png",
-  "/heating-areas.png"
+  "/heating-PLANNING.webp",
+  "/heating-Installation work.webp",
+  "/heating-new vs upgrade.webp",
+  "/heating-underfloor heating.webp",
+  "/heating-smart control.webp",
+  "/heating-fit cleann and tidy.webp",
+  "/heating-cost.webp",
+  "/heating-areas.webp"
 ];
 
 // Heating Installation Content Blocks (From Document)

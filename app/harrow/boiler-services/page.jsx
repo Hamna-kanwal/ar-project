@@ -19,7 +19,7 @@ const serviceDetails = [
   {
     title: "Why service your boiler every year?",
     tab: "Why Service",
-    image: "/boiler-service.png",
+    image: "/service-Why service-01.webp",
     paras: [
       "A yearly service finds small faults before they turn into a breakdown on the coldest day of the year. A clean boiler burns gas more efficiently, so less of your money goes up the flue. Most boiler makers also ask for a yearly service to keep your warranty valid.",
       "A service also checks your boiler is safe. Our engineer tests for carbon monoxide on every visit, a gas you cannot see or smell."
@@ -29,7 +29,7 @@ const serviceDetails = [
   {
     title: "What does a boiler service include?",
     tab: "What's Included",
-    image: "/flue-test.png",
+    image: "/service-what includes-01.webp",
     paras: [
       "Every service follows the same full check, whatever the make of boiler:",
     ],
@@ -48,7 +48,7 @@ const serviceDetails = [
   {
     title: "Boiler service and gas safety certificate for Harrow landlords",
     tab: "Landlords & CP12",
-    image: "/landlord-cert.png",
+    image: "/service-landlord certificate-01.webp",
     paras: [
       "Harrow has a large number of rented homes, and we already work with letting agents across Harrow, Pinner, Stanmore and Northolt. Every rented home needs a gas safety certificate (CP12) each year by law.",
       "We can service the boiler and carry out the CP12 check on the same visit, so your tenants only let us in once. Send us your tenant's contact details and our team books the visit around them. A CP12 on its own costs £80 to £120, and you get a digital certificate within 24 hours."
@@ -58,7 +58,7 @@ const serviceDetails = [
   {
     title: "Servicing older boilers in Harrow homes",
     tab: "Older Boilers",
-    image: "/older-boiler.png",
+    image: "/service-old boiler-01.webp",
     paras: [
       "Many homes in Harrow and Pinner still run older boilers, often tucked in kitchen cupboards or lofts. Older boilers need a service just as much as new ones, and often more, as worn parts and old seals are more likely to fail.",
       "If our engineer finds your boiler is near the end of its life, we tell you honestly, and explain whether a repair or a new boiler makes more sense."
@@ -68,7 +68,7 @@ const serviceDetails = [
   {
     title: "How much is a boiler service in Harrow?",
     tab: "Clear Pricing",
-    image: "/quote-check.png",
+    image: "/service-clear price-01.webp",
     paras: [
       "We give you a fixed price before any work starts, with no hidden extras. Call 07800 657141 or send your boiler make on WhatsApp for an exact price. If we find a fault, we explain it and give you a fixed price to repair before doing any extra work.",
     ],
@@ -77,7 +77,7 @@ const serviceDetails = [
   {
     title: "When is the best time to book?",
     tab: "Best Time to Book",
-    image: "/calendar-autumn.png",
+    image: "/service-right time to book-01.webp",
     paras: [
       "Any time is fine, but booking before the cold weather sets in means any fault is found while you can still live without heat for a day. Once you are booked, we can remind you when your next service is due, so you never miss a year and your warranty stays valid.",
     ],
@@ -86,7 +86,7 @@ const serviceDetails = [
   {
     title: "Why do Harrow homeowners and landlords choose us?",
     tab: "Why Us",
-    image: "/gas-register.webp",
+    image: "/service-why us-01.webp",
     paras: [
       "We have worked in Harrow since we started in 2012, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
     ],
@@ -95,7 +95,7 @@ const serviceDetails = [
   {
     title: "Which parts of Harrow do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-van.png",
+    image: "/service-area-01.webp",
     paras: [
       "We service boilers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -376,21 +376,22 @@ export default function BoilerServiceHarrow() {
               hidden={activeTab !== i}
               className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
             >
-              <div className="relative">
-                <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
-                  <NextImage
-                    src={s.image}
-                    alt={s.alt}
-                    fill
-                    sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
-                  />
-                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-              </div>
+           <div className="relative">
+  <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
+  <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+    <NextImage
+      src={s.image}
+      alt={s.alt}
+      width={800}
+      height={600}
+      sizes="(min-width: 768px) 55vw, 100vw"
+      className="w-full h-auto object-contain"
+    />
+    <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg z-10">
+      {String(i + 1).padStart(2, "0")}
+    </span>
+  </div>
+</div>
 
               <div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-[#03304b] mb-5 leading-tight">

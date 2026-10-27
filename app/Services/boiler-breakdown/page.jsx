@@ -16,13 +16,13 @@ const OFFER_TEXT = "Offer text and end date go here.";
 
 const blockImages = [
   "/fast.webp",
-  "/boiler-intial checks.png",
-  "/boiler-faults and fix.png",
-  "/boiler-fixed pricing.png",
-  "/repair vs replace.png",
-  "/prevention.png",
-  "/boiler-why us.png",
-  "/areas.png"
+  "/boiler-intial checks.webp",
+  "/boiler-faults and fix.webp",
+  "/boiler-fixed pricing.webp",
+  "/repair vs replace.webp",
+  "/prevention.webp",
+  "/boiler-why us.webp",
+  "/AREAS.webp"
 ];
 
 const repairServices = [

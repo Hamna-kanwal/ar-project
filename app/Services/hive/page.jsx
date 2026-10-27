@@ -17,7 +17,7 @@ const serviceDetails = [
   {
     title: "Can I run my heating from my phone?",
     tab: "Phone Control",
-    image: "/phone  control -01.jpg",
+    image: "/phone  control -01.webp",
     paras: [
       "Yes. With Hive you can warm your home before you get in, switch the heating off from bed, or turn it down when you are away, all from the app. You can set a schedule for each day, and change it any time from anywhere.",
     ],
@@ -26,7 +26,7 @@ const serviceDetails = [
   {
     title: "Can Hive save me money?",
     tab: "Save Money",
-    image: "/save money specific spot-01.jpg",
+    image: "/save money specific spot-01.webp",
     paras: [
       "It can, if used well. Better control means less heat wasted in empty rooms and empty hours. You can turn the heating down when plans change, and see when your heating runs, which helps you spot waste.",
     ],
@@ -35,7 +35,7 @@ const serviceDetails = [
   {
     title: "Can Hive control each room?",
     tab: "Room Control",
-    image: "/room control-01.jpg",
+    image: "/room control-01.webp",
     paras: [
       "Yes, with Hive smart radiator valves. Each valve lets you set the temperature of one room from the app, so you only heat the rooms you use. We can fit the valves when we fit your Hive thermostat, or add them later.",
     ],
@@ -44,7 +44,7 @@ const serviceDetails = [
   {
     title: "Do you set Hive up for me?",
     tab: "Setup Included",
-    image: "/setup included-01.jpg",
+    image: "/setup included-01.webp",
     paras: [
       "Yes. We fit Hive, link the app to your phone, test the connection to your boiler and set your schedule. Then we show you how to use it, from changing the temperature to setting holiday mode. You are ready to go the moment we leave.",
     ],
@@ -53,7 +53,7 @@ const serviceDetails = [
   {
     title: "Can you replace my old thermostat with Hive?",
     tab: "Replace Old Control",
-    image: "/old and new hive-01.jpg",
+    image: "/old and new hive-01.webp",
     paras: [
       "Yes. We remove your old thermostat and timer, fit Hive in their place and make good the wall. If your old thermostat is in a bad spot, such as a draughty hallway, we can place Hive somewhere better for an accurate reading.",
     ],
@@ -62,7 +62,7 @@ const serviceDetails = [
   {
     title: "Does Hive work with my boiler?",
     tab: "Boiler Check",
-    image: "/boiler check-01.jpg",
+    image: "/boiler check-01.webp",
     paras: [
       "Hive works with most gas boilers and heating systems. We check your boiler and wiring first and confirm it will work before we fit. If you are getting a new boiler, we can fit Hive at the same time.",
     ],
@@ -71,7 +71,7 @@ const serviceDetails = [
   {
     title: "Hive or Nest: which is best for me?",
     tab: "Hive vs Nest",
-    image: "/hive vs nest-01.jpg",
+    image: "/hive vs nest-01.webp",
     paras: [
       "Both are good choices. Hive is simple to use, with an easy app and optional smart radiator valves. Nest learns your routine and adjusts the heating for you. We fit both, and talk you through which suits your home and how you live. See our thermostat installation page for other options.",
     ],
@@ -80,7 +80,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/hive-why us.jpg",
+    image: "/hive-why us.webp",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -89,7 +89,7 @@ const serviceDetails = [
   {
     title: "Can you fit Hive with a new boiler?",
     tab: "Fit With New Boiler",
-    image: "/fit with boiler-01.jpg",
+    image: "/fit with boiler-01.webp",
     paras: [
       "Yes, and it is a good time to do it. When we fit your new boiler, we can fit Hive at the same time, wire both together and set them up in one visit. You get a new boiler and smart controls working together from day one.",
     ],
@@ -98,7 +98,7 @@ const serviceDetails = [
   {
     title: "What can I do with Hive day to day?",
     tab: "Day to Day",
-    image: "/day to day-01.jpg",
+    image: "/day to day-01.webp",
     paras: [
       "Set a different schedule for weekdays and weekends. Boost the heating for an hour when it turns cold. Turn the heating down when you go away, and back up before you get home. Check the temperature at home from anywhere. Small changes like these add up over a winter.",
     ],
@@ -107,7 +107,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/hive-areas.jpg",
+    image: "/hive-areas.webp",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit Hive across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],

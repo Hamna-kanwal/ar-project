@@ -25,7 +25,7 @@ export default function MeetYourEngineerPage() {
   // Sample Data (Aap ise apne props ya data source se replace kar sakte hain)
   const engineer = {
     name: "John Doe",
-    photo: "/images/engineer.jpg", // Apni image ka path dein
+    photo: "/images/engineer.webp", // Apni image ka path dein
     gasSafeId: "Gas Safe: #584920",
     experience: "15+ Years Experience",
   };

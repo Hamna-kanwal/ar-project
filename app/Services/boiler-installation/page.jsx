@@ -20,7 +20,7 @@ const serviceDetails = [
   {
     title: "How do I know I need a new boiler?",
     tab: "Need New Boiler?",
-    image: "/new boiler.png",
+    image: "/new boiler.webp",
     paras: [
       "Boilers rarely quit all at once. Watch for higher bills with no clear reason, radiators slow to warm, banging or gurgling, a yellow flame instead of a blue one, and repair bills piling up. A boiler over ten years old on its second or third repair is often near the end, and a new one can cost less over time than more fixes.",
       "Older boilers also tend to waste more gas, so a new A rated boiler can help bring your heating bills down as well as end the cycle of call outs.",
@@ -30,7 +30,7 @@ const serviceDetails = [
   {
     title: "Should I repair or replace my boiler?",
     tab: "Repair or Replace",
-    image: "/repairings.png", // <-- Doosri tab ki image
+    image: "/repairings.webp", // <-- Doosri tab ki image
     paras: [
       "If your boiler is under ten years old and the fault is a single worn part, a repair is usually the better choice. If the boiler is older, needs parts which are hard to find, or has broken down several times in a year, replacing it often costs less over time.",
       "Our engineers give you an honest answer. If a repair makes more sense, we will tell you, and quote for the repair instead.",
@@ -40,7 +40,7 @@ const serviceDetails = [
   {
     title: "Which boiler is best for my home?",
     tab: "Which Boiler?",
-    image: "/which boiler.png", // <-- Teesri tab ki image
+    image: "/which boiler.webp", // <-- Teesri tab ki image
     paras: [
       "The best boiler is the one built for your home and your hot water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose.",
     ],
@@ -49,7 +49,7 @@ const serviceDetails = [
   {
     title: "How much does a new boiler cost in Watford?",
     tab: "Costs",
-    image: "/costs.png", // <-- Chauthi tab ki image
+    image: "/costs.webp", // <-- Chauthi tab ki image
     paras: [
       "A new combi boiler, fitted, usually costs between £1,800 and £3,500. The price depends on the boiler type, brand and model, moving the boiler to a new spot, changing boiler type, and extras such as a power flush or a new flue. We visit, look at your home and give you a fixed price in writing. The price we quote is the price you pay.",
     ],
@@ -58,7 +58,7 @@ const serviceDetails = [
   {
     title: "Combi or system boiler: what is the difference in cost?",
     tab: "Combi vs System",
-    image: "/combi vs system.png", // <-- Paanchvi tab ki image
+    image: "/combi vs system.webp", // <-- Paanchvi tab ki image
     paras: [
       "A combi swap is usually the quickest and lowest cost fit, as there is no tank or cylinder to replace. A system or regular boiler fit costs more, because the cylinder and pipework also need work. Changing from one boiler type to another, such as a regular boiler to a combi, adds time and cost too.",
       "The right choice depends on your bathrooms and hot water use, not just the price. We explain both options in your quote, so you can compare them side by side.",
@@ -68,7 +68,7 @@ const serviceDetails = [
   {
     title: "Which boiler brands do you fit?",
     tab: "Brands",
-    image: "/brands.png", // <-- Chhati tab ki image
+    image: "/brands.webp", // <-- Chhati tab ki image
     paras: [
       "We fit A rated boilers from Worcester Bosch, Vaillant, Ideal and Baxi. Most come with a manufacturer warranty of up to 10 years, depending on the model, and we register the warranty for you after fitting.",
     ],
@@ -77,7 +77,7 @@ const serviceDetails = [
   {
     title: "What happens on fitting day?",
     tab: "Fitting Day",
-    image: "/fittings.png", // <-- Sātvi tab ki image
+    image: "/fittings.webp", // <-- Sātvi tab ki image
     paras: [
       "Here is how a boiler fit works with us:",
     ],
@@ -94,7 +94,7 @@ const serviceDetails = [
   {
     title: "Can you add smart controls?",
     tab: "Smart Controls",
-    image: "/smart control.png", // <-- Aathvi tab ki image
+    image: "/smart control.webp", // <-- Aathvi tab ki image
     paras: [
       "Yes. Add a Hive or Google Nest smart thermostat with your new boiler and control your heating from your phone. A power flush before fitting clears sludge from your pipes and helps your new boiler last longer.",
     ],
@@ -103,7 +103,7 @@ const serviceDetails = [
   {
     title: "Where do you fit boilers?",
     tab: "Areas Covered",
-    image: "/installation-area.jpeg",
+    image: "/installation-area.webp",
     customLayout: true,
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit boilers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",

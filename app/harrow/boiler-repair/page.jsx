@@ -6,8 +6,6 @@ import CtaBanner from '../../Components/CTA';
 import ReviewsSection from '../../Components/ReviewsSection';
 import MeetYourEngineer from '../../Components/MeetYourEngineer';
 
-
-
 const PHONE_DISPLAY = "+44 7800 657141";
 const PHONE_TEL = "+447800657141";
 const WHATSAPP_NUMBER = "447800657141";
@@ -19,7 +17,7 @@ const serviceDetails = [
   {
     title: "How quickly can you get to me in Harrow?",
     tab: "Response Time",
-    image: "/boiler-repair.png",
+    image: "/emergency-01.webp",
     paras: [
       "For emergencies, such as no heating in cold weather, we aim to reach homes in Harrow within 60 to 90 minutes, 7 days a week. For faults which can wait, we book a time to suit you. When you call, tell us your postcode, boiler make and any fault code, and we will give you an arrival time.",
     ],
@@ -28,7 +26,7 @@ const serviceDetails = [
   {
     title: "Quick checks before you call",
     tab: "Quick Checks",
-    image: "/pressure-gauge.png",
+    image: "/harrow-quick check-01.webp",
     paras: [
       "A few simple checks can sometimes get your heating back on, or help our engineer find the fault faster:",
     ],
@@ -45,7 +43,7 @@ const serviceDetails = [
   {
     title: "Boiler faults we fix",
     tab: "Faults We Fix",
-    image: "/fault-testing.png",
+    image: "/Faults-01.webp",
     paras: [
       "We repair all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi, and fix common breakdown issues quickly:",
     ],
@@ -62,7 +60,7 @@ const serviceDetails = [
   {
     title: "Will I know the cost first?",
     tab: "Fixed Price",
-    image: "/quote-check.png",
+    image: "/harrow-fixed prices-01.webp",
     paras: [
       "Yes. Before any repair, we explain the fault and give you a fixed price. Nothing goes ahead without your OK, and there are no surprise charges. If a part needs ordering, we tell you how long it will take and come back to fit it.",
     ],
@@ -71,7 +69,7 @@ const serviceDetails = [
   {
     title: "Boiler repairs for Harrow landlords and letting agents",
     tab: "Landlords",
-    image: "/letting-office.png",
+    image: "/harrow-landlord-01.webp",
     paras: [
       "When a tenant's boiler breaks down, landlords need it fixed fast. We already work with letting agents across Harrow, and can deal with your tenant directly to arrange access. You get a clear price before the repair, and a short report once the job is done. Need the yearly gas safety check too? We can do it on the same visit.",
     ],
@@ -80,7 +78,7 @@ const serviceDetails = [
   {
     title: "Repair or replace?",
     tab: "Repair or Replace",
-    image: "/new-boiler.png",
+    image: "/harrow-repair or replace-01.webp",
     paras: [
       "We give a straight answer. If your boiler is under ten years old with a single worn part, a repair is usually best. If the repair costs more than the boiler is worth, or it keeps breaking down, a new boiler often costs less over time. A new combi boiler, fitted, usually costs between £1,800 and £3,500, and most fits take one day.",
     ],
@@ -89,7 +87,7 @@ const serviceDetails = [
   {
     title: "Why do Harrow homeowners and landlords choose us?",
     tab: "Why Choose Us",
-    image: "/gas-register.webp",
+    image: "/harrow-why us-01.webp",
     paras: [
       "We have worked in Harrow since we started in 2012, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start any repair, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
     ],
@@ -98,7 +96,7 @@ const serviceDetails = [
   {
     title: "Which parts of Harrow do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-van.png",
+    image: "/harrow-areas-01.webp",
     paras: [
       "We repair boilers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -286,7 +284,7 @@ export default function BoilerRepairHarrow() {
       {/* ============ HERO ============ */}
       <section className="relative w-full min-h-[680px] flex items-center justify-center overflow-hidden pb-32 pt-36">
         <NextImage
-          src="/boiler.webp"
+          src="/harrow-boiler-repair.webp"
           alt="Gas Safe engineer repairing a boiler in Harrow"
           fill
           priority
@@ -380,15 +378,16 @@ export default function BoilerRepairHarrow() {
             >
               <div className="relative">
                 <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+                <div className="relative w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
                   <NextImage
                     src={s.image}
                     alt={s.alt}
-                    fill
+                    width={800}
+                    height={600}
                     sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
+                    className="w-full h-auto object-cover"
                   />
-                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
+                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg z-10">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>

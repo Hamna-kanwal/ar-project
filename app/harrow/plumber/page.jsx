@@ -18,7 +18,7 @@ const serviceDetails = [
   {
     title: "What plumbing jobs do you do in Harrow?",
     tab: "Plumbing Jobs",
-    image: "/plumber-repair.png",
+    image: "/harrow-plumbing jobs-01.webp",
     paras: [
       "We handle everyday plumbing repairs and fittings to keep your home running smoothly:",
     ],
@@ -37,7 +37,7 @@ const serviceDetails = [
   {
     title: "Need an emergency plumber in Harrow?",
     tab: "Emergency Help",
-    image: "/burst-pipe.png",
+    image: "/harrow-emergency-01.webp",
     paras: [
       "For burst pipes, leaks through ceilings and overflowing toilets, we aim to reach you within 60 to 90 minutes, 7 days a week. Turn off your water at the stop tap first, usually under the kitchen sink, and switch off electrics near the water. Then call us on 07800 657141.",
     ],
@@ -46,7 +46,7 @@ const serviceDetails = [
   {
     title: "Do you find hidden leaks?",
     tab: "Hidden Leaks",
-    image: "/ceiling-stain.png",
+    image: "/harrow-Hidden leaks-01.webp",
     paras: [
       "Water often shows up far from where the leak is. Signs of a hidden leak include damp patches, a musty smell, boiler pressure dropping, or your water meter moving when all taps are off. We trace the leak to its source, stop it and repair the pipe or fitting.",
     ],
@@ -55,7 +55,7 @@ const serviceDetails = [
   {
     title: "Blocked sinks, toilets and drains",
     tab: "Blocked Drains",
-    image: "/blocked-sink.png",
+    image: "/harrow-blocked drains-01.webp",
     paras: [
       "We clear blockages in sinks, basins, baths, showers, toilets and drains. We also check why the blockage formed, such as grease, a poor pipe fall or a damaged pipe, so it does not come back. If the blockage is in a shared drain or the public sewer, we tell you who to contact.",
     ],
@@ -64,7 +64,7 @@ const serviceDetails = [
   {
     title: "Plumbing for Harrow landlords",
     tab: "Landlords",
-    image: "/rental-bathroom.png",
+    image: "/harrow-landlords-01.webp",
     paras: [
       "We already work with landlords and letting agents across Harrow, Pinner, Stanmore and Northolt. Send us your tenant's details and we arrange access directly. We can deal with a plumbing fault and the yearly gas safety certificate (CP12) on the same visit, which saves your tenants from booking two appointments.",
     ],
@@ -73,7 +73,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Pricing",
-    image: "/quote-check.png",
+    image: "/harrow-pricing-01.webp",
     paras: [
       "Yes. We give you a price before we start, and keep to it. If there is a call out charge, we tell you up front, before the engineer visits. Got several small jobs? Send us the list and we can quote for them all and do them in one visit, which often costs less.",
     ],
@@ -82,7 +82,7 @@ const serviceDetails = [
   {
     title: "Why is my water pressure low?",
     tab: "Water Pressure",
-    image: "/shower-flow.png",
+    image: "/harrow-water pressure-01.webp",
     paras: [
       "Low pressure can come from a part closed stop tap, a failing valve, a hidden leak, or old narrow pipes. Sometimes the cause is the supply to your street, which the water company handles. We test your pressure, find the cause and fix it. If your home needs stronger hot water flow, a Megaflo unvented cylinder can help.",
     ],
@@ -91,7 +91,7 @@ const serviceDetails = [
   {
     title: "Running toilets and dripping taps",
     tab: "Toilets & Taps",
-    image: "/toilet-cistern.png",
+    image: "/harrow-toilet and taps-01.webp",
     paras: [
       "A running toilet usually means a worn flush valve seal or a faulty fill valve. A dripping tap is usually a worn washer or cartridge. Both waste a lot of water over a few weeks and push up your bill if you are on a meter. We replace the worn part, often in one visit, or fit a new tap or valve if the old one is past repair.",
     ],
@@ -100,7 +100,7 @@ const serviceDetails = [
   {
     title: "Why do Harrow homeowners and landlords choose us?",
     tab: "Why Us",
-    image: "/gas-register.webp",
+    image: "/plumber-why us-01.webp",
     paras: [
       "We have worked in Harrow since we started in 2012, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
     ],
@@ -109,7 +109,7 @@ const serviceDetails = [
   {
     title: "Which parts of Harrow do you cover?",
     tab: "Areas Covered",
-    image: "/engineer-van.png",
+    image: "/plumber-AREAS-01.webp",
     paras: [
       "We work as plumbers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],
@@ -390,21 +390,22 @@ export default function PlumberHarrow() {
               hidden={activeTab !== i}
               className="grid md:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-center"
             >
-              <div className="relative">
-                <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
-                <div className="relative aspect-[3/2] w-full rounded-[2rem] overflow-hidden shadow-2xl bg-white">
-                  <NextImage
-                    src={s.image}
-                    alt={s.alt}
-                    fill
-                    sizes="(min-width: 768px) 55vw, 100vw"
-                    className="object-contain"
-                  />
-                  <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-              </div>
+            <div className="relative">
+  <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[2rem] bg-gradient-to-br from-orange-400/30 to-sky-400/30" />
+  <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-white">
+    <NextImage
+      src={s.image}
+      alt={s.alt}
+      width={800}
+      height={600}
+      sizes="(min-width: 768px) 55vw, 100vw"
+      className="w-full h-auto object-contain"
+    />
+    <span className="absolute top-5 left-5 bg-white/90 backdrop-blur text-[#027cc1] font-extrabold text-lg w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg z-10">
+      {String(i + 1).padStart(2, "0")}
+    </span>
+  </div>
+</div>
 
               <div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-[#03304b] mb-5 leading-tight">

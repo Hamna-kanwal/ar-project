@@ -15,14 +15,14 @@ const SHOW_OFFER = false;
 const OFFER_TEXT = "Offer text and end date go here.";
 
 const blockImages = [
-  "/u1.png",
-  "/u2.png",
-  "/u3.png",
-  "/u4.png",
-  "/u5.png",
-  "/u6.png",
-  "/u7.png",
-  "/u8.png"
+  "/u1.webp",
+  "/u2.webp",
+  "/u3.webp",
+  "/u4.webp",
+  "/u5.webp",
+  "/u6.webp",
+  "/u7.webp",
+  "/u8.webp"
 ];
 
 const serviceDetails = [
@@ -171,7 +171,7 @@ const engineer = {
   name: "Lead Engineer",
   gasSafeId: "Gas Safe No. 574111",
   experience: "12+ Years Experience",
-  photo: "/undergroundheating3.jpg",
+  photo: "/undergroundheating3.webp",
 };
 
 const relatedServices = [

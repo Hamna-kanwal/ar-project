@@ -18,7 +18,7 @@ const serviceDetails = [
   {
     title: "What plumbing jobs do you fix?",
     tab: "Plumbing Jobs",
-    image: "/plumbing jobs.png",
+    image: "/plumbing jobs-from-png.webp",
     paras: [
       "We handle day to day plumbing repairs, including:",
       "Small problems get dearer the longer they are left, so call us early.",
@@ -38,7 +38,7 @@ const serviceDetails = [
   {
     title: "Do you fix leaks fast?",
     tab: "Fix Leaks",
-    image: "/Fix leaks.png",
+    image: "/Fix leaks.webp",
     paras: [
       "Yes. A leak can damage floors, ceilings and wiring, and push up your water bill. We find the source, which is not always where the water shows, stop the leak and repair the pipe or fitting. If the leak is serious, turn off your water at the stop tap and call us straight away.",
     ],
@@ -47,7 +47,7 @@ const serviceDetails = [
   {
     title: "Can you clear a blocked drain?",
     tab: "Blocked Drains",
-    image: "/Blocked drains.png",
+    image: "/Blocked drains.webp",
     paras: [
       "Yes. We clear blocked sinks, basins, baths, showers, toilets and drains. We also check why the blockage formed, such as grease, a poor pipe fall or a damaged pipe, so it does not come back next week.",
     ],
@@ -56,7 +56,7 @@ const serviceDetails = [
   {
     title: "Why is my water pressure low?",
     tab: "Water Pressure",
-    image: "/Water pressure.png",
+    image: "/Water pressure.webp",
     paras: [
       "Low pressure can come from a part closed stop tap, a blocked or failing valve, a hidden leak, old narrow pipes or a problem with the supply to your street. We test the pressure, find the cause and fix it. If your home needs stronger hot water flow, a Megaflo unvented cylinder can help.",
     ],
@@ -65,7 +65,7 @@ const serviceDetails = [
   {
     title: "Are your prices clear?",
     tab: "Clear Prices",
-    image: "/Fixed pricing.png",
+    image: "/Fixed pricing-from-png.webp",
     paras: [
       "Yes. We give you a price before we start, and we keep to it. No surprise costs. If there is a call out charge, we tell you before the engineer comes, so you know the cost up front.",
       "We turn up on time, fix the fault and leave the site clean.",
@@ -75,7 +75,7 @@ const serviceDetails = [
   {
     title: "Can you replace taps, toilets and valves?",
     tab: "Replacements",
-    image: "/Replacements.png",
+    image: "/Replacements.webp",
     paras: [
       "Yes. As well as repairs, we fit new kitchen and bathroom taps, toilets, cisterns, basins, shower valves and isolation valves. Bought the part already? We can fit it for you. See our general installation page for more.",
     ],
@@ -84,7 +84,7 @@ const serviceDetails = [
   {
     title: "Why choose AR Heating?",
     tab: "Why Us",
-    image: "/plumbing-Why us.png",
+    image: "/plumbing-Why us.webp",
     paras: [
       "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you.",
     ],
@@ -93,7 +93,7 @@ const serviceDetails = [
   {
     title: "Why does my toilet keep running?",
     tab: "Running Toilet",
-    image: "/Toilet running.png",
+    image: "/Toilet running.webp",
     paras: [
       "A running toilet usually means a worn flush valve seal, a faulty fill valve or a float set too high. It wastes a lot of water and can push up your water bill. We find the faulty part and replace it, often in one visit.",
     ],
@@ -102,7 +102,7 @@ const serviceDetails = [
   {
     title: "Can you fix a dripping tap?",
     tab: "Dripping Tap",
-    image: "/Driping tap.png",
+    image: "/Driping tap.webp",
     paras: [
       "Yes. A dripping tap is usually a worn washer or cartridge. We replace the part, or fit a new tap if the old one is beyond repair. A drip may seem small, but over weeks it wastes a lot of water and can stain your sink.",
     ],
@@ -111,7 +111,7 @@ const serviceDetails = [
   {
     title: "Where do you cover?",
     tab: "Areas Covered",
-    image: "/Areas covered.jpeg",
+    image: "/Areas covered.webp",
     paras: [
       "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fix plumbing across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
     ],

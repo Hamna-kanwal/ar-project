@@ -1,6 +1,13 @@
 export const metadata = {
   title: "Washing Machine Installation Watford | AR Heating ",
   description: "Washing machine fitting in Watford. Plumbed in, leak checked and run before we go. Quick, secure connection. Free quotes. Call today. ",
+  openGraph: {
+    title: "Washing Machine Installation Watford | AR Heating",
+    description: "Washing machine fitting in Watford. Plumbed in, leak checked and run before we go. Quick, secure connection. Free quotes. Call today.",
+    url: "https://www.arheatingservice.co.uk/Services/washing-machine",
+    images: ["https://www.arheatingservice.co.uk/machine1.webp"],
+    type: "website",
+  },
        alternates: {
     canonical: "https://www.arheatingservice.co.uk/Services/washing-machine",
   },

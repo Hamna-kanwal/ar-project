@@ -101,7 +101,7 @@ const repairServices = [
     title: "Why choose AR Heating?",
     tab: "Why Us",
     paras: [
-      "We are a local Watford company, trading since 2012, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
     ],
     alt: "Gas Safe registered AR Heating engineer"
   },
@@ -160,7 +160,7 @@ const IconAlert = ({ className = "w-7 h-7" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -260,7 +260,7 @@ export default function BoilerBreakdownPage() {
                 "url": "https://www.arheatingservice.co.uk",
                 "telephone": "+447800657141",
                 "email": "info@arheatingservice.co.uk",
-                "foundingDate": "2012",
+                "foundingDate": "2007",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Unit 24 The Roundway",
@@ -323,7 +323,7 @@ export default function BoilerBreakdownPage() {
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Emergency visits in 60 to 90 minutes
+              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2007 &nbsp;|&nbsp; Emergency visits in 60 to 90 minutes
             </span>
 
             <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">

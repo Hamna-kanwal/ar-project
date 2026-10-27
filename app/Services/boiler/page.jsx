@@ -148,7 +148,7 @@ const IconCert = ({ className = "w-7 h-7" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -259,7 +259,7 @@ export default function ServicesAndFAQ() {
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2012 &nbsp;|&nbsp; Open 7 days
+              Gas Safe No. 574111 &nbsp;|&nbsp; Local since 2007 &nbsp;|&nbsp; Open 7 days
             </span>
 
             <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">
@@ -267,7 +267,7 @@ export default function ServicesAndFAQ() {
             </h1>
 
             <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed text-center">
-              A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2012. Most visits take under an hour, and the price is fixed before we start.
+              A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2007. Most visits take under an hour, and the price is fixed before we start.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-4 mt-9 w-full">

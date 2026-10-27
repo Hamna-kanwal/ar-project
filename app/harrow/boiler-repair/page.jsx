@@ -89,7 +89,7 @@ const serviceDetails = [
     tab: "Why Choose Us",
     image: "/harrow-why us-01.webp",
     paras: [
-      "We have worked in Harrow since we started in 2012, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start any repair, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
+      "We have worked in Harrow since we started in 2007, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start any repair, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
     ],
     alt: "Gas Safe registered engineer working in Harrow",
   },
@@ -150,7 +150,7 @@ const IconCert = ({ className = "w-7 h-7" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -237,7 +237,7 @@ export default function BoilerRepairHarrow() {
                 "url": "https://www.arheatingservice.co.uk",
                 "telephone": "+447800657141",
                 "email": "info@arheatingservice.co.uk",
-                "foundingDate": "2012",
+                "foundingDate": "2007",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Unit 24 The Roundway",

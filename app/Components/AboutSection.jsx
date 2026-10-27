@@ -30,7 +30,7 @@ export default function AboutSection() {
                 Gas Safe Heating Engineers in Watford, Harrow & Hemel Hempstead
               </p>
               <p>
-                AR Heating Services is a Gas Safe registered (No. 574111) heating and plumbing company based at Unit 24, The Roundway, Watford, WD18 6LB. Since 2012, our local engineers have installed, repaired and serviced boilers for homeowners and landlords across Watford, Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip and Northolt.
+                AR Heating Services is a Gas Safe registered (No. 574111) heating and plumbing company based at Unit 24, The Roundway, Watford, WD18 6LB. Since 2007, our local engineers have installed, repaired and serviced boilers for homeowners and landlords across Watford, Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip and Northolt.
               </p>
               <p>
                 We specialise in boiler installation, boiler repair, annual servicing, power flushing, Megaflo cylinders, smart thermostats and landlord gas safety certificates (CP12) all at fixed, affordable prices agreed before work starts. No job is too big or too small. Need help urgently? Our 24-hour emergency call-out service aims to have an engineer at your door within 60–90 minutes, or at a time that suits you.

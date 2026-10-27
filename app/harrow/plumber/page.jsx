@@ -102,7 +102,7 @@ const serviceDetails = [
     tab: "Why Us",
     image: "/plumber-why us-01.webp",
     paras: [
-      "We have worked in Harrow since we started in 2012, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
+      "We have worked in Harrow since we started in 2007, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you.",
     ],
     alt: "Gas Safe registered engineer working in Harrow",
   },
@@ -163,7 +163,7 @@ const IconCert = ({ className = "w-7 h-7" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -251,7 +251,7 @@ export default function PlumberHarrow() {
                 "url": "https://www.arheatingservice.co.uk",
                 "telephone": "+447800657141",
                 "email": "info@arheatingservice.co.uk",
-                "foundingDate": "2012",
+                "foundingDate": "2007",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Unit 24 The Roundway",
@@ -314,7 +314,7 @@ export default function PlumberHarrow() {
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              Gas Safe No. 574111 &nbsp;|&nbsp; Serving Harrow since 2012 &nbsp;|&nbsp; No job too small
+              Gas Safe No. 574111 &nbsp;|&nbsp; Serving Harrow since 2007 &nbsp;|&nbsp; No job too small
             </span>
 
             <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">

@@ -179,7 +179,7 @@ const IconThermo = ({ className = "w-7 h-7" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -298,7 +298,7 @@ export default function ServicesAndFAQ() {
               Boiler Installation <span className="text-orange-500">in Watford</span>
             </h1>
             <p className="text-base md:text-xl text-sky-50/90 max-w-2xl mx-auto font-medium leading-relaxed">
-              New combi, system and regular boilers fitted by Gas Safe engineers (No. 574111), local to Watford since 2012. We help you pick the right boiler, give you a fixed price before work starts, and finish most fits in one day.
+              New combi, system and regular boilers fitted by Gas Safe engineers (No. 574111), local to Watford since 2007. We help you pick the right boiler, give you a fixed price before work starts, and finish most fits in one day.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-9">
               <Link href="/contact" className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:bg-orange-600 hover:-translate-y-0.5 transition-all">

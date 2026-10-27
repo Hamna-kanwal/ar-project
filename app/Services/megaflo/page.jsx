@@ -76,7 +76,7 @@ const IconChat = ({ className = "w-5 h-5" }) => (
 
 const trustItems = [
   { icon: <IconShield />, label: "Gas Safe No. 574111" },
-  { icon: <IconPin />, label: "Local since 2012" },
+  { icon: <IconPin />, label: "Local since 2007" },
   { icon: <IconTag />, label: "Fixed price before we start" },
   { icon: <IconClock />, label: "Open 7 days a week" },
 ];
@@ -128,7 +128,7 @@ export default function ServicesAndFAQ() {
                 "url": "https://www.arheatingservice.co.uk",
                 "telephone": "+447800657141",
                 "email": "info@arheatingservice.co.uk",
-                "foundingDate": "2012",
+                "foundingDate": "2007",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Unit 24 The Roundway",
@@ -191,7 +191,7 @@ export default function ServicesAndFAQ() {
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <span className="w-2 h-2 rounded-full bg-orange-400 animate-pulse" />
-              Local since 2012 &nbsp;|&nbsp; High Pressure Hot Water &nbsp;|&nbsp; Fixed price before we start
+              Local since 2007 &nbsp;|&nbsp; High Pressure Hot Water &nbsp;|&nbsp; Fixed price before we start
             </span>
 
             <h1 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight text-white leading-[1.05] text-center">

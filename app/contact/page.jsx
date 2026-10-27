@@ -135,7 +135,7 @@ const ContactPage = () => {
 
   <div className="mt-6">
     <label className="text-[10px] font-extrabold text-gray-500 tracking-[0.2em] block mb-2">PHONE NUMBER</label>
-    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+44 793 050 6303" className="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-100" />
+    <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+44 7800 657141" className="w-full p-4 border border-gray-200 rounded-xl outline-none focus:ring-2 focus:ring-blue-100" />
   </div>
 
   <div className="mt-6">
@@ -193,11 +193,11 @@ const ContactPage = () => {
           <div className="mt-6 space-y-4">
             <div>
               <p className="text-sm font-medium opacity-90">Switchboard:</p>
-              <p className="text-xl font-bold">+44 793 050 6303</p>
+              <p className="text-xl font-bold">+44 7800 657141</p>
             </div>
             <div>
               <p className="text-sm font-medium opacity-90">Support:</p>
-              <p className="text-lg font-bold break-all">sultan@eazy-switch.com</p>
+              <p className="text-lg font-bold break-all">info@arheatingservice.co.uk</p>
             </div>
           </div>
         </div>

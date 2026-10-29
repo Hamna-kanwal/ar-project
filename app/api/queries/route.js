@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { dbConnect } from '@/lib/db';
 import Query from '@/models/Query';
+import { sendQueryNotification } from '@/lib/mailer';
 
 // 1. GET Handler - Used by your Admin Panel to retrieve queries
 export async function GET() {
@@ -27,7 +28,7 @@ export async function GET() {
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, phone, subject, message } = body;
+    const { firstName, lastName, email, phone, message } = body;
 
     if (!firstName || !email || !message) {
       return NextResponse.json(
@@ -38,18 +39,25 @@ export async function POST(req) {
 
     await dbConnect();
 
-    const fullName = `${firstName} ${lastName || ''}`.trim();
-
-    const newQuery = await Query.create({
+    const cleanData = {
       firstName: firstName.trim(),
       lastName: lastName ? lastName.trim() : '',
-      name: fullName, // Saves both ways so q.name always works in the admin UI
       email: email.trim(),
       phone: phone ? phone.trim() : null,
-      subject: subject || 'Free Energy Audit Request',
       message: message.trim(),
+    };
+
+    const newQuery = await Query.create({
+      ...cleanData,
       status: 'pending',
     });
+
+    // Send email notification (does not block or break the form if mail fails)
+    try {
+      await sendQueryNotification(cleanData);
+    } catch (mailError) {
+      console.error('Email notification failed:', mailError);
+    }
 
     return NextResponse.json(
       { success: true, message: 'Query submitted successfully!', queryId: newQuery._id },

@@ -32,6 +32,7 @@ const nextConfig: NextConfig = {
       r('/hive-thermostat-installation', '/Services/hive'),
 
       // Megaflo / landlord
+      r('/services/megaflo','/Services/megaflo'),
       r('/megaflo-unvented-cylinder-installation', '/Services/megaflo'),
       r('/services/landlord-certificate', '/Services/landlord'),
 

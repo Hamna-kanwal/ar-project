@@ -1,0 +1,135 @@
+{
+  "serviceDetails": [
+    {
+      "title": "How do you plan heating for my home?",
+      "tab": "Planning",
+      "image": "/heating-PLANNING.webp",
+      "paras": [
+        "No two homes heat the same way. We look at your rooms, your windows, your hot water use and how many people live with you. Then we size the boiler and every radiator so each room stays warm without wasting gas.",
+        "Good planning is the biggest reason a heating system works well for years. A boiler too big for your home wastes fuel, and radiators too small leave cold rooms. We get the sizes right at the start."
+      ],
+      "alt": "Heating engineer planning a new heating system with homeowners in Watford"
+    },
+    {
+      "title": "What heating installation work do you do?",
+      "tab": "Installation Work",
+      "image": "/heating-Installation work.webp",
+      "paras": [
+        "We cover every part of a home heating system, from a single new radiator to a full system in a new extension or a gutted house:"
+      ],
+      "list": [
+        "Full new heating systems for homes without heating or with old systems",
+        "Boiler and radiator upgrades",
+        "Extra radiators for extensions, loft conversions and cold rooms",
+        "Wet and electric underfloor heating",
+        "Megaflo unvented cylinders for strong hot water flow, fitted by G3 qualified engineers",
+        "Smart and programmable thermostats, including Hive and Google Nest",
+        "Power flushing to clean an existing system before new parts go in"
+      ],
+      "alt": "Gas Safe engineer installing heating pipework in a Watford home"
+    },
+    {
+      "title": "Do I need a full new system or just an upgrade?",
+      "tab": "New vs Upgrade",
+      "image": "/heating-new vs upgrade.webp",
+      "paras": [
+        "Many homes do not need a full new system. If your pipes are in good shape, we can often keep them and replace only the parts which are failing, such as the boiler, some radiators or the controls. We check your current set up first, and reuse what still works well.",
+        "A full new system makes sense when the pipework is old or badly laid out, when rooms stay cold however high the heating is set, or when you are renovating and the floors are already up."
+      ],
+      "alt": "Old and new radiators compared in a home heating upgrade"
+    },
+    {
+      "title": "Can you fit underfloor heating?",
+      "tab": "Underfloor Heating",
+      "image": "/heating-underfloor heating.webp",
+      "paras": [
+        "Yes. We fit wet underfloor heating, which runs warm water from your boiler through pipes under the floor, and electric underfloor heating, which uses heating mats. Wet systems suit larger spaces and new builds. Electric systems suit smaller rooms like bathrooms, where lifting the whole floor is not practical.",
+        "Underfloor heating spreads warmth evenly across the room and frees up wall space, as there are no radiators. We advise which type fits your room and your budget in your quote."
+      ],
+      "alt": "Wet underfloor heating pipes laid in a Watford extension"
+    },
+    {
+      "title": "Which controls should I have?",
+      "tab": "Smart Controls",
+      "image": "/heating-smart control.webp",
+      "paras": [
+        "Good controls can make as much difference to your bills as a new boiler. A smart thermostat lets you set times and temperatures from your phone, and radiator valves let you heat only the rooms you use. We install Hive and Google Nest, and set them up on your phone before we leave."
+      ],
+      "alt": "Smart thermostat fitted as part of a heating installation"
+    },
+    {
+      "title": "Is the fit clean and tidy?",
+      "tab": "Clean Fitting",
+      "image": "/heating-fit cleann and tidy.webp",
+      "paras": [
+        "Yes. We fit the boiler, pipes and radiators with care, protect your floors while we work, and clean up when we finish. Before we leave, we fill and test the system, balance every radiator so heat spreads evenly, and check for leaks.",
+        "We then show you how your new system and controls work, so you feel in charge from day one."
+      ],
+      "alt": "Engineer testing a radiator after a heating installation"
+    },
+    {
+      "title": "How much does heating installation cost?",
+      "tab": "Cost & Pricing",
+      "image": "/heating-cost.webp",
+      "paras": [
+        "The cost depends on the size of your home, how many radiators you need, the boiler type, and how much pipework needs to change. Because every home is different, we visit first and give you a fixed price in writing. The price we quote is the price you pay, with no hidden extras."
+      ],
+      "alt": "Fixed price heating installation quote in Watford"
+    },
+    {
+      "title": "Where do you install heating?",
+      "tab": "Areas Covered",
+      "image": "/heating-areas.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and install heating across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a heating installation take?",
+      "a": "Most jobs take one to three days, depending on the size of your home and how much pipework needs to change. We give you a clear plan before we start."
+    },
+    {
+      "q": "Can you work around my old pipes?",
+      "a": "Often, yes. We check your existing pipework first and reuse the parts which still work well."
+    },
+    {
+      "q": "Will new heating cut my bills?",
+      "a": "In most cases, yes. A modern, well sized system with good controls uses less gas to keep your home just as warm."
+    },
+    {
+      "q": "Do I need a new boiler with new heating?",
+      "a": "Not always. If your boiler is in good condition and the right size, we can keep it and upgrade the radiators, pipework or controls."
+    },
+    {
+      "q": "How many radiators do I need?",
+      "a": "We work out the number and size of radiators from the size of each room, its windows and how it is used, so every room stays warm."
+    },
+    {
+      "q": "Can you add heating to an extension or loft conversion?",
+      "a": "Yes. We can extend your current system with new radiators or underfloor heating, after checking your boiler can handle the extra load."
+    },
+    {
+      "q": "Do you fit underfloor heating?",
+      "a": "Yes. We fit both wet and electric underfloor heating, and advise which suits your room."
+    },
+    {
+      "q": "Can you install heating in an older home?",
+      "a": "Yes. We plan the work around your existing set up, reuse sound pipework where we can, and choose radiators sized for older rooms with high ceilings or single glazed windows."
+    },
+    {
+      "q": "Will my home be without heating during the work?",
+      "a": "Only for part of the job. We plan the work so your heating and hot water are off for as short a time as possible, and tell you when before we start."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    },
+    {
+      "q": "How much does heating installation cost?",
+      "a": "The cost depends on your home and the work needed. We visit, then give you a free fixed price in writing before any work starts."
+    }
+  ]
+}

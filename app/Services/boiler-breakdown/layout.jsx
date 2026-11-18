@@ -1,18 +1,13 @@
-export const metadata = {
-  title: "Boiler Breakdown and Repair in Watford | AR Heating ",
-  description: "Boiler not working in Watford? Gas Safe engineers find the fault and fix many faults in one visit. Clear prices. Call AR Heating now. ",
-  openGraph: {
-    title: "Boiler Breakdown and Repair in Watford | AR Heating",
-    description: "Boiler not working in Watford? Gas Safe engineers find the fault and fix many faults in one visit. Clear prices. Call AR Heating now.",
-    url: "https://www.arheatingservice.co.uk/Services/boiler-breakdown",
-    images: ["https://www.arheatingservice.co.uk/boiler.webp"],
-    type: "website",
-  },
-     alternates: {
-    canonical: "https://www.arheatingservice.co.uk/Services/boiler-breakdown",
-  },
-};
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/lib/JsonLd";
 
-export default function BoilerLayout({ children }) {
-  return <>{children}</>;
+export const generateMetadata = () => buildMetadata("services-boiler-breakdown");
+
+export default function ServiceLayout({ children }) {
+  return (
+    <>
+      <JsonLd id="services-boiler-breakdown" />
+      {children}
+    </>
+  );
 }

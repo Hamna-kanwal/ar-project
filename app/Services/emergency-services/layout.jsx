@@ -1,19 +1,13 @@
-export const metadata = {
-  title: "Emergency Heating and Gas Engineer Watford | AR Heating ",
-  description: "Emergency heating and plumbing help in Watford, 24 hours a day. We aim to reach you in 60 to 90 minutes, make things safe and fix the fault. ",
-  openGraph: {
-    title: "Emergency Heating and Gas Engineer Watford | AR Heating",
-    description: "Emergency heating and plumbing help in Watford, 24 hours a day. We aim to reach you in 60 to 90 minutes, make things safe and fix the fault.",
-    url: "https://www.arheatingservice.co.uk/Services/emergency-services",
-    images: ["https://www.arheatingservice.co.uk/emergencie.webp"],
-    type: "website",
-  },
-      alternates: {
-    canonical: "https://www.arheatingservice.co.uk/Services/emergency-services",
-  },
-};
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/lib/JsonLd";
 
+export const generateMetadata = () => buildMetadata("services-emergency-services");
 
-export default function BoilerLayout({ children }) {
-  return <>{children}</>;
+export default function ServiceLayout({ children }) {
+  return (
+    <>
+      <JsonLd id="services-emergency-services" />
+      {children}
+    </>
+  );
 }

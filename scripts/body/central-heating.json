@@ -1,0 +1,131 @@
+{
+  "serviceDetails": [
+    {
+      "title": "How do you build the system for my home?",
+      "tab": "System Planning",
+      "image": "/c2.webp",
+      "paras": [
+        "We start with a home survey. We measure each room, look at windows, walls and insulation, and talk about how you use your home and hot water. From this we work out the right boiler size and the size of each radiator.",
+        "Getting the sizing right is what makes a system warm and cheap to run. Too small and rooms stay cold. Too big and you waste gas."
+      ],
+      "alt": "Engineer planning a central heating system in Watford"
+    },
+    {
+      "title": "What is included in a full central heating system?",
+      "tab": "What's Included",
+      "image": "/c1.webp",
+      "paras": [
+        "A full central heating installation from AR Heating covers:"
+      ],
+      "list": [
+        "A new A rated boiler sized for your home",
+        "New pipework, run neatly and hidden where possible",
+        "New radiators with thermostatic radiator valves",
+        "A hot water cylinder where your home needs one",
+        "Room thermostat or smart controls",
+        "System flush, fill, testing and balancing",
+        "Handover, warranty registration and Gas Safe paperwork"
+      ],
+      "alt": "Central heating system with boiler, pipework and radiators"
+    },
+    {
+      "title": "Can you fit central heating in an older home?",
+      "tab": "Older Homes",
+      "image": "/c3.webp",
+      "paras": [
+        "Yes. Many older homes in and around Watford have old systems, storage heaters or no central heating at all. We plan the pipe routes around your home to keep disruption low, and choose radiators sized for high ceilings, solid walls and older windows.",
+        "If your home has some sound pipework, we can often reuse part of it and focus the work where it matters."
+      ],
+      "alt": "Central heating being fitted in an older Watford home"
+    },
+    {
+      "title": "Which boiler suits my central heating?",
+      "tab": "Boiler Choice",
+      "image": "/c4.webp",
+      "paras": [
+        "The right boiler depends on your home and hot water use. A combi suits smaller homes with one bathroom, with no tank needed. A system boiler with a cylinder suits homes with two or more bathrooms, as it can feed several taps at once. We fit Worcester Bosch, Vaillant, Ideal and Baxi boilers, with warranties of up to 10 years depending on the model."
+      ],
+      "alt": "Choosing between combi and system boilers for central heating"
+    },
+    {
+      "title": "Will the system last?",
+      "tab": "System Longevity",
+      "image": "/c5.webp",
+      "paras": [
+        "We use trusted parts, fit them with care, and test the whole system before we leave. We flush the system clean, add inhibitor to protect the pipes, and balance every radiator so each room heats evenly.",
+        "With a yearly boiler service and an occasional check of the system water, a well fitted central heating system gives many years of reliable warmth."
+      ],
+      "alt": "Engineer balancing radiators after a central heating installation"
+    },
+    {
+      "title": "How much does central heating cost?",
+      "tab": "Pricing",
+      "image": "/c6.webp",
+      "paras": [
+        "The cost depends on the size of your home, the number of radiators, the boiler type and how much pipework is needed. We visit, survey your home and give you a fixed price in writing. The price we quote is the price you pay.",
+        "Want to upgrade part of your system instead? See our heating installation page for radiator, boiler and control upgrades."
+      ],
+      "alt": "Fixed price central heating quote in Watford"
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Us",
+      "image": "/c7.webp",
+      "paras": [
+        "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered AR Heating engineer"
+    },
+    {
+      "title": "Where do you cover?",
+      "tab": "Areas Covered",
+      "image": "/c8.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and install central heating across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a full central heating installation take?",
+      "a": "Usually two to four days, depending on the size of your home. We give you a clear plan before we start."
+    },
+    {
+      "q": "Can you fit heating in an older home?",
+      "a": "Yes. We plan the work around your home and reuse sound pipework where we can."
+    },
+    {
+      "q": "How many radiators do I need?",
+      "a": "We work out the number and size from each room's size, windows and use, so every room stays warm."
+    },
+    {
+      "q": "Do I need a combi or a system boiler?",
+      "a": "A combi suits homes with one bathroom. A system boiler suits homes with two or more bathrooms."
+    },
+    {
+      "q": "Will new central heating lower my bills?",
+      "a": "In most cases, yes. A modern A rated boiler with good controls uses less gas to keep your home warm."
+    },
+    {
+      "q": "Will my floors be lifted?",
+      "a": "Sometimes, to run new pipes. We keep this to a minimum, protect your home and put everything back neatly."
+    },
+    {
+      "q": "What is the difference between this and heating installation?",
+      "a": "This page covers full central heating systems. Our heating installation page covers upgrades such as extra radiators, underfloor heating and new controls."
+    },
+    {
+      "q": "Which boiler brands do you fit?",
+      "a": "Worcester Bosch, Vaillant, Ideal and Baxi, with warranties of up to 10 years depending on the model."
+    },
+    {
+      "q": "Do you take away the old system?",
+      "a": "Yes. We remove the old boiler, radiators and pipework we replace, and leave your home tidy."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ]
+}

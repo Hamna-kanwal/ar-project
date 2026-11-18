@@ -1,0 +1,236 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "title": "Boiler Installation in Watford & Harrow",
+        "desc": "New A-rated combi and system boilers from Worcester Bosch, Vaillant, Ideal and Baxi installed by Gas Safe engineers with warranties up to 10 years.",
+        "img": "/heating_installation.webp",
+        "buttonText": "Boiler Installation",
+        "buttonLink": "/Services/boiler"
+      },
+      {
+        "title": "Gas Appliance & General Installation",
+        "desc": "Gas cookers, hobs, washing machines and dishwashers installed safely and compliantly by qualified engineers alongside our boiler, heating and plumbing services.",
+        "img": "/general_installation.webp",
+        "buttonText": "General Installation",
+        "buttonLink": "/Services/general-installation"
+      },
+      {
+        "title": "Heating & Plumbing",
+        "desc": "From leaking taps to complete system repairs — premium central heating and plumbing services across Watford, Harrow and Hemel Hempstead, with same-day appointments available.",
+        "img": "/plumbing.webp",
+        "buttonText": "Heating & Plumbing",
+        "buttonLink": "/Services/heating-installation"
+      },
+      {
+        "title": "Power Flushing Specialists",
+        "desc": "Cold radiators or a noisy boiler? Our power flush removes sludge, rust and debris from your heating system restoring heat output and extending your boiler's life.",
+        "img": "/power.webp",
+        "buttonText": "Power Flushing",
+        "buttonLink": "/Services/power-flushing"
+      },
+      {
+        "title": "Megaflo Unvented Cylinder Installation",
+        "desc": "High-pressure hot water for busy homes. G3-qualified engineers supply and install Megaflo unvented cylinders professional, certified and cost-effective.",
+        "img": "/mega.webp",
+        "buttonText": "Megaflo Installation",
+        "buttonLink": "/Services/megaflo"
+      },
+      {
+        "title": "Hive Smart Thermostat Installation",
+        "desc": "Control your heating from your phone and cut energy bills. Gas Safe engineers install and configure Hive standalone or with your new boiler.",
+        "img": "/nest2.webp",
+        "buttonText": "Hive Thermostat Installation",
+        "buttonLink": "/Services/hive"
+      },
+      {
+        "title": "Gas Appliance & General Installation",
+        "desc": "Gas cookers, hobs, washing machines and dishwashers installed safely and compliantly by qualified engineers alongside our boiler, heating and plumbing services.",
+        "img": "/plumbing2.webp",
+        "buttonText": "Gas Installation",
+        "buttonLink": "/Services/gas-cooker"
+      }
+    ]
+  },
+  "services": {
+    "heading": "Our Expertise",
+    "items": [
+      {
+        "name": "Boiler Installation",
+        "desc": "A-rated combi, system and conventional boilers installed with manufacturer warranties up to 10 years.",
+        "link": "/Services/boiler"
+      },
+      {
+        "name": "Heating Installation",
+        "desc": "Complete central heating design and installation, tailored to your home and budget.",
+        "link": "/Services/heating-installation"
+      },
+      {
+        "name": "Boiler Repair",
+        "desc": "Same day diagnosis and repair for all major boiler brands, error codes and breakdowns.",
+        "link": "/Services/boiler-breakdown"
+      },
+      {
+        "name": "Central Heating",
+        "desc": "Radiators, pipework and controls designed, fitted and balanced for even, efficient warmth.",
+        "link": "/Services/central-heating"
+      },
+      {
+        "name": "Underfloor Heating",
+        "desc": "Wet and electric underfloor heating installed for modern, energy-efficient comfort.",
+        "link": "/Services/underfloor-heating"
+      },
+      {
+        "name": "General Installation",
+        "desc": "Safe, certified installation of gas cookers, hobs and heating system components.",
+        "link": "/Services/general-installation"
+      },
+      {
+        "name": "Thermostat Install",
+        "desc": "Smart and programmable thermostats fitted for better control and lower energy bills.",
+        "link": "/Services/thermostat-installation"
+      },
+      {
+        "name": "Landlord Certificate",
+        "desc": "CP12 gas safety inspections for rental properties, with same-day certificates issued.",
+        "link": "/Services/landlord"
+      },
+      {
+        "name": "Emergency Services",
+        "desc": "24/7 emergency plumbers and heating engineers at your door in 60–90 minutes.",
+        "link": "/Services/emergency-services"
+      },
+      {
+        "name": "General Plumbing",
+        "desc": "Leaks, taps, toilets, pipework and bathroom repairs fixed fast by local plumbers.",
+        "link": "/Services/general-plumbing"
+      },
+      {
+        "name": "Power Flushing",
+        "desc": "Deep system clean that removes sludge and rust to restore radiator and boiler performance",
+        "link": "/Services/power-flushing"
+      },
+      {
+        "name": "Hive Thermostat",
+        "desc": "Hive smart heating installed and paired to your phone before we leave.",
+        "link": "/Services/hive"
+      },
+      {
+        "name": "Megaflo Cylinder",
+        "desc": "G3-certified installation of Megaflo unvented cylinders for powerful mains-pressure hot water.",
+        "link": "/Services/megaflo"
+      },
+      {
+        "name": "Gas Cooker",
+        "desc": "Gas Safe installation and connection of all cooker and hob types, fully compliant.",
+        "link": "/Services/gas-cooker"
+      },
+      {
+        "name": "Nest Thermostat",
+        "desc": "Google Nest learning thermostats are installed to cut heating costs automatically.",
+        "link": "/Services/nest"
+      },
+      {
+        "name": "Washing Machine",
+        "desc": "Quick, secure plumbing and connection for new washing machines.",
+        "link": "/Services/washing-machine"
+      },
+      {
+        "name": "Dishwasher Install",
+        "desc": "Reliable water supply, drainage and connection for your new dishwasher.",
+        "link": "/Services/dishwasher"
+      }
+    ]
+  },
+  "video": {
+    "heading": "Expert Heating & Plumbing Services in Watford, Harrow & Hemel Hempstead",
+    "paragraphs": [
+      "Heating and plumbing troubles aren't simple. They require immediate attention, high safety standards, and trusted professionals you can rely on.",
+      "At AR Heating Services, we're Gas Safe registered (No. 574111) and committed to delivering transparent, fixed-price solutions. From brand-new A-rated boiler installations and power flushing to emergency repairs, we shape our support around your home and keep you covered for the long haul.",
+      "We'll understand your requirements, provide honest advice, and take care of the heavy lifting so your home comfort is one less thing to worry about."
+    ],
+    "primaryButton": {
+      "label": "Why AR-Heating",
+      "href": "/about"
+    },
+    "callButton": {
+      "label": "Call +44 7800 657141",
+      "href": "tel:+447800657141"
+    }
+  },
+  "about": {
+    "heading": "Boiler Heating Services",
+    "subheading": "Gas Safe Heating Engineers in Watford, Harrow & Hemel Hempstead",
+    "paragraphs": [
+      "AR Heating Services is a Gas Safe registered (No. 574111) heating and plumbing company based at Unit 24, The Roundway, Watford, WD18 6LB. Since 2007, our local engineers have installed, repaired and serviced boilers for homeowners and landlords across Watford, Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip and Northolt.",
+      "We specialise in boiler installation, boiler repair, annual servicing, power flushing, Megaflo cylinders, smart thermostats and landlord gas safety certificates (CP12) all at fixed, affordable prices agreed before work starts. No job is too big or too small. Need help urgently? Our 24-hour emergency call-out service aims to have an engineer at your door within 60–90 minutes, or at a time that suits you."
+    ]
+  },
+  "trust": {
+    "cardTitle": "Gas Safe Registered",
+    "cardNote": "Official Registration No. 574111",
+    "verifyLabel": "Verify Registration ↗",
+    "heading": "Trusted by Households, Backed by Expertise.",
+    "paragraph": "We bring over 15 years of industry experience to help Watford & Harrow residents navigate heating and plumbing issues with complete confidence.",
+    "badges": [
+      {
+        "title": "24/7 Support",
+        "text": "Always here when you need us"
+      },
+      {
+        "title": "Fully Insured",
+        "text": "Your home is in safe hands"
+      }
+    ]
+  },
+  "strategy": {
+    "items": [
+      {
+        "title": "Our Strategy",
+        "description": "Fixed prices quoted upfront, quality parts, and workmanship guaranteed. Efficient, honest heating services at prices local families can afford."
+      },
+      {
+        "title": "Our Priority",
+        "description": "Your safety and satisfaction. Every engineer is Gas Safe registered (No. 574111). Verify us on the official Gas Safe Register before we even arrive. All gas work is carried out by qualified professionals only."
+      },
+      {
+        "title": "Our Coverage",
+        "description": "Based in Watford and minutes from Harrow, Hemel Hempstead, St. Albans, Bushey, Stanmore, Edgware, Ruislip, Northolt and Greater London, which is how we keep emergency response times to 60–90 minutes."
+      }
+    ]
+  },
+  "faqs": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How much does a new boiler cost in Watford?",
+        "a": "A new combi boiler installation typically costs between £1,800 and £3,500, including installation and warranty, depending on brand and complexity. AR Heating Services gives free fixed-price quotes. Call 07800 657141 for an exact price for your home."
+      },
+      {
+        "q": "How quickly can you attend an emergency?",
+        "a": "Our engineers reach most addresses in Watford, Harrow, Hemel Hempstead and St. Albans within 60–90 minutes, 24 hours a day, 7 days a week."
+      },
+      {
+        "q": "Are you Gas Safe registered?",
+        "a": "Yes, AR Heating Services is Gas Safe registered (No. 574111). You can verify our registration on the official Gas Safe Register via the badge in our footer."
+      },
+      {
+        "q": "How often should a boiler be serviced?",
+        "a": "Once every 12 months. Annual servicing keeps your manufacturer's warranty valid, maintains efficiency and checks for dangerous faults. Landlords must have gas appliances checked annually (CP12)."
+      },
+      {
+        "q": "Do I need a power flush?",
+        "a": "If your radiators are cold at the bottom, slow to heat, or your boiler is noisy, sludge build-up is the likely cause. A power flush removes it and restores performance."
+      },
+      {
+        "q": "Do you offer free quotes?",
+        "a": "Yes, all quotes are free and no-obligation, with fixed prices agreed in writing before any work begins."
+      }
+    ]
+  },
+  "cta": {
+    "headingStart": "Free, No-Obligation Quotes With the",
+    "headingHighlight": "Best Possible Advice",
+    "text": "Speak to a local Gas Safe engineer today. Fixed prices. Emergency response in 60–90 minutes, 7 days a week."
+  }
+}

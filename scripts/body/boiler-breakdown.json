@@ -1,0 +1,141 @@
+{
+  "serviceDetails": [
+    {
+      "title": "How fast can you come out?",
+      "tab": "Emergency Response",
+      "image": "/fast.webp",
+      "paras": [
+        "A broken boiler in winter is urgent, and we treat it that way. For emergencies we aim to reach you in 60 to 90 minutes, 7 days a week. For less urgent faults, we book a time to suit you.",
+        "When we arrive, we make your boiler safe first, find the fault, and get your heating and hot water back on as soon as we can. We keep you updated at every step."
+      ],
+      "alt": "Gas Safe engineer repairing a boiler in Watford"
+    },
+    {
+      "title": "What should I do when my boiler stops?",
+      "tab": "Initial Checks",
+      "image": "/boiler-intial checks.webp",
+      "paras": [
+        "Before you call, a few simple checks can save time:"
+      ],
+      "list": [
+        "Check the boiler display for a fault code and note it down",
+        "Check the pressure gauge. Most boilers need around 1 to 1.5 bar when cold",
+        "Check your thermostat and timer are on and set correctly",
+        "Check the gas is on at the meter and other gas appliances work",
+        "If the boiler has a reset button, press it once only"
+      ],
+      "parasAfter": [
+        "If the boiler still will not work, call us with your boiler make and the fault code. Do not take the boiler casing off yourself."
+      ],
+      "alt": "Boiler display showing a fault code before repair"
+    },
+    {
+      "title": "Which boiler faults do you fix?",
+      "tab": "Faults Fixed",
+      "image": "/boiler-faults and fix.webp",
+      "paras": [
+        "Our engineers repair all major boiler brands and fix common faults such as:"
+      ],
+      "list": [
+        "No heating or no hot water",
+        "Boiler losing pressure",
+        "Boiler not firing up or locking out",
+        "Leaks from the boiler or pipework",
+        "Noisy boilers: banging, whistling or gurgling",
+        "Frozen condensate pipes in cold weather",
+        "Faulty pumps, diverter valves, fans and ignition parts"
+      ],
+      "alt": "Engineer finding a boiler fault in a Watford home"
+    },
+    {
+      "title": "Will I know the cost first?",
+      "tab": "Fixed Pricing",
+      "image": "/boiler-fixed pricing.webp",
+      "paras": [
+        "Yes. Before we start any repair, we explain the fault and tell you the price. Nothing goes ahead without your OK, and there are no surprise charges.",
+        "Our vans carry common parts, so many repairs are done in one visit. If a part has to be ordered, we tell you how long it will take and come back to fit it."
+      ],
+      "alt": "Engineer giving a fixed price boiler repair quote"
+    },
+    {
+      "title": "Should I repair or replace my boiler?",
+      "tab": "Repair vs Replace",
+      "image": "/repair vs replace.webp",
+      "paras": [
+        "We give you a straight answer. If your boiler is under ten years old and the fault is a single worn part, a repair is usually the best choice. If the repair costs more than the boiler is worth, or the boiler keeps breaking down, a new boiler often costs less over time.",
+        "If replacement makes more sense, we will tell you, and can quote for a new boiler fitted in most cases in one day."
+      ],
+      "alt": "Old boiler being assessed for repair or replacement"
+    },
+    {
+      "title": "How can I stop my boiler breaking down again?",
+      "tab": "Prevention",
+      "image": "/prevention.webp",
+      "paras": [
+        "Most breakdowns start as small faults which a yearly service would catch. A service cleans the main parts, checks pressure and safety devices, and spots worn parts before they fail. It also keeps your manufacturer warranty valid.",
+        "After a repair, we can book your yearly service so your boiler stays safe and reliable through the winter."
+      ],
+      "alt": "Yearly boiler service to prevent breakdowns"
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Us",
+      "image": "/boiler-why us.webp",
+      "paras": [
+        "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered AR Heating engineer"
+    },
+    {
+      "title": "Where do you cover?",
+      "tab": "Areas Covered",
+      "image": "/AREAS.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and repair boilers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "My boiler has stopped. What now?",
+      "a": "Check the display for a fault code and the pressure gauge, then call us on 07800 657141 with your boiler make and the code. An engineer will come out, find the fault and fix it."
+    },
+    {
+      "q": "How fast can you come out?",
+      "a": "For emergencies we aim to reach you in 60 to 90 minutes, 7 days a week. For other faults we book a time to suit you."
+    },
+    {
+      "q": "Do you carry spare parts?",
+      "a": "Yes. Our vans carry common parts, so many faults are fixed on the first visit."
+    },
+    {
+      "q": "Will I know the price before you start?",
+      "a": "Yes. We explain the fault and give you a fixed price first. Nothing goes ahead without your OK."
+    },
+    {
+      "q": "Should I repair or replace my boiler?",
+      "a": "We give a straight answer. If the repair costs more than the boiler is worth, or it keeps breaking down, a new boiler is often the better choice."
+    },
+    {
+      "q": "Why does my boiler keep losing pressure?",
+      "a": "Common causes are a leak in the system, a faulty pressure relief valve or a worn expansion vessel. Our engineer will find the cause and fix it."
+    },
+    {
+      "q": "Can I fix my boiler myself?",
+      "a": "You can check the pressure, thermostat and reset button. Any work inside the boiler must be done by a Gas Safe registered engineer by law."
+    },
+    {
+      "q": "Which boiler brands do you repair?",
+      "a": "We repair all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi."
+    },
+    {
+      "q": "Is a boiler repair covered by my warranty?",
+      "a": "If your boiler is still under the maker's warranty and has a service record, the maker may cover the repair. Check your paperwork, and we can advise."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ]
+}

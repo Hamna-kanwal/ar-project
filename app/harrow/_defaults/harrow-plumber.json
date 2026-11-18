@@ -1,0 +1,194 @@
+{
+  "hero": {
+    "image": "/boiler.webp",
+    "imageAlt": "Plumber repairing pipework in a Harrow kitchen",
+    "badge": "Gas Safe No. 574111 | Serving Harrow since 2007 | No job too small",
+    "title": "Plumbers",
+    "titleHighlight": "in Harrow",
+    "paragraph": "Leaking pipe, running toilet or blocked sink? Our plumbers cover Harrow, Pinner and Stanmore, from small repairs to urgent leaks. You get a fixed price before we start, we turn up when we say we will, and no job is too small.",
+    "primaryButton": "Get my free quote",
+    "callLabel": "Call:",
+    "phoneDisplay": "+44 7800 657141",
+    "phoneTel": "+447800657141"
+  },
+  "trustItems": [
+    "Gas Safe No. 574111",
+    "Local since 2007",
+    "Fixed price before we start",
+    "Open 7 days a week"
+  ],
+  "serviceDetails": [
+    {
+      "title": "What plumbing jobs do you do in Harrow?",
+      "tab": "Plumbing Jobs",
+      "image": "/harrow-plumbing jobs-01.webp",
+      "paras": [
+        "We handle everyday plumbing repairs and fittings to keep your home running smoothly:"
+      ],
+      "list": [
+        "Leaking pipes, joints and radiators",
+        "Dripping and broken taps",
+        "Running, leaking or blocked toilets",
+        "Blocked sinks, basins, baths and drains",
+        "Low water pressure",
+        "Stuck or leaking stop taps and valves",
+        "Shower and bath leaks",
+        "Washing machines, dishwashers and outside taps fitted"
+      ],
+      "alt": "Plumber repairing pipework in a Harrow kitchen"
+    },
+    {
+      "title": "Need an emergency plumber in Harrow?",
+      "tab": "Emergency Help",
+      "image": "/harrow-emergency-01.webp",
+      "paras": [
+        "For burst pipes, leaks through ceilings and overflowing toilets, we aim to reach you within 60 to 90 minutes, 7 days a week. Turn off your water at the stop tap first, usually under the kitchen sink, and switch off electrics near the water. Then call us on 07800 657141."
+      ],
+      "alt": "Emergency plumber fixing a burst pipe in Harrow"
+    },
+    {
+      "title": "Do you find hidden leaks?",
+      "tab": "Hidden Leaks",
+      "image": "/harrow-Hidden leaks-01.webp",
+      "paras": [
+        "Water often shows up far from where the leak is. Signs of a hidden leak include damp patches, a musty smell, boiler pressure dropping, or your water meter moving when all taps are off. We trace the leak to its source, stop it and repair the pipe or fitting."
+      ],
+      "alt": "Hidden leak stain on a ceiling in a Harrow home"
+    },
+    {
+      "title": "Blocked sinks, toilets and drains",
+      "tab": "Blocked Drains",
+      "image": "/harrow-blocked drains-01.webp",
+      "paras": [
+        "We clear blockages in sinks, basins, baths, showers, toilets and drains. We also check why the blockage formed, such as grease, a poor pipe fall or a damaged pipe, so it does not come back. If the blockage is in a shared drain or the public sewer, we tell you who to contact."
+      ],
+      "alt": "Plumber clearing a blocked sink in Harrow"
+    },
+    {
+      "title": "Plumbing for Harrow landlords",
+      "tab": "Landlords",
+      "image": "/harrow-landlords-01.webp",
+      "paras": [
+        "We already work with landlords and letting agents across Harrow, Pinner, Stanmore and Northolt. Send us your tenant's details and we arrange access directly. We can deal with a plumbing fault and the yearly gas safety certificate (CP12) on the same visit, which saves your tenants from booking two appointments."
+      ],
+      "alt": "Plumbing repairs for a rented home in Harrow"
+    },
+    {
+      "title": "Are your prices clear?",
+      "tab": "Clear Pricing",
+      "image": "/harrow-pricing-01.webp",
+      "paras": [
+        "Yes. We give you a price before we start, and keep to it. If there is a call out charge, we tell you up front, before the engineer visits. Got several small jobs? Send us the list and we can quote for them all and do them in one visit, which often costs less."
+      ],
+      "alt": "Fixed price plumbing quote in Harrow"
+    },
+    {
+      "title": "Why is my water pressure low?",
+      "tab": "Water Pressure",
+      "image": "/harrow-water pressure-01.webp",
+      "paras": [
+        "Low pressure can come from a part closed stop tap, a failing valve, a hidden leak, or old narrow pipes. Sometimes the cause is the supply to your street, which the water company handles. We test your pressure, find the cause and fix it. If your home needs stronger hot water flow, a Megaflo unvented cylinder can help."
+      ],
+      "alt": "Low water pressure from a shower in Harrow"
+    },
+    {
+      "title": "Running toilets and dripping taps",
+      "tab": "Toilets & Taps",
+      "image": "/harrow-toilet and taps-01.webp",
+      "paras": [
+        "A running toilet usually means a worn flush valve seal or a faulty fill valve. A dripping tap is usually a worn washer or cartridge. Both waste a lot of water over a few weeks and push up your bill if you are on a meter. We replace the worn part, often in one visit, or fit a new tap or valve if the old one is past repair."
+      ],
+      "alt": "Running toilet repaired in a Harrow bathroom"
+    },
+    {
+      "title": "Why do Harrow homeowners and landlords choose us?",
+      "tab": "Why Us",
+      "image": "/plumber-why us-01.webp",
+      "paras": [
+        "We have worked in Harrow since we started in 2007, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered engineer working in Harrow"
+    },
+    {
+      "title": "Which parts of Harrow do you cover?",
+      "tab": "Areas Covered",
+      "image": "/plumber-AREAS-01.webp",
+      "paras": [
+        "We work as plumbers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Harrow"
+    }
+  ],
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Still unsure? Call or WhatsApp us and we will help."
+  },
+  "faqs": [
+    {
+      "q": "Do you cover all of Harrow?",
+      "a": "Yes, along with Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley."
+    },
+    {
+      "q": "How fast can an emergency plumber reach me?",
+      "a": "We aim to arrive within 60 to 90 minutes for emergencies, 7 days a week."
+    },
+    {
+      "q": "Is there a call out charge?",
+      "a": "We tell you any charge up front, before the engineer visits."
+    },
+    {
+      "q": "Can you do small jobs?",
+      "a": "Yes. No job is too small, from a dripping tap to a sticking valve."
+    },
+    {
+      "q": "What should I do if a pipe bursts?",
+      "a": "Turn off the water at the stop tap, switch off electrics near the water, and call us straight away."
+    },
+    {
+      "q": "Can you find a hidden leak?",
+      "a": "Yes. We trace damp patches, falling boiler pressure and a moving water meter back to the leak and fix it."
+    },
+    {
+      "q": "Do you work with letting agents in Harrow?",
+      "a": "Yes. We arrange access with tenants directly."
+    },
+    {
+      "q": "Can you fit a tap or appliance I have bought?",
+      "a": "Yes. We fit taps, toilets, washing machines and dishwashers you have already bought."
+    },
+    {
+      "q": "Do you work weekends?",
+      "a": "Yes. We work 7 days a week."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ],
+  "booking": {
+    "heading": "Book a Plumber",
+    "text": "Fill in a few details and we will get back to you. Fixed price before work starts, no job too small, open 7 days a week."
+  },
+  "relatedServices": [
+    {
+      "title": "Boiler Repair Harrow",
+      "desc": "Boiler broken down? Link to repair service.",
+      "href": "/harrow/boiler-repair"
+    },
+    {
+      "title": "Boiler Service Harrow",
+      "desc": "Yearly service and CP12 certificates.",
+      "href": "/harrow/boiler-services"
+    },
+    {
+      "title": "Emergency Services",
+      "desc": "Burst pipes and leaks, day or night.",
+      "href": "/Services/emergency-services"
+    }
+  ],
+  "cta": {
+    "heading": "Need a Plumber in Harrow?",
+    "text": "Speak to a local engineer. Fixed prices, no job too small."
+  }
+}

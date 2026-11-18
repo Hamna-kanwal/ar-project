@@ -1,0 +1,159 @@
+{
+  "serviceDetails": [
+    {
+      "title": "What jobs do you take on?",
+      "tab": "Overview",
+      "image": "/o1.webp",
+      "paras": [
+        "We fit a wide range of heating, plumbing and appliance items around the home, including:"
+      ],
+      "list": [
+        "Gas cookers and gas hobs",
+        "Washing machines and dishwashers",
+        "Kitchen and bathroom taps",
+        "Radiators, radiator valves and towel rails",
+        "Stop taps, isolation valves and outside taps",
+        "Toilets, basins and shower valves",
+        "Thermostats and heating controls"
+      ],
+      "parasAfter": [
+        "Not sure if we do it? Ask us. If we cannot help, we will tell you straight away."
+      ],
+      "alt": "Engineer fitting a new kitchen tap in Watford"
+    },
+    {
+      "title": "Do you fit gas appliances?",
+      "tab": "Gas Appliances",
+      "image": "/o2.webp",
+      "paras": [
+        "Yes. By law, gas cookers, hobs and other gas appliances must be fitted by a Gas Safe registered engineer. We connect the appliance, test every joint for leaks, check the flame and make sure there is enough ventilation. You can use it the same day.",
+        "See our gas cooker installation page for more detail."
+      ],
+      "alt": "Gas Safe engineer connecting a gas hob in Watford"
+    },
+    {
+      "title": "Do you plumb in washing machines and dishwashers?",
+      "tab": "Appliances",
+      "image": "/o3.webp",
+      "paras": [
+        "Yes. We connect the water supply and waste, fit new valves where needed, level the machine, test for leaks and run a cycle before we leave. Most fits take under an hour, and we can take your old machine away.",
+        "See our washing machine and dishwasher pages for more detail."
+      ],
+      "alt": "Washing machine plumbed in by an engineer"
+    },
+    {
+      "title": "Can you replace a radiator or towel rail?",
+      "tab": "Radiators",
+      "image": "/o4.webp",
+      "paras": [
+        "Yes. We drain the system, remove the old radiator, fit the new one and new valves, then refill, bleed and test. We can fit a heated towel rail in a bathroom, swap a radiator for a larger one in a cold room, or move a radiator to suit a new layout."
+      ],
+      "alt": "Radiator replaced in a Watford home"
+    },
+    {
+      "title": "Are your prices clear?",
+      "tab": "Clear Pricing",
+      "image": "/o5.webp",
+      "paras": [
+        "Yes. Tell us what you need, and we give you a fixed price before any work starts. No hidden costs, no surprises. Quotes are free.",
+        "We turn up on time, do the job properly, and leave your home clean. If we spot anything else worth fixing while we are there, we tell you, and you decide."
+      ],
+      "alt": "Fixed price quote for a small plumbing job"
+    },
+    {
+      "title": "Can you do several small jobs in one visit?",
+      "tab": "Multiple Jobs",
+      "image": "/o6.webp",
+      "paras": [
+        "Yes, and it often saves you money. Make a list of the jobs around your home, such as a dripping tap, a sticking valve and a new appliance to connect, and we can quote for them all and do them in one visit."
+      ],
+      "alt": "Engineer doing several small jobs in one visit"
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Us",
+      "image": "/o7.webp",
+      "paras": [
+        "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered AR Heating engineer"
+    },
+    {
+      "title": "Can you fit an outside tap?",
+      "tab": "Outside Tap",
+      "image": "/o8.webp",
+      "paras": [
+        "Yes. An outside tap makes watering the garden and washing the car far easier. We fit the tap with a check valve to protect your drinking water, and an isolation valve inside so you can turn it off in winter to stop it freezing."
+      ],
+      "alt": "Outside tap fitted on a Watford home"
+    },
+    {
+      "title": "Why fit isolation valves?",
+      "tab": "Isolation Valves",
+      "image": "/o9.webp",
+      "paras": [
+        "An isolation valve lets you turn off the water to one tap, toilet or appliance without shutting off the whole house. If something leaks, you can stop it fast. We fit them under sinks, behind toilets and on appliance supplies, often as part of another job."
+      ],
+      "alt": "Isolation valve fitted under a sink"
+    },
+    {
+      "title": "Where do you cover?",
+      "tab": "Areas Covered",
+      "image": "/o11.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit appliances and fittings across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What kind of jobs do you take on?",
+      "a": "A wide range of heating, plumbing and appliance installation work. If you are not sure, just ask."
+    },
+    {
+      "q": "Do you charge for a quote?",
+      "a": "No. Quotes are free and clear, given before any work starts."
+    },
+    {
+      "q": "Can you do small jobs?",
+      "a": "Yes. No job is too small."
+    },
+    {
+      "q": "Can I fit a gas hob myself?",
+      "a": "No. By law, gas appliances must be fitted by a Gas Safe registered engineer."
+    },
+    {
+      "q": "How long does an appliance fit take?",
+      "a": "Most cooker, washing machine and dishwasher fits take under an hour."
+    },
+    {
+      "q": "Can you take my old appliance away?",
+      "a": "Yes. We can remove the old machine and clear the space."
+    },
+    {
+      "q": "Can you do several jobs in one visit?",
+      "a": "Yes. Send us your list and we will quote for everything together."
+    },
+    {
+      "q": "Do you supply the parts?",
+      "a": "We can supply fittings and parts, or fit items you have already bought. We will confirm in your quote."
+    },
+    {
+      "q": "Can you fit an outside tap?",
+      "a": "Yes. We fit outside taps with a check valve and an inside isolation valve."
+    },
+    {
+      "q": "Do you fit heated towel rails?",
+      "a": "Yes. We fit towel rails on your heating system, and swap old radiators for new ones."
+    },
+    {
+      "q": "Can you move a radiator?",
+      "a": "Yes. We can move a radiator to suit a new room layout, and change the pipework to match."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ]
+}

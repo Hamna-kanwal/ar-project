@@ -11,6 +11,23 @@ export async function GET(_request, { params }) {
       return new Response('Blog image not found', { status: 404 });
     }
 
+    if (!blog.image.startsWith('data:image/')) {
+      let imageUrl;
+      try {
+        imageUrl = new URL(blog.image);
+      } catch {
+        console.error(`Invalid blog image data for slug: ${slug}`);
+        return new Response('Invalid blog image', { status: 500 });
+      }
+
+      if (imageUrl.protocol !== 'https:' || !imageUrl.hostname) {
+        console.error(`Invalid blog image URL for slug: ${slug}`);
+        return new Response('Invalid blog image', { status: 500 });
+      }
+
+      return Response.redirect(imageUrl, 302);
+    }
+
     const match = /^data:(image\/[a-zA-Z0-9.+-]+);base64,([\s\S]*)$/.exec(blog.image);
     if (!match) {
       console.error(`Invalid blog image data for slug: ${slug}`);

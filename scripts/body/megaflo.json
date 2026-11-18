@@ -1,0 +1,36 @@
+{
+  "serviceDetails": [
+    {
+      "title": "What is a Megaflo unvented cylinder?",
+      "tab": "Overview",
+      "image": "/megaflo1.webp",
+      "paras": [
+        "A Megaflo works off the mains, so you get powerful hot water with no cold tank in the loft. Great for homes with more than one bathroom."
+      ],
+      "alt": "Megaflo unvented cylinder overview"
+    },
+    {
+      "title": "Is a Megaflo fitted safely?",
+      "tab": "Safe Fitting",
+      "image": "/megaflo2.webp",
+      "paras": [
+        "We size the cylinder to your home, fit the safety parts, and test the flow. You get steady, strong hot water you can count on."
+      ],
+      "alt": "Safe Megaflo installation and testing"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do I have space for a Megaflo?",
+      "a": "Most homes do. We check the space and advise on the right size."
+    },
+    {
+      "q": "Is a Megaflo safe?",
+      "a": "Yes. We fit all the safety parts and test the system in full."
+    },
+    {
+      "q": "How much hot water does a Megaflo hold?",
+      "a": "Sizes vary. We help you pick one to match your home."
+    }
+  ]
+}

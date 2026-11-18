@@ -1,19 +1,13 @@
-export const metadata = {
-  title: "Power Flushing Watford | AR Heating ",
-  description: "Power flushing in Watford to clear sludge from your heating. Warmer radiators, lower bills. Call today",
-  openGraph: {
-    title: "Power Flushing Watford | AR Heating",
-    description: "Power flushing in Watford to clear sludge from your heating. Warmer radiators, lower bills. Call today",
-    url: "https://www.arheatingservice.co.uk/Services/power-flushing",
-    images: ["https://www.arheatingservice.co.uk/power1.webp"],
-    type: "website",
-  },
-       alternates: {
-    canonical: "https://www.arheatingservice.co.uk/Services/power-flushing",
-  },
-};
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/lib/JsonLd";
 
+export const generateMetadata = () => buildMetadata("services-power-flushing");
 
-export default function BoilerLayout({ children }) {
-  return <>{children}</>;
+export default function ServiceLayout({ children }) {
+  return (
+    <>
+      <JsonLd id="services-power-flushing" />
+      {children}
+    </>
+  );
 }

@@ -1,39 +1,42 @@
+import { getPageCached } from "@/lib/pageCache";
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/lib/JsonLd";
 import HeroSlider from "./Components/HeroSlider";
 import ServiceList from "./Components/ServiceList";
 import VideoSection from "./Components/VideoSection";
 import AboutSection from "./Components/AboutSection";
-import TrustSection from "./Components/Badge"
+import TrustSection from "./Components/Badge";
 import Strategy from "./Components/Strategy";
-import FAQSection from "./Components/Faqs"
+import FAQSection from "./Components/Faqs";
 import CTA from "./Components/CTA";
 
-export const metadata = {
-  title: 'Gas Safe Heating Engineers in Watford | AR Heating',
-  description: 'Boiler installation, repair and servicing in Watford and Harrow. Gas Safe No. 574111. Free fixed price quotes. Emergency callouts 24 hours.',
-  openGraph: {
-    title: 'Gas Safe Heating Engineers in Watford | AR Heating',
-    description: 'Boiler installation, repair and servicing in Watford and Harrow. Gas Safe No. 574111. Free fixed price quotes. Emergency callouts 24 hours.',
-    url: 'https://www.arheatingservice.co.uk/',
-    images: [
-      {
-        url: 'https://www.arheatingservice.co.uk/heating_installation.webp',
-      },
-    ],
-    type: 'website',
-  },
-};
+export const generateMetadata = () => buildMetadata("home");
 
-export default function Home() {
+// Always read fresh content so approved edits show up without a rebuild
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  let content = null;
+
+  try {
+    const page = await getPageCached("home");
+    content = page?.body ?? null;
+  } catch (err) {
+    console.error("home page: could not load body", err);
+    content = null;
+  }
+
   return (
     <>
-      <HeroSlider />
-      <ServiceList />
-      <VideoSection/>
-      <AboutSection />
-      <TrustSection />
-      <Strategy /> 
-      <FAQSection />
-      <CTA />
+      <JsonLd id="home" />
+      <HeroSlider content={content?.hero} />
+      <ServiceList content={content?.services} />
+      <VideoSection content={content?.video} />
+      <AboutSection content={content?.about} />
+      <TrustSection content={content?.trust} />
+      <Strategy content={content?.strategy} />
+      <FAQSection content={content?.faqs} />
+      <CTA content={content?.cta} />
     </>
   );
 }

@@ -1,0 +1,163 @@
+"use client";
+import React from 'react';
+import { ShieldCheck, Clock, Users, Wrench, Zap, Award, MapPin, HandCoins } from 'lucide-react';
+import RelatedServices from '../Components/RelatedServices';
+
+// Images and icons stay in code
+const HERO_IMAGE = "/boiler.webp";
+const INTRO_IMAGE = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800";
+const INTRO_IMAGE_ALT = "Engineer";
+const highlightIcons = [ShieldCheck, Award];
+const statIcons = [Clock, Zap, Users];
+const statColors = ["text-blue-600", "text-amber-500", "text-emerald-600"];
+const featureIcons = [MapPin, Wrench, ShieldCheck, HandCoins];
+
+const defaultHero = {
+  title: "About",
+  titleHighlight: "Us",
+  paragraph:
+    "AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas.We specialise in all types of gas services including boiler & heating repair, installation, and servicing.",
+};
+
+const defaultIntro = {
+  heading: "AR Heating & Plumbing Services.",
+  paragraph:
+    "We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.",
+  highlights: [
+    "24hr Emergency Call out service",
+    "Many satisfied customers in Harrow",
+  ],
+  closing:
+    "We believe in giving our customers the best value possible and focus on providing complete dedication with an eye to quality. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.",
+  button: "Get In Touch",
+};
+
+const defaultStats = [
+  { value: "24/7", label: "Emergency Support" },
+  { value: "60-90", label: "Mins Response Time" },
+  { value: "10+", label: "Certified Experts" },
+];
+
+const defaultWhy = {
+  heading: "Why AR Heating & Plumbing?",
+  paragraph:
+    "Many satisfied customers in Harrow, Watford and London show the dedication of our engineers backed up by competitive rates and services completed on schedule. Whether you are looking to have major works or something small and simple to be repaired or installed, AR Heating Services can help. We believe in giving our customers the best value possible and focus on providing complete dedication with an eye for quality.We are a heating & plumbers company based in Birmingham, West Midlands with extensive experience installing and maintaining heating systems, emergency plumber service, installing bathrooms and kitchens etc...",
+};
+
+const defaultFeatures = [
+  { title: "Local Company", desc: "AR Heating & Plumbing Services is a local company established in 2007. We cover Harrow and surrounding areas, including Rickmansworth, Hemel Hempstead, St Albans, Harrow. We pride ourselves on the quality of our work at very competitive prices. Our work and your satisfaction are guaranteed." },
+  { title: "Our Services", desc: "We provide a complete range of services including installation, servicing, and repairs for all brands of boilers, heating systems and gas appliances. We also offer plumbing services associated with your boiler and heating needs. Our other services include Landlord Certificates, Power Flushes, and more." },
+  { title: "Safety First", desc: "We consider safety as the highest priority throughout the works we carry out. All our engineers are highly trained, have considerable experience, and are Gas Safe Registered (formerly known as Corgi registered). Our engineers deliver a high level of quality work." },
+  { title: "Affordable", desc: "Our relationship with key manufacturers of boilers and heating systems means we are able to secure better trade prices, savings which we pass on to our customers. Our labour charges are the most competitive in the market. Call us today on 07800 657141 for a no-obligation quote or general advice." },
+];
+
+// Use the database array only when it is a non-empty array, otherwise keep the default
+const pickArray = (value, fallback) =>
+  Array.isArray(value) && value.length > 0 ? value : fallback;
+
+export default function AboutUsClient({ content, showRelated = true }) {
+  // Merge database content over the defaults
+  const c = content && typeof content === "object" ? content : {};
+  const hero = { ...defaultHero, ...(c.hero || {}) };
+  const intro = { ...defaultIntro, ...(c.intro || {}) };
+  const why = { ...defaultWhy, ...(c.why || {}) };
+  const highlights = pickArray(intro.highlights, defaultIntro.highlights);
+  const stats = pickArray(c.stats, defaultStats);
+  const features = pickArray(c.features, defaultFeatures);
+
+  return (
+    <div className="bg-gray-50">
+      {/* Hero Section */}
+      <section className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${HERO_IMAGE}')` }} />
+        <div className="absolute inset-0 bg-white/80" />
+        <div className="relative z-10 text-center px-6 max-w-4xl">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight text-[#027cc1]">
+            {hero.title}<span className="text-orange-500"> {hero.titleHighlight}</span>
+          </h1>
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto mt-6 font-medium">
+            {hero.paragraph}
+          </p>
+        </div>
+      </section>
+
+      {/* About Content */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="rounded-3xl overflow-hidden shadow-xl">
+            <img src={INTRO_IMAGE} alt={INTRO_IMAGE_ALT} />
+          </div>
+          <div>
+            <h2 className="text-4xl font-bold text-[#027cc1] mb-3">{intro.heading}</h2>
+            <p className="text-gray-600 leading-relaxed mb-3">{intro.paragraph}</p>
+            <div className="space-y-4">
+              {highlights.map((text, i) => {
+                const Icon = highlightIcons[i % highlightIcons.length];
+                return (
+                  <div key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                    <Icon className="text-orange-500" /> {text}
+                  </div>
+                );
+              })}
+              <p className="text-gray-600 mb-6 leading-relaxed">{intro.closing}</p>
+            </div>
+            <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-md">
+              {intro.button}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {stats.map((stat, i) => {
+            const Icon = statIcons[i % statIcons.length];
+            return (
+              <div
+                key={i}
+                className="group relative bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-blue-50 transition-colors">
+                  <Icon className={`w-8 h-8 ${statColors[i % statColors.length]}`} />
+                </div>
+                <h3 className="text-5xl font-extrabold text-gray-900 mb-2">{stat.value}</h3>
+                <p className="text-gray-600 font-medium text-lg uppercase tracking-wider text-sm">{stat.label}</p>
+                <div className="absolute bottom-0 left-1/2 w-0 h-1 bg-[#027cc1] group-hover:w-full group-hover:left-0 transition-all duration-500 rounded-b-3xl"></div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">{why.heading}</h2>
+          <p>{why.paragraph}</p>
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            {features.map((item, i) => {
+              const Icon = featureIcons[i % featureIcons.length];
+              return (
+                <div
+                  key={i}
+                  className="flex items-start gap-5 p-8 bg-white rounded-3xl border-2 border-orange-100 shadow-sm hover:border-orange-300 hover:shadow-md transition-all duration-300 group"
+                >
+                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors">
+                    <Icon className="w-8 h-8 text-orange-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-2xl mb-1.5 text-gray-900">{item.title}</h4>
+                    <p className="text-gray-600 text-base leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {showRelated && <RelatedServices className="mt-12 mb-0" />}
+        </div>
+      </section>
+    </div>
+  );
+}

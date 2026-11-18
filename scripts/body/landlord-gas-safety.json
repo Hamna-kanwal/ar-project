@@ -1,0 +1,137 @@
+{
+  "hero": {
+    "title": "Landlord Gas",
+    "titleHighlight": "safety Certificate",
+    "paragraph": "If you're a landlord or letting agent, keeping your tenants safe isn't optional, it's the law. Under the Gas Safety (Installation and Use) Regulations 1998, every rental property needs a valid gas safety certificate (CP12), renewed every 12 months.",
+    "quoteButton": "Get my free quote",
+    "callButton": "Call: +44 7800 657141"
+  },
+  "experience": {
+    "heading": "AR Heating Services",
+    "paragraphs": [
+      "AR Heating Services has been carrying out landlord gas safety inspections across Watford, Harrow, London and the surrounding areas for the last 18 years. We're Gas Safe registered registration number 574111, and we've certified 8000 properties / CP12s for local landlords and letting agents to date.",
+      "Our job is simple: keep your properties legal, your tenants safe, and the whole process off your to-do list."
+    ],
+    "stats": [
+      {
+        "value": "18",
+        "label": "Years Experience"
+      },
+      {
+        "value": "8000",
+        "label": "Properties Certified"
+      }
+    ],
+    "gasSafeCard": {
+      "title": "Gas Safe Registered",
+      "number": "Registration Number: 574111"
+    }
+  },
+  "boxes": [
+    {
+      "title": "Booking Made Easy for Landlords",
+      "paragraphs": [
+        "Chasing tenants to find a time that works for everyone eats up a whole afternoon. So don't — just send us their contact details, and we'll take it from there. Our admin team gets in touch directly, works around their schedule, and books the inspection in without you lifting a finger.",
+        "We already do this for letting agencies across Wembley, Watford, Harrow and other partner areas. If you manage multiple properties, ask us about batch scheduling we can align renewal dates across a portfolio so you're not chasing separate appointments every month."
+      ]
+    },
+    {
+      "title": "Qualified Engineers, Every Time",
+      "paragraphs": [
+        "Every inspection is carried out by a lead engineer, a Gas Safe registered engineer with 11 years of experience across residential and rental properties. When it comes to safety and compliance, we don't cut corners."
+      ],
+      "badge": "Gas Safe Registered • 574111"
+    }
+  ],
+  "inspection": {
+    "heading": "What Does a CP12 Inspection Cover?",
+    "subtitle": "Our engineers carry out a full check of every gas appliance, flue, and pipe in the property:",
+    "cards": [
+      {
+        "title": "Legal compliance",
+        "desc": "A proper certificate confirming your property meets current UK housing and safety regulations."
+      },
+      {
+        "title": "Carbon monoxide checks",
+        "desc": "Testing to catch hidden leaks before they become dangerous."
+      },
+      {
+        "title": "Efficiency checks",
+        "desc": "Making sure appliances run efficiently, which helps keep tenants' energy bills down."
+      },
+      {
+        "title": "Pressure and ignition safety",
+        "desc": "Confirming gas pressure is correct and everything ignites safely."
+      },
+      {
+        "title": "Early problem spotting",
+        "desc": "Catching small issues in boilers or pipework before they become expensive repairs."
+      }
+    ]
+  },
+  "coverage": {
+    "heading": "Where We Cover",
+    "columns": [
+      "Area",
+      "Towns Covered",
+      "Turnaround"
+    ],
+    "rows": [
+      [
+        "Harrow & surrounding",
+        "Harrow, Pinner, Stanmore, Northolt",
+        "Digital CP12 within 24 hours"
+      ],
+      [
+        "Watford & surrounding",
+        "Watford, Edgware",
+        "Digital CP12 within 24 hours"
+      ],
+      [
+        "West & Greater London",
+        "London, Wembley, Ealing, Southall, Uxbridge",
+        "Digital CP12 within 24 hours"
+      ]
+    ]
+  },
+  "faqHeading": "Frequently Asked Question",
+  "faqs": [
+    {
+      "q": "How long does a gas safety check take?",
+      "a": "Usually 30 to 60 minutes, depending on how many gas appliances are in the property — a boiler, cooker, and fireplace together will take longer than a single appliance."
+    },
+    {
+      "q": "What happens if an appliance fails the inspection?",
+      "a": "If something's unsafe, our engineer isolates it on the spot to protect your tenants. You'll get a clear explanation of what's wrong and an upfront quote for the repair — no surprises, no pressure."
+    },
+    {
+      "q": "Can letting agents pass on tenant details directly?",
+      "a": "Yes. We already work this way with agencies across Harrow, Watford, West and Greater London. Send over the tenant's contact details and we handle scheduling from there."
+    },
+    {
+      "q": "How much does a CP12 cost?",
+      "a": "A CP12 roughly costs between £80 to £120."
+    }
+  ],
+  "reviews": {
+    "heading": "What Landlords Say",
+    "items": [
+      {
+        "quote": "Excellent, hassle-free service. They contacted my tenants directly in Pinner, sorted out the keys, and sent the digital certificate the next morning.",
+        "author": "Sarah, landlord in Pinner"
+      },
+      {
+        "quote": "AR Heating looks after our entire Watford rental portfolio. Having synchronized renewal dates has saved us massive amounts of admin work.",
+        "author": "David K., Letting Agent in Watford"
+      },
+      {
+        "quote": "Very professional team. They turned up on time in Harrow, did a thorough safety check on our boilers, and the CP12 was in my email within hours.",
+        "author": "James L., Landlord in Harrow"
+      },
+      {
+        "quote": "Been using them for 5 years now for all my properties across Wembley and West London. Reliable, reasonably priced, and always Gas Safe registered.",
+        "author": "Amara, Letting Agent in Wembley"
+      }
+    ]
+  }
+}

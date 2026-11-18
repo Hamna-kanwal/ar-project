@@ -1,0 +1,163 @@
+{
+  "serviceDetails": [
+    {
+      "title": "How do I know I need a new boiler?",
+      "tab": "Need New Boiler?",
+      "image": "/new boiler.webp",
+      "paras": [
+        "Boilers rarely quit all at once. Watch for higher bills with no clear reason, radiators slow to warm, banging or gurgling, a yellow flame instead of a blue one, and repair bills piling up. A boiler over ten years old on its second or third repair is often near the end, and a new one can cost less over time than more fixes.",
+        "Older boilers also tend to waste more gas, so a new A rated boiler can help bring your heating bills down as well as end the cycle of call outs."
+      ],
+      "alt": "Engineer checking an old boiler before replacement in Watford"
+    },
+    {
+      "title": "Should I repair or replace my boiler?",
+      "tab": "Repair or Replace",
+      "image": "/repairings.webp",
+      "paras": [
+        "If your boiler is under ten years old and the fault is a single worn part, a repair is usually the better choice. If the boiler is older, needs parts which are hard to find, or has broken down several times in a year, replacing it often costs less over time.",
+        "Our engineers give you an honest answer. If a repair makes more sense, we will tell you, and quote for the repair instead."
+      ],
+      "alt": "Engineer advising on boiler repair or replacement in Watford"
+    },
+    {
+      "title": "Which boiler is best for my home?",
+      "tab": "Which Boiler?",
+      "image": "/which boiler.webp",
+      "paras": [
+        "The best boiler is the one built for your home and your hot water use. A combi heats water on demand with no tank. A system boiler feeds many taps at once. A regular boiler suits older homes with a tank in the loft. We look at your home and help you choose."
+      ],
+      "alt": "Combi boiler and hot water cylinder side by side"
+    },
+    {
+      "title": "How much does a new boiler cost in Watford?",
+      "tab": "Costs",
+      "image": "/costs.webp",
+      "paras": [
+        "A new combi boiler, fitted, usually costs between £1,800 and £3,500. The price depends on the boiler type, brand and model, moving the boiler to a new spot, changing boiler type, and extras such as a power flush or a new flue. We visit, look at your home and give you a fixed price in writing. The price we quote is the price you pay."
+      ],
+      "alt": "Engineer giving a fixed price boiler quote in Watford"
+    },
+    {
+      "title": "Combi or system boiler: what is the difference in cost?",
+      "tab": "Combi vs System",
+      "image": "/combi vs system.webp",
+      "paras": [
+        "A combi swap is usually the quickest and lowest cost fit, as there is no tank or cylinder to replace. A system or regular boiler fit costs more, because the cylinder and pipework also need work. Changing from one boiler type to another, such as a regular boiler to a combi, adds time and cost too.",
+        "The right choice depends on your bathrooms and hot water use, not just the price. We explain both options in your quote, so you can compare them side by side."
+      ],
+      "alt": "Hot water running from several taps at once"
+    },
+    {
+      "title": "Which boiler brands do you fit?",
+      "tab": "Brands",
+      "image": "/brands.webp",
+      "paras": [
+        "We fit A rated boilers from Worcester Bosch, Vaillant, Ideal and Baxi. Most come with a manufacturer warranty of up to 10 years, depending on the model, and we register the warranty for you after fitting."
+      ],
+      "alt": "New A rated boilers from leading brands"
+    },
+    {
+      "title": "What happens on fitting day?",
+      "tab": "Fitting Day",
+      "image": "/fittings.webp",
+      "paras": [
+        "Here is how a boiler fit works with us:"
+      ],
+      "list": [
+        "Free quote: we visit and look at your home",
+        "Fixed price in writing, with no hidden extras",
+        "Fitting day: old boiler out, new boiler in, most done in one day",
+        "Testing: we test the boiler, flush the system and check every radiator",
+        "Handover: we show you the controls and register your warranty",
+        "Tidy up: we take the old boiler away and leave your home clean"
+      ],
+      "alt": "Gas Safe engineer fitting a new boiler in Watford"
+    },
+    {
+      "title": "Can you add smart controls?",
+      "tab": "Smart Controls",
+      "image": "/smart control.webp",
+      "paras": [
+        "Yes. Add a Hive or Google Nest smart thermostat with your new boiler and control your heating from your phone. A power flush before fitting clears sludge from your pipes and helps your new boiler last longer."
+      ],
+      "alt": "Smart thermostat fitted with a new boiler"
+    },
+    {
+      "title": "Where do you fit boilers?",
+      "tab": "Areas Covered",
+      "image": "/installation-area.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit boilers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive.",
+        "From the first visit to the warranty paperwork, one local team handles the whole job."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How much does a new boiler cost in Watford?",
+      "a": "A new combi boiler, fitted, usually costs between £1,800 and £3,500, depending on the brand and the work needed. We give a free fixed price before any work starts."
+    },
+    {
+      "q": "Can I fit a boiler myself?",
+      "a": "No. By law, a gas boiler must be fitted by a Gas Safe registered engineer. A bad fit can cause leaks, safety risks and a void warranty."
+    },
+    {
+      "q": "How long does a boiler fit take?",
+      "a": "Most boiler swaps take one day. Moving the boiler or changing its type can take two days."
+    },
+    {
+      "q": "How long does a boiler last?",
+      "a": "Around ten to fifteen years with a yearly service."
+    },
+    {
+      "q": "Combi or system boiler, which is best?",
+      "a": "A combi suits homes with one bathroom. A system boiler suits homes with two or more bathrooms, as it can feed several taps at once."
+    },
+    {
+      "q": "Which boiler brands do you fit?",
+      "a": "We fit Worcester Bosch, Vaillant, Ideal and Baxi boilers, with manufacturer warranties of up to 10 years depending on the model."
+    },
+    {
+      "q": "Can I pay over time?",
+      "a": "Ask about payment plans when you request your quote."
+    },
+    {
+      "q": "Do you take the old boiler away?",
+      "a": "Yes. We remove the old boiler safely and leave your home tidy."
+    },
+    {
+      "q": "Should I repair or replace my boiler?",
+      "a": "If your boiler is under ten years old with a single fault, a repair is usually best. If it is older and keeps breaking down, a new boiler often costs less over time."
+    },
+    {
+      "q": "Do I need a power flush with a new boiler?",
+      "a": "A power flush clears sludge from your pipes and radiators. Many boiler makers recommend cleaning the system when a new boiler goes in, to protect the boiler and the warranty."
+    },
+    {
+      "q": "Will I be without heating for long?",
+      "a": "Most fits are done in one day, so you are usually without heating and hot water only while the engineer works."
+    }
+  ],
+  "boilerData": [
+    {
+      "title": "Combi",
+      "bestFor": "Flats and small homes, one bathroom",
+      "tank": "No tank",
+      "points": "Quick fit, saves space, cheap to run"
+    },
+    {
+      "title": "System",
+      "bestFor": "Busy family homes, two or more bathrooms",
+      "tank": "Yes, a cylinder",
+      "points": "Runs many taps at once, steady flow"
+    },
+    {
+      "title": "Regular",
+      "bestFor": "Older homes with a loft tank",
+      "tank": "Yes, tank and cylinder",
+      "points": "Suits homes with the old set up in place"
+    }
+  ]
+}

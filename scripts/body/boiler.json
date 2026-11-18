@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "image": "/boiler.webp",
+    "imageAlt": "Boiler service background",
+    "badge": "Gas Safe No. 574111 | Local since 2007 | Open 7 days",
+    "title": "Boiler Service",
+    "titleHighlight": "in Watford",
+    "paragraph": "A yearly boiler service keeps your home safe, your bills down and your warranty valid. Our Gas Safe engineers (No. 574111) have served Watford homes since 2007. Most visits take under an hour, and the price is fixed before we start.",
+    "primaryButton": "Get my free quote",
+   "callLabel": "Call:",
+"phoneDisplay": "+44 7800 657141",
+"phoneTel": "+447800657141"
+  },
+  "trustItems": [
+    "Gas Safe No. 574111",
+    "Local since 2007",
+    "Fixed price before we start",
+    "Open 7 days a week"
+  ],
+  "serviceDetails": [
+    {
+      "title": "Why does my boiler need a yearly service?",
+      "tab": "Yearly Service",
+      "image": "/YEARLY SERVICE.webp",
+      "alt": "Gas Safe engineer servicing a boiler in Watford",
+      "paras": [
+        "A yearly check spots small faults before they grow into big repair bills. A well kept boiler burns gas cleanly, uses less fuel and breaks down far less often. Most boiler makers also ask for a yearly service to keep your warranty valid, so skipping a year can cost you a free repair later.",
+        "A service also keeps your home safe. A boiler with a blocked flue or a worn seal can leak carbon monoxide, a gas you cannot see or smell. Our engineer tests for this on every visit."
+      ]
+    },
+    {
+      "title": "What do you check in a boiler service?",
+      "tab": "Service Checks",
+      "image": "/SERVICE CHECKS.webp",
+      "alt": "Engineer checking boiler gas pressure",
+      "paras": [
+        "Every service follows the same full check, and you get a written record at the end:"
+      ],
+      "list": [
+        "Casing, seals and fittings",
+        "Burner, heat exchanger and main parts cleaned",
+        "Gas pressure and gas flow tested",
+        "Flue checked and flue gas tested for carbon monoxide",
+        "Condensate pipe, controls and safety devices tested",
+        "System pressure and expansion vessel checked"
+      ]
+    },
+    {
+      "title": "How much does a boiler service cost?",
+      "tab": "Service Cost",
+      "image": "/SERVICE COST.webp",
+      "alt": "Engineer giving a homeowner a boiler service record",
+      "paras": [
+        "We give you a fixed price before any work starts, with no hidden extras. Send us your boiler make on WhatsApp or call 07800 657141 for an exact price. If we find a fault, we explain the problem and give you a fixed repair price first. Nothing extra goes ahead without your OK.",
+        "Landlords can book a boiler service and a gas safety certificate (CP12) on one visit. A CP12 on its own costs £80 to £120."
+      ]
+    },
+    {
+      "title": "Is a boiler service worth the cost?",
+      "tab": "Worth It?",
+      "image": "/WORTH IT.webp",
+      "alt": "Homeowner booking a yearly boiler service in Watford",
+      "paras": [
+        "Yes, for most homes. A yearly service finds worn parts early, when they are cheap to replace, and stops small faults turning into a breakdown in the middle of winter. A clean boiler also burns gas more efficiently, so less of your money goes up the flue.",
+        "Most importantly, a service keeps your manufacturer warranty valid. If your boiler breaks down while under warranty and you have no service record, the maker may refuse a free repair."
+      ]
+    },
+    {
+      "title": "Signs your boiler needs a service now",
+      "tab": "Warning Signs",
+      "image": "/WARNING SIGNS.webp",
+      "alt": "Boiler showing warning signs before a service",
+      "paras": [
+        "Book a service soon if you see a yellow or orange flame, hear banging or gurgling, notice the pressure dropping often, find radiators slow to warm, or see black marks around the boiler. If your last service was over 12 months ago, book now. If you smell gas, leave the house and call the National Gas Emergency line on 0800 111 999 first."
+      ]
+    },
+    {
+      "title": "Boiler service for landlords",
+      "tab": "Landlords",
+      "image": "/LANDLORDS.webp",
+      "alt": "Landlord receiving a gas safety certificate in Watford",
+      "paras": [
+        "Landlords must have every gas appliance checked each year and hold a valid gas safety certificate (CP12). We can service the boiler and carry out the CP12 check on the same visit, so your tenants only need to let us in once.",
+        "Send us your tenant contact details and our team books the visit around their schedule. A CP12 on its own costs £80 to £120, and you get a digital certificate within 24 hours."
+      ]
+    },
+    {
+      "title": "Which boilers and areas do you cover?",
+      "tab": "Areas Covered",
+      "image": "/AREAS.webp",
+      "alt": "AR Heating engineer at a home in Watford",
+      "paras": [
+        "We service combi, system and regular gas boilers from all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi. We are based at Unit 24, The Roundway, Watford, WD18 6LB, and cover Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt."
+      ]
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Us",
+      "image": "/gas-register.webp",
+      "alt": "Gas Safe registered engineer ID",
+      "paras": [
+        "We are Gas Safe registered (No. 574111), and you can check our number on the Gas Safe Register before we arrive. We are a local Watford company, fully insured, open 7 days a week, and every price is fixed before we start.",
+        "From your first call to the written record at the end, you deal with one local team who know the homes and boilers of Watford."
+      ]
+    }
+  ],
+  "faqs": [
+    { "q": "How much is a boiler service in Watford?", "a": "We give a fixed price before any work starts. Call 07800 657141 or send us your boiler make on WhatsApp for an exact price." },
+    { "q": "How often should I service my boiler?", "a": "Once every 12 months. Most boiler makers ask for a yearly service to keep the warranty valid." },
+    { "q": "How long does a boiler service take?", "a": "Most services take under an hour. Older or very dirty boilers can take a little longer." },
+    { "q": "Does a boiler service keep my warranty valid?", "a": "In most cases, yes. Most makers ask for a yearly service by a Gas Safe engineer. Keep your service record safe as proof." },
+    { "q": "Do you check for carbon monoxide?", "a": "Yes. Every service includes a flue gas test and a check for fume leaks." },
+    { "q": "Are you Gas Safe registered?", "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register." },
+    { "q": "Do landlords need a yearly boiler service?", "a": "Landlords must get a gas safety certificate (CP12) every year by law. A yearly service is strongly advised too, and we can do both on one visit." },
+    { "q": "What happens if you find a fault?", "a": "We explain the fault, give you a fixed price to repair, and only go ahead with your OK." },
+    { "q": "What does a boiler service include?", "a": "A full check and clean of the main parts, gas pressure and flow tests, a flue gas test for carbon monoxide, and checks on controls, seals and safety devices, with a written record." },
+    { "q": "Is a boiler service worth the cost?", "a": "Yes, for most homes. A service finds faults early, helps your boiler burn gas efficiently and keeps your warranty valid." },
+    { "q": "Can I book a boiler service in winter?", "a": "Yes. We service boilers all year round. Booking before the cold months helps you avoid a breakdown when you need heat most." },
+    { "q": "What should I do before the engineer arrives?", "a": "Clear space around the boiler and make sure the engineer can reach it. Have your last service record to hand if you have one." }
+  ]
+}

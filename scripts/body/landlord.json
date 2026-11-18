@@ -1,0 +1,48 @@
+{
+  "serviceDetails": [
+    {
+      "title": "What is a landlord gas safety certificate (CP12)?",
+      "tab": "CP12 Overview",
+      "image": "/landlord2.webp",
+      "paras": [
+        "A yearly gas safety check is a legal must for landlords. We check the boiler, cooker, and other gas fittings, then give you the paperwork you need. The record is known as a CP12."
+      ],
+      "alt": "Landlord gas safety check CP12 certificate"
+    },
+    {
+      "title": "How quick is the check?",
+      "tab": "Fast Execution",
+      "image": "/landlord3.webp",
+      "paras": [
+        "We work around your tenants and get the check done with little fuss. You get your certificate fast, well before your due date."
+      ],
+      "alt": "Engineer carrying out fast landlord gas safety inspection"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often do I need a gas safety check?",
+      "a": "Once a year for each rented home, by law."
+    },
+    {
+      "q": "Is a CP12 the same as a landlord certificate?",
+      "a": "Yes. A CP12 is the record you get from a landlord gas safety check."
+    },
+    {
+      "q": "How long is a CP12 valid?",
+      "a": "One year. Book your next check before the date runs out."
+    },
+    {
+      "q": "What if a fault turns up?",
+      "a": "We tell you straight away and can often fix the fault the same day."
+    }
+  ],
+  "checkCovers": [
+    "Appliance checks: boiler, cooker, fire",
+    "Gas pipework tightness test",
+    "Carbon monoxide safety",
+    "Flues and air vent inspection",
+    "Safety cut-off device testing",
+    "Signed CP12 record provided"
+  ]
+}

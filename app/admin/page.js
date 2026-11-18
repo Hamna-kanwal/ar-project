@@ -18,6 +18,9 @@ export default function AdminDashboardHub() {
   }, [router]);
 
   const handleLogout = () => {
+    // Server wali session cookie bhi hatao
+    fetch('/api/admin/session', { method: 'DELETE' }).catch(() => {});
+
     // 1. Clear all local and session storage
     localStorage.removeItem('admin_token');
     localStorage.clear();
@@ -74,6 +77,15 @@ export default function AdminDashboardHub() {
             </div>
           </Link>
 
+          {/* Blog approvals */}
+          <Link href="/admin/blog-approvals" style={{ textDecoration: 'none' }}>
+            <div style={{ backgroundColor: '#ffffff', padding: '30px', borderRadius: '16px', border: '2px solid #E85A00', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.2s', cursor: 'pointer' }}>
+              <div style={{ fontSize: '32px', marginBottom: '10px' }}>📋</div>
+              <h2 style={{ color: '#E85A00', margin: '0 0 10px', fontSize: '20px' }}>Blog Approvals</h2>
+              <p style={{ color: '#666', margin: 0, fontSize: '14px', lineHeight: '1.5' }}>Review blog drafts and content changes before they go live.</p>
+            </div>
+          </Link>
+
           {/* Card 2: Customer Queries */}
           <Link href="/admin/queries" style={{ textDecoration: 'none' }}>
             <div style={{ backgroundColor: '#ffffff', padding: '30px', borderRadius: '16px', border: '2px solid #E85A00', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.2s', cursor: 'pointer' }}>
@@ -82,6 +94,24 @@ export default function AdminDashboardHub() {
               <p style={{ color: '#666', margin: 0, fontSize: '14px', lineHeight: '1.5' }}>View and manage incoming contact form submissions from website visitors.</p>
             </div>
           </Link>
+
+          {/* Card 3: SEO Approvals */}
+          <Link href="/admin/seo" style={{ textDecoration: 'none' }}>
+            <div style={{ backgroundColor: '#ffffff', padding: '30px', borderRadius: '16px', border: '2px solid #0080C8', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.2s', cursor: 'pointer' }}>
+              <div style={{ fontSize: '32px', marginBottom: '10px' }}>✅</div>
+              <h2 style={{ color: '#0080C8', margin: '0 0 10px', fontSize: '20px' }}>SEO Approvals</h2>
+              <p style={{ color: '#666', margin: 0, fontSize: '14px', lineHeight: '1.5' }}>Review SEO changes sent by Claude and approve or reject them before they go live.</p>
+            </div>
+          </Link>
+          <Link href="/admin/pages" style={{ textDecoration: 'none' }}>
+  <div style={{ backgroundColor: '#ffffff', padding: '30px', borderRadius: '16px', border: '2px solid #0080C8', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.2s', cursor: 'pointer' }}>
+    <div style={{ fontSize: '32px', marginBottom: '10px' }}>📄</div>
+    <h2 style={{ color: '#0080C8', margin: '0 0 10px', fontSize: '20px' }}>Pages Approvals</h2>
+    <p style={{ color: '#666', margin: 0, fontSize: '14px', lineHeight: '1.5' }}>Review and approve content updates for service pages before they go live.</p>
+  </div>
+</Link>
+
+
 
         </div>
       </div>

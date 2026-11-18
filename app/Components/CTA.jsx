@@ -1,33 +1,33 @@
 "use client";
 import Image from "next/image";
 import { Phone, MessageCircle, ShieldCheck } from "lucide-react";
+import defaults from "../_defaults/home.json";
 
-export default function CtaBanner() {
+// Only the `content` prop is read. Other pages pass heading/text props, which are still ignored, same as before.
+export default function CtaBanner({ content }) {
+  const c = { ...defaults.cta, ...(content || {}) };
+
   return (
     <section className="relative overflow-hidden bg-gray-900 mb-11">
-      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/home-cta.webp"
           alt="Get a free quote"
           fill
-          className="object-cover opacity-70" // Thora opacity kam kiya taake background focus na kare
+          className="object-cover opacity-70"
           priority
         />
-       </div>
-      {/* Content overlay */}
+      </div>
       <div className="relative z-10 max-w-3xl px-8 md:px-14 py-10 md:py-10">
         <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug mb-5 drop-shadow-md">
-          Free, No-Obligation Quotes With the{" "}
-          <span className="text-[#f5a623] drop-shadow-sm">Best Possible Advice</span>
+          {c.headingStart}{" "}
+          <span className="text-[#f5a623] drop-shadow-sm">{c.headingHighlight}</span>
         </h2>
 
         <p className="text-white/80 text-base md:text-lg mb-8 max-w-xl font-medium">
-          Speak to a local Gas Safe engineer today. Fixed prices. Emergency
-          response in 60–90 minutes, 7 days a week.
+          {c.text}
         </p>
 
-        {/* Buttons - Added hover lift effect */}
         <div className="flex flex-wrap items-center gap-4 mb-8">
           <a
             href="tel:+447800657141"
@@ -55,7 +55,6 @@ export default function CtaBanner() {
           </a>
         </div>
 
-        {/* Contact info - Improved contrast */}
         <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm font-medium">
           <a
             href="https://www.arheatingservice.co.uk"

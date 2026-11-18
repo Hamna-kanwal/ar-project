@@ -1,0 +1,147 @@
+{
+  "serviceDetails": [
+    {
+      "title": "How fast can you reach me?",
+      "tab": "Response Time",
+      "image": "/e1.webp",
+      "paras": [
+        "We aim to have an engineer at your door within 60 to 90 minutes, or at a time which suits you. We are based in Watford, close to Harrow, Hemel Hempstead and St Albans, which is how we keep response times short. When you call, tell us what has happened and your postcode, and we will give you an arrival time."
+      ],
+      "alt": "Emergency heating engineer arriving at a home in Watford"
+    },
+    {
+      "title": "What should I do if I smell gas?",
+      "tab": "Gas Leak",
+      "image": "/e2.webp",
+      "paras": [
+        "Your safety comes first. If you smell gas, follow these steps immediately:"
+      ],
+      "list": [
+        "Open doors and windows",
+        "Do not use light switches, sockets or sparks",
+        "Do not smoke or use naked flames",
+        "Turn off the gas at the meter if you can",
+        "Leave the property",
+        "Call National Gas Emergency on 0800 111 999"
+      ],
+      "parasAfter": [
+        "Once the gas supply is made safe, call us. Our Gas Safe engineers find and fix the leak and test your appliances before turning things back on."
+      ],
+      "alt": "Gas meter emergency control valve"
+    },
+    {
+      "title": "What should I do if a pipe bursts?",
+      "tab": "Burst Pipes",
+      "image": "/e3.webp",
+      "paras": [
+        "Turn off your water at the stop tap straight away. It is usually under the kitchen sink or where the water pipe enters your home. Switch off the electrics in any area where water is near sockets or lights, and turn off your boiler. Then call us. We stop the leak, repair the pipe and get your water back on."
+      ],
+      "alt": "Engineer repairing a burst pipe in an emergency"
+    },
+    {
+      "title": "What emergencies do you cover?",
+      "tab": "Faults Covered",
+      "image": "/e4.webp",
+      "paras": [
+        "Our engineers handle urgent heating, gas and plumbing faults, including:"
+      ],
+      "list": [
+        "Gas leaks and gas smells",
+        "No heating or no hot water",
+        "Boiler breakdowns and lock outs",
+        "Burst and leaking pipes",
+        "Leaks through ceilings",
+        "Overflowing toilets and cisterns",
+        "Frozen condensate pipes"
+      ],
+      "alt": "Emergency boiler repair at night"
+    },
+    {
+      "title": "Are you safe to call for gas faults?",
+      "tab": "Gas Safe",
+      "image": "/e5.webp",
+      "paras": [
+        "Yes. Every engineer who works on gas for us is Gas Safe registered under our registration, No. 574111. You can check our number on the Gas Safe Register. We follow the correct safety steps on every job, and will not turn an appliance back on until it is safe."
+      ],
+      "alt": "Gas Safe registered emergency engineer"
+    },
+    {
+      "title": "Will I know the cost before you start?",
+      "tab": "Fixed Pricing",
+      "image": "/e6.webp",
+      "paras": [
+        "Yes. We tell you the cost before any work starts, even in an emergency. Our first job is to make your home safe. Then we explain the fault, give you a fixed price for the repair, and only go ahead with your OK."
+      ],
+      "alt": "Emergency repair price explained before work starts"
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Choose Us",
+      "image": "/e7.webp",
+      "paras": [
+        "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start any repair, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered AR Heating engineer"
+    },
+    {
+      "title": "How can I prevent a winter emergency?",
+      "tab": "Winter Tips",
+      "image": "/e8.webp",
+      "paras": [
+        "Many winter call outs can be avoided. Book a yearly boiler service before the cold weather. Lag pipes in lofts and garages. Know where your stop tap is and check it turns. Keep the heating on low when you go away in winter. If your condensate pipe freezes, pouring warm, not boiling, water over it can often get your boiler going again."
+      ],
+      "alt": "Frozen pipe in winter in Watford"
+    },
+    {
+      "title": "Where do you cover?",
+      "tab": "Areas Covered",
+      "image": "/AREAS.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and cover emergencies across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "I smell gas. What do I do?",
+      "a": "Open windows, do not use switches, turn off the gas at the meter if you can, leave the property and call the gas emergency line on 0800 111 999. Then call us."
+    },
+    {
+      "q": "How fast can you come out?",
+      "a": "We aim to reach you in 60 to 90 minutes, or at a time which suits you."
+    },
+    {
+      "q": "Are you open 24 hours?",
+      "a": "Yes. Our emergency call out service runs 24 hours a day, 7 days a week."
+    },
+    {
+      "q": "What faults do you cover?",
+      "a": "Gas leaks, dead boilers, burst pipes, leaks, no heating, no hot water and more."
+    },
+    {
+      "q": "Where is my stop tap?",
+      "a": "It is usually under the kitchen sink, or where the water pipe enters your home. Turn it clockwise to shut off the water."
+    },
+    {
+      "q": "Will I know the price before you start?",
+      "a": "Yes. We make your home safe first, then give you a fixed price for the repair before any work starts."
+    },
+    {
+      "q": "Do you cover weekends and bank holidays?",
+      "a": "Yes. We work 7 days a week, including weekends."
+    },
+    {
+      "q": "Can you fix frozen pipes?",
+      "a": "Yes. We thaw them safely and repair any damage caused by the freeze."
+    },
+    {
+      "q": "My boiler stopped in freezing weather. What should I do?",
+      "a": "Check if the plastic condensate pipe outside has frozen. Pour warm, not boiling, water over it, then reset the boiler. If that fails, call us."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ]
+}

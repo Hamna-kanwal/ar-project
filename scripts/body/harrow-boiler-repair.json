@@ -1,0 +1,178 @@
+{
+  "hero": {
+    "image": "/harrow-boiler-repair.webp",
+    "imageAlt": "Gas Safe engineer repairing a boiler in Harrow",
+    "badge": "Gas Safe No. 574111 | 60 to 90 min response | Fixed price before work",
+    "title": "Boiler Repair",
+    "titleHighlight": "in Harrow",
+    "paragraph": "No heating or hot water? Our Gas Safe engineers (No. 574111) cover Harrow, Pinner and Stanmore, and aim to reach you in 60 to 90 minutes for emergencies. Our vans carry common parts, so many faults are fixed on the first visit, at a price agreed before we start.",
+    "primaryButton": "Get my free quote",
+    "callLabel": "Call:",
+    "phoneDisplay": "+44 7800 657141",
+    "phoneTel": "+447800657141"
+  },
+  "trustItems": [
+    "Gas Safe No. 574111",
+    "Local since 2007",
+    "Fixed price before we start",
+    "Open 7 days a week"
+  ],
+  "serviceDetails": [
+    {
+      "title": "How quickly can you get to me in Harrow?",
+      "tab": "Response Time",
+      "image": "/emergency-01.webp",
+      "paras": [
+        "For emergencies, such as no heating in cold weather, we aim to reach homes in Harrow within 60 to 90 minutes, 7 days a week. For faults which can wait, we book a time to suit you. When you call, tell us your postcode, boiler make and any fault code, and we will give you an arrival time."
+      ],
+      "alt": "Gas Safe engineer repairing a boiler in Harrow"
+    },
+    {
+      "title": "Quick checks before you call",
+      "tab": "Quick Checks",
+      "image": "/harrow-quick check-01.webp",
+      "paras": [
+        "A few simple checks can sometimes get your heating back on, or help our engineer find the fault faster:"
+      ],
+      "list": [
+        "Note any fault code on the boiler display",
+        "Check the pressure gauge (around 1 to 1.5 bar when cold)",
+        "Check the thermostat and timer are on",
+        "Check the gas is on and other gas appliances work",
+        "Check the outside condensate pipe has not frozen",
+        "Press the reset button once only"
+      ],
+      "alt": "Boiler pressure gauge showing low pressure"
+    },
+    {
+      "title": "Boiler faults we fix",
+      "tab": "Faults We Fix",
+      "image": "/Faults-01.webp",
+      "paras": [
+        "We repair all major brands, including Worcester Bosch, Vaillant, Ideal and Baxi, and fix common breakdown issues quickly:"
+      ],
+      "list": [
+        "No heating or no hot water",
+        "Boiler losing pressure or leaking",
+        "Boiler not firing up or locking out",
+        "Banging, whistling or gurgling noises",
+        "Frozen condensate pipes",
+        "Faulty pumps, fans, diverter valves and ignition parts"
+      ],
+      "alt": "Engineer finding a boiler fault in a Harrow home"
+    },
+    {
+      "title": "Will I know the cost first?",
+      "tab": "Fixed Price",
+      "image": "/harrow-fixed prices-01.webp",
+      "paras": [
+        "Yes. Before any repair, we explain the fault and give you a fixed price. Nothing goes ahead without your OK, and there are no surprise charges. If a part needs ordering, we tell you how long it will take and come back to fit it."
+      ],
+      "alt": "Fixed price boiler repair quote in Harrow"
+    },
+    {
+      "title": "Boiler repairs for Harrow landlords and letting agents",
+      "tab": "Landlords",
+      "image": "/harrow-landlord-01.webp",
+      "paras": [
+        "When a tenant's boiler breaks down, landlords need it fixed fast. We already work with letting agents across Harrow, and can deal with your tenant directly to arrange access. You get a clear price before the repair, and a short report once the job is done. Need the yearly gas safety check too? We can do it on the same visit."
+      ],
+      "alt": "Boiler repair for a rented home in Harrow"
+    },
+    {
+      "title": "Repair or replace?",
+      "tab": "Repair or Replace",
+      "image": "/harrow-repair or replace-01.webp",
+      "paras": [
+        "We give a straight answer. If your boiler is under ten years old with a single worn part, a repair is usually best. If the repair costs more than the boiler is worth, or it keeps breaking down, a new boiler often costs less over time. A new combi boiler, fitted, usually costs between £1,800 and £3,500, and most fits take one day."
+      ],
+      "alt": "Deciding whether to repair or replace a boiler in Harrow"
+    },
+    {
+      "title": "Why do Harrow homeowners and landlords choose us?",
+      "tab": "Why Choose Us",
+      "image": "/harrow-why us-01.webp",
+      "paras": [
+        "We have worked in Harrow since we started in 2007, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start any repair, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered engineer working in Harrow"
+    },
+    {
+      "title": "Which parts of Harrow do you cover?",
+      "tab": "Areas Covered",
+      "image": "/harrow-areas-01.webp",
+      "paras": [
+        "We repair boilers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Harrow"
+    }
+  ],
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Still unsure? Call or WhatsApp us and we will help."
+  },
+  "faqs": [
+    {
+      "q": "How fast can you reach me in Harrow?",
+      "a": "For emergencies we aim to arrive within 60 to 90 minutes, 7 days a week. For other faults we book a time to suit you."
+    },
+    {
+      "q": "Do you carry spare parts?",
+      "a": "Yes. Our vans carry common parts, so many faults are fixed on the first visit."
+    },
+    {
+      "q": "Will I know the price first?",
+      "a": "Yes. We explain the fault and give you a fixed price before any repair."
+    },
+    {
+      "q": "Why is my boiler losing pressure?",
+      "a": "Common causes are a leak, a faulty pressure relief valve or a worn expansion vessel. Our engineer will find and fix the cause."
+    },
+    {
+      "q": "My boiler stopped in freezing weather. What should I do?",
+      "a": "Check if the condensate pipe outside has frozen. Pour warm, not boiling, water over it and reset the boiler. If that fails, call us."
+    },
+    {
+      "q": "Do you repair boilers for landlords?",
+      "a": "Yes. We work with landlords and letting agents across Harrow and can arrange access with tenants."
+    },
+    {
+      "q": "Should I repair or replace my boiler?",
+      "a": "If the repair costs more than the boiler is worth, or it keeps breaking down, a new boiler is often the better choice. We give you a straight answer."
+    },
+    {
+      "q": "Which brands do you repair?",
+      "a": "All major brands, including Worcester Bosch, Vaillant, Ideal and Baxi."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ],
+  "booking": {
+    "heading": "Book a Boiler Repair",
+    "text": "Fill in a few details and we will get back to you. Fixed price before work starts, many faults fixed on first visit."
+  },
+  "relatedServices": [
+    {
+      "title": "Boiler Service Harrow",
+      "desc": "Stop breakdowns before they start.",
+      "href": "/harrow/boiler-service"
+    },
+    {
+      "title": "Boiler Installation",
+      "desc": "If repair is not worth it, new boilers fitted in one day.",
+      "href": "/Services/boiler-installation"
+    },
+    {
+      "title": "Emergency Services",
+      "desc": "Gas leaks, burst pipes and no heat.",
+      "href": "/Services/emergency-services"
+    }
+  ],
+  "cta": {
+    "heading": "Boiler Broken Down in Harrow? Call Now",
+    "text": "Speak to a local Gas Safe engineer. Fixed prices, many faults fixed on the first visit."
+  }
+}

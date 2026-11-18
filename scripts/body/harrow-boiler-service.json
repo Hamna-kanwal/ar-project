@@ -1,0 +1,179 @@
+{
+  "hero": {
+    "image": "/boiler.webp",
+    "imageAlt": "Gas Safe engineer servicing a boiler in Harrow",
+    "badge": "Gas Safe No. 574111 | Serving Harrow since 2007 | CP12 on the same visit",
+    "title": "Boiler Service",
+    "titleHighlight": "in Harrow",
+    "paragraph": "Keep your boiler safe and your warranty valid with a yearly service from a local Gas Safe engineer (No. 574111). We have serviced boilers for Harrow homeowners and landlords since 2007. Fixed price before we start, written record at the end.",
+    "primaryButton": "Get my free quote",
+    "callLabel": "Call:",
+    "phoneDisplay": "+44 7800 657141",
+    "phoneTel": "+447800657141"
+  },
+  "trustItems": [
+    "Gas Safe No. 574111",
+    "Local since 2007",
+    "Fixed price before we start",
+    "Open 7 days a week"
+  ],
+  "serviceDetails": [
+    {
+      "title": "Why service your boiler every year?",
+      "tab": "Why Service",
+      "image": "/service-Why service-01.webp",
+      "paras": [
+        "A yearly service finds small faults before they turn into a breakdown on the coldest day of the year. A clean boiler burns gas more efficiently, so less of your money goes up the flue. Most boiler makers also ask for a yearly service to keep your warranty valid.",
+        "A service also checks your boiler is safe. Our engineer tests for carbon monoxide on every visit, a gas you cannot see or smell."
+      ],
+      "alt": "Gas Safe engineer servicing a boiler in Harrow"
+    },
+    {
+      "title": "What does a boiler service include?",
+      "tab": "What's Included",
+      "image": "/service-what includes-01.webp",
+      "paras": [
+        "Every service follows the same full check, whatever the make of boiler:"
+      ],
+      "list": [
+        "Check the casing, seals and fittings",
+        "Clean the burner, heat exchanger and main parts",
+        "Test gas pressure and flow",
+        "Check the flue and run a flue gas test",
+        "Clear the condensate trap and check the pipe",
+        "Test controls, thermostat and safety devices",
+        "Check system pressure and the expansion vessel",
+        "Give you a written service record"
+      ],
+      "alt": "Flue gas test during a boiler service in Harrow"
+    },
+    {
+      "title": "Boiler service and gas safety certificate for Harrow landlords",
+      "tab": "Landlords & CP12",
+      "image": "/service-landlord certificate-01.webp",
+      "paras": [
+        "Harrow has a large number of rented homes, and we already work with letting agents across Harrow, Pinner, Stanmore and Northolt. Every rented home needs a gas safety certificate (CP12) each year by law.",
+        "We can service the boiler and carry out the CP12 check on the same visit, so your tenants only let us in once. Send us your tenant's contact details and our team books the visit around them. A CP12 on its own costs £80 to £120, and you get a digital certificate within 24 hours."
+      ],
+      "alt": "Landlord in Harrow receiving a gas safety certificate"
+    },
+    {
+      "title": "Servicing older boilers in Harrow homes",
+      "tab": "Older Boilers",
+      "image": "/service-old boiler-01.webp",
+      "paras": [
+        "Many homes in Harrow and Pinner still run older boilers, often tucked in kitchen cupboards or lofts. Older boilers need a service just as much as new ones, and often more, as worn parts and old seals are more likely to fail.",
+        "If our engineer finds your boiler is near the end of its life, we tell you honestly, and explain whether a repair or a new boiler makes more sense."
+      ],
+      "alt": "Older boiler in a Harrow home ready for a service"
+    },
+    {
+      "title": "How much is a boiler service in Harrow?",
+      "tab": "Clear Pricing",
+      "image": "/service-clear price-01.webp",
+      "paras": [
+        "We give you a fixed price before any work starts, with no hidden extras. Call 07800 657141 or send your boiler make on WhatsApp for an exact price. If we find a fault, we explain it and give you a fixed price to repair before doing any extra work."
+      ],
+      "alt": "Engineer explaining boiler service results in Harrow"
+    },
+    {
+      "title": "When is the best time to book?",
+      "tab": "Best Time to Book",
+      "image": "/service-right time to book-01.webp",
+      "paras": [
+        "Any time is fine, but booking before the cold weather sets in means any fault is found while you can still live without heat for a day. Once you are booked, we can remind you when your next service is due, so you never miss a year and your warranty stays valid."
+      ],
+      "alt": "Booking a boiler service before winter in Harrow"
+    },
+    {
+      "title": "Why do Harrow homeowners and landlords choose us?",
+      "tab": "Why Us",
+      "image": "/service-why us-01.webp",
+      "paras": [
+        "We have worked in Harrow since we started in 2007, for homeowners, landlords and letting agents. Every gas job is done under our Gas Safe registration, No. 574111. You get a fixed price before we start, we turn up when we say we will, and we leave your home clean. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered engineer working in Harrow"
+    },
+    {
+      "title": "Which parts of Harrow do you cover?",
+      "tab": "Areas Covered",
+      "image": "/service-area-01.webp",
+      "paras": [
+        "We service boilers across Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley, and the surrounding streets. Our base at Unit 24, The Roundway, Watford, WD18 6LB is a short drive from Harrow, which is how we keep emergency response times to 60 to 90 minutes. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Harrow"
+    }
+  ],
+  "faqSection": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Still unsure? Call or WhatsApp us and we will help."
+  },
+  "faqs": [
+    {
+      "q": "How much is a boiler service in Harrow?",
+      "a": "We give a fixed price before any work starts. Call 07800 657141 or send your boiler make on WhatsApp for an exact price."
+    },
+    {
+      "q": "How long does a boiler service take?",
+      "a": "Most services take under an hour. Older or very dirty boilers can take a little longer."
+    },
+    {
+      "q": "What does a boiler service include?",
+      "a": "A full check and clean of the main parts, gas pressure and flow tests, a flue gas test, checks on controls and safety devices, and a written record."
+    },
+    {
+      "q": "How often should I service my boiler?",
+      "a": "Once every 12 months. Most makers ask for a yearly service to keep the warranty valid."
+    },
+    {
+      "q": "Can you do a CP12 at the same time?",
+      "a": "Yes. We can service the boiler and do the landlord gas safety check on one visit."
+    },
+    {
+      "q": "Do you work with letting agents in Harrow?",
+      "a": "Yes. We already work with letting agents across Harrow and nearby areas, and can book directly with your tenants."
+    },
+    {
+      "q": "Which boiler brands do you service?",
+      "a": "All major gas boiler brands, including Worcester Bosch, Vaillant, Ideal and Baxi."
+    },
+    {
+      "q": "Do you cover Pinner and Stanmore?",
+      "a": "Yes. We cover Harrow, Pinner, Stanmore, Edgware, Northolt, Ruislip and Wembley."
+    },
+    {
+      "q": "What happens if you find a fault?",
+      "a": "We explain the fault, give you a fixed price to repair, and only go ahead with your OK."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ],
+  "booking": {
+    "heading": "Book My Boiler Service",
+    "text": "Fill in a few details and we will get back to you. Fixed price before we start, written record, CP12 on the same visit."
+  },
+  "relatedServices": [
+    {
+      "title": "Boiler Repair Harrow",
+      "desc": "Boiler broken down? Many faults fixed on the first visit.",
+      "href": "/harrow/boiler-repair"
+    },
+    {
+      "title": "Landlord Gas Safety Certificate",
+      "desc": "CP12 from £80 to £120, digital certificate within 24 hours.",
+      "href": "/Services/landlord"
+    },
+    {
+      "title": "Plumbers in Harrow",
+      "desc": "Leaks, taps, toilets and blockages.",
+      "href": "/harrow/plumber"
+    }
+  ],
+  "cta": {
+    "heading": "Book Your Boiler Service in Harrow",
+    "text": "Speak to a local Gas Safe engineer. Fixed prices, written record, CP12 on the same visit."
+  }
+}

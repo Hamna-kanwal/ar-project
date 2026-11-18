@@ -54,7 +54,7 @@ export default function AdminBlogs() {
  
   const fetchBlogs = async () => {
     try {
-      const res = await fetch('/api/blogs');
+      const res = await fetch('/api/admin/blogs');
       if (!res.ok) return;
       const data = await res.json();
       if (data.success) setBlogs(data.blogs);
@@ -124,7 +124,7 @@ export default function AdminBlogs() {
  
     try {
       const isEditing = Boolean(editingSlug);
-      const url = isEditing ? `/api/blogs/${editingSlug}` : '/api/blogs';
+      const url = isEditing ? `/api/admin/blogs/${editingSlug}` : '/api/admin/blogs';
       const method = isEditing ? 'PUT' : 'POST';
  
       const res = await fetch(url, {
@@ -152,7 +152,7 @@ export default function AdminBlogs() {
     if (!confirm('Are you sure you want to delete this blog?')) return;
  
     try {
-      const res = await fetch(`/api/blogs/${slug}`, { method: 'DELETE' });
+      const res = await fetch(`/api/admin/blogs/${slug}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
         showToast('Blog deleted successfully!', 'error');

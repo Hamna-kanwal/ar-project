@@ -1,0 +1,157 @@
+{
+  "serviceDetails": [
+    {
+      "title": "Is a gas cooker safe to fit?",
+      "tab": "Safety First",
+      "image": "/safety first-01.webp",
+      "paras": [
+        "Yes, when a Gas Safe engineer fits it. A badly fitted cooker can leak gas, which puts your home at risk. We follow the correct steps on every job, from the connection to the final safety checks, so you can cook without worry."
+      ],
+      "alt": "Gas Safe engineer connecting a gas cooker in Watford"
+    },
+    {
+      "title": "What is included in a cooker fit?",
+      "tab": "What's Included",
+      "image": "/whats include.webp",
+      "paras": [
+        "Every gas cooker or hob fit includes a full safety check and setup to ensure your kitchen is completely secure:"
+      ],
+      "list": [
+        "Checking the gas supply and space",
+        "Connecting with a suitable hose/pipe",
+        "Fitting stability bracket or chain",
+        "Testing every joint for leaks",
+        "Checking the flame on every burner",
+        "Checking room ventilation",
+        "Showing controls & cleaning up"
+      ],
+      "alt": "Engineer leak testing a gas cooker connection"
+    },
+    {
+      "title": "How quick is the fit?",
+      "tab": "Fitting Speed",
+      "image": "/fitting speed.webp",
+      "paras": [
+        "Most cooker fits take under an hour. Once we have tested every joint and checked the flame, your cooker is safe to use the same day. Book a time to suit you, including fits arranged around a new kitchen."
+      ],
+      "alt": "Gas cooker ready to use the same day"
+    },
+    {
+      "title": "Do you fit gas hobs and range cookers?",
+      "tab": "Hobs & Ranges",
+      "image": "/Hob RANGES-01.webp",
+      "paras": [
+        "Yes. We fit freestanding gas cookers, built in gas hobs, dual fuel cookers and range cookers. For built in hobs, we connect the gas once the hob is in the worktop. If the gas pipe needs moving or extending for a new kitchen layout, we can do this too."
+      ],
+      "alt": "Built in gas hob fitted in a kitchen worktop"
+    },
+    {
+      "title": "Can you disconnect my old cooker?",
+      "tab": "Disconnect Old",
+      "image": "/disconnect old-01.webp",
+      "paras": [
+        "Yes. We safely disconnect your old gas cooker, cap the gas supply if needed, and can take the old cooker away. If you are switching from gas to electric, we can cap the gas supply safely so it is left in a safe state."
+      ],
+      "alt": "Old gas cooker safely disconnected and removed"
+    },
+    {
+      "title": "Are your prices clear?",
+      "tab": "Clear Pricing",
+      "image": "/fixed pricing.webp",
+      "paras": [
+        "Yes. You get a fixed price before we start, with no hidden extras. Tell us the make and model of your new cooker, and whether you need the old one removed, and we will give you a price."
+      ],
+      "alt": "Fixed price gas cooker installation quote"
+    },
+    {
+      "title": "Why choose AR Heating?",
+      "tab": "Why Us",
+      "image": "/boiler-why us.webp",
+      "paras": [
+        "We are a local Watford company, trading since 2007, and every gas job is done under our Gas Safe registration, No. 574111. We give you a fixed price before we start, turn up when we say we will, and leave your home as clean as we found it. If something is not worth doing, we tell you."
+      ],
+      "alt": "Gas Safe registered AR Heating engineer"
+    },
+    {
+      "title": "Why does ventilation matter?",
+      "tab": "Ventilation",
+      "image": "/ventelation-01.webp",
+      "paras": [
+        "Gas cookers need fresh air to burn safely. Without enough ventilation, the flame can burn poorly and give off carbon monoxide. We check your kitchen has the right air supply for your cooker, and tell you if anything needs to change before we turn it on. We also recommend a carbon monoxide alarm in any room with a gas appliance."
+      ],
+      "alt": "Kitchen ventilation checked for a gas cooker"
+    },
+    {
+      "title": "What if my gas connection is old?",
+      "tab": "Old Connections",
+      "image": "/old connection.webp",
+      "paras": [
+        "Many older kitchens have a worn gas hose or a bayonet fitting which has seen better days. If your connection is not safe or is the wrong type for your new cooker, we replace it. We use parts made for gas cookers, and test the new connection before we leave."
+      ],
+      "alt": "Approved flexible gas hose for a cooker"
+    },
+    {
+      "title": "Where do you cover?",
+      "tab": "Areas Covered",
+      "image": "/Areas-01.webp",
+      "paras": [
+        "We are based at Unit 24, The Roundway, Watford, WD18 6LB, and fit gas cookers across Watford, Bushey, Rickmansworth, Hemel Hempstead, St Albans, Harrow, Pinner, Stanmore, Edgware, Ruislip and Northolt. We are Gas Safe registered (No. 574111), fully insured, and you can check our number on the Gas Safe Register before we arrive."
+      ],
+      "alt": "AR Heating engineer at a home in Watford"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I fit a gas cooker myself?",
+      "a": "No. By law, a gas cooker must be fitted by a Gas Safe registered engineer."
+    },
+    {
+      "q": "How long does the fit take?",
+      "a": "Most fits take under an hour."
+    },
+    {
+      "q": "Do you check for leaks?",
+      "a": "Yes. We test every joint before we leave."
+    },
+    {
+      "q": "Can I use the cooker the same day?",
+      "a": "Yes. Once it is tested and safe, you can cook straight away."
+    },
+    {
+      "q": "Do you fit gas hobs?",
+      "a": "Yes. We fit built in gas hobs, freestanding cookers, dual fuel and range cookers."
+    },
+    {
+      "q": "Can you take my old cooker away?",
+      "a": "Yes. We can disconnect and remove your old cooker."
+    },
+    {
+      "q": "Can you move my gas pipe for a new kitchen?",
+      "a": "Yes. We can move or extend the gas supply to suit your new layout."
+    },
+    {
+      "q": "Do you give a certificate?",
+      "a": "Ask us for a record of the work when you book, and we will confirm what you will receive."
+    },
+    {
+      "q": "Do I need a carbon monoxide alarm?",
+      "a": "We recommend one in any room with a gas appliance. It is a small cost for real peace of mind."
+    },
+    {
+      "q": "What if my old gas hose is worn?",
+      "a": "We replace it with a new connection made for gas cookers and test it before we leave."
+    },
+    {
+      "q": "Can you fit a cooker I bought online?",
+      "a": "Yes. We fit cookers and hobs bought from any shop, as long as the model is suitable for your gas supply."
+    },
+    {
+      "q": "Is a gas cooker cheaper to run than electric?",
+      "a": "It depends on gas and electricity prices at the time. Many people choose gas for the instant heat control on the hob."
+    },
+    {
+      "q": "Are you Gas Safe registered?",
+      "a": "Yes. AR Heating is Gas Safe registered, No. 574111. You can check our number on the official Gas Safe Register."
+    }
+  ]
+}

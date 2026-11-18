@@ -1,18 +1,13 @@
-export const metadata = {
-  title: "Nest Thermostat Installation Watford | AR Heating ",
-  description: "Google Nest learning thermostats fitted and set up in Watford. Smart heating learns your day and trims waste. Free quotes. Call AR Heating. ",
-  openGraph: {
-    title: "Nest Thermostat Installation Watford | AR Heating",
-    description: "Google Nest learning thermostats fitted and set up in Watford. Smart heating learns your day and trims waste. Free quotes. Call AR Heating.",
-    url: "https://www.arheatingservice.co.uk/Services/nest",
-    images: ["https://www.arheatingservice.co.uk/nest1.webp"],
-    type: "website",
-  },
-       alternates: {
-    canonical: "https://www.arheatingservice.co.uk/Services/nest",
-  },
-};
+import { buildMetadata } from "@/lib/seo";
+import JsonLd from "@/lib/JsonLd";
 
-export default function BoilerLayout({ children }) {
-  return <>{children}</>;
+export const generateMetadata = () => buildMetadata("services-nest");
+
+export default function ServiceLayout({ children }) {
+  return (
+    <>
+      <JsonLd id="services-nest" />
+      {children}
+    </>
+  );
 }

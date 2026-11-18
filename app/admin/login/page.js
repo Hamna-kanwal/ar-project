@@ -8,20 +8,28 @@ export default function AdminLogin() {
   const [error, setError] = useState('');
   const router = useRouter();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
 
-    // Demo Hardcoded Credentials (You can move this to .env later)
-    const ADMIN_EMAIL = 'arheating@gmail.com';
-    const ADMIN_PASS = 'admin1234';
+    try {
+      // Login ab server par check hota hai (credentials .env.local mein hain, code mein nahi)
+      const res = await fetch('/api/admin/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json().catch(() => ({}));
 
-    if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
-      // Set session token in localStorage
-      localStorage.setItem('admin_token', 'authenticated_true');
-      router.push('/admin');
-    } else {
-      setError('Invalid email or password');
+      if (res.ok) {
+        // Purane admin pages (blogs, queries) abhi isi token par chalte hain
+        localStorage.setItem('admin_token', 'authenticated_true');
+        router.push('/admin');
+      } else {
+        setError(data.error || 'Invalid email or password');
+      }
+    } catch {
+      setError('Could not reach the server');
     }
   };
 

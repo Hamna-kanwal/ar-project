@@ -1,5 +1,5 @@
 import { getPageCached } from "@/lib/pageCache";
-import AboutUsClient from "./AboutUsClient";
+import AboutUsClient from "./AboutUsAltClient";
 
 // Always read fresh content so approved edits show up without a rebuild
 export const dynamic = "force-dynamic";

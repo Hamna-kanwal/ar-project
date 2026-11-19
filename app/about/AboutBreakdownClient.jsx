@@ -11,24 +11,24 @@ const featureIcons = [MapPin, Wrench, ShieldCheck, HandCoins];
 
 const defaultHero = {
   image: "/boiler.webp",
-  title: "About",
-  titleHighlight: "Us",
+  title: "Why Choose",
+  titleHighlight: "AR Heating",
   paragraph:
-    "AR Heating Services are your local and reliable expert plumbers and Heating Engineers in Harrow & Local areas.We specialise in all types of gas services including boiler & heating repair, installation, and servicing.",
+    "We are Gas Safe registered heating and plumbing engineers based in Watford, covering Harrow and the surrounding towns. You get clear advice, fixed prices agreed before work starts, and work done properly the first time.",
 };
 
 const defaultIntro = {
   image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800",
-  imageAlt: "Engineer",
-  heading: "AR Heating & Plumbing Services.",
+  imageAlt: "AR Heating engineer at work",
+  heading: "Heating and Plumbing You Can Rely On",
   paragraph:
-    "We provide a full range of plumbing and heating services at affordable costs, no job is too big or too small with focus on customer satisfaction. Our engineers are qualified Gas Safe and are always available, all backed up by our 24hr Emergency Call out service. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.",
+    "From a small leak to a full boiler or heating system installation, no job is too big or too small for our team. Our engineers are Gas Safe registered, and our 24hr emergency call-out service means help is never far away.",
   bullets: [
-    "24hr Emergency Call out service",
-    "Many satisfied customers in Harrow",
+    "24hr Emergency Call-out",
+    "Trusted by Customers Across Harrow and Watford",
   ],
   extraParagraph:
-    "We believe in giving our customers the best value possible and focus on providing complete dedication with an eye to quality. Our aim is to have our emergency plumber or Heating Engineer at your door within 60-90 minutes or at a time that suits you.",
+    "When something goes wrong, we aim to have an engineer at your door within 60-90 minutes, or at a time that suits you. We keep the process simple: a clear quote, honest advice and a tidy finish.",
   buttonLabel: "Get In Touch",
 };
 
@@ -39,31 +39,25 @@ const defaultStats = [
 ];
 
 const defaultWhy = {
-  heading: "Why AR Heating & Plumbing?",
+  heading: "Why Customers Choose AR Heating",
   paragraph:
-    "Many satisfied customers in Harrow, Watford and London show the dedication of our engineers backed up by competitive rates and services completed on schedule. Whether you are looking to have major works or something small and simple to be repaired or installed, AR Heating Services can help. We believe in giving our customers the best value possible and focus on providing complete dedication with an eye for quality.We are a heating & plumbers company based in Birmingham, West Midlands with extensive experience installing and maintaining heating systems, emergency plumber service, installing bathrooms and kitchens etc...",
+    "Our customers in Watford, Harrow and across London choose us for fair rates, reliable engineers and jobs finished on schedule. Whether you need major works or a quick repair, we give every job the same care and attention to quality. We also take on bathroom and kitchen installations alongside our heating and plumbing work.",
 };
 
 const defaultFeatures = [
-  { title: "Local Company", desc: "AR Heating & Plumbing Services is a local company established in 2007. We cover Harrow and surrounding areas, including Rickmansworth, Hemel Hempstead, St Albans, Harrow. We pride ourselves on the quality of our work at very competitive prices. Our work and your satisfaction are guaranteed." },
-  { title: "Our Services", desc: "We provide a complete range of services including installation, servicing, and repairs for all brands of boilers, heating systems and gas appliances. We also offer plumbing services associated with your boiler and heating needs. Our other services include Landlord Certificates, Power Flushes, and more." },
-  { title: "Safety First", desc: "We consider safety as the highest priority throughout the works we carry out. All our engineers are highly trained, have considerable experience, and are Gas Safe Registered (formerly known as Corgi registered). Our engineers deliver a high level of quality work." },
-  { title: "Affordable", desc: "Our relationship with key manufacturers of boilers and heating systems means we are able to secure better trade prices, savings which we pass on to our customers. Our labour charges are the most competitive in the market. Call us today on 07800 657141 for a no-obligation quote or general advice." },
+  { title: "Local Company", desc: "AR Heating & Plumbing Services has been serving customers since 2007. We cover Watford, Harrow, Rickmansworth, Hemel Hempstead, St Albans and nearby areas. Our work and your satisfaction are guaranteed." },
+  { title: "Complete Range of Services", desc: "We install, service and repair all major brands of boilers, heating systems and gas appliances. We also handle the plumbing that goes with them, plus Landlord Certificates, Power Flushing and more." },
+  { title: "Safety First", desc: "Safety comes before everything else on every job. Our engineers are experienced, highly trained and Gas Safe registered, so you can be confident the work is done correctly and safely." },
+  { title: "Fair Prices", desc: "Because we work closely with leading boiler and heating manufacturers, we can offer better trade prices and pass the savings on to you. Call 07800 657141 for a no-obligation quote or friendly advice." },
 ];
 
-// Use the database array only when it is a non-empty array, otherwise keep the default
-const pickArray = (value, fallback) =>
-  Array.isArray(value) && value.length > 0 ? value : fallback;
-
-export default function AboutUsClient({ content }) {
-  // Merge database content over the defaults
-  const c = content && typeof content === "object" ? content : {};
-  const hero = { ...defaultHero, ...(c.hero || {}) };
-  const intro = { ...defaultIntro, ...(c.intro || {}) };
-  const why = { ...defaultWhy, ...(c.why || {}) };
-  const bullets = pickArray(intro.bullets, defaultIntro.bullets);
-  const stats = pickArray(c.stats, defaultStats);
-  const features = pickArray(c.features, defaultFeatures);
+export default function AboutUsClient() {
+  const hero = defaultHero;
+  const intro = defaultIntro;
+  const why = defaultWhy;
+  const bullets = intro.bullets;
+  const stats = defaultStats;
+  const features = defaultFeatures;
 
   return (
     <div className="bg-gray-50">

@@ -1,19 +1,24 @@
-import { getPageCached } from "@/lib/pageCache";
-import AboutUsClient from "../about/AboutBreakdownClient";
+import AboutUsClient from "./AboutBreakdownClient";
 
-// Always read fresh content so approved edits show up without a rebuild
 export const dynamic = "force-dynamic";
 
-export default async function AboutPage() {
-  let content = null;
+export const metadata = {
+  title: "Why Choose AR Heating | Gas Safe Engineers Watford",
+  description:
+    "Gas Safe registered heating and plumbing engineers in Watford. Fixed prices agreed before work starts. See how we work and check our registration.",
+  alternates: {
+    canonical: "https://www.arheatingservice.co.uk/about",
+  },
+  openGraph: {
+    title: "Why Choose AR Heating | Gas Safe Engineers Watford",
+    description:
+      "Gas Safe registered heating and plumbing engineers in Watford. Fixed prices agreed before work starts. See how we work and check our registration.",
+    url: "https://www.arheatingservice.co.uk/about",
+    type: "website",
+    images: ["https://www.arheatingservice.co.uk/logo-footer.webp"],
+  },
+};
 
-  try {
-    const page = await getPageCached("about");
-    content = page?.body ?? null;
-  } catch (err) {
-    console.error("about page: could not load body", err);
-    content = null;
-  }
-
-  return <AboutUsClient content={content} showRelated={false} />;
+export default function AboutPage() {
+  return <AboutUsClient />;
 }

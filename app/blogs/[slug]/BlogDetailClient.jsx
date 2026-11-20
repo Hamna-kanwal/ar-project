@@ -569,7 +569,6 @@ function FormattedTitle({ title }) {
 
 export default function BlogDetailClient({ blog }) {
   const contentRef = useRef(null);
-  const faqSchemaRef = useRef(null);
 
   useEffect(() => {
     const cleanContent = enhanceBlogContent(
@@ -580,19 +579,21 @@ export default function BlogDetailClient({ blog }) {
     if (contentRef.current) {
       contentRef.current.innerHTML = cleanContent;
     }
-    if (faqSchemaRef.current) {
-      const faqSchema = buildFaqSchema(cleanContent);
-      faqSchemaRef.current.textContent = faqSchema
-        ? JSON.stringify(faqSchema)
-        : "";
-    }
+
+    const faqSchema = buildFaqSchema(cleanContent);
+    if (!faqSchema) return;
+
+    const schemaScript = document.createElement("script");
+    schemaScript.type = "application/ld+json";
+    schemaScript.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(schemaScript);
+
+    return () => schemaScript.remove();
   }, [blog.description, blog.title]);
 
   return (
     <article className="mt-[50px] w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
       <style dangerouslySetInnerHTML={{ __html: blogStyles }} />
-
-      <script ref={faqSchemaRef} type="application/ld+json" />
 
       <div className="max-w-4xl mx-auto w-full">
         {/* Header Section */}
